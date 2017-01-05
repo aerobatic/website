@@ -1,0 +1,139 @@
+.terminal {
+  width: 738px;
+  height: 359px;
+  border: solid 2px #dfdfdf;
+  border-top: solid 48px #dfdfdf;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  background-color: #282c34;
+  color: #fff;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  padding: 15px;
+
+  pre {
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    color: inherit;
+    border: none;
+    padding: 0;
+
+    code {
+      display: inline-block;
+      color: #fff;
+    }
+
+    code.prompt {
+      margin-right: 10px;
+      color: #707070;
+    }
+
+    code.cursor {
+      background-color: #fff;
+      display: inline-block;
+    }
+  }
+
+  .typed-cursor {
+    background-color: #fff;
+    // animation: cursorBlink 0.7s infinite;
+  }
+
+  .spinner {
+    display: block;
+  }
+
+  .spinner:after {
+  	content:"_";
+    color: #fff;
+  	animation: terminalSpinner .4s infinite;
+  }
+}
+
+.terminal::before {
+  display: block;
+  position: absolute;
+  top: -29px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  background-color: #f36;
+  border-radius: 12px;
+  box-shadow: 0 0 0 0 #f36, 16px 0 0 0 #fc9, 32px 0 0 0 #3f6;
+  content: "";
+}
+
+#generatorMenu {
+  li {
+    a {
+      position: relative;
+    }
+
+    a > i.fa {
+      position: absolute;
+      right: 10px;
+      font-size: 20px;
+    }
+
+    a > i.fa-play-circle-o {
+      display: none;
+    }
+  }
+}
+
+#generatorMenu:not(.running) {
+  a:hover {
+    i.fa-play-circle-o {
+      display: inline-block;
+    }
+  }
+}
+
+#generatorMenu.running {
+  li.active {
+    a {
+      color: #fff;
+      cursor: default;
+    }
+    a:hover {
+      background-color: #337ab7;
+    }
+    i.fa-play-circle-o {
+      display: none;
+    }
+  }
+
+  li:not(.active) {
+    a {
+      cursor: default;
+      color: silver;
+    }
+    a:hover {
+      background-color: inherit;
+    }
+  }
+}
+
+@keyframes cursorBlink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes terminalSpinner {
+	0% {
+    content: "-"
+	}
+	25% {
+		content: "\\";
+	}
+	50% {
+		content: "|";
+	}
+	75% {
+		content: "/";
+	}
+	100% {
+		content: "-";
+  }
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    <div id="content">
+      {{ .Content }}
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

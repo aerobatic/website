@@ -1,0 +1,24 @@
+{
+  "name": "aerobatic-com-hugo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aerobatic marketing site at www.aerobatic.com",
+  "scripts": {
+    "clean": "rm -f static/*.js static/*.css",
+    "babel:build": "babel assets/js --out-file static/site.js --source-maps",
+    "babel:watch": "babel assets/js --watch --out-file static/site.js --source-maps",
+    "sass:watch": "onchange 'assets/scss/**/*.scss' -- npm run sass:build",
+    "sass:build": "node-sass --include-path node_modules/bootstrap-sass/assets/stylesheets assets/scss/main.scss static/site.css",
+    "build:assets": "npm run clean && npm run sass:build && npm run babel:build",
+    "build": "npm run build:assets && hugo",
+    "start": "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-babili": "0.0.9",
+    "bootstrap-sass": "^3.3.7",
+    "node-sass": "^4.1.1",
+    "onchange": "^3.2.1",
+    "parallelshell": "^2.0.0"
+  }
+}

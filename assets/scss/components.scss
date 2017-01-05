@@ -1,0 +1,89 @@
+.btn-primary {
+  background-color:#67ab49;
+  border:none;
+  border-radius:4px;
+  box-shadow:none;
+  color:#fff;
+  display:inline-block;
+  font-size:18px;
+  padding:10px 15px;
+  margin-top: 15px;
+  text-decoration: none !important;
+}
+
+.btn-primary:focus,.btn-primary:hover {
+  background-color:#14892c;
+  color:#fff;
+  text-decoration:none !important;
+}
+
+.jumbotron {
+  p > a.link {
+    display: inline-block;
+    color: #707070;
+    margin-bottom: 5px;
+    border-bottom: solid 1px #d7d7d7;
+  }
+
+  p > a.link:hover {
+    color: #333333;
+    text-decoration: none;
+    border-color: #333333;
+  }
+}
+
+img.screenshot {
+  vertical-align:bottom;
+  border:1px solid #d7d7d7;
+  border-radius: 5px;
+  margin: 15px 0;
+  max-width: 100%;
+  height: auto;
+  display:block;
+}
+
+img.awslogo {
+  width:300px;
+  display: block;
+margin-left: auto;
+margin-right: auto
+}
+
+.top-buffer {
+  margin-bottom:40px;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-member img {
+  margin: 0 auto;
+  width: 200px;
+  border: 0px solid grey;
+}
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.team-member p {
+  margin-top: 0;
+}
+
+.checkbox-list > ul > li {
+  list-style-image: url(../img/checked_checkbox.png)
+}
+
+.build-engines-docs {
+  img {
+    max-width: 100%;
+  }
+}
+
+.panel-heading > h3 {
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+}

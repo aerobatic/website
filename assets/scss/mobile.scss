@@ -1,0 +1,57 @@
+/*
+Some overrides for small screens
+*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  /*.col-xs-12 {
+    padding: 0;
+  }*/
+
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  .content {
+    padding-top: 10px;
+  }
+
+  .marketing-testimonial--content {
+    width: 100%;
+  }
+
+  #post h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  #post h2 {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  #post h4, #post h5, #post h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 24px;
+  }
+
+  .jumbotron h1 {
+    font-size: 45px;
+  }
+
+  #pricing .marketing-plans--dollar {
+    font-size: 28px;
+    top: -5px;
+  }
+
+  #pricing .marketing-plans--price {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width : 800px) {
+  .navbar-brand img {
+    height: 38px;
+  }
+}

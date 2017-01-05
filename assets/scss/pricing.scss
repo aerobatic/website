@@ -1,0 +1,97 @@
+section#pricing {
+  .plan {
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    ul {
+      text-align: left;
+    }
+
+    .websites {
+      color: #205081;
+      background: #f2f2f2;
+      border: 1px solid #dadada;
+      border-radius: 4px;
+      display: inline-block;
+      font-size: 14px;
+      height: 2.5;
+      line-height: 35px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      width: 102px;
+
+      .count {
+        font-size: 20px;
+      }
+    }
+
+    .price {
+      h2 {
+        display: inline-block;
+        font-size: 42px !important;
+        margin: 0 !important;
+      }
+
+      sup.currency {
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        top: -15px;
+        margin-right: 3px;
+      }
+
+      .period {
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .plan.free {
+    i.fa-asterisk {
+      display: inline-block;
+      font-size: 14px;
+      position: relative;
+      top: -16px;
+      margin-left: 4px;
+    }
+  }
+
+  .features {
+    margin-top: 20px;
+    height: 50px;
+
+    .count {
+      font-size: 20px;
+    }
+    i.fa-lock {
+      display: inline-block;
+      font-size: 14px;
+      position: relative;
+      margin-left: 4px;
+    }
+  }
+
+  .footnotes {
+    > div {
+      display: table;
+      margin-bottom: 8px;
+    }
+    span {
+      display: table-cell;
+    }
+    span:first-child {
+      width: 30px;
+      text-align: center;
+      padding-top: 3px;
+
+      > i {
+        font-size: 20px;
+      }
+    }
+  }
+}
