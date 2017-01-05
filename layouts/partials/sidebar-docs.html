@@ -1,0 +1,8 @@
+
+<!--left-->
+<ul class="nav nav-stacked" id="docs-menu">
+  <li {{ if eq .Params.name "getting-started" }}class="active"{{ end }}><a href="/docs/getting-started">Getting Started</a></li>
+  <li {{ if eq .Params.name "overview" }}class="active"{{ end }}><a href="/docs/overview">Overview</a></li>
+  <li {{ if eq .Params.name "static-serving" }}class="active"{{ end }}><a href="/docs/static-serving">Static website serving</a></li>
+  <li {{ if eq .Params.name "cli" }}class="active"{{ end }}><a href="/docs/cli/">CLI</a></li>
+</ul>

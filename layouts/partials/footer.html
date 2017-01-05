@@ -1,1 +1,32 @@
-<div>Footer</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright <a href="/">Aerobatic LLC</a> 2017</span>
+			</div>
+			<div class="col-md-5">
+				<ul class="list-inline">
+          {{ range .Site.Params.social }}
+  					<li>
+  						<span class="fa-stack fa-lg">
+                {{ .title }}
+                <a href="{{ .url }}">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-{{ .title }} fa-stack-1x"></i>
+                </a>
+              </span>
+  					</li>
+					{{ end }}
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<ul class="quicklinks">
+					<li><a href="/contact">Contact</a></li>
+					<li><a href="/legal">Legal</a></li>
+					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+			</div>
+    </div>
+  </div>
+</footer>

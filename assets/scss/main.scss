@@ -1,5 +1,5 @@
 @import "bootstrap-custom";
-@import "prism";
+// @import "prism";
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -56,6 +56,11 @@ ol {
     text-align: right;
     content: counter(item) ".";
   }
+}
+
+pre {
+  border: none;
+  background-color: inherit;
 }
 
 i.fa.header-anchor {

@@ -1,0 +1,14 @@
+baseurl: http://replace-this-with-your-hugo-site.com/
+languageCode: en-us
+title: Aerobatic
+PygmentsCodeFences: true
+
+params:
+  foo: asdfasdfasfasdf
+  social:
+    - title: twitter
+      url: http://twitter.com/aerobaticapp
+    - title: bitbucket
+      url: http://bitbucket.org/aerobatic
+    - title: github-alt
+      url: http://github.com/aerobatic

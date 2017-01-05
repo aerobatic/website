@@ -2,12 +2,19 @@
 <html>
   {{ partial "head.html" . }}
   <body>
+    {{ partial "nav.html" . }}
     <div class="container">
       <div class="row">
-        <h3>Docs Layout</h3>
-        {{ .Content }}
+        <div class="col-md-3">
+          {{ partial "sidebar-docs.html" . }}
+        </div>
+        <div class="col-md-9 col-xs-12 col-sm-12 content">
+          {{ .Content }}
+        </div>
       </div>
     </div>
     {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
   </body>
 </html>
