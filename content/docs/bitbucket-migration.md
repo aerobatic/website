@@ -53,29 +53,29 @@ If you created the file on your local machine, rather than within the Bitbucket 
 
 **6.** To get the value of your Aerobatic api key, you first need to have the CLI installed. If you don't have the CLI installed yet, do so by running:
 
-{% bash %}
-npm install aerobatic-cli -g
-{% endbash %}
+~~~sh
+[$] npm install aerobatic-cli -g
+~~~
 
 Now login to the CLI with the same credentials you used to login to the Control Panel:
 
-{% bash %}
-aero login
-{% endbash %}
+~~~sh
+[$] aero login
+~~~
 
 When your account was migrated, an identically named Aerobatic account was created for all Bitbucket accounts you belong to (both individual and team) that had the Aerobatic add-on installed. You need to ensure the CLI is set to use the same account that the repo belongs to:
 
 The `switch` command will display all the Aerobatic account you are associated with. Use the arrow keys to select the appopriate account.
 
-{% bash %}
-aero switch
-{% endbash %}
+~~~sh
+[$] aero switch
+~~~
 
 Now you can run the `apikey` command:
 
-{% bash %}
-aero apikey
-{% endbash %}
+~~~sh
+[$] aero apikey
+~~~
 
 This will print out the value of your api key. Keep this window open as you'll need that value momentarily.
 

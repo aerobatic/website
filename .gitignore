@@ -3,3 +3,4 @@ public
 static/*.css
 static/*.js
 static/*.js.map
+*.log

@@ -5,7 +5,7 @@ name: static-site-generators
 
 # Static site generators
 
-Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](), Hugo, Middleman and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.).
+Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](https://jekyllrb.com/), Hugo, Middleman and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.).
 
 There are two ways to configure the deploy directory:
 
@@ -18,10 +18,10 @@ There are two ways to configure the deploy directory:
   With this approach you just run `aero deploy` to deploy your site.
 
 * **Or**, pass a command line option:
-  ~~~
-  aero deploy --directory _site
+  ~~~sh
+  [$] aero deploy --directory _site
   # or
-  aero deploy -d _site
+  [$] aero deploy -d _site
   ~~~
 
 Full docs on the [deploy command](/docs/cli#deploy)
@@ -72,8 +72,9 @@ The basic formula for building and deploying a Jekyll site is to run bundler to 
 
 In order to override `site.url` to `https://__baseurl__`, one good approach is to create a dedicated config file like `_config.aeroatic.yml` containing a single line:
 
-~~~
+~~~yaml
 url: https://__baseurl__
+---
 ~~~
 
 Then pass both config files to the `--config` option. The settings in `_config.aerobatic.yml` will override those in `_config.yml`.
@@ -107,23 +108,22 @@ And when building the link to each post in `feed.xml`:
 
 Here's how you to create a new [Hugo](https://gohugo.io/) site from scratch and deploy to Aerobatic:
 
-Hugo is awesome!!
 ~~~sh
-$ hugo new site my-new-hugo-site
-$ cd my-new-hugo-site
-$ (cd themes; git clone https://github.com/eliasson/liquorice)
-$ aero create           # create the Aerobatic site
-$ hugo --baseURL https://&#95;&#95;baseurl&#95;&#95  # build the site
-$ aero deploy -d public # deploy output to Aerobatic
+[$] hugo new site my-new-hugo-site
+[$] cd my-new-hugo-site
+[$] (cd themes; git clone https://github.com/eliasson/liquorice)
+[$] aero create           # create the Aerobatic site
+[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95  # build the site
+[$] aero deploy -d public # deploy output to Aerobatic
 ~~~
 
 The [spf13/hugoThemes](https://github.com/spf13/hugoThemes) repo has an extensive collection of git sub-modules. Click on anyone of them to get the URL of an individual theme.
 
 [Hugo](https://gohugo.io/) makes more extensive use of absolute URLs than other generators. Fortunately it provides a `--baseURL` command line override that makes it really easy to set `https://\_\_baseurl\_\_` for Aerobatic builds:
 
-~~~
-$ hugo --baseURL https://&#95;&#95;baseurl&#95;&#95;
-$ aero deploy --directory public
+~~~sh
+[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95;
+[$] aero deploy --directory public
 ~~~
 
 The official Hugo guidance on RSS will just work once deployed to Aerobatic. In the rendered page response, the `https://__baseurl__` will be replaced with the actual site url.
@@ -131,8 +131,8 @@ The official Hugo guidance on RSS will just work once deployed to Aerobatic. In 
 #### Installing Hugo in CI script
 If you need to install hugo in a CI script, here's the commands for doing so (assuming an Ubuntu based build image):
 
-~~~
-$ apt-get update -y && apt-get install wget
-$ wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
-$ dpkg -i hugo*.deb
+~~~sh
+[$] apt-get update -y && apt-get install wget
+[$] wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
+[$] dpkg -i hugo*.deb
 ~~~
