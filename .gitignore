@@ -4,3 +4,4 @@ static/*.css
 static/*.js
 static/*.js.map
 *.log
+*.tar.gz

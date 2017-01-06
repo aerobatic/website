@@ -28,7 +28,7 @@ You still need to create a `.html` file corresponding to the `path`, in this cas
 
 You probably don't want your health check page to be indexed by search engines. To prevent it from being discovered, add the following to your `robots.txt` (adjusted for your specific configuration):
 
-~~~txt
+~~~
 User-agent: *
 Disallow: /health
 ~~~
