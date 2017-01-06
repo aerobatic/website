@@ -2,8 +2,10 @@ baseurl: http://replace-this-with-your-hugo-site.com/
 languageCode: en-us
 title: Aerobatic
 PygmentsCodeFences: true
+pygmentsuseclasses: true
 
 params:
+  prompt: "[cwd]:$"
   foo: asdfasdfasfasdf
   social:
     - title: twitter
