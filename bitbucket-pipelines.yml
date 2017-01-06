@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node
+image: beevelop/nodejs-python
 pipelines:
   branches:
     master:
@@ -12,6 +12,7 @@ pipelines:
             - apt-get update -y && apt-get install wget
             - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
             - dpkg -i hugo*.deb
+            - pip install pygments
             - npm install
             - npm run build:aerobatic
             - npm install -g aerobatic-cli
