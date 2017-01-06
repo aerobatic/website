@@ -14,6 +14,6 @@ pipelines:
             - dpkg -i hugo*.deb
             - pip install pygments
             - npm install
-            - npm run build:aerobatic
+            - NODE_ENV=production npm run build:aerobatic
             - npm install -g aerobatic-cli
             - aero deploy
