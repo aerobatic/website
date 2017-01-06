@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: S3 proxy plugin
 plugin: true
+name: s3-proxy
 ---
 
 # S3 proxy plugin

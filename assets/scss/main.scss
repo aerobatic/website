@@ -21,6 +21,7 @@ body {
   padding-top: 20px;
 }
 
+@import "markdown";
 @import "components";
 @import "pricing";
 @import "docs-menu";
@@ -370,28 +371,6 @@ footer span.copyright {
     font-weight: 300;
 }
 
-.content h1:first-child {
-  margin-top: 0;
-}
-
-.content p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.content ol, .content ul {
-  margin-bottom: 15px;
-}
-
-.content li {
-  line-height: 1.6;
-  margin-bottom: 6px;
-}
-
-.content table {
-  margin-bottom: 20px;
-}
-
 .feature-last
 {
     margin-bottom:50px;
@@ -558,23 +537,6 @@ footer span.copyright {
   margin: 10px 0;
 }
 
-#post table {
-  border-collapse: collapse !important;
-  width: 100%;
-
-  td, th {
-    background-color: #fff !important;
-    border: 1px solid #ddd !important;
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-  }
-
-  td > code {
-    line-height: 28px;
-  }
-}
-
 div.alert {
   font-size: 14px;
   border-radius: 3px;
@@ -608,7 +570,9 @@ div.alert h3 {
   font-size: 18px !important;
 }
 
-code {
+code, span.code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 90%;
   color: #205081;
   margin: 0 2px;
   padding: 2px 4px;

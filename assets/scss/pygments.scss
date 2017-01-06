@@ -87,4 +87,9 @@
     > span.o { margin-left: -2px; }
     > span.o ~ .o { margin-left: 0; }
   }
+
+  // Hide the last --- line that is use to
+  code.language-yaml {
+    > span.nn:last-child { display: none; }
+  }
 }

@@ -35,9 +35,9 @@ You'll be sent a validation email from `no-reply@certificates.amazon.com`. Click
 
 You can run the `aero domain` command again without any arguments to get a status update. Once provisioning is complete you will receive an email from `support@aerobatic.com` with instructions on how to configure your DNS records so that your domain resolves to your Aerobatic website.
 
-{% alert warning %}
+{{% alert warning %}}
 **ALERT** Receiving the verification email can sometimes trip people up. See the [troubleshooting section](#troubleshooting) at the bottom of this guide.
-{% endalert %}
+{{% /alert %}}
 
 ### DNS Settings
 
@@ -69,9 +69,9 @@ Domain providers that support one of the flavors of CNAME-like at the apex inclu
 * [Zerigo DNS - ALIAS](https://www.zerigo.com/docs/managed-dns/host_types)
 * [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200169056-Does-CloudFlare-support-CNAME-APEX-at-the-root-)
 
-{% alert warning %}
+{{% alert warning %}}
 **WARNING:** Some providers, such as Namecheap, technically allow you to define a `CNAME` record `@` that will route your apex domain correctly. But be aware, this will **likely break email for your domain**. This is because the `@` record takes precedence over any `MX` mail records.
-{% endalert %}
+{{% /alert %}}
 
 We suggest you **ONLY** utilize the apex domain if your DNS provider has special `ALIAS/ANAME` record types specifically intended to handle it. The alternative is a `CNAME` for each website like `www`.
 

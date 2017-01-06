@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: Basic auth plugin
 plugin: true
+name: basic-auth
 ---
 
 # Basic auth plugin

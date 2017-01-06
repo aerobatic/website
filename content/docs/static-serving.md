@@ -70,7 +70,7 @@ It will look like this when served from the Aerobatic CDN:
 
 When these individual assets are served up they will have an aggressive cache header informing the CDN, the browser, and any caching layers in between, to keep serving the same cached version for a full year.
 
-~~~
+~~~text
 Cache-Control: public, max-age=31557600
 ~~~
 

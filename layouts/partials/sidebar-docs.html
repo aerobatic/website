@@ -1,25 +1,26 @@
 
 <!--left-->
-<ul class="nav nav-stacked" id="docs-menu">
-  <li {{ if eq .Params.name "getting-started" }}class="active"{{ end }}><a href="/docs/getting-started/">Getting Started</a></li>
-  <li {{ if eq .Params.name "overview" }}class="active"{{ end }}><a href="/docs/overview/">Overview</a></li>
-  <li {{ if eq .Params.name "cli" }}class="active"{{ end }}><a href="/docs/cli/">CLI</a></li>
-  <li {{ if eq .Params.name "static-serving" }}class="active"{{ end }}><a href="/docs/static-serving/">Static website serving</a></li>
-  <li {{ if eq .Params.name "custom-domains-ssl" }}class="active"{{ end }}><a href="/docs/custom-domains-ssl/">Custom domains / SSL</a></li>
-  <li {{ if eq .Params.name "continuous-deployment" }}class="active"{{ end }}><a href="/docs/continuous-deployment/">Continuous deployment</a></li>
-  <li {{ if eq .Params.name "static-site-generators" }}class="active"{{ end }}><a href="/docs/static-site-generators/">Static site generators</a></li>
-  <li {{ if eq .Params.name "configuration" }}class="active"{{ end }}><a href="/docs/configuration/">Configuration</a></li>
-</ul>
-
-<!-- <li class="plugins {% if page.plugin %}active{% endif %}">
-  <a href="#">Plugins<i class="fa fa-caret-{% if page.plugin %}down{% else %}right{% endif %}"></i></a>
-</li>
-<ul class="nav nav-stacked plugins" style="display:{% if page.plugin %}block{% else %}none{% endif %}">
-  <li {% if page.name == 'http-proxy.md' %}class="active"{% endif %}><a href="/docs/plugins/http-proxy">http-proxy</a></li>
-  <li {% if page.name == 'cors.md' %}class="active"{% endif %}><a href="/docs/plugins/cors">cors</a></li>
-  <li {% if page.name == 'basic-auth.md' %}class="active"{% endif %}><a href="/docs/plugins/basic-auth">basic-auth</a></li>
-  <li {% if page.name == 'redirects.md' %}class="active"{% endif %}><a href="/docs/plugins/redirects">redirects</a></li>
-  <li {% if page.name == 'http-headers.md' %}class="active"{% endif %}><a href="/docs/plugins/http-headers">http-headers</a></li>
-  <li {% if page.name == 's3-proxy.md' %}class="active"{% endif %}><a href="/docs/plugins/s3-proxy">s3-proxy</a></li>
-  <li {% if page.name == 'health-check.md' %}class="active"{% endif %}><a href="/docs/plugins/health-check">health-check</a></li>
-</ul> -->
+<div id="docs-menu">
+  <ul class="nav nav-stacked">
+    <li {{ if eq .Params.name "getting-started" }}class="active"{{ end }}><a href="/docs/getting-started/">Getting Started</a></li>
+    <li {{ if eq .Params.name "overview" }}class="active"{{ end }}><a href="/docs/overview/">Overview</a></li>
+    <li {{ if eq .Params.name "cli" }}class="active"{{ end }}><a href="/docs/cli/">CLI</a></li>
+    <li {{ if eq .Params.name "static-serving" }}class="active"{{ end }}><a href="/docs/static-serving/">Static website serving</a></li>
+    <li {{ if eq .Params.name "custom-domains-ssl" }}class="active"{{ end }}><a href="/docs/custom-domains-ssl/">Custom domains / SSL</a></li>
+    <li {{ if eq .Params.name "continuous-deployment" }}class="active"{{ end }}><a href="/docs/continuous-deployment/">Continuous deployment</a></li>
+    <li {{ if eq .Params.name "static-site-generators" }}class="active"{{ end }}><a href="/docs/static-site-generators/">Static site generators</a></li>
+    <li {{ if eq .Params.name "configuration" }}class="active"{{ end }}><a href="/docs/configuration/">Configuration</a></li>
+    <li {{ if eq .Params.plugin true }}class="plugins active"{{ else }}class="plugins"{{ end }}>
+      <a href="#">Plugins<i {{ if eq .Params.plugin "true" }}class="fa fa-caret-down"{{ else }}class="fa fa-caret-right"{{ end }}></i></a>
+    </li>
+  </ul>
+  <ul class="nav nav-stacked plugins" {{ if eq .Params.plugin true }}style="display:block"{{ else }}style="display:none"{{ end }}>
+    <li {{ if eq .Params.name "http-proxy" }}class="active"{{ end }}><a href="/docs/plugins/http-proxy/">http-proxy</a></li>
+    <li {{ if eq .Params.name "cors" }}class="active"{{ end }}><a href="/docs/plugins/cors/">cors</a></li>
+    <li {{ if eq .Params.name "basic-auth" }}class="active"{{ end }}><a href="/docs/plugins/basic-auth/">basic-auth</a></li>
+    <li {{ if eq .Params.name "redirects" }}class="active"{{ end }}><a href="/docs/plugins/redirects/">redirects</a></li>
+    <li {{ if eq .Params.name "http-headers" }}class="active"{{ end }}><a href="/docs/plugins/http-headers/">http-headers</a></li>
+    <li {{ if eq .Params.name "s3-proxy" }}class="active"{{ end }}><a href="/docs/plugins/s3-proxy/">s3-proxy</a></li>
+    <li {{ if eq .Params.name "health-check" }}class="active"{{ end }}><a href="/docs/plugins/health-check/">health-check</a></li>
+  </ul>
+</div>

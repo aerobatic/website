@@ -124,7 +124,7 @@ Deploy a new version of the website in the current directory.
 ~~~
 
 #### domain
-Register a custom domain for the current website. This command requires that your website has already been upgraded to the Pro plan. If you want to run your website at the apex domain, i.e. `https://mydomain.com`, your DNS provider needs to support `ANAME` or `ALIAS` records. For details see the [apex domains docs](/docs/custom-domains-ssl#apex-domains).
+Register a custom domain for the current website. This command requires that your website has already been upgraded to the Pro plan. If you want to run your website at the apex domain, i.e. `https://mydomain.com`, your DNS provider needs to support `ANAME` or `ALIAS` records. For details see the [apex domains docs](/docs/custom-domains-ssl/#apex-domains).
 
 **Options**
 `-n, --name`

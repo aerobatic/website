@@ -1,11 +1,8 @@
-<!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="google-site-verification" content="YVIT1RbyJAckh4_IdfAmkf7XLplUdiu1tjBrdHe4TLA" />
-  {{ if isset .Params "title" }}
-  <title>{{ .Params.title }}</title>
-  {{ end }}
+  <title>{{ .Site.Title }} - {{ .Title }}</title>
   <meta name="viewport" content="width=device-width">
   {{ if isset .Params "description" }}
   <meta name="description" content="{{ .Params.description }}">

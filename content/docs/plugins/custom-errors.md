@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: Custom errors plugin
 plugin: true
+name: custom-errors
 ---
 
 # Custom errors plugin

@@ -31,18 +31,14 @@ $(document).ready(function() {
   // over a header displays a chain alongside that when clicked navigates
   // to the anchored header. Then it's easy to copy that URL
   // to paste somewhere else.
-  $('div.content').find('h2, h3, h4, h5').on('mouseenter', function(e) {
+  $('.markdown').find('h2, h3, h4, h5').on('mouseenter', function(e) {
     var heading = $(this);
-    var prevElem = heading.prev();
-    if (!prevElem) return;
-    var prevChildren = prevElem.children();
-    if (prevChildren.length !== 1) return;
-    var anchorLink = prevChildren.first();
-    if (anchorLink && anchorLink.is('a[id]')) {
+    var headingId = heading.attr('id');
+    if (headingId) {
       heading.css({cursor: 'pointer'})
         .append('<i class="header-anchor fa fa-link"></i>')
         .on('click', function() {
-          location.href = location.pathname + '#' + anchorLink.attr('id');
+          location.href = location.pathname + '#' + headingId;
         });
     }
   })

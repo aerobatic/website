@@ -71,9 +71,9 @@ aero deploy --stage $TRAVIS_BRANCH
 aero deploy --stage pr-$TRAVIS-PULL-REQUEST
 ~~~
 
-{% alert warning %}
+{{% alert warning %}}
 **TIP**: any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
-{% endalert %}
+{{% /alert %}}
 
 This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article.
 

@@ -1,7 +1,7 @@
 ---
-layout: docs
 plugin: true
 title: CORS plugin
+name: cors
 ---
 
 # CORS plugin

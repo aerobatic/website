@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: HTTP headers plugin
 plugin: true
+name: http-headers
 ---
 
 # HTTP headers plugin
@@ -65,6 +65,6 @@ Strict-Transport-Security: "max-age=31536000; includeSubDomains"
 * [The Security of HTTP-Headers](https://www.contextis.com/resources/blog/security-http-headers/)
 * [SecurityHeaders.io scanning service](https://securityheaders.io/)
 
-{% alert tip %}
+{{% alert warning %}}
 **TIP**: It's a good idea to test the security headers in a non-production [deploy stage](/docs/overview#deploy-stages) before you roll it out in production.
-{% endalert %}
+{{% /alert %}}

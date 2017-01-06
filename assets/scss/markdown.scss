@@ -1,0 +1,35 @@
+// Styling the HTML genertated by .md files
+
+.markdown {
+  p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  ol, .content ul {
+    margin-bottom: 15px;
+  }
+
+  li {
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100%;
+    margin-bottom: 20px;
+
+    td, th {
+      background-color: #fff !important;
+      border: 1px solid #ddd !important;
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+    }
+
+    td > code {
+      line-height: 28px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: HTTP proxy plugin
 plugin: true
+name: http-proxy
 ---
 
 # HTTP proxy plugin

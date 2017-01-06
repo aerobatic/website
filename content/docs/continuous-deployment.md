@@ -5,7 +5,7 @@ name: continuous-deployment
 
 # Continuous Deployment
 
-Deploying your website directly from your local terminal is a great way to get started with minimal friction. However as the deployment process matures and particular if there is a team of contributors, then it makes sense to move to a CD workflow where git commits automatically trigger a build and deployment of the website using a CI/CD service.
+Deploying your website directly from your local terminal is a great way to get started with minimal friction. However as the deployment process matures and particularly if there's a team of contributors, it makes sense to move to a CD workflow where git commits automatically trigger a build and deployment of the website using a CI/CD service.
 
 The [aerobatic-cli](/doc/cli) can easily be installed and run as part of a build script with any of the growing set of CI/CD tools and services such as: [Jenkins](https://jenkins.io/), [Travis](https://travis-ci.com/), [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), [Wercker](http://www.wercker.com/), [Codeship](https://codeship.com), [CircleCI](https://circleci.com/), [AWS CodeBuild](https://aws.amazon.com/codebuild/), [and more](https://github.com/ligurio/Continuous-Integration-services/blob/master/continuous-integration-services-list.md).
 
@@ -61,6 +61,6 @@ after_success:
 ---
 ~~~
 
-{% alert tip %}
+{{% alert tip %}}
 This setup is a bit cleaner with some of the other CI services. For example [Bitbucket Pipelines](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html#Configurebitbucket-pipelines.yml-ci_branchesbranches(optional)) and [Circle CI](https://circleci.com/docs/configuration/#deployment) (and probably others) provide the flexibility to define distinct deploy steps per branch.
-{% endalert %}
+{{% /alert %}}

@@ -3,6 +3,7 @@ languageCode: en-us
 title: Aerobatic
 PygmentsCodeFences: true
 pygmentsuseclasses: true
+pygmentsstripall: true
 
 params:
   prompt: "[cwd]:$"

@@ -1,7 +1,7 @@
 ---
-layout: docs
 title: Redirects plugin
 plugin: true
+name: redirects
 ---
 
 # Redirects plugin
