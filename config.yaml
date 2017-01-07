@@ -10,7 +10,7 @@ permalinks:
 
 params:
   prompt: "[cwd]:$"
-  foo: asdfasdfasfasdf
+  registerUrl: https://control.aerobatic.com/register
   social:
     - title: twitter
       url: http://twitter.com/aerobaticapp

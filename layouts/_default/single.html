@@ -3,12 +3,11 @@
   {{ partial "head.html" . }}
   <body>
     {{ partial "nav.html" . }}
-    <div class="container">
-      <div class="row">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-      </div>
+    <div id="content">
+      {{ .Content }}
     </div>
     {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
   </body>
 </html>

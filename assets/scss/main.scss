@@ -513,13 +513,16 @@ footer span.copyright {
   line-height: 40px;
 }
 
-#post .blog-sidebar h3 {
-  margin-top: 10px;
-  font-size: 18px;
-}
+.blog-sidebar {
+  margin-top: 20px;
 
-#post .blog-sidebar hr {
-  margin: 10px 0;
+  h3 {
+    font-size: 18px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
 }
 
 div.alert {

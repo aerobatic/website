@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    <div class="container">
+      <div class="row">
+        <ul>
+          {{ range .Data.Pages.ByPublishDate }}
+            <li class="post-item">
+              <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

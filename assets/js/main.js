@@ -10,7 +10,7 @@ $(document).ready(function() {
         document.location = url;
       }
     });
-    return false;
+    return true;
   });
 
   var pluginsHeader = $('#docs-menu li.plugins');

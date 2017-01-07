@@ -15,6 +15,6 @@ One of the biggest changes is what is known as [multiplexing](http://qnimate.com
 
 All [modern browsers have support](http://caniuse.com/#feat=http2) for the new protocol. Be aware that legacy browsers will downgrade to HTTP/1.1, so performance for HTTP/2 optimized pages could suffer on those browsers.
 
-Oh and and more thing, HTTP/2 only works over HTTPS, but we've got you covered as all [custom domains come with an automatically renewing wildcard certificate](https://www.aerobatic.com/docs/custom-domains-ssl).
+Oh and and more thing, HTTP/2 only works over HTTPS, but we've got you covered as all [custom domains come with an automatically renewing wildcard certificate](/docs/custom-domains-ssl/).
 
 The future is here! Happy developing.

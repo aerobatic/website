@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    <section id="post">
+      <div class="container">
+        <div class="row blog-pad">
+          <div class="col-md-9 col-xs-12 col-sm-12 content">
+            <h1>{{ .Title }}</h1>
+            <p class="muted publish-date">{{ .Date.Format "Monday, Jan 2, 2006" }}</p>
+
+            <div class="markdown">
+              {{ .Content }}
+            </div>
+
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_sharing_toolbox"></div>
+
+            <h3>Ready to try Aerobatic?</h3>
+            <p>You can have your first website live in 30 seconds!</p>
+            <a class="marketing-plans--cta marketing-cta-button" rel="external" href="{{ .Site.Params.registerUrl }}">Get Started for Free</a>
+          </div>
+          <div class="col-md-3 blog-sidebar">
+            <h3>Blog Posts</h3>
+            <div>
+              {{ range first 15 .Site.Pages }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <hr>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

@@ -3,7 +3,7 @@ title: Five Reasons to Host a Static Site with Aerobatic Instead of S3
 description: I'm a developer. S3 is almost free. Why would I pay for a static hosting service?
 slug: why-static-hosting-instead-of-s3
 comments: true
-date: 2016-02-29
+date: "2016-02-29"
 tags: s3, static hosting
 ---
 
@@ -52,7 +52,7 @@ If you've deployed your site to S3, you're now having to write logic to deal wit
 With Aerobatic, all of that is [handled automatically](/docs/static-http-hosting) for you. Here is how Aerobatic handles some common scenarios with __no__ special configuration on your part:
 
 | Request URL   | Condition | Response | Response Code |
-| ------------- | --------- | ------------- |
+| ------------- | --------- | ------------- | --- |
 | `/blog`       | File `/blog.html` exists | Render `/blog.html` | `200` or `304` |
 | `/blog.html`  | | Redirect to `/blog`    | `301` |
 | `/blog/`      | File `/blog/index.html` exists | Render `/blog/index.html` | `200` or `304` |
@@ -68,7 +68,7 @@ With Aerobatic, all of that is [handled automatically](/docs/static-http-hosting
 
 Our most commonly used plugin is [HTTP basic auth](/docs/http-basic-authentication) where developers want to password protect a site, or certain directories in the site (or maybe just the staging version of their site). For developers using S3, this isn't an available option. So, perhaps now you're setting up your own Apache web server or trying to integrate a 3rd party service into your site.
 
-With Aerobatic, it's a few lines of JSON, push your code to Bitbucket, and you're done in less than a minute. The same is also true for [custom error pages](/docs/custom-error-pages) and [redirects](/docs/redirects).
+With Aerobatic, it's a few lines of JSON, push your code to Bitbucket, and you're done in less than a minute. The same is also true for [custom error pages](/docs/plugins/custom-error-pages/) and [redirects](/docs/plugins/redirects/).
 
 For some developers, their site needs to call an API that's not CORS-enabled. Another common scenario is that they need to call an API but don't want to place the API key and secret in the client-side code. Additionally, perhaps the API response doesn't change that much, in which case, it'd be best to cache the API response, like the author of this [Smashing Magazine tutorial](https://www.smashingmagazine.com/2015/04/creating-web-app-in-foundation-for-apps/) did, using Aerobatic.
 

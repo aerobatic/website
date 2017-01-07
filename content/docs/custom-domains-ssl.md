@@ -83,7 +83,7 @@ If your current domain provider does not provide `ALIAS/ANAME` record types and 
 You'll want to create two record sets, an `A` record for your apex domain and a second `CNAME` for your `www` subdomain which will automatically redirect to your apex domain as long as the website subdomain is set to `@` in the Aerobatic hosting settings.
 
 | Name  | Type | Alias | Alias target or Value |
-| ------------- | --------- | ------------- |
+| ------------- | --------- | ------------- | --- |
 | \<blank\>  | `A - IPv4 address` | Yes | `[domain_dns_value].cloudfront.net.` |
 | `www`  | `CNAME` | No | `[domain_dns_value].cloudfront.net` |
 
