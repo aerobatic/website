@@ -4,6 +4,7 @@ description: Now your websites hosted on Aerobatic can take full advantage of th
 comments: true
 date: 2016-09-16
 tags: http2
+slug: http2-support-now-live
 ---
 
 We're happy to announce that all websites hosted on Aerobatic are now [HTTP/2](http://qnimate.com/post-series/http2-complete-tutorial/) enabled! Our CDN provider, AWS CloudFront, recently [announced support](https://aws.amazon.com/about-aws/whats-new/2016/09/amazon-cloudfront-now-supports-http2/), so we've switched over both the shared `*.aerobatic.io` domain and all our custom domains. Your websites are right now fully geared to take advantage of the performance improvements offered by the new protocol. Brand new distributions have it enabled by default. Here's a [handy tool](https://tools.keycdn.com/http2-test) that let's you enter a URL and have it verify that HTTP/2 is in effect.

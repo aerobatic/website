@@ -1,15 +1,15 @@
 ---
-layout: docs
 title: Migrating from Bitbucket add-on
+name: bitbucket-migrate
 ---
 
 # Migrating from Bitbucket add-on
 
 If you are an existing customer of the Aerobatic Bitbucket add-on, this guide walks you through migrating your site to our new standalone platform. Your actual deployed site will not suffer any service interruption as part of the migration process. The underlying hosting infrastructure is largely unchanged, the main difference is that you will now interact with Aerobatic via the web control panel at [https://control.aerobatic.com](https://control.aerobatic.com).
 
-{% alert warning %}
+{{% alert warning %}}
 **IMPORTANT** Aerobatic is changing from a Bitbucket add-on to a standalone service, but your website source code can absolutely continue to live in Bitbucket. These migration steps assume that your repository will remain right where it is.
-{% endalert %}
+{{% /alert %}}
 
 You'll still enjoy the same continuous deployment workflow as before, but now [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines) will provide the automated build infrastructure.
 

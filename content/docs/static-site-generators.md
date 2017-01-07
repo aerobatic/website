@@ -61,10 +61,10 @@ Many static-site generators have a config setting for the root site url (Jekyll 
 
 To allow the same built site output to be seamlessly deployed to any stage, Aerobatic does a special run-time replacement of the string <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> with the actual base URL of the current request.
 
-Our recommendation is to set your main config file to use your local development server as the base URL. Then override the value to <spanc assl="code">https://&#95;&#95baseurl&#95;&#95</span> when generating a build to deploy to Aerobatic. How to configure this override varies from generator to generator. Examples are provided for some of the more popular ones below.
+Our recommendation is to set your main config file to use your local development server as the base URL. Then override the value to <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> when generating a build to deploy to Aerobatic. How to configure this override varies from generator to generator. Examples are provided for some of the more popular ones below.
 
 ### Generator configurations
-Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment).
+Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment/).
 
 ### Jekyll
 

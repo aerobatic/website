@@ -5,6 +5,9 @@ PygmentsCodeFences: true
 pygmentsuseclasses: true
 pygmentsstripall: true
 
+permalinks:
+  blog: /blog/:slug/
+
 params:
   prompt: "[cwd]:$"
   foo: asdfasdfasfasdf

@@ -15,6 +15,21 @@
     margin-bottom: 6px;
   }
 
+  h2, h3, h4 {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin-top: 34px;
+  }
+
+  h4, h5, h3 {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
   table {
     border-collapse: collapse !important;
     width: 100%;
