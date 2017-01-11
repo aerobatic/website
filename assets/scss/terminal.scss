@@ -1,13 +1,13 @@
 .terminal {
   width: 738px;
   height: 359px;
-  border: solid 2px #dfdfdf;
-  border-top: solid 48px #dfdfdf;
+  border: solid 2px $lightGray;
+  border-top: solid 48px $lightGray;
   border-radius: 4px 4px 0 0;
   position: relative;
   background-color: #282c34;
-  color: #fff;
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  color: $white;
+  font-family: $fontMono;
   padding: 15px;
 
   pre {
