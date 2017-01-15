@@ -1,0 +1,13 @@
+.features-section {
+
+  .features-icon {
+    width: 100%;
+    max-width: 40px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .features-icon--import-export {
+    transform: rotate(90deg);
+  }
+}

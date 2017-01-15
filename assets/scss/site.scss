@@ -49,25 +49,26 @@ i.fa.code-anchor {
 }
 
 .jumbotron {
-  color: #205081;
-  background-color: #ecf0f1;
-  margin-bottom: 30px;
-  padding: 50px 0;
+  background-color: $linkBlue;
+  padding: 40px 0 50px;
+  color: $white;
 
-  h1, .h1 {
-    font-size: 58px;
-    font-weight: 300;
+  h1 {
+    font-size: 38px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
   }
 
-  p, .p {
-    color: #707070;
+  p {
+    font-size: 18px;
+    margin: 10px 0;
   }
 
   pre {
     color: #fff;
     display: inline-block;
-    background-color: #282c34;
-    font-size: 24px;
+    background-color: $primaryDark;
+    font-size: 22px;
   }
 }
 
