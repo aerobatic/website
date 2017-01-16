@@ -194,7 +194,7 @@ i.fa.code-anchor {
     margin-right:30px;
 }
 
-footer {
+.footer {
     margin-top: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -207,7 +207,7 @@ ul.list-inline {
     margin-top: 0;
     margin-bottom: 10px;
 }
-footer ul.quicklinks {
+.footer ul.quicklinks {
     margin-bottom: 0;
     text-align: center;
     list-style-type: none;
@@ -266,9 +266,10 @@ footer span.copyright {
 }
 .marketing-testimonial--quote
 {
-    font-family:Georgia,serif;font-size:24px;
+    font-size: 24px;
     font-style: italic;
-    line-height:1.7;
+    line-height: 1.5;
+    letter-spacing: 0.9px;
 }
 .marketing-testimonial--attribution
 {
