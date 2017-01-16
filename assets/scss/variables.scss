@@ -1,0 +1,32 @@
+// Fonts
+$fontSans: 'Muli', -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$fontMono: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Colors
+$primary: #24699D;
+$primaryDark: #3259B3;
+$white: #FFFFFF;
+$offWhite: #F4F7F7;
+$success: #28CB75;
+$warning: #ECC556;
+$danger: #DE4D4D;
+$lightGray: #eeeeee;
+$midGray: #D0D7DA;
+$gray: #9DA6A7;
+$darkGray: #272E39;
+$black: #222222;
+$linkBlue: #4E7CE5;
+
+// Shadows
+$shadowFaint: 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+  0 3px 1px -2px rgba(0, 0, 0, 0.1),
+  0 1px 5px 0 rgba(0, 0, 0, 0.1);
+$shadowLow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+  0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$shadowMid: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+  0 3px 3px -2px rgba(0, 0, 0, 0.2),
+  0 1px 8px 0 rgba(0, 0, 0, 0.12);
+$shadowHigh: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+  0 1px 18px 0 rgba(0, 0, 0, 0.12),
+  0 3px 5px -1px rgba(0, 0, 0, 0.2);

@@ -1,11 +1,11 @@
-.d3{
-    width: 960px;
-    overflow: auto;
-}
+.d3 {
+  width: 960px;
+  overflow: auto;
 
-.d3 svg{
-  width:5000px;
-  overflow-x:scroll;
+  svg{
+    width:5000px;
+    overflow-x:scroll;
+  }
 }
 
 .bar {

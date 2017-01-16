@@ -1,0 +1,63 @@
+.marketing-feature-showcase--screenshot
+{
+    vertical-align:bottom;
+    border:1px solid #d7d7d7;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.marketing-feature-showcase--heading
+{
+    font-size:24px;
+    margin-top:30px;
+    text-align:left;
+}
+.marketing-feature-showcase--description
+{
+    margin-top:15px;
+    text-align:left;
+}
+.marketing-feature-showcase--row
+{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    margin-top:40px
+}
+
+.marketing-feature-showcase--column
+{
+    margin-right:30px;
+}
+
+.post-preview {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #d7d7d7;
+
+  > p {
+    margin-top: 10px;
+  }
+}
+
+#post p.publish-date {
+  font-style: italic;
+}
+
+#post h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.blog-sidebar {
+  margin-top: 20px;
+
+  h3 {
+    font-size: 18px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+}

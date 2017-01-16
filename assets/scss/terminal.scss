@@ -1,13 +1,18 @@
+.terminal-section {
+  margin-top: -55px;
+}
+
 .terminal {
-  width: 738px;
-  height: 359px;
-  border: solid 2px #dfdfdf;
-  border-top: solid 48px #dfdfdf;
+  width: 740px;
+  height: 360px;
+  margin: 0 auto;
+  border: solid 2px $lightGray;
+  border-top: solid 40px $lightGray;
   border-radius: 4px 4px 0 0;
   position: relative;
-  background-color: #282c34;
-  color: #fff;
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  background-color: #272E39;
+  color: $white;
+  font-family: $fontMono;
   padding: 15px;
 
   pre {
@@ -53,64 +58,64 @@
 .terminal::before {
   display: block;
   position: absolute;
-  top: -29px;
+  top: -27px;
   left: 12px;
-  width: 12px;
-  height: 12px;
-  background-color: #f36;
-  border-radius: 12px;
-  box-shadow: 0 0 0 0 #f36, 16px 0 0 0 #fc9, 32px 0 0 0 #3f6;
+  width: 16px;
+  height: 16px;
+  background-color: #FF6159;
+  border-radius: 16px;
+  box-shadow: 0 0 0 0 #FF6159, 22px 0 0 0 #FFBD2E, 44px 0 0 0 #28CA42;
   content: "";
 }
 
-#generatorMenu {
+.generatorMenuText {
+  margin: 10px 0 0;
+}
+
+.generatorMenu {
+  display: flex;
+  padding: 0;
+  margin: 10px 0 0;
+
   li {
+    list-style: none;
+
     a {
       position: relative;
+      padding: 10px;
+      display: block;
+      height: 100%;
+      border-bottom: 2px solid $lightGray;
+      background-color: $white;
+      border-radius: 4px 4px 0 0;
+      transition: background-color 150ms ease;
+
+      &:hover {
+        background-color: $offWhite
+      }
+
+      & > i.fa {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 10px;
+      }
+
+      & > i.fa-play-circle-o {
+        display: none;
+      }
     }
 
-    a > i.fa {
-      position: absolute;
-      right: 10px;
-      font-size: 20px;
-    }
-
-    a > i.fa-play-circle-o {
-      display: none;
-    }
-  }
-}
-
-#generatorMenu:not(.running) {
-  a:hover {
-    i.fa-play-circle-o {
-      display: inline-block;
-    }
-  }
-}
-
-#generatorMenu.running {
-  li.active {
-    a {
-      color: #fff;
-      cursor: default;
-    }
-    a:hover {
-      background-color: #337ab7;
-    }
-    i.fa-play-circle-o {
-      display: none;
+    &.active {
+      a {
+        border-color: $linkBlue;
+      }
     }
   }
 
-  li:not(.active) {
-    a {
-      cursor: default;
-      color: silver;
-    }
-    a:hover {
-      background-color: inherit;
-    }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 

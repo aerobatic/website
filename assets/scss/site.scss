@@ -1,0 +1,229 @@
+pre {
+  border: none;
+  background-color: inherit;
+}
+
+i.fa.header-anchor {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+i.fa.code-anchor {
+  display: inline-block;
+  margin-left: 7px;
+  font-size: 16px;
+  color: #205081;
+}
+
+.jumbotron {
+  background-color: $linkBlue;
+  padding: 40px 0 50px;
+  color: $white;
+
+  h1 {
+    font-size: 38px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  pre {
+    color: #fff;
+    display: inline-block;
+    background-color: $primaryDark;
+    font-size: 22px;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 72px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+
+ .navbar-brand img {
+  margin-top: -5px;
+  padding-bottom:0px;
+  height: 45px;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+
+  ul.quicklinks {
+    margin-bottom: 0;
+    text-align: center;
+    list-style-type: none;
+    text-transform: none;
+    line-height: 20px;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .copyright {
+    text-transform: none;
+    line-height: 20px;
+  }
+}
+
+.homepage-testimonial
+{
+    background-position:left top;
+    background-size:cover;
+    background-repeat:no-repeat;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.marketing-testimonial
+{
+    background-color:$linkBlue;
+    color:#fff;
+    padding:50px 0;
+    letter-spacing: 0.1em;
+}
+.marketing-testimonial--content
+{
+    width:100%;
+}
+.marketing-testimonial--quote
+{
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 0.9px;
+}
+.marketing-testimonial--attribution
+{
+    text-transform:uppercase;
+    font-size: 16px;
+    display: block;
+    margin: 5px 0 0;
+}
+
+.marketing-testimonial--quote:before
+{
+    display: block;
+    font-size: 80px;
+    font-family: serif;
+    position: absolute;
+    left: -30px;
+    top: -35px;
+    content: "\201C";
+}
+
+
+.marketing-testimonial--attribution:before
+{
+    content: "\2014 \2009";
+}
+
+.marketing-plans--heading
+{
+    font-size:45px;
+    margin-top:20px
+}
+.marketing-plans--content
+{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    margin:50px auto 0 auto;
+}
+.pricing-table
+{
+    margin-top: 25px;
+}
+
+.legal-header {
+    margin-top:0px;
+}
+
+div.alert {
+  font-size: 14px;
+  border-radius: 3px;
+  line-height: 1.6;
+  padding: 15px;
+}
+
+div.alert > p:last-child {
+  margin-bottom: 0;
+}
+
+div.alert.warning {
+  color: #613A00;
+  background-color: #ffe3c8;
+  border: 1px solid #dca874;
+}
+
+div.alert.tip {
+  color: #264c72;
+  border: 1px solid #97c1da;
+  background-color: #d8ebf8;
+}
+
+div.alert.footnote {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+div.alert h3 {
+  margin-top: 0 !important;
+  font-size: 18px !important;
+}
+
+code, span.code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 90%;
+  color: #205081;
+  margin: 0 2px;
+  padding: 2px 4px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+td > code {
+  border: none;
+  color: inherit;
+}
+
+pre {
+  height: auto;
+  overflow: auto;
+  word-break: normal !important;
+  word-wrap: normal !important;
+  white-space: pre !important;
+}
+
+pre > code {
+  border: none;
+}
+
+li > pre {
+  margin-top: 12px;
+}
