@@ -1,0 +1,5 @@
+{{ if eq (.Get 0) "1" }}<div class="row">{{ end }}
+<div class="col-md-6">
+  {{ .Inner }}
+</div>
+{{ if eq (.Get 0) "2" }}</div>{{ end }}

@@ -49,53 +49,48 @@ Like with `bitbucket-pipelines.yml`, we'll provide you the exact YAML to copy an
 
 Here's a side by side comparison of the legacy `package.json` structure and the new `aerobatic.yml`:
 
-<div class="row">
-  <div class="col-md-6">
-  {{% md %}}
-  **Legacy package.json**
-  ~~~json
-  {
-    "_aerobatic": {
-      "router": [
-        {
-          "module": "basic-auth",
-          "options": {
-            "username": "$BASIC_AUTH_USERNAME",
-            "password": "$BASIC_AUTH_PASSWORD"
-          }
-        },
-        {
-          "module": "custom-errors",
-          "options": {
-            "404": "404.html"
-          }
+{{% col 1 %}}
+**Legacy package.json**
+~~~json
+{
+  "_aerobatic": {
+    "router": [
+      {
+        "module": "basic-auth",
+        "options": {
+          "username": "$BASIC_AUTH_USERNAME",
+          "password": "$BASIC_AUTH_PASSWORD"
         }
-      ]
-    }
+      },
+      {
+        "module": "custom-errors",
+        "options": {
+          "404": "404.html"
+        }
+      }
+    ]
   }
-  ~~~
-  {{% /md %}}
-  </div>
-  <div class="col-md-6">
-  {{% md %}}
-  **New aerobatic.yml**
-  ~~~yaml
-  id: <website_id>
-  plugins:
-    # Oh nice, comments!
-    - name: basic-auth
-      options:
-        username: "$BASIC_AUTH_USERNAME"
-        password: "$BASIC_AUTH_PASSWORD"
+}
+~~~
+{{% /col %}}
 
-    - name: custom-errors
-      options:
-        404: 404.html # Custom 404 page
-  ---
-  ~~~
-  {{% /md %}}
-  </div>
-</div>
+{{% col 2 %}}
+**New aerobatic.yml**
+~~~yaml
+id: <website_id>
+plugins:
+  # Oh nice, comments!
+  - name: basic-auth
+    options:
+      username: "$BASIC_AUTH_USERNAME"
+      password: "$BASIC_AUTH_PASSWORD"
+
+  - name: custom-errors
+    options:
+      404: 404.html # Custom 404 page
+---
+~~~
+{{% /col %}}
 
 ### Web serving improvements
 
