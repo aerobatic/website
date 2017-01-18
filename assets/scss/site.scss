@@ -18,18 +18,19 @@ i.fa.code-anchor {
 
 .jumbotron {
   background-color: $linkBlue;
-  padding: 40px 0 50px;
+  padding: 20px 0 40px;
   color: $white;
 
   h1 {
     font-size: 38px;
     font-weight: 100;
+    margin-bottom: 15px;
     -webkit-font-smoothing: antialiased;
   }
 
   p {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 10px 0 15px;
   }
 
   pre {
@@ -41,26 +42,39 @@ i.fa.code-anchor {
 }
 
 .navbar {
+  height: 55px;
   margin-bottom: 0;
 }
 
+.navbar-nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .login-link {
+    background-color: $success;
+    color: $white !important;
+    border-radius: 4px;
+    transition: background-color 200ms ease;
+
+    &:hover {
+      background-color: rgb(83, 221, 148) !important;
+    }
+  }
+}
+
 .navbar-nav > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    line-height: 72px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  line-height: 1;
 }
 
-@media (max-width: 767px) {
-    .navbar-nav > li > a {
-    line-height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;}
-}
+.navbar-brand {
+  padding: 8px 0px;
 
- .navbar-brand img {
-  margin-top: -5px;
-  padding-bottom:0px;
-  height: 45px;
+  img {
+    height: 100%;
+  }
 }
 
 .footer {
