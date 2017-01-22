@@ -9,8 +9,9 @@ permalinks:
   blog: /blog/:slug/
 
 params:
+  dashboardUrl: https://dashboard.aerobatic.com
   prompt: "[cwd]:$"
-  registerUrl: https://control.aerobatic.com/register
+  registerUrl: https://dashboard.aerobatic.com/register
   social:
     - title: twitter
       url: http://twitter.com/aerobaticapp

@@ -5,7 +5,7 @@ name: bitbucket-migrate
 
 # Migrating from Bitbucket add-on
 
-If you are an existing customer of the Aerobatic Bitbucket add-on, this guide walks you through migrating your site to our new standalone platform. Your actual deployed site will not suffer any service interruption as part of the migration process. The underlying hosting infrastructure is largely unchanged, the main difference is that you will now interact with Aerobatic via the web control panel at [https://control.aerobatic.com](https://control.aerobatic.com).
+If you are an existing customer of the Aerobatic Bitbucket add-on, this guide walks you through migrating your site to our new standalone platform. Your actual deployed site will not suffer any service interruption as part of the migration process. The underlying hosting infrastructure is largely unchanged, the main difference is that you will now interact with Aerobatic via the web dashboard at [https://dashboard.aerobatic.com](https://dashboard.aerobatic.com).
 
 {{% alert warning %}}
 **IMPORTANT** Aerobatic is changing from a Bitbucket add-on to a standalone service, but your website source code can absolutely continue to live in Bitbucket. These migration steps assume that your repository will remain right where it is.
@@ -13,9 +13,9 @@ If you are an existing customer of the Aerobatic Bitbucket add-on, this guide wa
 
 You'll still enjoy the same continuous deployment workflow as before, but now [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines) will provide the automated build infrastructure.
 
-### Logging into new Control Panel
+### Logging into new Dashboard
 
-The first step in making the move is to [login to the new Control Panel](https://control.aerobatic.com/login). The email address you login with is the same as your Bitbucket account, but the password is different. A temporary password was sent to all existing customers, however if you didn't receive the email, or you can't locate it, you can visit the [forgot password page](https://control.aerobatic.com/forgot) to reset it.
+The first step in making the move is to [login to the new dashboard](https://dashboard.aerobatic.com/login). The email address you login with is the same as your Bitbucket account, but the password is different. A temporary password was sent to all existing customers, however if you didn't receive the email, or you can't locate it, you can visit the [forgot password page](https://dashboard.aerobatic.com/forgot) to reset it.
 
 ### Migrating your websites
 
