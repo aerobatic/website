@@ -5,3 +5,4 @@ static/*.js
 static/*.js.map
 *.log
 *.tar.gz
+**/.DS_Store
