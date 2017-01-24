@@ -25,7 +25,7 @@ If you don't already have Node.js installed, you can get it [download it from he
 
 #### 3. Deploy your first website:
 
-~~~bash
+~~~sh
 [$] mkdir aerobatic-test-website
 [$] cd aerobatic-test-website
 [$] echo "<html>First Aerobatic Website</html>" > index.html
@@ -33,9 +33,9 @@ If you don't already have Node.js installed, you can get it [download it from he
 [$] aero deploy
 ~~~
 
-In less than 30 seconds your website will be deployed on an SSL enabled URL on our global CDN.
+In less than 30 seconds your website will be deployed to an https URL on our global CDN.
 
-If you want to try out a slightly more realistic example, try creating a website from a template. This command will automatically create a new directory with the downloaded files.
+If you want to try out a slightly more realistic example, try creating a website from a template such as [this one](https://html5up.net/editorial) from [HTML5 Up](https://html5up.net/). This command will automatically create a new directory with the downloaded files.
 
 ~~~sh
 [$] aero create --source https://html5up.net/editorial/download
@@ -43,6 +43,6 @@ If you want to try out a slightly more realistic example, try creating a website
 
 ### Next Steps
 
-* Explore how to use [plugins](/docs/configuration/#plugins) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more](/docs/configuration/#plugins)
-* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more](/docs/continuous-deployment/)
-* Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more](/docs/custom-domains-ssl/)
+* Explore how to use [plugins](/docs/configuration/#plugins) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
+* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
+* Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)

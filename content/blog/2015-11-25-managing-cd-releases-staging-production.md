@@ -67,7 +67,7 @@ In the `package.json` we can configure the proxy to get the url of the origin AP
 
 ## Locking down staging URLs
 
-Very likely you don't want your staging URLs to be accessible to the general public or to search crawlers. To prevent this, Aerobatic provides the [basic-auth plugin](http://www.aerobatic.com/docs/#basic-auth) as a simple way to password protect a website. In the `package.json` manifest you can optionally declare a list of environments for which each plugin should be invoked. That allows you to enforce basic auth only on the staging branches but not on the public production site if you choose.
+Very likely you don't want your staging URLs to be accessible to the general public or to search crawlers. To prevent this, Aerobatic provides the [basic-auth plugin](/docs/plugins/#basic-auth) as a simple way to password protect a website. In the `package.json` manifest you can optionally declare a list of environments for which each plugin should be invoked. That allows you to enforce basic auth only on the staging branches but not on the public production site if you choose.
 
 ~~~json
 {

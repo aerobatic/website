@@ -49,12 +49,15 @@ $(function() {
       title: 'Jekyll',
       commands: [
         {
-          text: 'jekyll new jekyll-site',
+          text: 'jekyll new jekyll-demo',
           output: [
             'Creating new Jekyll site',
             'Running bundle install'
           ],
           success: 'New jekyll site created'
+        },
+        {
+          text: 'cd jekyll-demo'
         },
         {
           text: 'aero create',

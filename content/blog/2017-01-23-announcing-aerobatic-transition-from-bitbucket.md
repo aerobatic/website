@@ -8,7 +8,7 @@ slug: announcing-aerobatic-transition
 ---
 
 {{% alert tip %}}
-**TLDR;** Aerobatic is transitioning from a Bitbucket add-on to a standalone CLI and web dashboard. You can still auto-deploy your sites with each push using Bitbucket Pipelines. Be sure to migrate your sites by March 1st 2017 when the Aerobatic Bitbucket add-on is retired.
+**TLDR;** Aerobatic is transitioning from a Bitbucket add-on to a standalone CLI and web dashboard. You can still auto-deploy your sites with each push using Bitbucket Pipelines. In order to maintain continuous deploymenbt, be sure to migrate your sites by **March 1st 2017** when the Aerobatic Bitbucket add-on is retired. Your sites will continue to load fine after that date, even if you don't migrate, but you won't be able to deploy new versions.
 {{% /alert %}}
 
 Back in Spring of 2015, Aerobatic launched as one of the original partners in the Bitbucket add-on program &mdash; providing a seamless static website deployment experience directly from the Bitbucket interface. The add-on has been a terrific way to introduce ourselves to a great many developers who use Bitbucket as their source-control provider. However this has meant in order to take advantage of Aerobatic, one needed to be a user of Bitbucket. In order for us to serve the largest possible audience, we've determined that Aerobatic needs to be the best static hosting solution not only for Bitbucket, but GitHub, GitLab, on-premise VCS, or no source-control at all.

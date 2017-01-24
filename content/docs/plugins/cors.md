@@ -32,12 +32,13 @@ plugins:
 
 All options are optional. By default all origins and methods are allowed. For a complete list of options, see the [cors module ](https://www.npmjs.com/package/cors#configuration-options) configuration options.
 
-`origin`
-: Either a string representing a specific remote origin to allow, i.e. `http://example.com`, or an array of origins. You can also specify a regex pattern to test whether the origin is allowed. Regex patterns are declared in `package.json` as strings with the special `regex:` prefix, i.e. `"/\.example2\.com$/"`.
+{{% option "origin" %}}
+Either a string representing a specific remote origin to allow, i.e. `http://example.com`, or an array of origins. You can also specify a regex pattern to test whether the origin is allowed. Regex patterns are declared in `package.json` as strings with the special `regex:` prefix, i.e. `"/\.example2\.com$/"`.
+{{% /option %}}
 
-`methods`
-: Array of allowed HTTP methods for the `Access-Control-Allow-Methods` header. By default all methods are allowed.
-
+{{% option "methods" %}}
+Array of allowed HTTP methods for the `Access-Control-Allow-Methods` header. By default all methods are allowed.
+{{% /option %}}
 
 ### Pre-Flight Request
 

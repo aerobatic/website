@@ -1,20 +1,62 @@
 .features-icon {
   width: 100%;
-  max-width: 40px;
-  height: auto;
-  margin: 10px auto;
-}
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.features-icon--import-export {
-  transform: rotate(90deg);
+  img {
+    width: auto;
+    height: 40px;
+    display: inline-block;
+    margin: auto;
+  }
 }
 
 .features-copy {
   text-align: left;
+
+  a.learn-more {
+    display: block;
+    text-align: left;
+    margin-top: 7px;
+    font-size: 14px;
+  }
 }
 
-.platforms-section {
+.interfaces-section {
   background-color: #f3f3f3;
   padding: 20px 0;
   margin: 20px 0;
+
+  .interface-item:first-child {
+    margin-right: 10px;
+  }
+
+  .interface-item:last-child {
+    margin-left: 10px;
+  }
+
+  .interface-item {
+    display: flex;
+    margin-top: 30px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .interface-icon {
+      margin-right: 20px;
+
+      > img {
+        display: inline-block;
+        width: 50px;
+      }
+    }
+  }
 }

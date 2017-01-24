@@ -26,71 +26,48 @@ title: Professional static web publishing
     </div>
     <div class="col-md-12">
       <p class="generatorMenuText text-center">See how easy it is to deploy a site with one of these popular frameworks:</p>
-      <ul class="generatorMenu" id="generatorMenu">
-        <li><a href="#html"><img alt="HTML" src="img/frameworks/html.png"/></a></li>
-        <li><a href="#jekyll"><img alt="Jekyll" src="img/frameworks/jekyll.png"/></a></li>
-        <li><a href="#hugo"><img alt="Hugo" src="img/frameworks/hugo.png"/></a></li>
-        <li><a href="#hexo"><img alt="Hexo" src="img/frameworks/hexo.png"/></a></li>
-        <li><a href="#react"><img alt="React" src="img/frameworks/react.png"/></a></li>
-        <li><a href="#yeoman"><img alt="Yeoman" src="img/frameworks/yeoman.png"/></a></li>
-      </ul>
+      <div class="generatorMenu">
+        <ul id="generatorMenu">
+          <li><a href="#html"><img alt="HTML" src="img/frameworks/html.png"/></a></li>
+          <li><a href="#jekyll"><img alt="Jekyll" src="img/frameworks/jekyll.png"/></a></li>
+          <li><a href="#hugo"><img alt="Hugo" src="img/frameworks/hugo.png"/></a></li>
+          <li><a href="#hexo"><img alt="Hexo" src="img/frameworks/hexo.png"/></a></li>
+          <li><a href="#react"><img alt="React" src="img/frameworks/react.png"/></a></li>
+          <li><a href="#yeoman"><img alt="Yeoman" src="img/frameworks/yeoman.png"/></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="features" class="features-section">
-	<div class="container">
-    <h1 class="text-center">All Sites Automatically Include</h1>
-		<div class="row">
-      <div class="col-md-4 text-center">
-        <h3>Global distribution</h3>
-        <img class="features-icon" src="img/icon/globe.svg" alt="Globe"/>
-        <p class="features-copy">Each deployment is replicated across the globe automatically, using the Cloudflare network. Aerobatic automatically generates highly-cachabe assets, so you don't need to sweat about it in your build process.</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <h3>Secure by default</h3>
-        <img class="features-icon" src="img/icon/lock.svg" alt="Lock"/>
-        <p class="features-copy">All custom domains on Aerobatic come with the ability to attach a wildcard SSL certificate, meaning both your apex and subdomains are served over a secure connection.</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <h3>Deploy like a Pro</h3>
-        <img class="features-icon features-icon--import-export" src="img/icon/import-export.svg" alt="Transfer"/>
-        <p class="features-copy">Serve thousands of users, or handle traffic spikes without any worry. All Aerobatic websites include up to 10GB of data transfer per day.</p>
-      </div>
-	  </div>
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h3>Hook it up to CI</h3>
-        <img class="features-icon" src="img/icon/terminal.svg" alt="Terminal Window"/>
-        <p class="features-copy">Integrate Aerobatic into your build pipeline using the Aerobatic CLI. Automatically deploy to various environments each time you push your project.</p>
-      </div>
-			<div class="col-md-4 text-center">
-        <h3>Go further with Plugins</h3>
-        <img class="features-icon" src="img/icon/plug.svg" alt="Wall Plug"/>
-        <p class="features-copy">...</p>
-      </div>
-			<div class="col-md-4 text-center">
-        <h3>Little things Done Right</h3>
-        <img class="features-icon" src="img/icon/checklist.svg" alt="Checklist"/>
-        <p class="features-copy">...</p>
-      </div>
-    </div>
-	</div>
+  {{< features-summary >}}
 </section>
 
-<section id="platforms" class="platforms-section">
+<section id="interfaces" class="interfaces-section">
 	<div class="container">
-    <h1 class="text-center">The Aerobatic Platform</h1>
+    <h1 class="text-center">Two Ways to Interface</h1>
 		<div class="row">
-      <div class="col-md-6 text-center">
-        <h3>Aerobatic CLI</h3>
-        <img class="features-icon" src="img/icon/terminal.svg" alt="terminal"/>
-        <p class="features-copy">...</p>
+      <div class="col-md-6">
+        <div class="interface-item">
+          <div class="interface-icon">
+            <img src="img/icon/terminal.svg" alt="terminal"/>
+          </div>
+          <div>
+            <h3>CLI</h3>
+            <p class="features-copy">The CLI provides commands for all website operations including creating new sites, deploying sites, provisioning a custom domain, setting environment variables, and more. You can even tail your web logs with the logs command.<a class="learn-more" href="/docs/cli/">Learn more &#8594;</a></p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-center">
-        <h3>Aerobatic Dashboard</h3>
-        <img class="features-icon" src="img/icon/dashboard.svg" alt="dashboard"/>
-        <p class="features-copy">...</p>
+      <div class="col-md-6">
+        <div class="interface-item">
+          <div class="interface-icon">
+            <img src="img/icon/dashboard.svg" alt="dashboard"/>
+          </div>
+          <div>
+            <h3>Web Dashboard</h3>
+            <p class="features-copy">Our web dashboard provides a more visual interface for managing deployments, team members, and more. It's intended to be valuable for developers and non-developers alike. Soon we'll rolling out new features for visualizing logs and key website metrics.<a class="learn-more" target="_blank" href="https://dashboard.aerobatic.com/">Login to dashboard &#8594;</a></p>
+          </div>
       </div>
 	  </div>
 	</div>
@@ -100,7 +77,7 @@ title: Professional static web publishing
 	<div class="container">
 		<div class="row">
       <div class="col-md-7">
-        <h1>Backed by the Power & Reliability of the AWS Cloud</h1>
+        <h1>Backed by the Power &amp; Reliability of the AWS Cloud</h1>
         <p>Our infrastructure is backed by AWS and built to auto-scale, meaning you can deploy with confidience that your website will be available for visitors around the globe.</p>
         <p>Aerobatic has been featured by Jeff Barr, Amazon Web Services Chief Evangelist, in the official AWS Podcast & was awarded Audience Favorite at the <strong>2016 AWS Activate</strong> Pitch Event.</p>
       </div>

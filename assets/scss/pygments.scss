@@ -83,13 +83,25 @@
   //   <span class="o">[</span>$<span class="o">]</span>
   //   <span class="o">[</span>$<span class="o">]</span>
   // </code>
-  code.language-bash, code.language-sh {
-    > span.o { margin-left: -2px; }
-    > span.o ~ .o { margin-left: 0; }
-  }
+  // code.language-bash, code.language-sh {
+  //   > span.o { margin-left: -2px; }
+  //   > span.o ~ .o { margin-left: 0; }
+  // }
 
   // Hide the last --- line that is use to
   code.language-yaml {
     > span.nn:last-child { display: none; }
+  }
+
+  code.language-sh, code.language-bash {
+    color: #f8f8f8 !important;
+
+    > span.c1, span.o {
+      color: silver !important;
+    }
+
+    > span {
+      color: #fff !important;
+    }
   }
 }

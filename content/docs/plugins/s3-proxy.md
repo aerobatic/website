@@ -35,26 +35,33 @@ The proxy will request the S3 object from your bucket with the key `images/photo
 
 ### Options
 
-`accessKeyId`
-: The AWS access key of the IAM user to connect to S3 with (environment variable recommended).
+{{% option accessKeyId %}}
+The AWS access key of the IAM user to connect to S3 with (environment variable recommended).
+{{% /option %}}
 
-`secretAccessKey`
-: The AWS secret access key (environment variable recommended).
+{{% option secretAccessKey %}}
+The AWS secret access key (environment variable recommended).
+{{% /option %}}
 
-`region`
-: The AWS region of the bucket, i.e. “us-west-2”.
+{{% option region %}}
+The AWS region of the bucket, i.e. “us-west-2”.
+{{% /option %}}
 
-`bucket`
-: The name of the S3 bucket.
+{{% option bucket %}}
+The name of the S3 bucket.
+{{% /option %}}
 
-`prefix`
-: Optional path to the root S3 folder where the files to be hosted live. If omitted, the http requests to the proxy need to mirror the full S3 path.
+{{% option prefix %}}
+Optional path to the root S3 folder where the files to be hosted live. If omitted, the http requests to the proxy need to mirror the full S3 path.
+{{% /option %}}
 
-`defaultCacheControl`
-: Value of the `Cache-Control` header to use if the metadata from the S3 object does not specify it’s own value.
+{{% option defaultCacheControl %}}
+Value of the `Cache-Control` header to use if the metadata from the S3 object does not specify it’s own value.
+{{% /option %}}
 
-`overrideCacheControl`
-: Value of the Cache-Control header that is applied to the response even if there there is a different value on the S3 object metadata.
+{{% option overrideCacheControl %}}
+Value of the Cache-Control header that is applied to the response even if there there is a different value on the S3 object metadata.
+{{% /option %}}
 
 <a id="create-iam-user"></a>
 

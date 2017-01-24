@@ -29,19 +29,21 @@ plugins:
 
   - name: redirect
     options:
-      /docs: /docs/getting-started
-      /docs/environment-variables: /docs/configuration#environment-variables
-      /docs/api-proxy: /docs/plugins/http-proxy
-      /docs/performance: /docs/overview#performance
-      /docs/ssl: /docs/custom-domains-ssl
-      /docs/custom-domains: /docs/custom-domains-ssl
-      /docs/automated-builds: /docs/static-generators
-      /docs/http-proxy: /docs/plugins/http-proxy
-      /docs/s3-proxy: /docs/plugins/s3-proxy
-      /docs/cors: /docs/plugins/cors
-      /docs/redirects: /docs/plugins/redirects
-      /docs/custom-error-pages: /docs/plugins/custom-errors
-      /docs/static-http-hosting: /docs/overview
+      /docs: /docs/getting-started/
+      /docs/environment-variables: /docs/configuration/#environment-variables
+      /docs/api-proxy: /docs/plugins/http-proxy/
+      /docs/performance: /docs/overview/#performance
+      /docs/ssl: /docs/custom-domains-ssl/
+      /docs/custom-domains: /docs/custom-domains-ssl/
+      /docs/automated-builds: /docs/static-generators/
+      /docs/http-proxy: /docs/plugins/http-proxy/
+      /docs/s3-proxy: /docs/plugins/s3-proxy/
+      /docs/cors: /docs/plugins/cors/
+      /docs/redirects: /docs/plugins/redirects/
+      /docs/http-basic-authentication: /docs/plugins/basic-auth/
+      /docs/custom-error-pages: /docs/plugins/custom-errors/
+      /docs/static-http-hosting: /docs/static-serving/
+      /bitbucket-changes: /blog/announcing-aerobatic-transition/
 
   - name: health-check
     path: /health

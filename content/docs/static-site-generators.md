@@ -5,8 +5,17 @@ name: static-site-generators
 
 # Static site generators
 
-Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](https://jekyllrb.com/), Hugo, Middleman and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.).
+Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](https://jekyllrb.com/), Hugo, Middleman and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.). Aerobatic works with **any** tool that generates static HTML, but we provide some specific guidance for the following popular generators:
 
+{{% col-3 1 %}}[![jekyll](/img/frameworks/jekyll.png)](#jekyll){{% /col-3 %}}
+{{% col-3 2 %}}[![hugo](/img/frameworks/hugo.png)](#hugo){{% /col-3 %}}
+{{% col-3 3 %}}[![react](/img/frameworks/react.png)](#react){{% /col-3 %}}
+
+{{% col-3 1 %}}[![hexo](/img/frameworks/hexo.png)](#hexo){{% /col-3 %}}
+{{% col-3 2 %}}[![yeoman](/img/frameworks/yeoman.png)](#yeoman){{% /col-3 %}}
+{{% col-3 3 %}}[![plain-html](/img/frameworks/html.png)](#html){{% /col-3 %}}
+
+### Specifying deploy directory
 There are two ways to configure the deploy directory:
 
 * Add a `deploy` section to your `aerobatic.yml` with a `directory` prop:
@@ -45,18 +54,26 @@ However, most static site generators have a `url` or `baseURL` config setting th
 Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment/).
 
 ### Jekyll
+<div class="generator-section"><img alt="Jekyll" src="/img/frameworks/jekyll.png"></div>
 
+Here's how to generate a new Jekyll site from scratch and deploy it to Aerobatic:
 
-
-The basic formula for building and deploying a Jekyll site is to run bundler to install any plugins from a Gemfile, build the site with `jekyll build`, and finally deploy to Aerobatic.
-
-In order to override `site.url` to <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span>, one good approach is to create a dedicated config file like `_config.aerobatic.yml` containing a single line:
-
-~~~text
-url: https://&#95;&#95;baseurl&#95;&#95;
+~~~sh
+[$] jekyll new my-jekyll-site
+[$] cd my-jekyll-site
+[$] aero create                                              # create the Aerobatic site
+[$] echo "url: https://&#95;&#95;baseurl&#95;&#95" > _aerobatic.config.yml  # override site.url for Aerobatic
+[$] jekyll build --config _config.yml,_aerobatic.config.yml  # generate the output
+[$] aero deploy --directory _site                            # deploy output to Aerobatic
 ~~~
 
-Then pass both config files to the `--config` option. The settings in `_config.aerobatic.yml` will override those in `_config.yml`.
+Rather than passing the `--directory` option every time, you can alternatively specify it in the aerobatic.yml file.
+
+{{< highlight yaml >}}
+deploy:
+  directory: _site{{< /highlight >}}
+
+Putting this all together for a CI build, your script might look like the following:
 
 ~~~sh
 [$] bundle install # Re-run on every build in a CI enviroment
@@ -64,54 +81,94 @@ Then pass both config files to the `--config` option. The settings in `_config.a
 [$] aero deploy --directory _site
 ~~~
 
-Then follow the standard [Jekyll guidance for RSS](http://jekyll.tips/jekyll-casts/rss-feed/) by declaring the `<link>` in the `</head>` tag of your layout:
+## Hugo
 
-~~~html
-<link rel="alternate" type="application/rss+xml"
-  title="RSS Feed" href="{{ 'feed.xml' | prepend: site.url }}">
-~~~
-
-And when building the link to each post in `feed.xml`:
-
-~~~xml
-<item>
-  <title>{{ post.title | xml_escape }}</title>
-  <description>{{ post.content | xml_escape }}</description>
-  <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-  <link>{{ post.url | prepend: site.url }}</link>
-  <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
-</item>
-~~~
-
-### Hugo
+<div class="generator-section"><img alt="Hugo" src="/img/frameworks/hugo.png"></div>
 
 Here's how you to create a new [Hugo](https://gohugo.io/) site from scratch and deploy to Aerobatic:
 
 ~~~sh
 [$] hugo new site my-new-hugo-site
 [$] cd my-new-hugo-site
-[$] (cd themes; git clone https://github.com/eliasson/liquorice)
-[$] aero create           # create the Aerobatic site
-[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95  # build the site
-[$] aero deploy -d public # deploy output to Aerobatic
+[$] (cd themes; git clone https://github.com/eliasson/liquorice)  # clone a theme
+[$] aero create                                                   # create the Aerobatic site
+[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95                            # build the site overriding baseURL
+[$] aero deploy -d public                                         # deploy output to Aerobatic
 ~~~
 
 The [spf13/hugoThemes](https://github.com/spf13/hugoThemes) repo has an extensive collection of git sub-modules. Click on anyone of them to get the URL of an individual theme.
 
-[Hugo](https://gohugo.io/) makes more extensive use of absolute URLs than other generators. Fortunately it provides a `--baseURL` command line override that makes it really easy to set <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> for Aerobatic builds:
+In the rendered page response, the <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> will be replaced with the actual site url.
 
-~~~sh
-[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95;
-[$] aero deploy --directory public
-~~~
+**Installing Hugo on a build server image**
 
-The official Hugo guidance on RSS will just work once deployed to Aerobatic. In the rendered page response, the <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> will be replaced with the actual site url.
-
-#### Installing Hugo in CI script
-If you need to install hugo in a CI script, here's the commands for doing so (assuming an Ubuntu based build image):
+If you need to install hugo in a CI script, here's the commands for doing so (assuming an Ubuntu based build image). You can obviously specify whatever version of hugo you like.
 
 ~~~sh
 [$] apt-get update -y && apt-get install wget
 [$] wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
 [$] dpkg -i hugo*.deb
+~~~
+
+## Hexo
+
+<div class="generator-section"><img alt="Hexo" src="/img/frameworks/hexo.png"></div>
+
+Here's how to create a new [Hexo](https://hexo.io) site and deploy it to Aerobatic:
+
+~~~sh
+[$] hexo init new-hexo-site
+[$] cd new-hexo-site
+[$] npm install
+[$] aero create                                              # create the Aerobatic site
+[$] echo "url: https://&#95;&#95;baseurl&#95;&#95" > _aerobatic.config.yml  # override site.url for Aerobatic
+[$] hexo generate --config _config.yml,_aerobatic.config.yml # generate the output
+[$] aero deploy -d public                                    # deploy output to Aerobatic
+~~~
+
+## React
+
+<div class="generator-section"><img alt="react" src="/img/frameworks/react.png"></div>
+
+Here's how to create a new React app from scratch using the excellent [create-react-app](https://github.com/facebookincubator/create-react-app) tool and deploy it to Aerobatic:
+
+~~~sh
+[$] create-react-app my-react-app
+[$] cd my-react-app
+[$] aero create                                              # create the Aerobatic site
+[$] yarn build                                               # generate the production optimized build
+[$] aero deploy --directory build                            # deploy output to Aerobatic
+~~~
+
+Hosting your static React front-end on Aerobatic paired with a serverless backend running on service like [AWS API Gateway](https://aws.amazon.com/api-gateway/) is a great decoupled front end / backend setup. In fact that's exactly how our [Dashboard](https://dashboard.aerobatic.com) is deployed.
+
+## Yeoman
+
+<div class="generator-section"><img alt="yeoman" src="/img/frameworks/yeoman.png"></div>
+
+Here's how to create a new [AngularJS](https://github.com/yeoman/generator-angular) app with [Yeoman](http://yeoman.io/) and deploy it to Aerobatic:
+
+~~~sh
+[$] mkdir my-angular-app
+[$] cd my-angular-app
+[$] yo angular                                               # scaffold the angular app
+[$] aero create                                              # create the Aerobatic site
+[$] gulp build                                               # build the production output
+[$] aero deploy --directory dist                             # deploy output to Aerobatic
+~~~
+
+Of course there are [many other Yeoman generators](http://yeoman.io/generators/) that emit a static site which can be used in the same basic manner.
+
+## Plain Html {#html}
+
+<div class="generator-section"><img alt="html" src="/img/frameworks/html.png"></div>
+
+Ok, plain html isn't really a generator at all. No build step necessary, just run `aero deploy` right from the root of your project.
+
+~~~sh
+[$] mkdir plain-html
+[$] cd plain-html
+[$] echo "<html>Hello Aerobatic!</html>" > index.html
+[$] aero create
+[$] aero deploy
 ~~~

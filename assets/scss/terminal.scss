@@ -83,51 +83,55 @@
 
 .generatorMenu {
   display: flex;
-  padding: 0;
-  margin: 10px 0 0;
 
-  li {
-    list-style: none;
+  > ul {
+    display: flex;
+    padding: 0;
+    margin: 20px auto;
 
-    a {
-      position: relative;
-      padding: 10px;
-      display: block;
-      height: 100%;
-      border-bottom: 2px solid $lightGray;
-      background-color: $white;
-      border-radius: 4px 4px 0 0;
-      transition: background-color 150ms ease;
+    li {
+      list-style: none;
 
-      &:hover {
-        background-color: $offWhite
-      }
-
-      & > i.fa {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        font-size: 10px;
-      }
-
-      & > i.fa-play-circle-o {
-        display: none;
-      }
-    }
-
-    &.active {
       a {
-        border-color: $linkBlue;
-      }
-    }
+        position: relative;
+        padding: 10px;
+        display: block;
+        height: 100%;
+        border-bottom: 2px solid $lightGray;
+        background-color: $white;
+        border-radius: 4px 4px 0 0;
+        transition: background-color 150ms ease;
 
-    &.inactive {
-      opacity: 0.3;
+        &:hover {
+          background-color: $offWhite
+        }
+
+        & > i.fa {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          font-size: 10px;
+        }
+
+        & > i.fa-play-circle-o {
+          display: none;
+        }
+      }
+
+      &.active {
+        a {
+          border-color: $linkBlue;
+        }
+      }
+
+      &.inactive {
+        opacity: 0.3;
+      }
     }
   }
 
   img {
-    width: 100%;
+    max-width: 140px;
     height: auto;
   }
 }

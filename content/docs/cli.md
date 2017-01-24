@@ -11,7 +11,7 @@ The `aerobatic-cli` is a way to interact with the Aerobatic platform via the com
 
 The CLI is installed via npm:
 
-~~~bash
+~~~sh
 [$] npm install aerobatic-cli --global
 ~~~
 
@@ -62,15 +62,16 @@ Commands:
 Display a summary of the current Aerobatic account including the list of websites.
 
 ~~~bash
-aero account
+[$] aero account
 ~~~
 
 #### apikey
 Get the api key for the current Aerobatic account. This value should be set as the `AEROBATIC_API_KEY` environment variable in a CI service. Read about [setting up a CI environment](/docs/continuous-deployment#aerobatic-apikey). Run with the `--reset` arg to reset to a new value.
 
 **Options**
-`-R, --reset`
-: Reset the account api key to a new value.
+{{% option "-R, --reset" %}}
+Reset the account api key to a new value.
+{{% /option %}}
 
 **Examples**
 ~~~bash
@@ -82,8 +83,9 @@ Get the api key for the current Aerobatic account. This value should be set as t
 Create a new Aerobatic website in the current directory. If no `aerobatic.yml` file exists in the current directory, a new one will created. If there is already an `aerobatic.yml` file, then the "id" property will overriden with the new website's unique identifier.
 
 **Options**
-`-S, --source`
-: URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.
+{{% option "-S, --source" %}}
+URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.
+{{% /option %}}
 
 **Examples**
 ~~~bash
@@ -103,17 +105,21 @@ Delete the website at the current directory. This will take down the website res
 Deploy a new version of the website in the current directory.
 
 **Options**
-`-d, --directory`
-: Specify the sub-directory where the built website assets are located. This overrides any value specified in the `deploy` section of the `aerobatic.yml` file. If no value is specified in either location the current directory is deployed.
+{{% option "-d, --directory" %}}
+Specify the sub-directory where the built website assets are located. This overrides any value specified in the `deploy` section of the `aerobatic.yml` file. If no value is specified in either location the current directory is deployed.
+{{% /option %}}
 
-`-s, --stage`
-: Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. This impacts the URL of the deployed version. For example passing `--stage test` will make the new version available at `https://www--test.customdomain.com` or `https://SITENAME--test.aerobatic.io`. If no value is provided then the deployment will target the production URL.
+{{% option "-s, --stage" %}}
+Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. This impacts the URL of the deployed version. For example passing `--stage test` will make the new version available at `https://www--test.customdomain.com` or `https://SITENAME--test.aerobatic.io`. If no value is provided then the deployment will target the production URL.
+{{% /option %}}
 
-`-m, --message`
-: A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history.
+{{% option "-m, --message" %}}
+A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history.
+{{% /option %}}
 
-`-c, --commit-url`
+{{% option "-c, --commit-url" %}}
 : The URL to the commit that triggered this deployment. Also mostly useful when being invoked by a CI server. This URL will be linkable from the Aerobatic control panel.
+{{% /option %}}
 
 **Examples**
 ~~~bash
@@ -127,11 +133,13 @@ Deploy a new version of the website in the current directory.
 Register a custom domain for the current website. This command requires that your website has already been upgraded to the Pro plan. If you want to run your website at the apex domain, i.e. `https://mydomain.com`, your DNS provider needs to support `ANAME` or `ALIAS` records. For details see the [apex domains docs](/docs/custom-domains-ssl/#apex-domains).
 
 **Options**
-`-n, --name`
-: The name of the domain (without any sub-domain, i.e. `mydomain.com`)
+{{% option "-n, --name" %}}
+The name of the domain (without any sub-domain, i.e. `mydomain.com`)
+{{% /option %}}
 
-`-N, --subdomain`
-: The subdomain you want your website to be accessible at. For apex domain enter the value '@'.
+{{% option "-N, --subdomain" %}}
+The subdomain you want your website to be accessible at. For apex domain enter the value '@'.
+{{% /option %}}
 
 You can also run the command without any arguments to get status information on the domain.
 
@@ -173,8 +181,9 @@ Register for a new Aerobatic account. You'll be prompted for email, password, an
 Rename the current website. On the Pro plan this only changes the name displayed in the Aerobatic Control Panel. But for the free plan this changes the URL of the site, i.e. `https://SITENAME.aerobatic.io`.
 
 **Options**
-`-n, --name`
-: The new name of the website
+{{% option "-n, --name" %}}
+The new name of the website
+{{% /option %}}
 
 ~~~bash
 [$] aero rename -n "new-website-name"
@@ -191,14 +200,17 @@ Switch to a different Aerobatic account. Displays a list of all the accounts you
 Manage website versions including displaying all versions, deleting versions, pushing a version to a deploy stage, and deleting a deploy stage. Which action is carried out depends on the combination of options provided.
 
 **Options**
-`-n, --name`
-: The name of the version (i.e "v21") or version number "21" of the version to act on.
+{{% option "-n, --name" %}}
+The name of the version (i.e "v21") or version number "21" of the version to act on.
+{{% /option %}}
 
-`-D, --delete`
-: Delete the version identified by the `--name` option.
+{{% option "-D, --delete" %}}
+Delete the version identified by the `--name` option.
+{{% /option %}}
 
-`-s, --stage`
-: If specified in conjunction with the `--name` option, indicates the stage to push the version to. If used in conjunction with the `--delete` option, then this specifies the stage to delete.
+{{% option "-s, --stage" %}}
+If specified in conjunction with the `--name` option, indicates the stage to push the version to. If used in conjunction with the `--delete` option, then this specifies the stage to delete.
+{{% /option %}}
 
 ~~~bash
 [$] aero versions                                 # Display a list of all versions

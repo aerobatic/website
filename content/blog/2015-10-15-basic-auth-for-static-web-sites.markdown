@@ -52,4 +52,4 @@ Push your updated repo with the newly created`package.json` file, and you're don
 ### Sample App
 - Sample web site that uses the Aerobatic `basic-auth` plugin: [http://auth-demo.aerobatic.io/](http://auth-demo.aerobatic.io/)
 - Sample app code on Bitbucket: [https://bitbucket.org/aerobatic/auth-demo/src](https://bitbucket.org/aerobatic/auth-demo/src)
-- Full documentation on basic authentication can be found on [4front.io](http://4front.io/docs/plugins/basic-auth.html) which is the open-source project that Aerobatic is built on.
+- Full documentation on basic authentication can be found [here](/docs/plugins/basic-auth/).

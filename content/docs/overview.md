@@ -14,7 +14,7 @@ Aerobatic utilizes a multi-layered global CDN so no matter where in the world yo
 
 All Aerobatic sites are served exclusively via SSL. All `http://` requests are 301 redirected at the CDN edge to the `https://` equivalent. Custom domains (included in Pro Plan) include a wildcard auto-renewing SSL certificate &mdash; set it once and never worry about certs again.
 
-For additional security you can declare the [http-headers plugin](/docs/plugins/http-headers) in your `aerobatic.yml` to append [OWASP](https://www.owasp.org/index.php/Main_Page) recommended headers to your HTTP responses.
+For additional security you can declare the [http-headers plugin](/docs/plugins/http-headers/#security-headers) in your `aerobatic.yml` to append [OWASP](https://www.owasp.org/index.php/Main_Page) recommended headers to your HTTP responses.
 
 ## Deployment {#deployment}
 
@@ -45,7 +45,7 @@ Aerobatic makes it super easy to deploy to different "stages". A stage is simply
 In the table above the stage name "test" could be anything you like, "preview", "develop", "etc".
 
 #### Password protection
-You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [basic-auth plugin](/docs/configuration#basic-auth). The declaration below in your `aerobatic.yml` file will enforce HTTP basic auth, but only in the `test` stage:
+You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [basic-auth plugin](/docs/plugins/basic-auth/). The declaration below in your `aerobatic.yml` file will enforce HTTP basic auth, but only in the `test` stage:
 
 {{< highlight yaml >}}
 plugins:
