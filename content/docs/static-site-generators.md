@@ -27,7 +27,7 @@ There are two ways to configure the deploy directory:
 
 Full docs on the [deploy command](/docs/cli/#deploy)
 
-### Relative vs absolute urls {#relative-absolute-urls}
+### Configuring the site url {#configuring-site-url}
 In general we suggest using relative URLs in your template files since the browser will automatically resolve them to the current host and protocol. For example:
 
 ~~~html
@@ -39,34 +39,14 @@ In general we suggest using relative URLs in your template files since the brows
 
 That way the same markup will function identically no matter where what the base host is, i.e. `http://localhost:4000`, `https://yoursite.com`, or `https://test.yoursite.com`.
 
-However, there are situations where absolute URLs are necessary, most notably with RSS.
-
-### RSS
-The [RSS spec](https://cyber.harvard.edu/rss/rss.html) requires an absolute URL in the [auto-discovery link](https://developer.mozilla.org/en-US/docs/Web/RSS/Getting_Started/Syndicating) in your HTML and within the feed itself. So the desired output looks something like so:
-
-~~~html
-<link rel="alternate" type="application/rss+xml"
-  title="RSS feed" href="https://mydomain.com/rss.xml" />
-~~~
-
-~~~xml
-<item>
-  <title>Blog post</title>
-  <link>https://yourdomain.com/blog/post</link>
-  <pubDate>Tue, 19 Oct 2004 11:09:11 -0400</pubDate>
-</item>
-~~~
-
-Many static-site generators have a config setting for the root site url (Jekyll calls it `site.url`, Hugo calls it `baseURL`). The problem with hard-coding this setting to your production URL is the links aren't accurate if the site is deployed elsewhere including `localhost` or a deploy stage such as `test.yourdomain.com`.
-
-To allow the same built site output to be seamlessly deployed to any stage, Aerobatic does a special run-time replacement of the string <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> with the actual base URL of the current request.
-
-Our recommendation is to set your main config file to use your local development server as the base URL. Then override the value to <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> when generating a build to deploy to Aerobatic. How to configure this override varies from generator to generator. Examples are provided for some of the more popular ones below.
+However, most static site generators have a `url` or `baseURL` config setting that is used to build an absolute URL. You could hardcode this value to your production URL, but then it won't automatically adjust when you push the version from one stage to another, i.e. `www--test.domain.com` to `www.domain.com`. If you are going to be taking advantage of [deploy stages](/overview/#deploy-stages), we recommend that you specify the reserved value <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> which Aerobatic substitutes at render time with the actual requested site url. We offer ways to configure this for specific generators below.
 
 ### Generator configurations
 Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment/).
 
 ### Jekyll
+
+
 
 The basic formula for building and deploying a Jekyll site is to run bundler to install any plugins from a Gemfile, build the site with `jekyll build`, and finally deploy to Aerobatic.
 

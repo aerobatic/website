@@ -53,6 +53,15 @@
     color: #fff;
   	animation: terminalSpinner .4s infinite;
   }
+
+  .learn-more {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #29d029;
+    cursor: pointer;
+  }
 }
 
 .terminal::before {
@@ -110,6 +119,10 @@
       a {
         border-color: $linkBlue;
       }
+    }
+
+    &.inactive {
+      opacity: 0.3;
     }
   }
 

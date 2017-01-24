@@ -28,6 +28,7 @@ $(function() {
 
   var generatorDemos = {
     html: {
+      title: 'plain html',
       commands: [
         {
           text: 'echo \'<html>Aerobatic is easy!</html>\' > index.html'
@@ -45,6 +46,7 @@ $(function() {
       ]
     },
     jekyll: {
+      title: 'Jekyll',
       commands: [
         {
           text: 'jekyll new jekyll-site',
@@ -72,6 +74,7 @@ $(function() {
       ]
     },
     hugo: {
+      title: 'Hugo',
       commands: [
         {
           text: 'hugo new site hugo-site',
@@ -103,7 +106,39 @@ $(function() {
         }
       ]
     },
+    hexo: {
+      title: 'Hexo',
+      commands: [
+        {
+          text: 'hexo init new-hexo-site'
+        },
+        {
+          text: 'cd new-hexo-site',
+        },
+        {
+          text: 'npm install',
+          output: ['Installing npm modules'],
+          success: 'Done with npm install'
+        },
+        {
+          text: 'aero create',
+          output: [aeroCreateOutput],
+          success: aeroCreateSuccess('https://hexo-demo.aerobatic.io')
+        },
+        {
+          text: 'hexo generate',
+          output: ['Generating hexo site'],
+          success: 'Done generating site'
+        },
+        {
+          text: 'aero deploy --directory public',
+          output: aeroDeployOutput,
+          success: aeroDeploySuccess('https://hexo-demo.aerobatic.io')
+        }
+      ]
+    },
     yeoman: {
+      title: 'Yeoman',
       commands: [
         {
           text: 'mkdir angular-project && cd $_'
@@ -135,6 +170,7 @@ $(function() {
       ]
     },
     react: {
+      title: 'React',
       commands: [
         {
           text: 'create-react-app demo-react-app',
@@ -173,6 +209,8 @@ $(function() {
     var key = $(this).attr('href').substr(1);
     $(this).closest('ul').find('li').removeClass('active');
     $(this).parent().addClass('active');
+    $(this).closest('ul').find('li:not(.active)').addClass('inactive');
+
     loadGeneratorDemo(key);
   });
 
@@ -181,8 +219,15 @@ $(function() {
 
     runningDemo = generator;
 
+    $('#terminal-demo .learn-more')
+      .css('display', 'block')
+      .attr('href', '/docs/static-site-generators/#' + generator)
+      .text('Learn more about ' + generatorDemos[generator].title + ' and Aerobatic >');
+
+    var generatorMenu = $('#generatorMenu');
+
     // Show a running indicator next to the generator
-    $('#generatorMenu').addClass('running')
+    generatorMenu.addClass('running')
       .find('li.active a')
       .append('<i class="fa fa-circle-o-notch fa-spin" />');
 
@@ -199,7 +244,8 @@ $(function() {
           // If this is the last command, exit.
           runningDemo = null;
           // Remove the spinner
-          $('#generatorMenu').removeClass('running')
+          generatorMenu.find('li').removeClass('inactive');
+          generatorMenu.removeClass('running')
             .find('li i.fa-spin').remove();
           return;
         } else {
