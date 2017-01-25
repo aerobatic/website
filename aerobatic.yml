@@ -4,11 +4,6 @@ deploy:
   directory: public
 
 plugins:
-  - name: basic-auth
-    options:
-      username: aerobatic
-      password: relaunch
-
   - name: http-proxy
     path: /slack
     method: post
