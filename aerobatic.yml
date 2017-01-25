@@ -1,33 +1,29 @@
-id: d89a028c-6128-4d32-b5a1-b1b7f010c935
+id: f593b673-75f2-4c7e-8a65-6e0d7a6e0f05
 deploy:
   ignore: []
   directory: public
-
 plugins:
   - name: http-proxy
     path: /slack
     method: post
     options:
       url: $SLACK_WEBHOOK
-
   - name: s3-proxy
     path: /media
     options:
       bucket: aerobatic-media
       prefix: website
       overrideCacheControl: max-age=2592000
-
   - name: custom-errors
     options:
       errors:
-        404: errors/404.html
-
+        '404': errors/404.html
   - name: redirect
     options:
       /docs: /docs/getting-started/
-      /docs/environment-variables: /docs/configuration/#environment-variables
+      /docs/environment-variables: '/docs/configuration/#environment-variables'
       /docs/api-proxy: /docs/plugins/http-proxy/
-      /docs/performance: /docs/overview/#performance
+      /docs/performance: '/docs/overview/#performance'
       /docs/ssl: /docs/custom-domains-ssl/
       /docs/custom-domains: /docs/custom-domains-ssl/
       /docs/automated-builds: /docs/static-generators/
@@ -39,6 +35,5 @@ plugins:
       /docs/custom-error-pages: /docs/plugins/custom-errors/
       /docs/static-http-hosting: /docs/static-serving/
       /bitbucket-changes: /blog/announcing-aerobatic-transition/
-
   - name: health-check
     path: /health
