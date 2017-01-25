@@ -17,7 +17,7 @@ Here's a look at the __Deploy settings__ screen in the Bitbucket add-on:
 
   <img class="screenshot" src="//www.aerobatic.com/media/blog/deploy-branches/deploy-branch-settings.png" alt="Screenshot of the Aerobatic deploy branch setup">
 
-And here is what the __Website versions__ view looks like with multiple staging branches in play. As I mentioned above, you don't have to have _any_ branches continuously deployed to production. You may wish to always manually promote a version using the actions drop down next to each deployed version. The goal is to provide enough built-in flexibility to adapt to different release workflows such as [Simple Git](http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/), [GitHub flow](https://guides.github.com/introduction/flow/), or [gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
+And here is what the __Website versions__ view looks like with multiple staging branches in play. As I mentioned above, you don't need _any_ branches continuously deployed to production. You may wish to always manually promote a version using the actions drop down next to each deployed version. The goal is to provide enough built-in flexibility to adapt to different release workflows such as [Simple Git](http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/), [GitHub flow](https://guides.github.com/introduction/flow/), or [gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
 
   <img class="img-responsive marketing-feature-showcase--screenshot" src="http://www.aerobatic.com/media/blog/deploy-branches/promote-deployment.png" alt="Screenshot of the promoting a version to production">
 

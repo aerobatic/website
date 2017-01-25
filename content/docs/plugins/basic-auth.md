@@ -60,23 +60,29 @@ plugins:
 
 #### Options
 
-`username`
-: The username for the website (environment variable recommended).
+{{% option username %}}
+The username for the website (environment variable recommended).
+{{% /option %}}
 
-`password`
-: The password for the website (environment variable recommended).
+{{% option password %}}
+The password for the website (environment variable recommended).
+{{% /option %}}
 
-`credentials`
-: An array of objects with keys `username` and `password`. If specified, this takes precedence over the individual `username` and `password` options.
+{{% option credentials %}}
+An array of objects with keys `username` and `password`. If specified, this takes precedence over the individual `username` and `password` options.
+{{% /option %}}
 
-`maxFailedLogins`
-: Number of failed login attempts within the `failedLoginPeriod` before returning a `403 Forbidden` page. Optional, defaults to `10`.
+{{% option maxFailedLogins %}}
+Number of failed login attempts within the `failedLoginPeriod` before returning a `403 Forbidden` page. Optional, defaults to `10`.
+{{% /option %}}
 
-`failedLoginPeriod`
-: Number of seconds that defines the time span for `maxFailedLogins`. Optional, defaults to `600` (10 minutes).
+{{% option failedLoginPeriod %}}
+Number of seconds that defines the time span for `maxFailedLogins`. Optional, defaults to `600` (10 minutes).
+{{% /option %}}
 
-`loginPage`
-: File path to the custom login form page. If not specified the built-in browser login dialog will be used. Optional, only works for paid plans.
+{{% option loginPage %}}
+File path to the custom login form page. If not specified the built-in browser login dialog will be used. Optional, only works for paid plans.
+{{% /option %}}
 
 ### Specifying what to protect
 In the sample configuration above, the `path` for the plugin is set to only require authentication for requests to `/protected` including anything nested beneath. You can also choose to lock down the entire website by specifying `/` for `path` or omitting it all together.
@@ -113,9 +119,7 @@ plugins:
 ---
 ~~~
 
-<a id="custom-auth"></a>
-
-### Custom HTML login form
+### Custom HTML login form {#custom-auth}
 
 While the built-in browser login dialog accomplishes the goal of requiring a username and password, it doesn't look very good and offers no ability to brand or provide additional copy. For this reason we offer custom basic auth, that allows you to code a `login.html` page from scratch that gives you full control over the login experience. Simply add your login page to your repo and specify the path in the `loginPage` option of the `basic-auth` plugin.
 

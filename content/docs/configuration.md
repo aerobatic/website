@@ -24,7 +24,7 @@ Plugins allow you to augment the core static hosting with additional capabilitie
 The sequence of plugins in the array is important. The incoming http request passes through each plugin in the order of appearance. The plugin has the opportunity to act on the request, either by sending a response (in which case the remaining plugins are never executed), or allowing the request to flow through to the next plugin.  The [http-proxy](/docs/plugins/http-proxy) is an example of a plugin that handles the request directly, so any plugins appearing after it will not get executed (provided the `path` is a match). The [http-headers](/docs/plugins/http-headers) plugin, on the other hand, adds some headers to the response, then passes execution along to the next plugin.
 
 {{% alert warning %}}
-**TIP** This req/res pipeline pattern will be familiar to developers that have worked with [Rack](http://rack.github.io/) or [Express](http://expressjs.com/en/guide/using-middleware.html) middleware. Aerobatic itself is built atop Express. While it's somewhat helpful to understand the concept of middleware flow, you don't have to have any working knowledge of Node.js or Ruby to deploy websites on Aerobatic.
+**TIP** This req / res pipeline pattern will be familiar to developers that have worked with [Rack](http://rack.github.io/) or [Express](http://expressjs.com/en/guide/using-middleware.html) middleware. Aerobatic itself is built atop Express. While it's somewhat helpful to understand the concept of middleware flow, no experience with Node.js or Ruby is required to deploy websites on Aerobatic.
 {{% /alert %}}
 
 #### Declaring plugins
