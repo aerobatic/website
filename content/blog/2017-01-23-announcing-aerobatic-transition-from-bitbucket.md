@@ -128,10 +128,6 @@ The Pro Plan is **$15 a month per website** and includes a custom domain, wildca
 If you are using the free plan today with a custom domain, **you will have until March 1, 2017 to upgrade**. After that, your website will automatically be downgraded to the free plan and your custom domain will stop resolving.
 {{% /alert %}}
 
-#### Personal or hobby sites
-
-If your site is a hobby or personal site, such as a development blog, you can request to join our "Powered By" program which waives the subscription fee for the Pro Plan. We just ask that you include a "Powered by Aerobatic" logo in your site footer hyperlinked back to www.aerobatic.com. Go ahead and migrate your site to the Pro Plan and send us an email at [support@aerobatic.com](mailto:support@aeroatic.com) requesting to be part of the program.
-
 ### Migrating your websites
 
 You should already have an account let's you login both with the CLI and the dashboard. Your login email is the same one that you login to Bitbucket with. You will need to establish a new password by visiting: [https://dashboard.aerobatic.com/bitbucket-welcome](https://dashboard.aerobatic.com/bitbucket-welcome). Once you login, you'll be presented with a list of all your Bitbucket websites with a button to migrate them over. You'll be presented with customized instructions including the code to paste into the new `bitbucket-pipelines.yml` and `aerobatic.yml` files that need to be created.
