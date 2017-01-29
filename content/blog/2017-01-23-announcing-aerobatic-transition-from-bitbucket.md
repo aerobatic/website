@@ -5,11 +5,18 @@ comments: true
 date: 2017-01-24
 tags: bitbucket, cli
 slug: announcing-aerobatic-transition
+hideBitbucketAlert: true
 ---
 
 {{% alert tip %}}
-**TLDR;** Aerobatic is transitioning from a Bitbucket add-on to a standalone CLI and web dashboard. You can still auto-deploy your sites with each push using Bitbucket Pipelines. In order to maintain continuous deployment, be sure to migrate your sites by **March 1st 2017** when the Aerobatic Bitbucket add-on is retired. Your sites will continue to load fine after that date, even if you don't migrate, but you won't be able to deploy new versions.
+**TL;DR;** Aerobatic is transitioning from a Bitbucket add-on to a standalone CLI and web dashboard. You can still auto-deploy your sites with each push using Bitbucket Pipelines. In order to maintain continuous deployment, be sure to migrate your sites by **March 1st 2017** when the Aerobatic Bitbucket add-on is retired. Your sites will continue to load fine after that date, even if you don't migrate, but you won't be able to deploy new versions.
+
+**Existing Customer Alert!**
+
+If you have websites that you created through the Aerobatic Bitbucket add-on, **[read this important message first](#pricing)** to understand how you are impacted.
 {{% /alert %}}
+
+### Background
 
 Back in Spring of 2015, Aerobatic launched as one of the original partners in the Bitbucket add-on program &mdash; providing a seamless static website deployment experience directly from the Bitbucket interface. The add-on has been a terrific way to introduce ourselves to a great many developers who use Bitbucket as their source-control provider. However this has meant in order to take advantage of Aerobatic, one needed to be a user of Bitbucket. In order for us to serve the largest possible audience, we've determined that Aerobatic needs to be the best static hosting solution not only for Bitbucket, but GitHub, GitLab, on-premise VCS, or no source-control at all.
 
@@ -94,7 +101,7 @@ plugins:
 
 ### Web serving improvements
 
-The underlying web serving infrastructure is mostly unchanged from before. However there are a couple of key enhancements. First we've improved how asset path rewriting is done. Originally we rewrote your images, JavaScripts, css, etc. to an absolute URL fingerprinted with your unique appId and versionId.
+The underlying web serving infrastructure is largely unchanged, however there are a couple of key enhancements. First we've improved how asset path rewriting is done. Originally we rewrote your images, JavaScripts, css, etc. to an absolute URL, fingerprinted with your unique appId and versionId.
 
 **Legacy asset paths**
 ~~~html
@@ -105,7 +112,7 @@ The underlying web serving infrastructure is mostly unchanged from before. Howev
 <img src="https://d2q4nobwyhnvov.cloudfront.net/[appId]/[versionId]/banner.jpg" />
 ~~~
 
-This performance enhancement allows for aggressive cache headers since a new version would result in a new URL. However the downside is that cached versions are invalidated with a new deployment __even if the file didn't change__. The new approach is to inject a hash representing the actual file contents into the asset path. This will cause assets to be served with a 1 year expiration and the cache will only be invalidated if the MD5 hash changes.
+This performance enhancement allows for aggressive cache headers since a new version will always result in a new URL. However the downside is that cached versions are always invalidated, __even if the file didn't change__. Our new approach injects a hash representing the actual file contents into the asset path at deploy time. These assets are served with a 1 year expiration and the same cached files will continue to be served across multiple deployments **unless** the file has actually changed (resulting in a new MD5 hash).
 
 **New asset paths**
 ~~~html
@@ -116,17 +123,33 @@ This performance enhancement allows for aggressive cache headers since a new ver
 <img src="/banner--md5--[asset-content-hash].jpg" />
 ~~~
 
-Read more about [Aerobatic asset acceleration](http://localhost:1313/docs/static-serving/#asset-acceleration).
+Read more about [Aerobatic asset acceleration](/docs/static-serving/#asset-acceleration).
 
 ### Pricing
 
-If you are already a paying Aerobatic customer, your existing websites will be grandfathered in to the new plan. The free plan provides all features and unlimited deployments, but **does not** include a custom domain and daily traffic is capped at 10GB. The free plan is really intended as a way to kick the tires and get a good sense for how Aerobatic works while in development, then upgrade to the Pro Plan when you are ready to go live.
+The free plan provides all features and unlimited deployments, but **does not** include a custom domain and daily traffic is capped at 10GB / day.
 
-The Pro Plan is **$15 a month per website** and includes a custom domain, wildcard SSL certificate, and 500GB of data transfer per month.
+Previously Aerobatic had multiple pricing tiers with a set number of websites and domains. Now we are simplifying our pricing model to a straightforward **$15 a month per website** (special pricing offer below for Bitbucket customers). This includes a custom domain, wildcard SSL certificate, and 500GB of data transfer per month.
 
-{{% alert tip %}}
-If you are using the free plan today with a custom domain, **you will have until March 1, 2017 to upgrade**. After that, your website will automatically be downgraded to the free plan and your custom domain will stop resolving.
+{{% alert warning %}}
+<div class="header">How you are impacted</div>
+
+**Current paying customers:**
+
+If you are already a paying Aerobatic customer, your existing websites will be grandfathered in to the new Pro Plan and your monthly bill will remain the same. However new websites you create will need their own individual subscriptions.
+
+**Non-paying customers WITH a custom domain:**
+
+When you migrate your site, you will automatically get a trial of the Pro Plan that lasts until March 1st. If you wish to continue hosting your site on Aerobatic after that, be sure to upgrade before the end of the trial. **After March 1st, any websites on the Pro trial will be downgraded to the free plan** and the custom domain will no longer resolve. See the special pricing offer below.
+
+**Non-paying customers WITHOUT a custom domain:**
+
+Your websites will continue to resolve at their *.aerobatic.io domain. However data transfer out will be capped at 10GB / day. If you are thinking of upgrading, be sure to do so by March 1st to take advantage of the special pricing offer below.
 {{% /alert %}}
+
+#### Special offer for Bitbucket customers
+
+All existing Bitbucket customers are eligible for a special **$7 / month** price for websites upgraded to the Pro Plan before March 1st (rather than the standard $15). Just use the coupon code "**BITBUCKET2017**" when you checkout. This offer only lasts until March 1st, 2017.
 
 ### Migrating your websites
 
@@ -134,8 +157,10 @@ You should already have an account let's you login both with the CLI and the das
 
 ### Bitbucket add-on retirement
 
-We will be retiring the Bitbucket add-on on March 1st 2017. After this date any websites that have not been migrated will no longer being automatically deployed when pushing to the repo. Any non-migrated websites that are using a custom domain will be downgraded to the free plan.
+We will be retiring the Bitbucket add-on on March 1st, 2017. After that date any websites that have not been migrated will continue to load, but will no longer automatically deploy when pushing to the repo. Any non-migrated websites that are using a custom domain will be **downgraded to the free plan**.
 
 ### Roadmap
 
-In the coming months you'll start to see new enhancements landing in the dashboard with the goal of making it useful not only for developers, but also non-developer website stakeholders. Specifically we want to deliver tools that facillitate an agency model where ongoing hosting and operation of the site can be turned over to a client. One typical scenario is for the development team to deploy new versions to a staging URL. The client can preview the site on a live URL like `https://www--staging.website.com` and have a self-service way for them to push the version to production from within the dashboard. The new CLI let's you [tail your weblogs](/docs/cli#logs) in near real-time and this same functionality will be coming soon to the dashboard.
+In the coming months you'll start to see new enhancements landing in the dashboard with the goal of making it useful not only for developers, but also non-developer stakeholders. Specifically we want to deliver tools that facillitate an agency model where ongoing hosting and operation of the site can be turned over to a client. One typical scenario is allowing the client to login and push a version from a staging URL like `https://www--staging.website.com` to production once they're ready.
+
+The [new CLI](/docs/cli/) let's you [tail your weblogs](/docs/cli#logs) in near real-time and this same functionality will be coming soon to the dashboard.

@@ -3,6 +3,28 @@ pre {
   background-color: inherit;
 }
 
+.bitbucket-alert {
+  background-color: #3259B3;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 0;
+  text-align: center;
+
+  i {
+    margin-right: 5px;
+  }
+  a {
+    color: #fff;
+    display: inline-block;
+    margin-left: 5px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+}
+
 .jumbotron {
   background-color: $linkBlue;
   padding: 20px 0 40px;
@@ -165,10 +187,15 @@ pre {
 }
 
 div.alert {
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 3px;
   line-height: 1.6;
   padding: 15px;
+
+  .header {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
 }
 
 div.alert > p:last-child {

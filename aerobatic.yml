@@ -17,7 +17,7 @@ plugins:
   - name: custom-errors
     options:
       errors:
-        '404': errors/404.html
+        '404': 404.html
   - name: redirect
     options:
       /docs: /docs/getting-started/
