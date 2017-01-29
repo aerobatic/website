@@ -149,7 +149,7 @@ Your websites will continue to resolve at their *.aerobatic.io domain. However d
 
 #### Special offer for Bitbucket customers
 
-All existing Bitbucket customers are eligible for a special **$7 / month** price for websites upgraded to the Pro Plan before March 1st (rather than the standard $15). Just use the coupon code "**BITBUCKET2017**" when you checkout. This offer only lasts until March 1st, 2017.
+All existing Bitbucket customers are eligible for a special **$10 / month** price for websites upgraded to the Pro Plan before March 1st (rather than the standard $15). Just use the coupon code "**BITBUCKET2017**" when you checkout. This offer only lasts until March 1st, 2017.
 
 ### Migrating your websites
 
