@@ -6,6 +6,6 @@ The main Aerobatic website at https://www.aerobatic.com. Powered by [Hugo](https
 
 * Clone repo
 * Install hugo `brew install hugo`
-* Install Pygments `pip install Pygments`
+* Install Pygments `pip install Pygments` or `pip3 install Pygments`
 * `npm install`
 * `npm start`
