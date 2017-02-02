@@ -1,4 +1,10 @@
+
+
 .terminal-section {
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+
   margin-top: -55px;
 }
 
