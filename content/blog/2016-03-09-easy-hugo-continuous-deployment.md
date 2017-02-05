@@ -7,6 +7,10 @@ date: 2016-03-09
 tags: hugo, static site generator, cd
 ---
 
+{{% alert tip %}}
+**UPDATE:** You can now continuously deploy your Hugo site using any CI tool and the new Aerobatic CLI. Check out this [blog post](/hugo-bitbucket-pipelines/) for how to use Bitbucket Pipelines to deploy a Hugo site with Aerobatic. 
+{{% /alert %}}
+
 <div style="text-align: center; margin-bottom: 20px;">
 <img src="//www.aerobatic.com/media/logos/hugo-logo.png" style="max-width: 100%; max-height: 200px;">
 </div>
