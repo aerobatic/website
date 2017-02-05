@@ -34,15 +34,30 @@ This flow provides some key advantages:
 
 ### Deploy stages
 
-Aerobatic makes it super easy to deploy to different "stages". A stage is simply an instance of the site available at a dedicated URL. This is a great way to manage testing and previews of new versions. By default the `aero deploy` command deploys to the "production" stage which is your main URL. However you can specify the `-s` or `--stage` argument to deploy to a different stage. For example `aero deploy --stage test`. The URL of the website for non-production stages depends on the style of your main URL.
+Aerobatic makes it super easy to deploy to different "stages". A stage is simply an instance of the site available at a dedicated URL. This is a great way to manage testing and previews of new versions. By default the `aero deploy` command deploys to the "production" stage which is your main URL. However you can specify the `-s` or `--stage` argument to deploy to a different stage. For example:
+
+~~~sh
+[$] aero deploy --stage test
+~~~
+
+This will make the deployed site available at unique URL. The form of the URL depends on whether there is a custom domain and if the production site is using a CNAME or the apex.
 
 | URL style   | Production url | "test" stage URL |
 | ------------- | --------- | ------------- |
 | Free plan | `https://site-name.aerobatic.io` | `https://site-name--test.aerobatic.io` |
-| Paid plan CNAME | `https://www.customdomain.com` | `https://www--test.customdomain.com`|
-| Paid plan ANAME | `https://customdomain.com` | `https://test.customdomain.com` |
+| Custom domain CNAME | `https://www.customdomain.com` | `https://www--test.customdomain.com`|
+| Custom domain apex | `https://customdomain.com` | `https://test.customdomain.com` |
 
 In the table above the stage name "test" could be anything you like, "preview", "develop", "etc".
+
+{{% alert tip %}}
+**TIP** When deploying to non-production stages with custom domains, you'll need to configure DNS in one of two ways:
+
+1. Wildcard CNAME that covers `*.yourdomain.net`
+2. CNAME for each stage, i.e. `test`, `preview`, etc.
+
+If you are going to be using many stages we recommend the wildcard approach since it's a one time setup.
+{{% /alert %}}
 
 #### Password protection
 You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [basic-auth plugin](/docs/plugins/basic-auth/). The declaration below in your `aerobatic.yml` file will enforce HTTP basic auth, but only in the `test` stage:
