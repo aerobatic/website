@@ -107,6 +107,24 @@ If you'd like to have a logout link on the protected pages, you can POST a form 
 </form>
 ~~~
 
+### Cross site login
+The same html form post for submitting the password will also work across sites. So if you have another site that your employees or customers have to login to (or that sits behind the firewall of a private network), you can include a simple HTML snippet to automatically log into your password protected Aerobatic site without having to enter the password manually.
+
+On your other secured site, add HTML like the following:
+
+~~~html
+<form method="POST" action="https://youraerobaticsite.com">
+  <input type="hidden" name="aerobatic-password" value="[YOUR SITE PASSWORD]" />
+  <button type="submit">Open Aerobatic site</button>
+</form>
+~~~
+
+If you want to launch a new browser tab, add the attribute `target="_blank"` to the form.
+
+{{% alert "warning" %}}
+**CAREFUL!** This technique involves exposing the password in the HTML source of the linking site. Ensure this site is running on HTTPS and that the only people with access are those that should have access to the password protected Aerobatic site. **Never embed your site password in the view-source of a publicly accessible web page!**
+{{% /alert %}}
+
 ### Multiple protected sections
 You can even declare multiple instances of the `password-protect` plugin to protect different parts of your site. The enables scenarios such as having a private sub-directory for each of several business clients:
 
