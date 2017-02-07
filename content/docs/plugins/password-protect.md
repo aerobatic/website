@@ -19,6 +19,7 @@ plugins:
       maxFailures: 5
       failureWindow: 600
       lockoutDuration: 600
+      ignorePatterns: []
 ---
 ~~~
 
@@ -30,6 +31,10 @@ The value of the password that needs to be entered to access the site. Using an 
 
 {{% option "loginPage" %}}
 The path to your custom `.html` login file. See the custom login form instructions below. If omitted, a simple responsive login form will be rendered for you.
+{{% /option %}}
+
+{{% option "ignorePatterns" %}}
+Array of url patterns to not enforce password protection for. For example `[/css/*.css]`. Don't worry about `robots.txt` or `favicon.ico` &mdash; they are ignored by default.
 {{% /option %}}
 
 {{% option "maxFailures" %}}
@@ -95,6 +100,24 @@ if (/fail=1/.test(location.search)) {
   <button type="submit">Log in</button>
 </form>
 ~~~
+
+**Branding and styling the custom login page**
+
+Chances are you want to use a stylesheet or some imagery on the login page. But when password protecting the root of your website, you're also password protecting nested stylesheets and images. This will result in broken links on your login page. To get around this, use the `ignorePatterns` property to specify that your images, stylesheets, etc. do not enforce a password. You don't necessarily have to do this for all assets, just those specifically needed by your custom login page.
+
+~~~yaml
+plugins:
+  - name: password-protect
+    path: /
+    options:
+      password: $SITE_PASSWORD
+      ignorePatterns:
+        - css/login.css
+        - images/login/*.jpg
+---
+~~~
+
+This is less of an issue if you are protecting a sub-directory. In that case your login page assets can live outside the protected directory.
 
 ### Logout link
 

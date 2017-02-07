@@ -35,10 +35,10 @@ Looking the HTML source after deploying your website, the plugin causes a blob s
 
 ~~~html
 <script>window['__aerobatic__'] = {
-  "customSetting1":"abc",
-  "customSetting2":"123",
-  "versionId":"0768d7b4-6c31-40e7-b337-54de5d6d7e99",
-  "appName":"client-config-test"
+  "customSetting1": "abc",
+  "customSetting2": "123",
+  "versionId": "0768d7b4-6c31-40e7-b337-54de5d6d7e99",
+  "appName": "client-config-test"
 };
 </script>
 ~~~
