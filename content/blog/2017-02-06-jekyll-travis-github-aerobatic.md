@@ -32,7 +32,7 @@ In the root of your repository, create a new file called `travis.yml`.
 cd my-jekyll-site
 ```
 
-```yaml
+~~~yaml
 language: ruby
 env:
   global:
@@ -45,13 +45,13 @@ install:
   - bundle install --path vendor/bundle
 
 script:
-- echo "url: https://&#95;&#95;baseurl&#95;&#95" >> _config.yml
+- echo "url: https://!!baseurl!!" >> _config.yml
 - bundle exec jekyll build
 
 after_success:
 - aero deploy -d _site
-
-```
+---
+~~~
 
 ## Step 4: Create aerobatic.yml
 
@@ -88,11 +88,3 @@ As a reminder, if you run `aero info`, you'll get your production URL. You can a
 
 
 <img class="screenshot" src="/img/travis-build.png" alt="Travis build">
-
-
-
-
-
-
-
-

@@ -18,7 +18,12 @@ language: ruby
 env:
   global:
     - secure: <encrypted_env_vars> # See AEROBATIC_API_KEY below
+    - TRAVIS_NODE_VERSION="6.9.5"
 install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm
+  - (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`)
+  - source ~/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
   - bundle install --path vendor/bundle
   - npm install
 script:
@@ -27,11 +32,11 @@ after_success:
   - npm install aerobatic-cli -g
   - aero deploy \
     --commit-url "https://github.com/owner/repo-name/commit/${TRAVIS_COMMIT}" \
-    --deploy-dir _site
+    --directory _site
 ---
 ~~~
 
-You'll notice in the `aero deploy` call above we are passing two arguments: `--commit-url` and `--deploy-dir`. The `commit-url` is simply the URL to the commit that triggered the build. This is optional, but if provided the Aerobatic control panel will include a link back to this URL in the deployment history which can be helpful for maintaining a connection between the code changes and what was deployed. The `deploy-dir` argument is the directory where the built assets were written which, in the case of jekyll, defaults to `_site`. This can be specified as a CLI arg or it can be [declared in the `deploy` section](/docs/configuration) of `aerobatic.yml`.
+You'll notice in the `aero deploy` call above we are passing two arguments: `--commit-url` and `--directory`. The `commit-url` is simply the URL to the commit that triggered the build. This is optional, but if provided the Aerobatic control panel will include a link back to this URL in the deployment history which can be helpful for maintaining a connection between the code changes and what was deployed. The `directory` argument is the directory where the built assets were written which, in the case of jekyll, defaults to `_site`. This can be specified as a CLI arg or it can be [declared in the `deploy` section](/docs/configuration) of `aerobatic.yml`.
 
 ### API Key environment variable {#aerobatic-apikey}
 
@@ -57,7 +62,7 @@ after_success:
   - aero deploy \
     --commit-url "https://github.com/owner/repo-name/commit/${TRAVIS_COMMIT}" \
     --stage $([ $TRAVIS_BRANCH = 'master' ] && echo 'production' || echo $TRAVIS_BRANCH ) \
-    --deploy-dir _site
+    --directory _site
 ---
 ~~~
 

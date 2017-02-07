@@ -65,7 +65,7 @@ pipelines:
             - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
             - dpkg -i hugo*.deb
             - git clone https://github.com/eliasson/liquorice themes/liquorice
-            - hugo --theme=liquorice --baseURL https://__baseurl__ --buildDrafts
+            - hugo --theme=liquorice --baseURL https://!!baseurl!! --buildDrafts
             - npm install -g aerobatic-cli
             - aero deploy
 ~~~
@@ -106,6 +106,3 @@ At this point, you can now create and edit blog posts directly in the Bitbucket 
 ## Suggested next steps
 
 The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/dundonian/hugo-docs-test). Aerobatic also provides a number of additional [plugins](https://www.aerobatic.com/docs) such as auth and redirects that you can use for your Hugo site.
-
-
-

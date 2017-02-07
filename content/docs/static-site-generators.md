@@ -20,9 +20,11 @@ There are two ways to configure the deploy directory:
 
 * Add a `deploy` section to your `aerobatic.yml` with a `directory` prop:
 
-  {{< highlight yaml >}}
+  ~~~yaml
   deploy:
-    directory: _site{{< /highlight >}}
+    directory: _site
+  ---
+  ~~~
 
   With this approach you just run `aero deploy` to deploy your site.
 
@@ -48,7 +50,7 @@ In general we suggest using relative URLs in your template files since the brows
 
 That way the same markup will function identically no matter where what the base host is, i.e. `http://localhost:4000`, `https://yoursite.com`, or `https://test.yoursite.com`.
 
-However, most static site generators have a `url` or `baseURL` config setting that is used to build an absolute URL. You could hardcode this value to your production URL, but then it won't automatically adjust when you push the version from one stage to another, i.e. `www--test.domain.com` to `www.domain.com`. If you are going to be taking advantage of [deploy stages](/overview/#deploy-stages), we recommend that you specify the reserved value <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> which Aerobatic substitutes at render time with the actual requested site url. We offer ways to configure this for specific generators below.
+However, most static site generators have a `url` or `baseURL` config setting that is used to build an absolute URL. You could hardcode this value to your production URL, but then it won't automatically adjust when you push the version from one stage to another, i.e. `www--test.domain.com` to `www.domain.com`. If you are going to be taking advantage of [deploy stages](/overview/#deploy-stages), we recommend that you specify the reserved value <span class="code">https://!!baseurl!!</span> which Aerobatic substitutes at render time with the actual requested site url. We offer ways to configure this for specific generators below.
 
 ### Generator configurations
 Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment/).
@@ -62,7 +64,7 @@ Here's how to generate a new Jekyll site from scratch and deploy it to Aerobatic
 [$] jekyll new my-jekyll-site
 [$] cd my-jekyll-site
 [$] aero create                                              # create the Aerobatic site
-[$] echo "url: https://&#95;&#95;baseurl&#95;&#95" > _aerobatic.config.yml  # override site.url for Aerobatic
+[$] echo "url: https://!!baseurl!!" > _aerobatic.config.yml  # override site.url for Aerobatic
 [$] jekyll build --config _config.yml,_aerobatic.config.yml  # generate the output
 [$] aero deploy --directory _site                            # deploy output to Aerobatic
 ~~~
@@ -81,6 +83,8 @@ Putting this all together for a CI build, your script might look like the follow
 [$] aero deploy --directory _site
 ~~~
 
+Check out this blog post on continuously deploying a [Jekyll site to Aerobatic with GitHub and TravisCI](/blog/jekyll-travis-github-aerobatic/)
+
 ## Hugo
 
 <div class="generator-section"><img alt="Hugo" src="/img/frameworks/hugo.png"></div>
@@ -90,15 +94,16 @@ Here's how you to create a new [Hugo](https://gohugo.io/) site from scratch and 
 ~~~sh
 [$] hugo new site my-new-hugo-site
 [$] cd my-new-hugo-site
+[$] mkdir -p themes
 [$] (cd themes; git clone https://github.com/eliasson/liquorice)  # clone a theme
 [$] aero create                                                   # create the Aerobatic site
-[$] hugo --baseURL https://&#95;&#95;baseurl&#95;&#95                            # build the site overriding baseURL
+[$] hugo --baseURL https://!!baseurl!! --theme liquorice          # build the site overriding baseURL
 [$] aero deploy -d public                                         # deploy output to Aerobatic
 ~~~
 
 The [spf13/hugoThemes](https://github.com/spf13/hugoThemes) repo has an extensive collection of git sub-modules. Click on anyone of them to get the URL of an individual theme.
 
-In the rendered page response, the <span class="code">https://&#95;&#95;baseurl&#95;&#95;</span> will be replaced with the actual site url.
+In the rendered page response, the <span class="code">https://!!baseurl!!</span> will be replaced with the actual site url.
 
 **Installing Hugo on a build server image**
 
@@ -121,7 +126,7 @@ Here's how to create a new [Hexo](https://hexo.io) site and deploy it to Aerobat
 [$] cd new-hexo-site
 [$] npm install
 [$] aero create                                              # create the Aerobatic site
-[$] echo "url: https://&#95;&#95;baseurl&#95;&#95" > _aerobatic.config.yml  # override site.url for Aerobatic
+[$] echo "url: https://!!baseurl!!" > _aerobatic.config.yml  # override site.url for Aerobatic
 [$] hexo generate --config _config.yml,_aerobatic.config.yml # generate the output
 [$] aero deploy -d public                                    # deploy output to Aerobatic
 ~~~
