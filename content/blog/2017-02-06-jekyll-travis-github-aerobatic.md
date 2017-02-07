@@ -45,6 +45,7 @@ install:
   - bundle install --path vendor/bundle
 
 script:
+- echo "url: https://__baseurl__" >> _config.yml
 - bundle exec jekyll build
 
 after_success:
