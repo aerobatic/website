@@ -92,7 +92,7 @@ You'll want to create two record sets, an `A` record for your apex domain and a 
 * [Values for Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-alias.html#rrsets-values-alias-alias)
 * [Migrating DNS Service for an Existing Domain to Amazon Route 53](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)
 
-### Apex domains and deploy stages #{apex-domains-deploy-stages}
+### Apex domains and deploy stages {#apex-domains-deploy-stages}
 When using deploy stages for websites whose production URL is at the apex, the stage name becomes a subdomain:
 
 * `https://mydomain.com` <-- production

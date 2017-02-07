@@ -1,0 +1,29 @@
+section.plugins {
+  margin-top: 25px;
+
+  div.row {
+    margin-bottom: 20px;
+  }
+
+  a.plugin {
+    display: block;
+    background-color: $lightGray;
+    padding: 15px;
+    height: 150px;
+    cursor: pointer;
+
+    > h3 {
+      margin-top: 0;
+      border: none;
+    }
+
+    > span {
+      color: $darkGray;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+    background-color: $softBlue;
+  }
+}

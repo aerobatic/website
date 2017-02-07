@@ -12,16 +12,20 @@ id: 42d648ac-e516-46a5-a831-62973841267c{{< /highlight >}}
 
 There are two additional sections that can be added to the yml file: `deploy` and `plugins`. The `deploy` block allows specifying config settings that affect how the `aero deploy` command works.
 
-{{< highlight yaml >}}
+~~~yaml
 deploy:
   ignore: [*.scss]  # Don't deploy .scss files
-  directory: _site  # Specifies the directory to deploy{{< /highlight >}}
+  directory: _site  # Specifies the directory to deploy
+---
+~~~
 
 ## Plugins
 
-Plugins allow you to augment the core static hosting with additional capabilities such as authentication, custom errors, redirects, and more. The plugin appears as an entry in the `plugins` array in `aerobatic.yml`.
+Plugins allow you to augment the core static hosting with additional capabilities such as authentication, custom errors, redirects, and more. A growing list of the available plugins can be found in the [plugins gallery](/docs/plugins/).
 
-The sequence of plugins in the array is important. The incoming http request passes through each plugin in the order of appearance. The plugin has the opportunity to act on the request, either by sending a response (in which case the remaining plugins are never executed), or allowing the request to flow through to the next plugin.  The [http-proxy](/docs/plugins/http-proxy) is an example of a plugin that handles the request directly, so any plugins appearing after it will not get executed (provided the `path` is a match). The [http-headers](/docs/plugins/http-headers) plugin, on the other hand, adds some headers to the response, then passes execution along to the next plugin.
+Each plugin is declared in the `plugins` array of `aerobatic.yml`. The sequence of the array is important as that is the same order the incoming HTTP request passes through. Each plugin has the opportunity to act on the request, either by sending a response (in which case the remaining plugins are never executed), or allowing the request to flow through to the next one.
+
+The [http-proxy](/docs/plugins/http-proxy) is an example of a plugin that handles the request directly, so any plugins appearing after it will not get executed (provided the `path` is a match). The [http-headers](/docs/plugins/http-headers) plugin, on the other hand, adds some headers to the response, then passes execution along to the next one in the pipeline.
 
 {{% alert warning %}}
 **TIP** This req / res pipeline pattern will be familiar to developers that have worked with [Rack](http://rack.github.io/) or [Express](http://expressjs.com/en/guide/using-middleware.html) middleware. Aerobatic itself is built atop Express. While it's somewhat helpful to understand the concept of middleware flow, no experience with Node.js or Ruby is required to deploy websites on Aerobatic.

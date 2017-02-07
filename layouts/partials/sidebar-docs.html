@@ -10,21 +10,6 @@
     <li {{ if eq .Params.name "continuous-deployment" }}class="active"{{ end }}><a href="/docs/continuous-deployment/">Continuous deployment</a></li>
     <li {{ if eq .Params.name "static-site-generators" }}class="active"{{ end }}><a href="/docs/static-site-generators/">Static site generators</a></li>
     <li {{ if eq .Params.name "configuration" }}class="active"{{ end }}><a href="/docs/configuration/">Configuration</a></li>
-    <li {{ if eq .Params.plugin true }}class="plugins active"{{ else }}class="plugins"{{ end }}>
-      <a href="#">Plugins<i {{ if eq .Params.plugin "true" }}class="fa fa-caret-down"{{ else }}class="fa fa-caret-right"{{ end }}></i></a>
-    </li>
-  </ul>
-  <ul class="nav nav-stacked plugins" {{ if eq .Params.plugin true }}style="display:block"{{ else }}style="display:none"{{ end }}>
-    <li {{ if eq .Params.name "redirects" }}class="active"{{ end }}><a href="/docs/plugins/redirects/">redirects</a></li>
-    <li {{ if eq .Params.name "custom-errors" }}class="active"{{ end }}><a href="/docs/plugins/custom-errors/">custom-errors</a></li>
-    <li {{ if eq .Params.name "password-protect" }}class="active"{{ end }}><a href="/docs/plugins/password-protect/">password-protect</a></li>
-    <li {{ if eq .Params.name "http-proxy" }}class="active"{{ end }}><a href="/docs/plugins/http-proxy/">http-proxy</a></li>
-    <li {{ if eq .Params.name "basic-auth" }}class="active"{{ end }}><a href="/docs/plugins/basic-auth/">basic-auth</a></li>
-    <li {{ if eq .Params.name "http-headers" }}class="active"{{ end }}><a href="/docs/plugins/http-headers/">http-headers</a></li>
-    <li {{ if eq .Params.name "s3-proxy" }}class="active"{{ end }}><a href="/docs/plugins/s3-proxy/">s3-proxy</a></li>
-    <li {{ if eq .Params.name "client-config" }}class="active"{{ end }}><a href="/docs/plugins/client-config/">client-config</a></li>
-    <li {{ if eq .Params.name "health-check" }}class="active"{{ end }}><a href="/docs/plugins/health-check/">health-check</a></li>
-    <li {{ if eq .Params.name "cors" }}class="active"{{ end }}><a href="/docs/plugins/cors/">cors</a></li>
-    <li {{ if eq .Params.name "webpage" }}class="active"{{ end }}><a href="/docs/plugins/webpage/">webpage</a></li>
+    <li {{ if eq .Params.plugin true }}class="active"{{ end }}><a href="/docs/plugins/">Plugins</a></li>
   </ul>
 </div>
