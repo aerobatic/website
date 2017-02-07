@@ -6,6 +6,10 @@ name: basic-auth
 
 # Basic auth plugin
 
+{{% alert warning %}}
+**DEPRECATED.** We now recommend the [password-protect](/docs/plugins/password-protect/) rather than basic-auth.
+{{% /alert %}}
+
 Sometimes you just need to provide a global basic username/password protection on an app. Often [HTTP basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a “good enough” solution. This plugin lets you secure all or parts of your website with a common username and password.
 
 We offer two flavors of basic auth: standard and custom. In standard mode the website visitor is presented with the browser's built-in login dialog. This gets the job done, but it isn't very aesthetic and offers no ability to put your own branding, messaging, etc. For this reason we offer [custom basic auth](#custom-auth), that lets you code your own login form html page from scratch.

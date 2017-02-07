@@ -40,7 +40,7 @@ plugins:
       option1: true
       option2: 5{{< /highlight >}}
 
-Here's a basic `plugins` definition that declares a couple of our most popular plugins: [custom-errors](/docs/custom-errors) and [basic-auth](/docs/http-basic-authentication).
+Here's a basic `plugins` definition that declares a couple of our most popular plugins: [custom-errors](/docs/plugins/custom-errors/) and [password-protect](/docs/plugins/password-protect/).
 
 {{< highlight yaml >}}
 plugins:

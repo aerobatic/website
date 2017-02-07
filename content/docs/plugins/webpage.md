@@ -8,7 +8,7 @@ name: webpage
 
 The webpage plugin is the core plugin for serving up an HTML webpage. You don't have to explicitly declare this plugin, one will be created automatically if omitted. However by declaring it in your `plugins` array of `aerobatic.yml`, there are some additional options that you can control.
 
-The webpage plugin should be declared at the **end** of the plugins array so that other plugins (such as [basic-auth](/docs/plugins/basic-auth/)) first have a chance to act on the request.
+The webpage plugin should be declared at the **end** of the plugins array so that other plugins (such as [password-protect](/docs/plugins/password-protect/)) first have a chance to act on the request.
 
 ### Usage
 

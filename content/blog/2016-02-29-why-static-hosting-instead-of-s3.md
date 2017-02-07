@@ -66,7 +66,7 @@ With Aerobatic, all of that is [handled automatically](/docs/static-http-hosting
 
 ### Plugins
 
-Our most commonly used plugin is [HTTP basic auth](/docs/http-basic-authentication) where developers want to password protect a site, or certain directories in the site (or maybe just the staging version of their site). For developers using S3, this isn't an available option. So, perhaps now you're setting up your own Apache web server or trying to integrate a 3rd party service into your site.
+Our most commonly used plugin is [password-protect](/docs/plugins/password-protect/) where developers want to password protect a site, or certain directories in the site (or maybe just the staging version of their site). For developers using S3, this isn't an available option. So, perhaps now you're setting up your own Apache web server or trying to integrate a 3rd party service into your site.
 
 With Aerobatic, it's a few lines of JSON, push your code to Bitbucket, and you're done in less than a minute. The same is also true for [custom error pages](/docs/plugins/custom-error-pages/) and [redirects](/docs/plugins/redirects/).
 
