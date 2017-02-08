@@ -26,7 +26,7 @@ plugins:
 ### Options
 
 {{% option "password" %}}
-The value of the password that needs to be entered to access the site. Using an [environment variable](/docs/configuration/#environment-variables) is recommended.
+The value of the password that needs to be entered to access the site. Using an [environment variable](/docs/configuration/#environment-variables) is recommended. You can also set to a list of valid passwords.
 {{% /option %}}
 
 {{% option "loginPage" %}}

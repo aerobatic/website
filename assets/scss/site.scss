@@ -60,6 +60,12 @@ pre {
   display: flex;
   align-items: center;
 
+  a.whats-new {
+    i {
+      color: #f91;
+    }
+  }
+
   .login-link {
     background-color: $success;
     color: $white !important;

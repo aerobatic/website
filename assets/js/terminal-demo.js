@@ -327,4 +327,6 @@ $(function() {
 
     append(0);
   }
+
+  autotypeInput('Try clicking one of the items below to see how it works!');
 });
