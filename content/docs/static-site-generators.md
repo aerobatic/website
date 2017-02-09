@@ -115,6 +115,8 @@ If you need to install hugo in a CI script, here's the commands for doing so (as
 [$] dpkg -i hugo*.deb
 ~~~
 
+If you're CI service supports custom Docker images, we've provided the [aerobatic/hugo](https://hub.docker.com/r/aerobatic/hugo/) image which has hugo, [aerobatic-cli](/docs/cli/), and other supporting software all set to go. See this [blog post](/blog/hugo-bitbucket-pipelines/) to learn how to build and deploy your Hugo sites with Bitbucket Pipelines.
+
 ## Hexo
 
 <div class="generator-section"><img alt="Hexo" src="/img/frameworks/hexo.png"></div>
