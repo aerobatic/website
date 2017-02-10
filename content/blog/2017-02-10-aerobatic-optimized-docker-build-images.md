@@ -37,7 +37,7 @@ pipelines:
           script:
             - mkdir -p themes
             - (cd themes; git clone https://github.com/alexurquhart/hugo-geo.git)
-            - hugo --theme=hugo-geo --baseURL "https://__baseurl__"
+            - hugo --theme=hugo-geo --baseURL "https://!!baseurl!!"
             - aero deploy --directory public
 ---
 ~~~
@@ -63,7 +63,7 @@ pipelines:
       - step:
           script:
             - [ -f Gemfile ] && bundle install
-            - echo "url: https://__baseurl__" >> _config.yml
+            - echo "url: https://!!baseurl!!" >> _config.yml
             - bundle exec jekyll build
             - aero deploy --directory _site
 ---
