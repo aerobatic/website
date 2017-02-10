@@ -4,7 +4,7 @@ subtitle:
 slug: hakyll-a-haskell-static-site-generator
 comments: true
 description: Love functional programming? Want to get started with Haskell? Try out Hakyll, a static site generator.
-
+date: 2015-10-26
 tags: haskell, hekyll, bitbucket, blogs
 ---
 

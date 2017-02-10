@@ -3,6 +3,7 @@ title: Hosting Swagger API Documentation with Bitbucket
 subtitle:
 slug: hosting-swagger-api-documentation-wth-bitbucket
 comments: true
+date: 2015-10-21
 description: How to create a static site for your Swagger API documentation and host it on Bitbucket and Aerobatic
 ---
 

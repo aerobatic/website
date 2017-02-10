@@ -4,16 +4,16 @@
   <body>
     {{ partial "nav.html" . }}
     <div class="container">
-      <div class="row">
-        <ul>
-          {{ range .Data.Pages.ByPublishDate }}
-            <li class="post-preview">
-              <a class="h3" href="{{ .Permalink }}">{{ .Title }}</a>
-              <p>{{ .Description }}</p>
-            </li>
-          {{ end }}
-        </ul>
-      </div>
+      {{ range $index, $post := .Data.Pages.ByPublishDate }}
+        {{ if eq (mod (sub $index 1) 3) 0 }}<div class="row">{{ end }}
+        <div class="col-md-3">
+          <a href="{{ $post.Permalink }}">
+            <h3>{{ $post.Title }}</h3>
+            <p>{{ $post.Description }}</p>
+          </a>
+        </div>
+        {{ if eq (mod (add $index  1) 3) 0 }}</div>{{ end }}
+      {{ end }}
     </div>
     {{ partial "footer.html" . }}
     {{ partial "google-analytics.html" . }}

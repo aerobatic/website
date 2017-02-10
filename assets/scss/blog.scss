@@ -1,3 +1,40 @@
+.blog-list {
+  a.blog-item {
+    display: block;
+    background-color: $lightGray;
+    padding: 15px;
+    height: 250px;
+    cursor: pointer;
+
+    .date {
+      color: $gray;
+      font-size: 14px;
+      // font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $softBlue;
+    }
+
+    > h3 {
+      margin-top: 0;
+      border: none;
+      line-height: 1.3;
+    }
+
+    > p {
+      color: $darkGray;
+    }
+  }
+
+  div.row {
+    margin-bottom: 20px;
+  }
+}
+
+
 .marketing-feature-showcase--screenshot
 {
     vertical-align:bottom;

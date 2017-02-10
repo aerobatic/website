@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Feb 10, 2017
+* Announcing [optimized Docker images](/blog/optimized-docker-images-continuous-deployment/) for building your Jekyll or Hugo sites and deploying to Aerobatic.
+
 ### Feb 8, 2017
 * The aerobatic-cli [deploy command](/docs/cli/#deploy) now takes advantage of [S3 transfer acceleration](http://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) for faster uploads.
 

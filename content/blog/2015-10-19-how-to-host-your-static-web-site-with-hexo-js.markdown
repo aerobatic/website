@@ -4,6 +4,7 @@ subtitle:
 slug: how-to-host-your-static-web-site-with-hexo-js
 comments: true
 description: Easy static web site hosting, with Hexo, a JavaScript based site generator
+date: 2015-10-19
 tags: hexo, javascript, bitbucket, blogs
 ---
 

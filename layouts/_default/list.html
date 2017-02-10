@@ -4,13 +4,19 @@
   <body>
     {{ partial "nav.html" . }}
     <div class="container">
-      <div class="row">
-        <h1>Aerobatic Blog</h1>
-        {{ range .Data.Pages.ByPublishDate }}
-          <div class="post-preview">
-            <a class="h3" href="{{ .Permalink }}">{{ .Title }}</a>
-            <p>{{ .Description }}</p>
+      <h1>Blog</h1>
+
+      <div class="blog-list">
+        {{ range $index, $post := .Data.Pages.ByPublishDate }}
+          {{ if in (seq 0 3 100) $index }}<div class="row">{{ end }}
+          <div class="col-md-4">
+            <a href="{{ $post.Permalink }}" class="blog-item">
+              <h3>{{ $post.Title }}</h3>
+              {{ if $post.Date }}<div class="date">{{ $post.Date.Format "Monday, Jan 2, 2006" }}</div>{{ end }}
+              <p>{{ $post.Description }}</p>
+            </a>
           </div>
+          {{ if in (seq 2 3 100) $index }}</div>{{ end }}
         {{ end }}
       </div>
     </div>
