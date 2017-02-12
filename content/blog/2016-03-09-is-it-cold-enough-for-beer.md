@@ -22,7 +22,7 @@ For deploying the site, [Aerobatic](https://www.aerobatic.com) was indispensible
 
 How does the code work? It's a simple jQuery GET request:
 
-{% highlight javascript %}
+~~~js
 // this URL is set up by the Aerobatic HTTP Proxy
 $.get('/api', updater);
 
@@ -37,7 +37,7 @@ function updater(data) {
   }
   $('span.location').text(data.current_observation.display_location.full)
 }
-{% endhighlight %}
+~~~
 
 Some things I could do to improve the site (and happy to accept pull requests) are:
 
