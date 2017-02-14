@@ -7,6 +7,13 @@ date: 2016-03-02
 tags: jekyll, static site generator, cd
 ---
 
+{{% alert warning %}}
+**OUT OF DATE** This blog post refers to a deprecated way of interfacing with Aerobatic. For up to date information on continuous deployment of Jekyll sites, please see these articles:
+
+* [Deploy a Jekyll site to Aerobatic](/docs/static-site-generators/#jekyll)
+* [Continuous Deployment of a Jekyll Site with Travis CI and Aerobatic](/blog/jekyll-travis-github-aerobatic/)
+{{% /alert %}}
+
 <div style="text-align: center; margin-bottom: 20px;">
 <img src="////www.aerobatic.com/media/logos/jekyll.png" style="max-width: 100%; max-height: 200px;">
 </div>
@@ -34,15 +41,13 @@ The Aerobatic **Deployment settings** should specify the root directory `/` as t
 
 In the Bitbucket add-on, you can view the Jekyll log output for each build/deployment:
 
-<img class="screenshot" src="//www.aerobatic.com/media/screenshots/	jekyll-build-log-output-screenshot.png" alt="Build log screenshot">
-
 ## Plugins
 You can declare Jekyll plugins one of two ways:
 
 1. Ruby (`*.rb`) files located in the `_plugins` directory.
 2. Declared in the `gems` array of `_config.yml`:
 
-~~~
+~~~text
 gems: [jekyll-paginate, jekyll/tagging]
 ~~~
 
@@ -86,13 +91,11 @@ end
 
 Now authors can declare the quote plugin in any markdown file:
 
-{% raw %}
 ~~~text
 {% quote icon border %}
 Here's a great quote with **markdown**.
 {% endquote %}
 ~~~
-{% endraw %}
 
 You can imagine more complex features like passing in an avatar image and other styling flags. The ruby code would be responsible for inflating the short image name to a full URL, altering the markup within the `blockquote` tag, and so on.
 
