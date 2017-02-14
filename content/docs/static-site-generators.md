@@ -115,7 +115,7 @@ If you need to install hugo in a CI script, here's the commands for doing so (as
 [$] dpkg -i hugo*.deb
 ~~~
 
-If you're CI service supports custom Docker images, we've provided the [aerobatic/hugo](https://hub.docker.com/r/aerobatic/hugo/) image which has hugo, [aerobatic-cli](/docs/cli/), and other supporting software all set to go. See this [blog post](/blog/hugo-bitbucket-pipelines/) to learn how to build and deploy your Hugo sites with Bitbucket Pipelines.
+If you're CI service supports custom Docker images, we've provided the [aerobatic/hugo](https://hub.docker.com/r/aerobatic/hugo/) image which has hugo, [aerobatic-cli](/docs/cli/), and other supporting software all set to go. See this [blog post](/blog/hugo-bitbucket-pipelines/) to learn how to build and deploy your Hugo sites with Bitbucket Pipelines. This additional [blog post](/blog/hugo-github-circleci/) shows how to build and deploy your Hugo site with GitHub and CircleCI.
 
 ## Hexo
 
@@ -179,3 +179,4 @@ Ok, plain html isn't really a generator at all. No build step necessary, just ru
 [$] aero create
 [$] aero deploy
 ~~~
+
