@@ -28,6 +28,8 @@ At this point, we could now simply create and deploy the site to Aerobatic like 
 
 However, in this case, what we'd instead like to do is host our site on GitHub and, using CircleCI, auto-build and deploy our site to Aerobatic with each commit to GitHub. That way, we set things up once, and from then on, we only need to author markdown and make our commits. We can even author new blog posts directly in the GitHub UI.
 
+So, we'll still use `aero create` to create the site in Aerobatic, but we'll pause there and then set up our CircleCI build steps...
+
 ## Step 2: Commit code to GitHub
 
 Go ahead and create a new repository in GitHub at [https://github.com/new](https://github.com/new). Once the repository is created, then push your code to GitHub:
