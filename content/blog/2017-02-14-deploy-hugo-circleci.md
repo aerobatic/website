@@ -14,7 +14,6 @@ With the recent introduction of our new CLI, you can now host your Hugo sites on
 ~~~bash
 [$] hugo new site aerohugo && cd $_
 [$] git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
-[$] cd ..
 [$] hugo new post/good-to-great.md
 [$] hugo serve --theme=hugo-zen --buildDrafts
 ~~~
@@ -95,5 +94,5 @@ At this point, with your build process set up, you can now author new blog posts
 
 <img class="screenshot" src="/img/author-gh.png" alt="Author in GitHub">
 
-And that's it. Happy Coding!
+And that's it. Happy Coding! p.s. The code for this tutorial can be found at [https://github.com/Dundonian/aerohugo](https://github.com/Dundonian/aerohugo)
 
