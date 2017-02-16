@@ -41,6 +41,10 @@ Commands:
     Type aero help COMMAND for more details
 ~~~
 
+### Behind a proxy
+
+The CLI will honor the `HTTPS_PROXY` environment variable when making outbound network calls.
+
 ### Commands
 
 * [account](#account)
