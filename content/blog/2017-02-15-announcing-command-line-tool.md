@@ -7,7 +7,7 @@ date: 2017-02-15
 tags: github, cli
 ---
 
-[Aerobatic](https://www.aerobatic.com) is a static website hosting service.  For web designers, it simplifies the power of the Amazon Web Services (AWS) platform.  The service recently changed from a Bitbucket plugin to a stand-alone tool. This makes it easier to try because you can use your existing code repository anywhere.
+[Aerobatic](https://www.aerobatic.com) is a static website hosting service.  For web designers, it provides an easy alternative to complex SSL provisioning, CDN configuration, and web server setup. The service recently changed from a Bitbucket plugin to a stand-alone tool. This makes it easier to try because you can use your existing code repository anywhere.
 
 > “If you’ve considered Aerobatic before, but stopped because it was only available on Bitbucket, now is a great time to try it out.” –Jason Gowans, Aerobatic Co-founder
 
@@ -17,9 +17,44 @@ Github and Gitlab do offer integrated static hosting services. Although, they do
 
 The Aerobatic hosting platform removes barriers to getting a site online. [David Von Lehman](https://www.aerobatic.com/about/) founded Aerobatic to help simplify a developer's daily experience. Enterprise developers in the past have had to wait for IT to provision a server. Independent or small business web developers have had to learn how to manage web servers. Neither task is a core competency of a web developer. Aerobatic simplifies complex deployment tasks and brings them within reach of web designers.
 
-Learn how to get starting publishing your website in 30 seconds.
+To have your website live and served from our global Content Delivery Network (CDN) in seconds:
 
-- [Continuous Deployment of a Jekyll Site with Travis CI and Aerobatic](http://localhost:1313/blog/jekyll-travis-github-aerobatic/)
-- [Deploy a Hugo site to Aerobatic with CircleCI](http://localhost:1313/blog/hugo-github-circleci/)
+#### 1. Install the aerobatic-cli from npm:
 
-Aerobatic has more tutorial blog posts available at [http://aerobatic.com/blog](http://aerobatic.com/blog)
+~~~bash
+[$] npm install aerobatic-cli -g
+~~~
+
+If you don't already have Node.js installed, you can get it [download it from here](https://nodejs.org/en/).
+
+#### 2. Create an Aerobatic account:
+
+~~~bash
+[$] aero register
+~~~
+
+#### 3. Deploy your first website:
+
+~~~sh
+[$] mkdir aerobatic-test-website
+[$] cd aerobatic-test-website
+[$] echo "<html>First Aerobatic Website</html>" > index.html
+[$] aero create
+[$] aero deploy
+~~~
+
+In less than 30 seconds your website will be deployed to an https URL on our global CDN.
+
+If you want to try out a slightly more realistic example, try creating a website from a template such as [this one](https://html5up.net/editorial) from [HTML5 Up](https://html5up.net/). This command will automatically create a new directory with the downloaded files.
+
+~~~sh
+[$] aero create --source https://html5up.net/editorial/download
+~~~
+
+### Next Steps
+
+* Explore how to use [plugins](/docs/configuration/#plugins) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
+* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
+* Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)
+
+Aerobatic has more tutorial blog posts available at [http://aerobatic.com/blog](/blog)
