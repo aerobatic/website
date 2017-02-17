@@ -60,15 +60,14 @@ If you are going to be using many stages we recommend the wildcard approach sinc
 {{% /alert %}}
 
 #### Password protection
-You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [basic-auth plugin](/docs/plugins/basic-auth/). The declaration below in your `aerobatic.yml` file will enforce HTTP basic auth, but only in the `test` stage:
+You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [password-protect plugin](/docs/plugins/password-protect/). The declaration below in your `aerobatic.yml` file will enforce password protection, but only in the `test` stage:
 
 {{< highlight yaml >}}
 plugins:
-  - name: basic-auth
+  - name: password-protect
     stages: [test]
     options:
-      username: $BASIC_AUTH_USERNAME
-      password: $BASIC_AUTH_PASSWORD
+      password: $SITE_PASSWORD
 {{< /highlight >}}
 
 #### Continuous deployment

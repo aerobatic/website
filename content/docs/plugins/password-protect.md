@@ -6,7 +6,7 @@ name: password-protect
 
 # Password protect plugin
 
-The `password-protect` plugin is an easy way to require a password from visitors to access all or parts of your website. You can use our password form, or provide your own fully custom html login page.
+The `password-protect` plugin is an easy way to require a password from visitors to access all or parts of your website. You can use our password form, or provide your own fully custom html login page. Like all plugins, password protection can be enabled only for [specific deploy stages](#deploy-stages).
 
 ### Configuration
 ~~~yaml
@@ -163,3 +163,20 @@ plugins:
       password: $CLIENT2_PASSWORD
 ---
 ~~~
+
+### Deploy stages
+
+A common use case is to only enable password protection on a staging or preview instance of the site. That enables locking down un-released changes to a controlled audience. Then when you're ready to make the changes public, either re-deploy to the production stage, or push the staged version to production in the dashboard or with the [aero versions](https://www.aerobatic.com/docs/cli/#versions) CLI command.
+
+Here's an example declaration that only enables password protection for the `test` deploy stage, i.e. `https://test.yourdomain.com`. The production site `https://yourdomain.com` would not require a password.
+
+~~~yaml
+plugins:
+  - name: password-protect
+    stages: [test]
+    options:
+      password: $CLIENT1_PASSWORD
+---
+~~~
+
+Read more about [deploy stages](/docs/overview/#deploy-stages).

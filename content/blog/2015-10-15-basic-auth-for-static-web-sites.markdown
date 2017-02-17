@@ -8,6 +8,10 @@ description: Add password protection to your static website in seconds with the 
 tags:
 ---
 
+{{% alert warning %}}
+**DEPRECATED** This post refers to an older version of Aerobatic. We now offer the [password-protect plugin](/docs/plugins/password-protect/) to accomplish the same objective.
+{{% /alert %}}
+
 A common request from our customers, especially digital agencies, is to be able to password protect their web site such that clients can preview it while in development, while making sure that it's not accessible to the general public.
 
 In the following example, we'll create a simple password protected site using the new Aerobatic `basic-auth` plugin.

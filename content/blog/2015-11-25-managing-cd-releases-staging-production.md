@@ -7,6 +7,10 @@ date: 2015-11-25
 tags: CD, environments, staging, production, devops
 ---
 
+{{% alert warning %}}
+**DEPRECATED** This post refers to an older version of Aerobatic. Check out how we now handle CD release workflow using [deploy stages](/docs/overview/#deploy-stages).
+{{% /alert %}}
+
 Aerobatic has made it incredibly easy to deploy your production website with a simple `git push` command to your Bitbucket repo. Our [continuous deployment worker](http://www.aerobatic.com/blog/lambda-continuous-deployment.html) automatically grabs the latest source bundle, deploys it, and voilà, in less than a minute, your website is live to the world. This is the ultimate streamlined deployment flow for simple websites that are maintained by a single developer.
 
 However for sites being built by a team of developers, or when building on behalf of a client, a more formal staged release process is often called for. In a typical workflow, in-progress changes are committed to a dedicated git branch that is not deployed to production. However clients and/or stakeholders usually want to be able to preview and approve website changes well before customers see it for real.
