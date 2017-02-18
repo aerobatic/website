@@ -1,19 +1,44 @@
 /*
 Some overrides for small screens
 */
+@media only screen and (max-width : 768px) {
+  .navbar-default {
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-collapse {
+    background-color: #fff;
+    padding: 0;
+    margin: 0 -20px;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin: 0;
+
+      > li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+
+        a {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-  /*.col-xs-12 {
-    padding: 0;
-  }*/
-
-  .navbar-brand img {
-    height: 30px;
-  }
-
   .content {
     padding-top: 10px;
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
   }
 
   .marketing-testimonial--content {
@@ -37,7 +62,11 @@ Some overrides for small screens
   }
 
   .jumbotron h1 {
-    font-size: 45px;
+    font-size: 38px;
+  }
+
+  .jumbotron pre {
+    font-size: 18px;
   }
 
   #pricing .marketing-plans--dollar {
@@ -47,11 +76,5 @@ Some overrides for small screens
 
   #pricing .marketing-plans--price {
     font-size: 35px;
-  }
-}
-
-@media only screen and (max-width : 800px) {
-  .navbar-brand img {
-    height: 38px;
   }
 }

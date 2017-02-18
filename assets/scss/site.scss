@@ -85,10 +85,18 @@ pre {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
   padding: 8px 0px;
+  width: 160px;
+
+  @media (min-width: 992px) {
+    width: 200px;
+  }
 
   img {
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 }
 
