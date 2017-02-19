@@ -62,8 +62,8 @@ pipelines:
     master:
       - step:
           script:
-            - [ -f Gemfile ] && bundle install
-            - echo "url: https://!!baseurl!!" >> _config.yml
+            - '[ -f Gemfile ] && bundle install'
+            - 'echo "url: https://!!baseurl!!" >> _config.yml'
             - bundle exec jekyll build
             - aero deploy --directory _site
 ---
