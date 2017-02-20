@@ -48,11 +48,11 @@ _Prerequisite: Node JS installed_
 
 ## Preview your Site
 
-Use `npm start` to preview your site in your browser. Phenomic includes hot-reloading
+Use `npm start` to preview your site in your browser. Phenomic includes hot-reloading. The web page updates automatically whenever you make changes in your editor.
 
 ## Build the Site
 
-Building a Phenomic site is simply `npm run build`. This makes your website into the `dist` folder
+Building a Phenomic site is simply `npm run build`. This makes your website into the `dist` folder.
 
 ## Deploy to Aerobatic
 
