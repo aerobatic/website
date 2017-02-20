@@ -13,7 +13,7 @@ Well, the good news is that, with Aerobatic, you can create a login page for you
 
 ## Create a login.html
 
-In your Jekyll site, you've got an **index.html** in the root folder. Make a copy of that file and call it **login.html**. Replace the content of the login.html file with code similar to below. You can style your login page however you want. What's essential is that the form markup needs to be decorated with the `data-basic-auth-form`, `data-basic-auth-username`, and `data-basic-auth-password` attributes as shown below. The `data-basic-auth-error` element will only be shown if invalid credentials are submitted.
+In your Jekyll site, you've got an **index.html** in the root folder. Make a copy of that file and call it **login.html**. Replace the content of the login.html file with code similar to below. You can style your login page however you want. What's essential is that the form markup needs to be decorated with the `aerobatic-password` attribute in the input as shown below.
 
 ~~~html
 ---
@@ -49,8 +49,6 @@ layout: [INSERT YOUR SITE'S LAYOUT]
     </body>
 </html>
 ~~~
-
-Make sure also that you actually are building your Jekyll site with these new changes i.e. from the command line, type `jekyll serve`.
 
 ## Create Aerobatic site
 
