@@ -72,7 +72,9 @@ Here's a side by side comparison of the legacy `package.json` structure and the 
       {
         "module": "custom-errors",
         "options": {
-          "404": "404.html"
+          "errors": {
+            "404": "404.html"  
+          }
         }
       }
     ]
@@ -94,7 +96,8 @@ plugins:
 
   - name: custom-errors
     options:
-      404: 404.html # Custom 404 page
+      errors:
+        404: 404.html # Custom 404 page
 ---
 ~~~
 {{% /col %}}

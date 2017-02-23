@@ -50,7 +50,8 @@ Here's a basic `plugins` definition that declares a couple of our most popular p
 plugins:
   - name: custom-errors
     options:
-      404: errors/404.html
+      errors:
+        404: errors/404.html
 
   - name: basic-auth
     path: /protected
