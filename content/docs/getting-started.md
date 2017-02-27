@@ -19,9 +19,7 @@ If you don't already have Node.js installed, you can get it [download it from he
 
 #### 2. Create an Aerobatic account:
 
-~~~bash
-[$] aero register
-~~~
+Register at [https://dashboard.aerobatic.com/dashboard](https://dashboard.aerobatic.com/dasbhboard)
 
 #### 3. Deploy your first website:
 
