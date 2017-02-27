@@ -80,7 +80,7 @@ plugins:
   - name: http-proxy
     path: /api/*
     options:
-      url: https://some-remote-api.com/
+      url: https://some-remote-api.com/api/v1
       query:
         apikey: $SOME_REMOTE_API_KEY
 ---
