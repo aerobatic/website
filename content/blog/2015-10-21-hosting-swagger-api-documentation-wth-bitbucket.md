@@ -52,9 +52,13 @@ When you're ready use the *File > Download JSON* menu option and save the file a
 Run the `gulp` command to generate the assets in your `dist` folder.
 
 #### 7. Deploy
-When you are ready to deploy, push your code to Bitbucket, link your repo to Aerobatic, and you're done. Ensure that the __Deploy directory__ is set to `/dist`.
 
-<img class="screenshot" src="//www.aerobatic.com/media/blog/swagger/link-repo.png" alt="Link Swagger UI repo to Aerobatic" >
+Assuming you already have an Aerobatic account and have [installed the aerobatic-cli](https://www.aerobatic.com/docs/cli/):
+
+~~~bash
+aero create
+aero deploy -d dist
+~~~
 
 #### 8. Congratulations, your Swagger API documentation is live!
 

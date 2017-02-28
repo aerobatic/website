@@ -174,13 +174,6 @@ Tail the web logs for the current website. Gives a near real-time snapshot of th
 [$] aero logs
 ~~~
 
-#### register
-Register for a new Aerobatic account. You'll be prompted for email, password, and organization name. A automated email will be sent to the email with a verification link. Once clicked you'll be able to run `aero login`.
-
-~~~bash
-[$] aero register
-~~~
-
 #### rename
 Rename the current website. On the Pro plan this only changes the name displayed in the Aerobatic Control Panel. But for the free plan this changes the URL of the site, i.e. `https://SITENAME.aerobatic.io`.
 
