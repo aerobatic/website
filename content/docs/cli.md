@@ -33,7 +33,6 @@ Commands:
     info           Display a summary of the current website
     login          Login to your Aerobatic account
     logs           Tail the web logs for the current website
-    register       Register a new Aerobatic account
     rename         Rename the website
     switch         Switch to a different Aerobatic account
     versions       Manage website versions
@@ -57,7 +56,6 @@ The CLI will honor the `HTTPS_PROXY` environment variable when making outbound n
 * [info](#info)
 * [login](#login)
 * [logs](#logs)
-* [register](#register)
 * [rename](#rename)
 * [switch](#switch)
 * [versions](#versions)
@@ -87,14 +85,19 @@ Reset the account api key to a new value.
 Create a new Aerobatic website in the current directory. If no `aerobatic.yml` file exists in the current directory, a new one will created. If there is already an `aerobatic.yml` file, then the "id" property will overriden with the new website's unique identifier.
 
 **Options**
+{{% option "-n, --name" %}}
+The desired name of the website. Names are globally unique and must be URL friendly (lower-case letters, numbers, and dashes). If no name is specified then a random website name will be generated for you. You can always use the [rename](#rename) command to change the name later.
+{{% /option %}}
+
 {{% option "-S, --source" %}}
 URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.
 {{% /option %}}
 
 **Examples**
 ~~~bash
-[$] aero create # Creates website at the current directory
-[$] aero create --source https://html5up.net/editorial/download
+[$] aero create       # Creates website at the current directory
+[$] aero create -n website-name
+[$] aero create --source https://html5up.net/editorial/download --name html5up-demo
 [$] aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip
 ~~~
 

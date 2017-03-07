@@ -6,6 +6,10 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Mar 6, 2017
+* You can now pass a `-n` or `--name` option to the [aero create](/docs/cli/#create) CLI command to control the website name at time of creation.
+* Deployments using the [aero deploy](/docs/cli/#deploy) CLI command are now up to 150% faster due to a new S3 key naming scheme that allows for faster uploads.
+
 ### Feb 10, 2017
 * Announcing [optimized Docker images](/blog/optimized-docker-images-continuous-deployment/) for building your Jekyll or Hugo sites and deploying to Aerobatic.
 

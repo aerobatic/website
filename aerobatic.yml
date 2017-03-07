@@ -35,5 +35,6 @@ plugins:
       /docs/custom-error-pages: /docs/plugins/custom-errors/
       /docs/static-http-hosting: /docs/static-serving/
       /bitbucket-changes: /blog/announcing-aerobatic-transition/
+      /feed.xml: /index.xml
   - name: health-check
     path: /health
