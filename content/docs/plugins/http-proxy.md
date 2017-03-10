@@ -10,20 +10,24 @@ The `http-proxy` plugin is a high performance, intelligent proxy that supports p
 
 For CORS support, declare this plugin in conjunction with the [cors plugin](/docs/cors).
 
-### Basic Configuration
+### Configuration
 
 Declare the proxy plugin in your `aerobatic.yml`:
 
 ~~~yaml
 plugins:
   - name: http-proxy
-    path: /api/geocode
+    path: /api
     options:
-      url: https://maps.googleapis.com/maps/api/geocode/json
+      url: https://the-api.com
       query:
-        key: $GOOGLE_API_KEY
+        key: $API_KEY
+      headers:
+        'custom-header': $CUSTOM_HEADER
 ---
 ~~~
+
+### Basic Example
 
 In this case, we’re defining our own `/api/geocode` endpoint on our Aerobatic web app which proxies to `maps.googleapi.com`. Additionally a `key` querystring parameter is tacked onto the remote call with our Google API key which is stored as an environment variable.
 
@@ -47,6 +51,21 @@ $.ajax({
 ~~~
 
 The actual URL sent off to Google would then be: `https://maps.googleapis.com/maps/api/geocode/json?key=XYZ&address=Timbuktu`. Importantly the client JavaScript never has anything to do with the API key, that remains entirely on the server-side.
+
+### Http Headers
+
+The proxy will passthrough any http headers in the incoming request from the end user, but the plugin can be configured to tack on additional headers. A common example is hitting a URL that requires Basic Auth without exposing any credentials on the client.
+
+~~~yaml
+plugins:
+  - name: http-proxy
+    path: /api
+    options:
+      url: https://remote-endpoint.com/protected
+      headers:
+        Authorization: 'Basic $BASIC_AUTH_CREDS'
+---
+~~~
 
 ### Named Parameters Route Setup
 
@@ -80,7 +99,7 @@ plugins:
   - name: http-proxy
     path: /api/*
     options:
-      url: https://some-remote-api.com/api/v1
+      url: https://some-remote-api.com/api/v1/*
       query:
         apikey: $SOME_REMOTE_API_KEY
 ---
