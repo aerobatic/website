@@ -29,7 +29,18 @@ plugins:
 
 ### Basic Example
 
-In this case, we’re defining our own `/api/geocode` endpoint on our Aerobatic web app which proxies to `maps.googleapi.com`. Additionally a `key` querystring parameter is tacked onto the remote call with our Google API key which is stored as an environment variable.
+In this case, we’re defining our own `/api/geocode` endpoint on our Aerobatic web app which proxies to `maps.googleapi.com`. Additionally a `key` query string parameter is tacked onto the remote call with our Google API key which is stored as an environment variable.
+
+~~~yaml
+plugins:
+  - name: http-proxy
+    path: /api/geocode
+    options:
+      url: https://maps.googleapis.com/maps/api/geocode/json
+      query:
+        key: $GOOGLE_API_KEY
+---
+~~~
 
 #### Client Code
 
@@ -114,7 +125,7 @@ The proxy will translate the incoming request to the origin API like so:
 
 ### Caching
 
-For http responses that don't change frequently or to avoid strict rate-limits, Aerobatic allows you to cache API responses on our servers as well as on the CDN. Just specify a `cacheMaxAge` option with the number of seconds the API response is valid for. Subsequent requests to the same URL will be served directly from the CDN or at the very least from the Aerobatic web servers, but the request will not be proxied off to the true origin server until the TTL has expired. This can be a great way to boost performance of an API that is out of your control.
+For http responses that don't change frequently or to avoid strict rate-limits, Aerobatic allows you to specify a `cacheMaxAge` which forces 200 responses from the origin to be cached on the CDN for the specified number of seconds. This will override whatever `Cache-Control` header was returned from the origin (if it even had one). Subsequent requests to the same URL will be served directly from the CDN. This can be a great way to boost performance of calls to an endpoint is out of your control.
 
 ~~~yaml
 plugins:
@@ -125,3 +136,30 @@ plugins:
       cacheMaxAge: 600   # Cache with TTL of 600 seconds
 ---
 ~~~
+
+### Troubleshooting
+
+When implementing the `http-proxy` plugin, it is often valuable to have visibility into what URL is being proxied to behind the scenes. For proxied requests, Aerobatic appends a `proxyUrl` property to the log entry which you can see by running the `logs` command:
+
+~~~sh
+[$] aero logs --format json
+~~~
+
+In the case of the [Basic Example](#basic-example) above, you'd see a log entry emitted similar to this:
+
+~~~json
+{
+  "url": "https://www.yoursite.com/api/geocode",
+  "method": "GET",
+  "statusCode": 200,
+  "timestamp": "2017-03-13T15:47:38",
+  "ip": "123.123.123.123",
+  "country": "US",
+  "region": "WA",
+  "city": "Seattle",
+  "httpVersion":"1.1",
+  "proxyUrl": "https://maps.googleapis.com/maps/api/geocode/json?key=XYZ&address=Timbuktu"
+}
+~~~
+
+The logs will only capture those requests that are not served directly from the CDN so you shouldn't set the `cacheMaxAge` until you have confirmed the proxy is returning the correct response from the remote endpoint.

@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Mar 13, 2017
+* You can now pass a `-f` or `--format` option to the [aero logs](/docs/cli/#logs) command to see the raw JSON weblog entries in their entirety. There is also an additional `proxyUrl` property in the log entry for requests that are handled by the [http-proxy](/docs/plugins/http-proxy/) plugin. This is useful when diagnosing exactly what URL Aerobatic is requesting behind the scenes. The [plugin troubleshooting](/docs/plugins/http-proxy/#troubleshooting) section has more details.
+
 ### Mar 6, 2017
 * You can now pass a `-n` or `--name` option to the [aero create](/docs/cli/#create) CLI command to control the website name at time of creation.
 * Deployments using the [aero deploy](/docs/cli/#deploy) CLI command are now up to 150% faster due to a new S3 key naming scheme that allows for faster uploads.

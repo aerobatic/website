@@ -173,8 +173,36 @@ Login to your Aerobatic account. You'll be prompted to enter your email and pass
 #### logs
 Tail the web logs for the current website. Gives a near real-time snapshot of the HTTP requests and responses being served from your site including geoip location.
 
+By default the log entry output follows a format similar to the [Apache combined log format](https://httpd.apache.org/docs/1.3/logs.html#combined) which displays a sub-set of the entire log entry:
+
+~~~text
+123.123.123.123     - 2017-03-13T15:44:11 - 200 - GET HTTP/1.1 - https://www.aerobatic.com/ - "Seattle, WA, US" - us-west-2
+~~~
+
+You can also call with the `--format json` option to see the entire JSON log entry:
+
+~~~json
+{
+  "appId": "f593b673-75f2-4c7e-8a65-6e0d7a6e0f05",
+  "awsRegion": "eu-central-1",
+  "deployStage": "production",
+  "host": "www.aerobatic.com",
+  "url": "https://www.aerobatic.com/blog/",
+  "method": "GET",
+  "statusCode": 200,
+  "timestamp": "2017-03-13T15:47:38",
+  "requestId": "Hyz5-jEjg",
+  "ip": "123.123.123.123",
+  "country": "US",
+  "region": "WA",
+  "city": "Seattle",
+  "httpVersion":"1.1"
+}
+~~~
+
 ~~~bash
 [$] aero logs
+[$] aero logs --format json
 ~~~
 
 #### rename
