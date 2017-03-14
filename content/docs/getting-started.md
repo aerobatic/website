@@ -27,7 +27,7 @@ Register at [https://dashboard.aerobatic.com/dashboard](https://dashboard.aeroba
 [$] mkdir aerobatic-test-website
 [$] cd aerobatic-test-website
 [$] echo "<html>First Aerobatic Website</html>" > index.html
-[$] aero create
+[$] aero create -n your-site-name
 [$] aero deploy
 ~~~
 

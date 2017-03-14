@@ -83,7 +83,11 @@ Putting this all together for a CI build, your script might look like the follow
 [$] aero deploy --directory _site
 ~~~
 
-Check out this blog post on continuously deploying a [Jekyll site to Aerobatic with GitHub and TravisCI](/blog/jekyll-travis-github-aerobatic/)
+**Additional reading**
+
+* [Continuous deployment of Jekyll with GitHub and TravisCI](/blog/jekyll-travis-github-aerobatic/)
+* [Continuous deployment of Jekyll site with Bitbucket Pipelines](/blog/jekyll-bitbucket-pipelines/)
+* [How to password protect a Jekyll site](/blog/password-protect-a-jekyll-site/)
 
 ## Hugo
 
@@ -179,4 +183,3 @@ Ok, plain html isn't really a generator at all. No build step necessary, just ru
 [$] aero create
 [$] aero deploy
 ~~~
-
