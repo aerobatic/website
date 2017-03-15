@@ -8,6 +8,8 @@ name: password-protect
 
 The `password-protect` plugin is an easy way to require a password from visitors to access all or parts of your website. You can use our password form, or provide your own fully custom html login page. Like all plugins, password protection can be enabled only for [specific deploy stages](#deploy-stages).
 
+See the plugin in action on our [demo site](https://password-protect-demo.aerobatic.io) ([source code](https://github.com/aerobatic/password-protect-demo)).
+
 ### Configuration
 ~~~yaml
 plugins:

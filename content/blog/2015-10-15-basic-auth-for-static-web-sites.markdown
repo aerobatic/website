@@ -54,6 +54,6 @@ In the `package.json` file above, you'll notice that we have two environment var
 Push your updated repo with the newly created`package.json` file, and you're done!
 
 ### Sample App
-- Sample web site that uses the Aerobatic `basic-auth` plugin: [http://auth-demo.aerobatic.io/](http://auth-demo.aerobatic.io/)
+- Sample web site that uses the Aerobatic `basic-auth` plugin: [https://auth-demo.aerobatic.io/](https://auth-demo.aerobatic.io/)
 - Sample app code on Bitbucket: [https://bitbucket.org/aerobatic/auth-demo/src](https://bitbucket.org/aerobatic/auth-demo/src)
 - Full documentation on basic authentication can be found [here](/docs/plugins/basic-auth/).
