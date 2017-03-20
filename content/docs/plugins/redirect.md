@@ -1,10 +1,10 @@
 ---
-title: Redirects plugin
+title: Redirect plugin
 plugin: true
-name: redirects
+name: redirect
 ---
 
-# Redirects plugin
+# Redirect plugin
 
 The `redirect` plugin allows specifying redirect rules for inbound URLs. You can specify either an explicit match or URL patterns. Two different rule types are supported: [Express route style](http://expressjs.com/en/guide/routing.html) or regular expressions. We recommend the Express style rules when possible because they are more intuitive, but for more advanced scenarios, such as redirecting based on querystrings, the flexibility of regular expressions is handy.
 

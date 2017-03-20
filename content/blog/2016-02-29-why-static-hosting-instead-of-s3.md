@@ -68,7 +68,7 @@ With Aerobatic, all of that is [handled automatically](/docs/static-http-hosting
 
 Our most commonly used plugin is [password-protect](/docs/plugins/password-protect/) where developers want to password protect a site, or certain directories in the site (or maybe just the staging version of their site). For developers using S3, this isn't an available option. So, perhaps now you're setting up your own Apache web server or trying to integrate a 3rd party service into your site.
 
-With Aerobatic, it's a few lines of JSON, push your code to Bitbucket, and you're done in less than a minute. The same is also true for [custom error pages](/docs/plugins/custom-error-pages/) and [redirects](/docs/plugins/redirects/).
+With Aerobatic, it's a few lines of JSON, push your code to Bitbucket, and you're done in less than a minute. The same is also true for [custom error pages](/docs/plugins/custom-error-pages/) and [redirects](/docs/plugins/redirect/).
 
 For some developers, their site needs to call an API that's not CORS-enabled. Another common scenario is that they need to call an API but don't want to place the API key and secret in the client-side code. Additionally, perhaps the API response doesn't change that much, in which case, it'd be best to cache the API response, like the author of this [Smashing Magazine tutorial](https://www.smashingmagazine.com/2015/04/creating-web-app-in-foundation-for-apps/) did, using Aerobatic.
 
