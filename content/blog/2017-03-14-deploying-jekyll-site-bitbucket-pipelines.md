@@ -38,7 +38,7 @@ First, [create a repository](https://confluence.atlassian.com/bitbucket/create-a
 # commit and push code to master branch
 [$] git add --all
 [$] git commit -m "Initial commit"
-[$] git remote add origin git@bitbucket.org:YourUsername/jekyll-test.git
+[$] git remote add origin git@bitbucket.org:YourUsername/jekyll-pipelines.git
 [$] git push -u origin master
 ~~~
 
@@ -65,7 +65,7 @@ pipelines:
 ---
 ~~~
 
-To make the build as steps as streamlined as possible, there's a ready-made docker image [aerobatic/jekyll](https://hub.docker.com/r/aerobatic/jekyll/) that already has hugo, [aerobatic-cli](/docs/cli/), and other supporting software all ready to go.
+To make the build as steps as streamlined as possible, there's a ready-made docker image [aerobatic/jekyll](https://hub.docker.com/r/aerobatic/jekyll/) that already has Ruby, Bundler, Jekyll, [aerobatic-cli](/docs/cli/), and other supporting software for building native plugin gems all ready to go.
 
 The `https://!!baseurl!!` is a special value that Aerobatic will substitute on the fly with the current website URL. This makes it so the same deployed version can be safely pushed to a different deploy stage and all absolute URLs will auto-correct themselves.
 
@@ -101,11 +101,11 @@ end
 
 It's also a good idea to run `bundle install` to generate a `Gemfile.lock` that should be committed to source control.
 
-The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/dvonlehman/jekyll-config-test).
+The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/aerobatic/jekyll-pipelines).
 
 ## Step 3: Create environment variable
 
-This step only needs to be done once per account. If you haven't already done this in Bitbucket, from the command line;
+This step only needs to be done once per account. If you haven't already done this in Bitbucket, from the command line:
 
 ~~~bash
 [$] aero apikey
@@ -144,16 +144,16 @@ pipelines:
 ---
 ~~~
 
-With this configuration, any push to the `master` branch will deploy to `https://my-jekyll-site.aerobatic.io` and pushes to the `develop` branch will deploy to `https://my-jekyll-site--staging.aerobatic.io`. This of course works with custom domains as well.
+With this configuration, any push to the `master` branch will deploy to `https://jekyll-pipelines.aerobatic.io` and pushes to the `develop` branch will deploy to `https://jekyll-pipelines--staging.aerobatic.io`. This of course works with custom domains as well.
 
 ## Additional reading
-* The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/dvonlehman/jekyll-config-test).
+* The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/aerobatic/jekyll-pipelines).
 * Learn how to use [declare plugins](/docs/plugins/) in your `aerobatic.yml` to extend the capabilities of your static Jekyll site.
 * [How to Password Protect a Jekyll site](/blog/password-protect-a-jekyll-site/)
 
 ## Troubleshooting
 
-Jekyll seems to be very particular when running in the Docker container about the format of the `_config.yml` and `Gemfile`. If you get the error below, look at the files in the [sample repo](https://bitbucket.org/dvonlehman/jekyll-config-test) for guidance. Some users have reported they needed a line break at the end of the `_config.yml`.
+Jekyll seems to be very particular when running in the Docker container about the format of the `_config.yml` and `Gemfile`. If you get the error below, look at the files in the [sample repo](https://bitbucket.org/aerobatic/jekyll-pipelines) for guidance. Some users have reported they needed a line break at the end of the `_config.yml`.
 
 ~~~text
 jekyll 3.4.2 | Error:  (/opt/atlassian/pipelines/agent/build/_config.yml): mapping values are not allowed in this context
