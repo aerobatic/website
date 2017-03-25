@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Mar 24, 2017
+* We now support [email or Slack deploy alerts](/docs/configuration/#deploy-alerts) that you configure in your `aerobatic.yml` file. You can even specify different alerts based on the deploy stage that was updated. Great way for agencies to automatically notify clients when changes are made.
+
 ### Mar 15, 2017
 * New [sample website](https://password-protect-demo.aerobatic.io) demonstrating use of the [password-protect](/docs/plugins/password-protect/) plugin.
 

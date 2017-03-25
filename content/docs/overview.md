@@ -89,7 +89,7 @@ aero deploy --stage pr-$TRAVIS-PULL-REQUEST
 **TIP**: any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
 {{% /alert %}}
 
-This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article.
+This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article. You can even [configure email or Slack alerts](/docs/configuration/#deploy-alerts) when the deployment completes.
 
 ### Web logs {#weblogs}
 

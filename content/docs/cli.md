@@ -121,7 +121,7 @@ Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. Thi
 {{% /option %}}
 
 {{% option "-m, --message" %}}
-A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history.
+A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history. It will also be displayed in any email or Slack [deploy alerts](/docs/configuration/#deploy-alerts).
 {{% /option %}}
 
 {{% option "-c, --commit-url" %}}
@@ -155,6 +155,17 @@ You can also run the command without any arguments to get status information on 
 [$] aero domain --name mydomain.com --subdomain @
 [$] aero domain
 ~~~
+
+#### env
+Set or display environment variables for the website. By default variables are set for all deploy stages, but you can also override a value for a specific stage. You might want to do this with the [password-protect](/docs/plugins/password-protect/) to configure a different password for different stages. Or for the `url` property of the [http-proxy](/docs/plugins/http-proxy/) if you are proxying to a different API endpoint for test and production. Calling the command with no options will display all your variables.
+
+~~~bash
+[$] aero env -n SITE_PASSWORD -v bigsecret
+[$] aero env -n WIDGET_API_URL -v https://widgets-test/ --stage test
+[$] aero env
+~~~
+
+Read more about [configuration with environment variables](/docs/configuration/#environment-variables).
 
 #### info
 Display summary information about the current website.

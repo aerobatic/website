@@ -2,6 +2,10 @@ id: f593b673-75f2-4c7e-8a65-6e0d7a6e0f05
 deploy:
   ignore: []
   directory: public
+  alerts:
+    default:
+      slack:
+        webhookUrl: $SLACK_WEBHOOK_ALERT
 plugins:
   - name: http-proxy
     path: /slack

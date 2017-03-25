@@ -76,6 +76,61 @@ A common use case is wanting to lock down only staging instances with the `basic
     username: $BASIC_AUTH_USERNAME
     password: $BASIC_AUTH_PASSWORD{{< /highlight >}}
 
+## Deploy Alerts
+
+You can specify that an alert be sent whenever a deployment completes. The two currently supported alert types are email and Slack. To send an alert for all deployments (regardless of stage), declare YAML like so in your `aerobatic.yml`:
+
+~~~yaml
+deploy:
+  alerts:
+    default:
+      # You can specify one or both of these keys
+      email:
+        to: [userA@company.com, userB@company.com]
+      slack:
+        username: 'Website Update'  # Optional, defaults to "Aerobatic Deploys"
+        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
+---
+~~~
+
+To get the `webhookUrl`, just add the [Incoming Webhook App](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks) to your Slack instance. You simply specify which channel you want the alerts to be posted to (i.e. something like "#deployments") and you'll be provided the URL to paste into your `aerobatic.yml` file. You can also choose an icon or emoji that appears next to each alert.
+
+If you don't want to store the `webhookUrl` in clear text, you can also configure it as an [environment variable](/docs/configuration/#environment-variables):
+
+~~~yaml
+slack:
+  webhookUrl: $SLACK_DEPLOY_ALERT_URL
+---
+~~~
+
+Deploy these changes and you'll start getting alerts with each new deployment. The alert includes the name of the website, the version name, an optional message, and a hyperlink that launches the site.
+
+![Slack Alert](/img/slack-deploy-alert.png)
+
+The deploy message is a handy way to provide a short description of the what was changed. The message is provided to the `aero deploy` command like so:
+
+~~~sh
+[$] aero deploy --message "Added new link to the global footer"
+~~~
+
+### Stage specific alerts
+
+There is also the flexibility to define different alerts based on the deploy stage. For example, if you are an agency, you might want to post alerts for all deployments to your team's internal Slack channel, but additionally send an email alert to the client for production deployments:
+
+~~~yaml
+deploy:
+  alerts:
+    default:
+      slack:
+        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
+    production:
+      email:
+        to: [sally@client.co]  # Alert the client for production deployments
+---
+~~~
+
+You can also omit the `default` section altogether and configure alerts on a stage by stage basis - whatever best fits your workflow.
+
 ### Environment variables
 
 Environment variables can be used to store sensitive configuration settings that you don't want to hard-code into the `aerobatic.yml` file (which you should commit to source-control along with the rest of your project). The basic-auth password is a prime example.
