@@ -78,6 +78,8 @@ A common use case is wanting to lock down only staging instances with the `basic
 
 ## Deploy Alerts
 
+<img src="/img/deploy-alert-types.png" style="display:block; margin: 0 auto"/>
+
 You can specify that an alert be sent whenever a deployment completes. The two currently supported alert types are email and Slack. To send an alert for all deployments (regardless of stage), declare YAML like so in your `aerobatic.yml`:
 
 ~~~yaml

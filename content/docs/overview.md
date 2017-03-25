@@ -89,7 +89,25 @@ aero deploy --stage pr-$TRAVIS-PULL-REQUEST
 **TIP**: any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
 {{% /alert %}}
 
-This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article. You can even [configure email or Slack alerts](/docs/configuration/#deploy-alerts) when the deployment completes.
+This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article.
+
+### Deploy Alerts
+
+You can configure email or Slack alerts when each deployment completes using a block of YAML in your `aerobatic.yml` file:
+
+~~~yaml
+deploy:
+  alerts:
+    default:
+      email:
+        to: [userA@company.com, userB@company.com]
+      slack:
+        username: 'Website Update'
+        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
+---
+~~~
+
+See the [deploy configuration docs](/docs/configuration/#deploy-alerts) for full details.
 
 ### Web logs {#weblogs}
 

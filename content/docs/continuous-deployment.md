@@ -69,3 +69,20 @@ after_success:
 {{% alert tip %}}
 This setup is a bit cleaner with some of the other CI services. For example [Bitbucket Pipelines](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html#Configurebitbucket-pipelines.yml-ci_branchesbranches(optional)) and [Circle CI](https://circleci.com/docs/configuration/#deployment) (and probably others) provide the flexibility to define distinct deploy steps per branch.
 {{% /alert %}}
+
+### Deploy Alerts
+You can configure email or Slack alerts when each deployment completes using a block of YAML in your `aerobatic.yml` file:
+
+~~~yaml
+deploy:
+  alerts:
+    default:
+      email:
+        to: [userA@company.com, userB@company.com]
+      slack:
+        username: 'Website Update'
+        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
+---
+~~~
+
+See the [deploy configuration docs](/docs/configuration/#deploy-alerts) for full details.
