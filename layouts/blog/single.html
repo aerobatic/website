@@ -24,7 +24,7 @@
           <div class="col-md-3 blog-sidebar">
             <h3>Blog Posts</h3>
             <div>
-              {{ range first 15 .Site.Pages }}
+              {{ range first 15 (where .Site.Pages ".Params.hidden" "ne" "true")}}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 <hr>
               {{ end }}

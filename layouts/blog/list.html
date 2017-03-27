@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   {{ partial "head.html" . }}
   <body>
     {{ partial "nav.html" . }}
     <div class="container">
-      {{ range $index, $post := .Data.Pages.ByPublishDate }}
+      {{ range $index, $post := .Data.Pages.ByPublishDate (where .Data.Pages ".Params.hidden" "!=" nil) }}
         {{ if eq (mod (sub $index 1) 3) 0 }}<div class="row">{{ end }}
         <div class="col-md-3">
           <a href="{{ $post.Permalink }}">
@@ -19,4 +19,4 @@
     {{ partial "google-analytics.html" . }}
     {{ partial "js.html" . }}
   </body>
-</html>
+</html> -->
