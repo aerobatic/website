@@ -18,10 +18,12 @@ Imagine an HTML5 gaming site at the fictional domain **aerogames.play**. This te
 
 From the static web serving perspective, each of these URLs is the exact same code &mdash; probably just a minimal HTML shim and a JavaScript bundle. The client script is responsible for examining the `window.location.hostname` and loading the correct game into the DOM. Even though it renders to the end user as distinct experiences, it's all the same physical site, so you only pay for a single Aerobatic subscription.
 
-This even works in conjunction with [deploy stages](/docs/overview/#deploy-stages), so you could deploy to the **preview** stage and have your JavaScript app available at each of these URLs:
+**DNS Settings**
+
+In your DNS console you'll need to either setup a separate CNAME for each game `tictactoe`, `chess`, etc., or even better, create a single wildcard CNAME. The advantages of the wildcard become even more apparent when deploying to a [non-production stage](/docs/overview/#deploy-stages) such as **preview**. That will make the app available at these URLs:
 
 * `https://tictactoe--preview.aerogames.play`
 * `https://chess--preview.aerogames.play`
 * `https://poker--preview.aerogames.play`
 
-And all of this is powered off a single website. Pretty cool, right? 😁
+You get all this flexibility with only a single website to maintain and deploy. Pretty cool, right? 😁
