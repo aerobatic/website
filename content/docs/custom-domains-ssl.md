@@ -36,7 +36,7 @@ You'll be sent a validation email from `no-reply@certificates.amazon.com`. Click
 You can run the `aero domain` command again without any arguments to get a status update. Once provisioning is complete you will receive an email from `support@aerobatic.com` with instructions on how to configure your DNS records so that your domain resolves to your Aerobatic website.
 
 {{% alert warning %}}
-**ALERT** Receiving the verification email can sometimes trip people up. See the [troubleshooting section](#troubleshooting) at the bottom of this guide.
+**ALERT** Receiving the verification email can sometimes trip people up. See the [troubleshooting section](#trouble-receiving-validation-email) at the bottom of this guide. We suggest that you configure MX records for your domain or use your DNS providers mail forwarding service so you can receive email sent to `admin@yourdomain.com`.
 {{% /alert %}}
 
 ### DNS Settings
@@ -102,21 +102,27 @@ When using deploy stages for websites whose production URL is at the apex, the s
 <!-- ## Binding domain to website
 Once DNS is setup, it's still necessary to bind the domain + subdomain to a specific Aerobatic website. For an existing website this is done in the *Hosting settings* screen. You can also select a custom domain at the time of creating a new website from a Bitbucket repo. Naturally you can only bind one website to a domain name + subdomain combination. For the apex domain you leave the subdomain blank or enter the special value `@`. -->
 
-## Troubleshooting
-
-**Didn't receive the certificate verification email**
+## Trouble receiving validation email
 
 First of all, check your spam folder. The email comes directly from Amazon Web Services. Aerobatic does not send the verification email. Assuming the email isn't in your spam folder, read on.
 
-Aerobatic uses Amazon Certificate Manager to provision auto-renewing wildcard SSL certificates for your custom domain. As part of that process, Amazon sends an email to the email address associated with the WHOIS record on your domain. However, if you are using a WHOIS privacy protection service e.g. WhoisGuard, your email address is obscured from the WHOIS record, and thus Amazon cannot properly route the validation email.
+Aerobatic uses [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/) to provision auto-renewing wildcard SSL certificates for your custom domain. As part of that process, AWS sends an email to the address associated with the WHOIS record on your domain. However, if you are using a WHOIS privacy protection service e.g. WhoisGuard, your email address is obscured from the WHOIS record, and thus Amazon cannot properly route the validation email. For this reason the email is also automatically sent to common administrative email addresses e.g. (`hostmaster@`, `postmaster@`, `webmaster@`, `administrator@`, `admin@`).
 
-However, Amazon also automatically sends its validation email to common administrative email addresses e.g. (`hostmaster@`, `postmaster@`, `webmaster@`, `administrator@`, `admin@`). So, if you have added privacy protection to your custom domain and you haven't received the validation email, one option would be to create an email address such as `webmaster@mydomain.com` and repeat the validation step outlined in this step by step guide.
+For best results we suggest setting up email on your domain so you can receive mail sent to `admin@yourdomain.com`.
+
+### Configuring email for your domain
+
+If your DNS provider supports it, the easiest way to ensure you receive the validation email is by using your DNS provider's mail forwarding service. This allows you to specify that email sent to `admin@yourdomain.com` is forwarded on to your personal email address.
+
+If your DNS provider does not provide mail forwarding, you will need to configure MX records on your domain. [Mailgun](https://www.mailgun.com/) is a service you can use to receive incoming email.  This guide will walk you through setting up the necessary MX records with your DNS provider: [Mailgun Receiving Email Quickstart](https://documentation.mailgun.com/quickstart-receiving.html#how-to-start-receiving-inbound-email).
+
+### Resending the validation email
+
+If you never received the validation (perhaps because the WHOIS protection), you can have the validation email resent by running the following command from the root of your website (in the same directory where the `aerobatic.yml` resides):
+
+~~~sh
+[$] aero domain --reset
+~~~
 
 More details on Amazon Certificate Manager can be found here:
 [ACM Provisioning FAQ](https://aws.amazon.com/certificate-manager/faqs/#provisioning)
-
-If you are unable to set up an administrative email address, read on.
-
-Some DNS providers don't provide email services. In that situation, you might be unable to set up an administrative email address as described above. One alternative is to set up free email forwarding with a service such as [Mailgun](https://www.mailgun.com/).
-
-This guide will walk you through setting up the necessary MX records with your DNS provider: [Mailgun Receiving Email Quickstart](https://documentation.mailgun.com/quickstart-receiving.html#how-to-start-receiving-inbound-email)

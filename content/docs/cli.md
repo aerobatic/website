@@ -145,7 +145,11 @@ The name of the domain (without any sub-domain, i.e. `mydomain.com`)
 {{% /option %}}
 
 {{% option "-N, --subdomain" %}}
-The subdomain you want your website to be accessible at. For apex domain enter the value '@'.
+The subdomain you want your website to be accessible at. For apex domain enter the value '@'. For wildcard domain enter '&#42;'.
+{{% /option %}}
+
+{{% option "-R, --reset" %}}
+Pass this option with no other options to have the domain validation email resent. See the [email troubleshooting tips](/docs/custom-domains-ssl/#trouble-receiving-validation-email).
 {{% /option %}}
 
 You can also run the command without any arguments to get status information on the domain.
