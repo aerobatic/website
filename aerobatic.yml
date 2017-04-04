@@ -6,6 +6,8 @@ deploy:
     default:
       slack:
         webhookUrl: $SLACK_WEBHOOK_ALERT
+      email:
+        to: [david.vonlehman@gmail.com]
 plugins:
   - name: http-proxy
     path: /slack

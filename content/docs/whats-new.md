@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Apr 4, 2017
+* Announcing the new [form-submit-plugin](/docs/plugins/form-submit/) for collecting HTML form submissions from your Aerobatic websites! All forms are protected from bots by [Google reCAPTCHA](https://www.google.com/recaptcha/intro/invisible.html). Submissions can be viewed in the dashboard and also forwarded via email and webhook. One less reason for you to need a PHP or other active server backend for your website.
+
 ### Mar 24, 2017
 * We now support [email or Slack deploy alerts](/docs/configuration/#deploy-alerts) that you configure in your `aerobatic.yml` file. You can even specify different alerts based on the deploy stage that was updated. Great way for agencies to automatically notify clients when changes are made.
 
