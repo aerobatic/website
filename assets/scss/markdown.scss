@@ -16,6 +16,23 @@
     margin-bottom: 15px;
   }
 
+  ol {
+    padding-left: 0;
+    counter-reset: item;
+  }
+
+  ol li { 
+    display: block;
+    list-style-position: outside;
+    margin-left: 15px;
+  }
+
+  ol li:before {
+    content: counter(item) ".  ";
+    counter-increment: item;
+    font-weight: bold;
+  }
+
   li {
     line-height: 1.6;
     margin-bottom: 6px;
@@ -34,6 +51,19 @@
   h4, h5, h3 {
     font-size: 22px;
     margin-top: 30px;
+  }
+
+  figure {
+    margin-top: 20px;
+    padding: 10px;
+    border: solid 1px $gray;
+
+    h4 {
+      border: none;
+      font-size: 16px;
+      margin-top: 0;
+      font-weight: 800;
+    }
   }
 
   table {

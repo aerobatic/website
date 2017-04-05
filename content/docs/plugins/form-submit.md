@@ -166,6 +166,8 @@ If the service you want to send form submissions to doesn't provide a webhook en
 * [Salesforce](https://zapier.com/zapbook/zaps/1751/add-a-new-salesforce-lead-from-a-webhook/)
 * And [many more](https://zapier.com/zapbook/webhook/)
 
+See our [blog post](/blog/form-submit-zapier-google-spreadsheet/) demonstrating how to append each form submission to a Google spreadsheet using Zapier.
+
 
 
 
