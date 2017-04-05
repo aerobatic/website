@@ -12,11 +12,11 @@ In this blog post we'll explore how to append each submission of a simple online
 
 ![Form to webhook to Google sheet](https://www.aerobatic.com/media/blog/form-submit-webhook-google-sheet.png)
 
-The code examples for this post are based on the [form-submit-demo](https://form-submit-demo.aerobatic.io) [[source code](https://github.com/aerobatic/form-submit-demo)].
+If you're unfamiliar with Aerobatic static plugins, check out [this introduction](https://www.aerobatic.com/docs/configuration/#plugins). The code examples for this post are based on the [form-submit-demo](https://form-submit-demo.aerobatic.io) [[source code](https://github.com/aerobatic/form-submit-demo)].
 
 ## First create the form
 
-There's nothing fancy here, just code up a standard HTML form the way you normally would. Just be sure to set the `method` to "POST" and the `target` attribute to the path that the plugin is mounted at, in our case "/contact-us". You can perform your own client-side form validation with JavaScript or use [HTML5 form validation](http://www.the-art-of-web.com/html/html5-form-validation/). You can submit the form in the classic way, or you can intercept the `submit` event with JavaScript and post it using AJAX. The [demo site](https://github.com/aerobatic/form-submit-demo) shows both techniques.
+There's nothing fancy here, just code up a standard HTML form the way you normally would. Just be sure to set the `method` to "POST" and the `target` attribute to the path that the plugin is mounted at, in our case `/contact-us`. You can perform your own client-side form validation with JavaScript or use [HTML5 form validation](http://www.the-art-of-web.com/html/html5-form-validation/). By default the full page is refreshed upon submission, but you can also intercept the `submit` event with JavaScript and post with AJAX. The [demo site](https://github.com/aerobatic/form-submit-demo) shows both techniques.
 
 ~~~html
 <form target="/contact-us" method="post">
@@ -32,11 +32,13 @@ There's nothing fancy here, just code up a standard HTML form the way you normal
 </form>
 ~~~
 
-Your form will require a [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) which is required by the form-submit plugin in order to protect against spam submissions from bots. But fear not, unlike 1st generation CAPTCHA implementations that required all users to decipher some cryptic text imagery, the most recent incarnation from Google is far less invasive. In fact with the new "invisible" option, most users won't actually know there is a CAPTCHA present. For brevity, we'll leave out the reCAPTCHA implementation details here, but it is covered in the [form-submit plugin docs](/docs/plugins/form-submit/).
+### Preventing spam
+
+Your form will need a [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) which is required by the form-submit plugin in order to protect against spam submissions from bots. But fear not, unlike 1st generation CAPTCHA implementations, with their loathed cryptic text imagery, the most recent incarnation from Google is far less invasive. In fact, with the new [invisible option](https://www.google.com/recaptcha/intro/invisible.html), most users won't actually know there is a CAPTCHA present. For brevity, we'll leave out the reCAPTCHA implementation details here, but it is covered in the [form-submit plugin docs](/docs/plugins/form-submit/).
 
 ## Configure the plugin
 
-Plugins are configured in the `aerobatic.yml` manifest. Here we want to mount the plugin at the `/contact-us` path and set it to only be enabled for requests using the POST method. We are using an environment variable to store the actual Zapier webhook URL (we'll get the value shortly). Note that the `path` property matches the `target` attribute of the `<form>` element in the HTML.
+Plugins are configured in the `aerobatic.yml` manifest. Here we want to mount the plugin at the `/contact-us` path and set it to only be enabled for requests using the `post` method. We are using an environment variable to store the actual Zapier webhook URL (we'll get the value shortly). Note that the `path` property matches the `target` attribute of the `<form>` element in the HTML.
 
 ~~~yaml
 plugins:
@@ -55,7 +57,7 @@ plugins:
 
 ## Create Zapier integration
 
-Now let's configure the integration in Zapier. First you need a Zapier account &mdash; there is a free plan that allows up to 5 "zaps". While the steps below may seem daunting, the Zapier UI is quite slick and intuitive.
+Now let's configure the integration in Zapier. First you need a Zapier account &mdash; there's a free plan that allows up to 5 "zaps". While the steps below may initially seem daunting, the Zapier UI is quite slick and intuitive.
 
 1. Login and click "Make a Zap!"
 2. For the Trigger App, scroll down to the built-in apps section and select "Webhooks"
@@ -73,7 +75,7 @@ Now let's configure the integration in Zapier. First you need a Zapier account &
 
 ## See it in action
 
-Go ahead and make another test form submission and you should see it get added to the spreadsheet. Since Google docs auto-updated when changes are made by other users (or API calls in this case), you can even leave the sheet up and see new submissions appear in near real-time!
+Go ahead and submit another test form and you should see it get added to the spreadsheet. Since Google docs auto-update when changes are made by other users (or API calls in this case), you can even leave the sheet up and see new submissions appear in near real-time!
 
 Here's a screencast showing the [form-submit-demo](https://form-submit-demo.aerobatic.io) (which uses the same exact setup as we just walked through) in action:
 
@@ -83,9 +85,9 @@ Here's a screencast showing the [form-submit-demo](https://form-submit-demo.aero
 
 ## Conclusion
 
-That's it, now each time a user submits the contact form on your Aerobatic hosted website it will show up as a new row in the spreadsheet within seconds. No wrangling with APIs and no server code or infrastructure to maintain. The process for setting up a Zapier webhook integration to other services will work very similarly to this one.
+That's it &mdash; now each time a user submits the contact form on your Aerobatic hosted website it will show up as a new row in the spreadsheet within seconds. No wrangling with APIs and no server code or infrastructure to maintain. The process for setting up a Zapier webhook integration for other services is very similar to this one.
 
-And you're not limited to simple contact forms either, this same technique can be applied to a complicated multi-step survey. Just code it with client JavaScript and POST it to the configured plugin route at the end.
+You're not limited to simple contact forms either, this same technique can be applied to a complicated multi-step user survey. Just code it with client JavaScript and POST it to the configured plugin route at the end.
 
 Now there's one less reason to hold onto that PHP or other active server backend. Static sites FTW! 
 
