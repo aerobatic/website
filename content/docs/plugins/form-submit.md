@@ -126,9 +126,9 @@ In the simple plugin model, the full webpage is posted to Aerobatic. After the P
 ~~~
 
 ## Viewing submissions
-Form submissions can be viewed in the Aerobatic dashboard. The labels on the left are derived by title-casing the values of the `name` attributes in your HTML form. Several `X-` metadata fields are appended to the submission including the date and time when the form was submitted, the configured `formName`, the IP address of the end user that submitted the form, and an approximate geo-location of the user.
+Form submissions can be viewed in the Aerobatic dashboard. The labels on the left are derived by title-casing the values of the `name` attributes in your HTML form. Several `X-` metadata fields are appended to the submission including the date and time when the form was submitted, the configured `formName`, the anonymized IP address of the end user that submitted the form, and an approximate geo-location of the user.
 
-![Form Submission screenshot](https://www.aerobatic.com/media/docs/--2/form-submission-dashboard.png)
+![Form Submission screenshot](https://www.aerobatic.com/media/docs/--3/form-submission-dashboard.png)
 
 In addition to viewing form submissions in the Aerobatic dashboard, you can also specify two additional targets: "email" and "webhook".
 
