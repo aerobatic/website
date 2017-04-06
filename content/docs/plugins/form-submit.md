@@ -66,7 +66,7 @@ Follow the steps below to create your own reCAPTCHA for each form:
 To set the **Secret key** as an environment variable, run the following command. The variable can of course be named whatever makes sense for your scenario.
 
 ~~~sh
-aero env --name $CONTACT_FORM_RECAPTCHA_KEY --value <YOUR_SECRET_KEY>
+aero env --name CONTACT_FORM_RECAPTCHA_KEY --value <YOUR_SECRET_KEY>
 ~~~
  
 **Including reCAPTCHA in your webpage**
