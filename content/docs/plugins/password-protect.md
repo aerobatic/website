@@ -182,3 +182,14 @@ plugins:
 ~~~
 
 Read more about [deploy stages](/docs/overview/#deploy-stages).
+
+### Multiple passwords
+
+If you want to have more than one valid password you can do so by setting the `password` property to an array (with a max length of 10):
+
+~~~yaml
+plugins:
+  - name: password-protect
+    options:
+      password: [$PASSWORD1, $PASSWORD2, $PASSWORD3] 
+~~~

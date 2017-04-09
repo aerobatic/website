@@ -92,6 +92,8 @@ The [form-submit-demo](https://github.com/aerobatic/form-submit-demo) is a fully
       // Allow for client validation to happen before the recaptcha
       // Here we are just using HTML5 built-in form validation
       grecaptcha.execute();
+
+      // Important to prevent the form from submitting on it's own
       event.preventDefault();
     }
 
@@ -107,6 +109,10 @@ The [form-submit-demo](https://github.com/aerobatic/form-submit-demo) is a fully
 </body>
 ~~~
 
+{{% alert warning %}}
+The function provided to the `data-callback` attribute of the reCAPTCHA div (in this case `recaptchaOnSubmit`) **must** be a global function!
+{{% /alert %}}
+
 ## Using AJAX
 In the simple plugin model, the full webpage is posted to Aerobatic. After the POST body is collected, the browser is redirected to the `redirectUrl`. However you can also submit the form with AJAX. Just make sure that the `Accept` header is set to `application/json`. JQuery offers a convenient `dataType` property for doing this:
 
@@ -115,6 +121,27 @@ In the simple plugin model, the full webpage is posted to Aerobatic. After the P
   url: demoForm.attr('action'), 
   method: 'POST',
   data: demoForm.serialize(),
+  // This causes Accepts header to be application/json
+  dataType: 'json',
+  success: function() {
+    // Replace the form with a thank you message
+    demoForm.hide();
+    $('#thankYou').show();
+  }
+});
+~~~
+
+In the example above the [JQuery serialize](https://api.jquery.com/serialize/) function is used to create a JSON object from all the form inputs which will automatically pick up the hidden input injected by the Google reCAPTCHA. If you are constructing the JSON object yourself, then you'll need to make sure you append the input with id `g-recaptcha-response` to the object.
+
+~~~js
+$.ajax({
+  url: demoForm.attr('action'), 
+  method: 'POST',
+  data: {
+    email: $('#email').val(),
+    message: $('#message').val(),
+    'g-recaptcha-response': $('#g-recaptcha-response').val()
+  },
   // This causes Accepts header to be application/json
   dataType: 'json',
   success: function() {
