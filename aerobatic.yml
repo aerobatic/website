@@ -25,6 +25,7 @@ plugins:
       secretAccessKey: $S3_SECRET_ACCESS_KEY
   - name: keyword-search
     path: /search
+    method: get
   - name: redirect
     options:
       /docs: /docs/getting-started/
