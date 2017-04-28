@@ -7,7 +7,7 @@ name: continuous-deployment
 
 Deploying your website directly from your local terminal is a great way to get started with minimal friction. However as the deployment process matures and particularly if there's a team of contributors, it makes sense to move to a CD workflow where git commits automatically trigger a build and deployment of the website using a CI/CD service.
 
-The [aerobatic-cli](/doc/cli) can easily be installed and run as part of a build script with any of the growing set of CI/CD tools and services such as: [Jenkins](https://jenkins.io/), [Travis](https://travis-ci.com/), [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), [Wercker](http://www.wercker.com/), [Codeship](https://codeship.com), [CircleCI](https://circleci.com/), [AWS CodeBuild](https://aws.amazon.com/codebuild/), [and more](https://github.com/ligurio/Continuous-Integration-services/blob/master/continuous-integration-services-list.md).
+The [aerobatic-cli](/docs/cli) can easily be installed and run as part of a build script with any of the growing set of CI/CD tools and services such as: [Jenkins](https://jenkins.io/), [Travis](https://travis-ci.com/), [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), [Wercker](http://www.wercker.com/), [Codeship](https://codeship.com), [CircleCI](https://circleci.com/), [AWS CodeBuild](https://aws.amazon.com/codebuild/), [and more](https://github.com/ligurio/Continuous-Integration-services/blob/master/continuous-integration-services-list.md).
 
 All the examples below are based on a [Jekyll](https://jekyllrb.com/) site being built by Travis, but the basic concepts are all transferrable to other static site generators and CI/CD services.
 

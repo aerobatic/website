@@ -50,3 +50,8 @@ plugins:
     options:
       errors:
         '404': 404.html
+
+siteIndexing:
+  noCrawlPatterns:
+    - tags/**
+
