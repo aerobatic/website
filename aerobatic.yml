@@ -52,6 +52,6 @@ plugins:
         '404': 404.html
 
 siteIndexing:
-  noCrawlPatterns:
+  noIndexPatterns:
     - tags/**
 
