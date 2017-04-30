@@ -111,4 +111,4 @@ See the [deploy configuration docs](/docs/configuration/#deploy-alerts) for full
 
 ### Web logs {#weblogs}
 
-You can follow your web logs in near real-time using the either the [`aero logs`](/cli/#logs) command or in the web control panel. In addition to the usual web log fields such as URL, method, response code, etc. we also include the physical location of the end user by geo-location of their IP address.
+You can follow your web logs in near real-time using the either the [`aero logs`](/docs/cli/#logs) command or in the web control panel. In addition to the usual web log fields such as URL, method, response code, etc. we also include the physical location of the end user by geo-location of their IP address.

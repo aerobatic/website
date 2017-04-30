@@ -51,7 +51,8 @@ plugins:
       errors:
         '404': 404.html
 
-siteIndexing:
-  noIndexPatterns:
-    - tags/**
+scanner:
+  keywordSearch:
+    noIndexPatterns:
+      - tags/**
 
