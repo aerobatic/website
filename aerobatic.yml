@@ -26,6 +26,8 @@ plugins:
   - name: keyword-search
     path: /search
     method: get
+    options:
+      resultsTemplate: search/index.html
   - name: redirect
     options:
       /docs: /docs/getting-started/
