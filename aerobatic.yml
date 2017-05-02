@@ -55,5 +55,5 @@ scanner:
   keywordSearch:
     noIndexPatterns:
       - /tags/**
-    stripTitleStart: "Aerobatic - "
+    titleStripStart: "Aerobatic - "
 
