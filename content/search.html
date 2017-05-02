@@ -1,0 +1,57 @@
+---
+layout: base
+title: Search
+description: Search the Aerobatic site
+---
+
+<div class="container" style="max-width: 900px; margin-top: 30px;">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert tip">
+				Our site search is powered by the Aerobatic <a href="/docs/plugins/keyword-search/">keyword-search</a> plugin which you can easily configure for your own website. <a href="/docs/plugins/keyword-search/">Find out how</a>.
+			</div>
+			<form method="GET" action="/search/">
+				<div class="input-group">
+					<input class="form-control input-lg" name="q" type="text" placeholder="Search Aerobatic" />
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!--<div class="search-result">
+		<h3><a href="/blog/basic-auth-for-static-web-sites/">How To Password Protect A Static Website</a></h3>
+		<cite>https://www.aerobatic.com/blog/basic-auth-for-static-web-sites/</cite>
+		<span class="snippet">Oct 15, 2015 - Add password protection to your <em>static</em> website in seconds with the Aerobatic HTTP basic auth plugin.<span class="ellipsis">...</span></span>
+	</div>
+	<div class="search-result">
+		<h3><a href="/blog/deploy-a-roots-static-site-to-bitbucket/">Deploy a Roots Static Site to Bitbucket</a></h3>
+		<cite>https://www.aerobatic.com/blog/deploy-a-roots-static-site-to-bitbucket/</cite>
+		<span class="snippet">Nov 18, 2015 - How to deploy a Roots <em>static</em> site to Bitbucket using Aerobatic.<span class="ellipsis">...</span></span>
+	</div>-->
+
+	<div id="search-term" style="display:none">{{{searchTerm}}}</div>
+	<div id="search-results" style="display:none;">
+		{{#searchResults}}
+			<div class="search-result">
+				<h3><a href="{{{urlPath}}}">{{title}}</a></h3>
+				<cite>{{fullUrl}}</cite>
+				{{#snippet}}
+				<span class="snippet">{{#date}}{{date}} - {{/date}}{{{snippet}}}<span class="ellipsis">...</span></span>
+				{{/snippet}}
+			</div>
+		{{/searchResults}}
+	</div>
+</div>
+
+<script>
+	// Check if the mustache tag was evaluated. If so this must be
+	// the rendered search results.
+	const searchTerm = document.getElementById('search-term').innerText;
+	if (searchTerm !== '{{{' + 'searchTerm' + '}}}') {
+		document.getElementById('search-term').value = searchTerm;
+		document.getElementById('search-results').style.display = 'block';
+	}
+</script>
