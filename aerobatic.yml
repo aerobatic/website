@@ -54,5 +54,6 @@ plugins:
 scanner:
   keywordSearch:
     noIndexPatterns:
-      - tags/**
+      - /tags/**
+    stripTitleStart: "Aerobatic - "
 
