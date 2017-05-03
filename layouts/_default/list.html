@@ -7,7 +7,7 @@
       <h1>Blog</h1>
 
       <div class="blog-list">
-        {{ range $index, $post := (where .Data.Pages ".Params.hidden" "ne" "true") (sort .Data.Pages.ByPublishDate)}}
+        {{ range $index, $post := (where .Data.Pages ".Params.hidden" "ne" "true").ByPublishDate}}
           {{ if in (seq 0 3 100) $index }}<div class="row">{{ end }}
           <div class="col-md-4">
             <a href="{{ $post.Permalink }}" class="blog-item">
