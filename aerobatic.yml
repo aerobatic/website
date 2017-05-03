@@ -28,6 +28,7 @@ plugins:
     method: get
     options:
       resultsTemplate: /search/index.html
+      mustacheTags: ['<%=', '%>']
   - name: redirect
     options:
       /docs: /docs/getting-started/
