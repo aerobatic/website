@@ -84,6 +84,11 @@ pre {
   line-height: 1;
 }
 
+// Hide the label "Search" and just show the icon
+.nav.navbar-nav.navbar-right .search-link span {
+  display: none;
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;

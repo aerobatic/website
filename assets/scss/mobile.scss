@@ -27,6 +27,18 @@ Some overrides for small screens
           padding: 10px;
         }
       }
+
+      .login-link {
+        color: inherit !important;
+        background-color: inherit !important;
+      }
+
+      > li.search-link {
+        span {
+          display: inline-block !important;
+          margin-left: 8px;
+        }
+      }
     }
   }
 }

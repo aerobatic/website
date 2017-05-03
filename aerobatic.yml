@@ -27,7 +27,7 @@ plugins:
     path: /search
     method: get
     options:
-      resultsTemplate: search/index.html
+      resultsTemplate: /search/index.html
   - name: redirect
     options:
       /docs: /docs/getting-started/
@@ -57,5 +57,7 @@ scanner:
   keywordSearch:
     noIndexPatterns:
       - /tags/**
+      - /legal/**
+      - /search/**
     titleStripStart: "Aerobatic - "
 
