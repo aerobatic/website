@@ -6,13 +6,13 @@ description: Search the Aerobatic site
 <div class="container" style="max-width: 900px; margin-top: 30px;">
 	<div class="row">
 		<div class="col-lg-12">
-			<!--<div class="alert tip">
-				Our site search is powered by the Aerobatic <a href="/docs/plugins/keyword-search/">keyword-search</a> plugin which you can easily configure for your own website. <a href="/docs/plugins/keyword-search/">Find out how</a>.
-			</div>-->
+			<div class="alert tip">
+				Our site search is powered by the Aerobatic <a href="/docs/plugins/keyword-search/">keyword-search</a> plugin which you can use in your own website. <a href="/docs/plugins/keyword-search/">Find out how</a>.
+			</div>
 			<form method="GET" action="/search/">
 				<div class="form-group">
 					<div class="input-group">
-						<input class="form-control input-lg" name="q" type="text" placeholder="Search Aerobatic" style="z-index:0" />
+						<input id="search-box" class="form-control input-lg" name="q" type="text" placeholder="Search Aerobatic" style="z-index:0" />
 						<span class="input-group-btn" style="z-index:0">
 							<button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
 						</span>
@@ -44,6 +44,10 @@ description: Search the Aerobatic site
 				<%= /snippet %>
 			</div>
 		<%= /searchResults %>
+
+		<%= #zeroResults %>
+		<h3>No results</h3>
+		<%= /zeroResults %>
 	</div>
 </div>
 
@@ -52,7 +56,7 @@ description: Search the Aerobatic site
 	// the rendered search results.
 	const searchTerm = document.getElementById('search-term').innerText;
 	if (searchTerm !== '<%= ' + 'searchTerm' + ' %>') {
-		document.getElementById('search-term').value = searchTerm;
+		document.getElementById('search-box').value = searchTerm;
 		document.getElementById('search-results').style.display = 'block';
 	}
 </script>

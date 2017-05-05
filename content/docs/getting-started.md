@@ -19,7 +19,7 @@ If you don't already have Node.js installed, you can get it [download it from he
 
 #### 2. Create an Aerobatic account:
 
-Register at [https://dashboard.aerobatic.com/dashboard](https://dashboard.aerobatic.com/dasbhboard)
+Register at [https://dashboard.aerobatic.com/register](https://dashboard.aerobatic.com/register)
 
 #### 3. Deploy your first website:
 
@@ -41,6 +41,6 @@ If you want to try out a slightly more realistic example, try creating a website
 
 ### Next Steps
 
-* Explore how to use [plugins](/docs/configuration/#plugins) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
+* Explore how to use [plugins](/docs/plugins/) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/plugins)
 * If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
 * Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)

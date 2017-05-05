@@ -112,3 +112,7 @@ See the [deploy configuration docs](/docs/configuration/#deploy-alerts) for full
 ### Web logs {#weblogs}
 
 You can follow your web logs in near real-time using the either the [`aero logs`](/docs/cli/#logs) command or in the web control panel. In addition to the usual web log fields such as URL, method, response code, etc. we also include the physical location of the end user by geo-location of their IP address.
+
+## Site scanner
+
+The site scanner crawls and examines the content of your website after each deployment. Currently the only function of the scanner is to build the search index for the [keyword-search](/docs/plugins/keyword-search) plugin, but it has been designed to offer additional site services for catching broken links and performing SEO audits. See the [site-scanner configuration](/docs/configuration/#site-scanner) for further details.

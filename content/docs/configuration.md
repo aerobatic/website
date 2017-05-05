@@ -155,3 +155,14 @@ Environment variables can even have different values for different stages. For e
 {{% alert warning %}}
 These environment variables are used at runtime by your website plugins. There is also an `AEROBATIC_API_KEY` environment variable which is to be [configured with your CI service](/docs/continuous-deployment#aerobatic-apikey) rather than the `aero env` command.
 {{% /alert %}}
+
+## Site scanner
+
+The site scanner crawls and examines the content of your website after each deployment. Currently the only function of the scanner is to build the search index for the [keyword-search](/docs/plugins/keyword-search) plugin, but it has been designed to offer additional site services for catching broken links and performing SEO audits. See the [site-scanner configuration](/docs/configuration/#site-scanner) for further details. Sites must opt-in to be scanned by declaring a `scanner` section in the `aerobatic.yml`.
+
+Currently the only supported property is `keywordSearch` which is used to configure how the search index is built. See the [keyword-search](/docs/plugins/keyword-search/#configuration) docs for full details.
+
+~~~yaml
+scanner:
+  keywordSearch: {}
+~~~

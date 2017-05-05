@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### May 5, 2017
+* The new [keyword-search](/docs/plugins/keyword-search/) plugin is now available. All Aerobatic sites can now offer full text search of site content without reliance on any external services. You can provide a custom search results template for a fully integrated user experience.
+
 ### Apr 24, 2017
 * [Announcing the new metrics section](/blog/introducing-website-metrics/) in the Aerobatic dashboard for gleaning insights into the traffic on your website including: visits, page views, top pages, visitor locations, traffic source, and more.
 

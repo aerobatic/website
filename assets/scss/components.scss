@@ -17,18 +17,18 @@
   text-decoration:none !important;
 }
 
-.jumbotron {
-  p > a.link {
+#banner {
+  p > a {
     display: inline-block;
-    color: #707070;
+    color: #fff;
     margin-bottom: 5px;
-    border-bottom: solid 1px #d7d7d7;
+    border-bottom: solid 1px #fff;
   }
 
-  p > a.link:hover {
-    color: #333333;
+  p > a:hover {
+    color: #d7d7d7;
     text-decoration: none;
-    border-color: #333333;
+    border-color: #d7d7d7;
   }
 }
 

@@ -19,3 +19,7 @@ params:
       url: http://bitbucket.org/aerobatic
     - title: github-alt
       url: http://github.com/aerobatic
+
+taxonomies:
+  tag: ""
+  category: ""
