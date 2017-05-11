@@ -77,7 +77,11 @@ scanner:
     titleStripStart: 'Sitename |'
     titleStripEnd: ' - Sitename'
     contentSelectors: [p, li]
-    headerSelectors: [h1, h2]
+    headerSelectors: [h1, h2],
+    metadataKeys:
+      - author
+      - tags
+      - description
 ~~~
 
 {{% option "noIndexPatterns" %}}
@@ -102,6 +106,10 @@ String that should be stripped off the start of the `<title>`. See [Page title f
 
 {{% option "titleStripEnd" %}}
 String that should be stripped off the end of the `<title>`.
+{{% /option %}}
+
+{{% option "metadataKeys" %}}
+Names of metadata keys to scrape from the `<meta>` tags when building the keyword index. See the [metadata](#metadata) section for details.
 {{% /option %}}
 
 ## How it works
@@ -136,7 +144,7 @@ At search time, each document is evaluated based on how well it matches the quer
 
 * `path` - **5**
 * `title` - **5**
-* `description` - **3**
+*  Metadata, i.e. `description`, `author`, etc. - **3**
 * `headers` - **2**
 * `body` - **1**
 
@@ -179,6 +187,29 @@ Links found in the sitemap with a `lastmod` element will appears in search resul
     <lastmod>2017-04-24T00:00:00+00:00</lastmod>
   </url>
 <urlset>
+~~~
+
+### Metadata
+
+The scanner can be configured to take the values of specific `<meta>` tags in the head of your pages. The metadata is stored in the search document both for searching on and to display alongside each search result. The list of metadata keys must be specified with the `metadataKeys` property:
+
+~~~yaml
+scanner:
+  keywordSearch:
+    metadataKeys:
+      - author
+      - description
+      - category
+~~~
+
+Then you would need to make sure these values are emitted in the `<head>` of your pages:
+
+~~~html
+<head>
+  <meta name="author" content="Author name" />
+  <meta name="description" content="This is a description of the page" />
+  <meta name="category" content="Blog" />
+</head>
 ~~~
 
 ### Formatting page titles
@@ -295,8 +326,11 @@ plugins:
       mustacheTags: ['<%=', '%>']
 ~~~
 
+For a tutorial on how to use keyword-search for a Hugo site, see our blog post [Implementing full-text search for Hugo sites
+](/blog/full-text-search-for-hugo-sites/).
+
 ### Testing custom template locally
-In order to test your search results template locally the best approach is to hardcode some HTML in your template that matches what is output by the mustache template. Then you can fine tune your HTML and CSS to get everything looking the way you like. Then make sure your mustache tags will emit the same HTML when populated by actual search results and comment out the hardcoded block.
+In order to test your search results template locally the best approach is to hardcode some HTML in your template that matches the output of the mustache template. Then you can fine tune your HTML and CSS to get everything looking the way you like. Then make sure your mustache tags will emit the same HTML when populated by actual search results and comment out the hardcoded block.
 
 ## JSON search results
 Rather than loading a dedicated search results page, you can also execute searches via an AJAX call. In this model you don't need a `resultsTemplate` since your client JavaScript will be responsible for rendering the JSON response. In order to inform the plugin that you want back JSON rather than HTML results, you need to pass the `Accept: application/json` header. If you are using jQuery, you can make the call like so:
@@ -308,6 +342,9 @@ $.ajax({
   dataType: 'json'
 })
 ~~~
+
+## Password protected sites
+Sites using the [password-protect](/docs/plugins/password-protect/) plugin can also use the keyword search plugin. Just be sure to set the `path` of the search plugin within the protected portion of the site to avoid exposing search result summaries to non-logged in users (although they would be forced to enter the password if they clicked on the search result link).
 
 ## Limits
 The following table summarizes limits enforced when building the search index:
