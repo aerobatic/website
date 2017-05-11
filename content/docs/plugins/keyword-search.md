@@ -92,7 +92,7 @@ Override the path where the sitemap is located. Defaults to `/sitemap.xml`.
 The list of jQuery style selector strings that identify the blocks of content that should be indexed. Defaults to `[p, li]`. See [Controlling what is indexed](#controlling-what-is-indexed).
 {{% /option %}}
 
-{{% option "contentSelectors" %}}
+{{% option "headerSelectors" %}}
 The list of jQuery style selector strings that identify the content headers indexed. Defaults to `[h1, h2]`.
 {{% /option %}}
 
