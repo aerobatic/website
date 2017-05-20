@@ -75,7 +75,25 @@ Domain providers that support one of the flavors of CNAME-like at the apex inclu
 
 We suggest you **ONLY** utilize the apex domain if your DNS provider has special `ALIAS/ANAME` record types specifically intended to handle it. The alternative is a `CNAME` for each website like `www`.
 
-Most all providers let you define a URL redirect record that will redirect the apex to any URL of your choice. In this case you would want to point to `https://www.mydomain.com`. Note that this will only work when a user browses to the non-SSL URL for your site.
+### Apex workarounds
+
+If your DNS provider does not support `ANAME` or `ALIAS` records and it's not possible to switch, then your best bet is to redirect the apex URL to a CNAME like `www`. Below are two possible ways to configure this:
+
+* Many providers let you define a URL redirect record that will redirect the apex to any URL of your choice. In this case you would want to point to `https://www.mydomain.com`. 
+
+* Use a service called [ARecord](http://www.arecord.net/) which provides a static IP address to assign to an `A` record. Their service will redirect requests from the apex to `www` sub-domain.
+
+{{% alert warning %}}
+**ALERT:** These redirect solutions only work for an **http** request, NOT **https**. If a user types "yourdomain.com" into their browser, the above solution will work since the browser defaults to http in the absence of a protocol. But the **ONLY** way to make `https://yourdomain.com` work is to use one of the aforementioned DNS providers that support `ANAME` or `ALIAS` record types.
+{{% /alert %}}
+
+### CloudFlare Setup {#cloudflare}
+If you are using CloudFlare in front of your Aerobatic custom domain there are a few considerations to keep in mind:
+
+1. You can use the [CNAME flattening](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) feature to make your site available at the apex domain.
+2. You **must** set SSL to "Full" to avoid your site getting caught in a redirect loop. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-)].
+3. In order to force CloudFlare to use the HTTP headers set by Aerobatic make sure to set the "Respect Existing Headers" option. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200169266-Does-Cloudflare-honor-my-Expires-and-Cache-Control-headers-for-static-content-)]
+
 
 ### Route 53 setup {#route53}
 If your current domain provider does not provide `ALIAS/ANAME` record types and you really want to host your site on the apex domain, we recommend transferring your name server records to [Amazon Route 53](https://aws.amazon.com/route53/). Route 53 can has a special relationship with CloudFront which is the CDN that Aerobatic uses to host your custom domain and SSL certificate.

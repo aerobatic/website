@@ -33,10 +33,12 @@ Register at [https://dashboard.aerobatic.com/register](https://dashboard.aerobat
 
 In less than 30 seconds your website will be deployed to an https URL on our global CDN.
 
-If you want to try out a slightly more realistic example, try creating a website from a template such as [this one](https://html5up.net/editorial) from [HTML5 Up](https://html5up.net/). This command will automatically create a new directory with the downloaded files.
+For a more realistic example, you can create a website from a template such as [this one](https://html5up.net/editorial) from [HTML5 Up](https://html5up.net/). When specifying the `--source` argument a new directory will automatically be created for you.
 
 ~~~sh
-[$] aero create --source https://html5up.net/editorial/download
+[$] aero create --source https://html5up.net/editorial/download -n your-site-name
+[$] cd your-site-name
+[$] aero deploy
 ~~~
 
 ### Next Steps
