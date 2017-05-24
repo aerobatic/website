@@ -1,0 +1,13 @@
+{
+  "title": "Mickey",
+  "homepage": "https://github.com/vincentchan/mickey",
+  "thumbnail": "mickey.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/mickey.png",
+  "slug": "mickey",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 124,
+  "stars": 226,
+  "description": "A minimal one-column theme for Jekyll. ",
+  "downloadUrl": "https://github.com/vincentchan/mickey/archive/master.tar.gz"
+}

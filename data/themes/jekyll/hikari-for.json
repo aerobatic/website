@@ -1,0 +1,13 @@
+{
+  "title": "Hikari",
+  "homepage": "https://github.com/mx3m/hikari-for-Jekyll",
+  "thumbnail": "hikari.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/hikari.png",
+  "slug": "hikari-for",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 70,
+  "stars": 164,
+  "description": "An open-source theme for Jekyll",
+  "downloadUrl": "https://github.com/mx3m/hikari-for-Jekyll/archive/gh-pages.tar.gz"
+}

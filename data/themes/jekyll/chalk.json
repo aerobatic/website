@@ -1,0 +1,15 @@
+{
+  "title": "Chalk",
+  "homepage": "https://github.com/nielsenramon/chalk",
+  "thumbnail": "chalk.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/chalk.png",
+  "slug": "chalk",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 175,
+  "stars": 296,
+  "description": "Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.",
+  "downloadUrl": "https://github.com/nielsenramon/chalk/archive/master.tar.gz",
+  "demoAppId": "0cd265da-e523-410d-ab6d-49cbb8e0977b",
+  "demoAppName": "theme-jekyll-chalk-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Skinny Bones",
+  "homepage": "https://github.com/mmistakes/skinny-bones-jekyll",
+  "thumbnail": "skinny-bones.gif",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/skinny-bones.gif",
+  "slug": "skinny-bones",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 524,
+  "stars": 551,
+  "description": ":art: A Jekyll starter with a variety of customizable layouts and components.",
+  "downloadUrl": "https://github.com/mmistakes/skinny-bones-jekyll/archive/master.tar.gz"
+}

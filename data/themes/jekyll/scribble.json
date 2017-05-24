@@ -1,0 +1,13 @@
+{
+  "title": "Scribble",
+  "homepage": "https://github.com/muan/scribble",
+  "thumbnail": "scribble.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/scribble.png",
+  "slug": "scribble",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 566,
+  "stars": 557,
+  "description": ":tomato: A Jekyll theme.",
+  "downloadUrl": "https://github.com/muan/scribble/archive/gh-pages.tar.gz"
+}

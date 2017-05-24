@@ -1,0 +1,13 @@
+{
+  "title": "Freelancer",
+  "homepage": "https://github.com/jeromelachaud/freelancer-theme",
+  "thumbnail": "freelancer.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/freelancer.png",
+  "slug": "freelancer",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 748,
+  "stars": 678,
+  "description": "Jekyll theme based on Freelancer Start Bootstrap theme",
+  "downloadUrl": "https://github.com/jeromelachaud/freelancer-theme/archive/master.tar.gz"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Balzac",
+  "homepage": "https://github.com/coletownsend/balzac-for-jekyll",
+  "thumbnail": "balzac.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/balzac.jpg",
+  "slug": "balzac-for-jekyll",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 284,
+  "stars": 354,
+  "description": "Your favorite AnchorCMS theme, now for Jekyll!",
+  "downloadUrl": "https://github.com/coletownsend/balzac-for-jekyll/archive/master.tar.gz"
+}

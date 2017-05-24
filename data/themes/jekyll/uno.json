@@ -1,0 +1,13 @@
+{
+  "title": "Jekyll-Uno",
+  "homepage": "https://github.com/joshgerdes/jekyll-uno",
+  "thumbnail": "jekyll-uno.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jekyll-uno.png",
+  "slug": "uno",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 268,
+  "stars": 296,
+  "description": "Jekyll-Uno - a minimal, responsive theme for Jekyll based on Uno for Ghost",
+  "downloadUrl": "https://github.com/joshgerdes/jekyll-uno/archive/master.tar.gz"
+}

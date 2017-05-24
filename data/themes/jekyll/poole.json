@@ -1,0 +1,15 @@
+{
+  "title": "Poole",
+  "homepage": "https://github.com/poole/poole",
+  "thumbnail": "poole.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/poole.png",
+  "slug": "poole",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 995,
+  "stars": 2156,
+  "description": "The Jekyll Butler.",
+  "downloadUrl": "https://github.com/poole/poole/archive/master.tar.gz",
+  "demoAppId": "f465108e-b8ce-4d8e-879f-a1c76c1a4adb",
+  "demoAppName": "theme-jekyll-poole-demo"
+}

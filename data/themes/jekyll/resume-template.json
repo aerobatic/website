@@ -1,0 +1,13 @@
+{
+  "title": "Resume",
+  "homepage": "https://github.com/jglovier/resume-template",
+  "thumbnail": "resume.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/resume.png",
+  "slug": "resume-template",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 289,
+  "stars": 428,
+  "description": ":page_facing_up::briefcase::tophat: A simple Jekyll + GitHub Pages powered resume template.",
+  "downloadUrl": "https://github.com/jglovier/resume-template/archive/gh-pages.tar.gz"
+}

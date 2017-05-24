@@ -1,0 +1,15 @@
+{
+  "title": "Mediator",
+  "homepage": "https://github.com/dirkfabisch/mediator",
+  "thumbnail": "mediator.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/mediator.png",
+  "slug": "mediator",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 552,
+  "stars": 612,
+  "description": "a medium inspired jekyll theme",
+  "downloadUrl": "https://github.com/dirkfabisch/mediator/archive/master.tar.gz",
+  "demoAppId": "d14a99d8-5e3d-44f5-a5c4-e7f0b7b492a4",
+  "demoAppName": "theme-jekyll-mediator-demo"
+}

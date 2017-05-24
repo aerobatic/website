@@ -1,0 +1,13 @@
+{
+  "title": "Clean Blog",
+  "homepage": "https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll",
+  "thumbnail": "clean-blog.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/clean-blog.png",
+  "slug": "startbootstrap-clean-blog",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 859,
+  "stars": 845,
+  "description": "A Jekyll version of the Clean Blog theme by Start Bootstrap",
+  "downloadUrl": "https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll/archive/master.tar.gz"
+}

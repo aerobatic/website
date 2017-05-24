@@ -1,0 +1,15 @@
+{
+  "title": "Landing Page",
+  "homepage": "https://github.com/swcool/landing-page-theme",
+  "thumbnail": "landing-page.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/landing-page.png",
+  "slug": "landing-page",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 307,
+  "stars": 218,
+  "description": "Jekyll Bootstrap theme",
+  "downloadUrl": "https://github.com/swcool/landing-page-theme/archive/master.tar.gz",
+  "demoAppId": "6c39b37c-aac3-47ba-b06a-03ead1659781",
+  "demoAppName": "theme-jekyll-landing-page-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Jasper",
+  "homepage": "https://github.com/biomadeira/jasper",
+  "thumbnail": "jasper.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jasper.png",
+  "slug": "jasper",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 162,
+  "stars": 245,
+  "description": "Jekyll-ready and full featured clone of Ghost's Casper theme",
+  "downloadUrl": "https://github.com/biomadeira/jasper/archive/master.tar.gz"
+}

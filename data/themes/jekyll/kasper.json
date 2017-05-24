@@ -1,0 +1,13 @@
+{
+  "title": "Kasper",
+  "homepage": "https://github.com/rosario/kasper",
+  "thumbnail": "kasper.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/kasper.png",
+  "slug": "kasper",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 355,
+  "stars": 773,
+  "description": "Ghost's default theme (Casper) on Jekyll",
+  "downloadUrl": "https://github.com/rosario/kasper/archive/master.tar.gz"
+}

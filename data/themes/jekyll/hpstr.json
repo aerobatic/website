@@ -1,0 +1,13 @@
+{
+  "title": "HPSTR",
+  "homepage": "https://github.com/mmistakes/hpstr-jekyll-theme",
+  "thumbnail": "hpstr.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/hpstr.png",
+  "slug": "hpstr",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1427,
+  "stars": 793,
+  "description": ":art: A Jekyll theme with some tumble-log tendencies.",
+  "downloadUrl": "https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.tar.gz"
+}

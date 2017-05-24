@@ -1,0 +1,13 @@
+{
+  "title": "Grayscale",
+  "homepage": "https://github.com/jeromelachaud/grayscale-theme",
+  "thumbnail": "grayscale.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/grayscale.jpg",
+  "slug": "grayscale",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 243,
+  "stars": 159,
+  "description": "Jekyll theme based on Grayscale Start Bootstrap theme",
+  "downloadUrl": "https://github.com/jeromelachaud/grayscale-theme/archive/master.tar.gz"
+}

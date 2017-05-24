@@ -1,0 +1,15 @@
+{
+  "title": "Moon",
+  "homepage": "https://github.com/TaylanTatli/Moon",
+  "thumbnail": "moon.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/moon.png",
+  "slug": "moon",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 605,
+  "stars": 660,
+  "description": "Moon is a minimal, one column jekyll theme.",
+  "downloadUrl": "https://github.com/TaylanTatli/Moon/archive/master.tar.gz",
+  "demoAppId": "06f44714-3798-4d9f-a5f9-046a5b8e3d7e",
+  "demoAppName": "theme-jekyll-moon-demo"
+}

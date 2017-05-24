@@ -1,0 +1,13 @@
+{
+  "title": "Minimal Mistakes",
+  "homepage": "https://github.com/mmistakes/minimal-mistakes",
+  "thumbnail": "minimal-mistakes.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/minimal-mistakes.png",
+  "slug": "minimal-mistakes",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 4268,
+  "stars": 1985,
+  "description": ":triangular_ruler: A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server.",
+  "downloadUrl": "https://github.com/mmistakes/minimal-mistakes/archive/master.tar.gz"
+}

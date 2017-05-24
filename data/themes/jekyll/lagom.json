@@ -1,0 +1,13 @@
+{
+  "title": "Lagom",
+  "homepage": "https://github.com/swanson/lagom",
+  "thumbnail": "lagom.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/lagom.png",
+  "slug": "lagom",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 377,
+  "stars": 364,
+  "description": "A Jekyll blog theme with just the right amount of style",
+  "downloadUrl": "https://github.com/swanson/lagom/archive/master.tar.gz"
+}

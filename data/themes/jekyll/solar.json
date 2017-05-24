@@ -1,0 +1,13 @@
+{
+  "title": "Solar",
+  "homepage": "https://github.com/mattvh/solar-theme-jekyll",
+  "thumbnail": "solar.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/solar.png",
+  "slug": "solar",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 88,
+  "stars": 156,
+  "description": "A stylish theme for Jekyll blogs, based on the Solarized color palette",
+  "downloadUrl": "https://github.com/mattvh/solar-theme-jekyll/archive/master.tar.gz"
+}

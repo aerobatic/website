@@ -1,0 +1,13 @@
+{
+  "title": "Dbyll",
+  "homepage": "https://github.com/dbtek/dbyll",
+  "thumbnail": "dbyll.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/dbyll.png",
+  "slug": "dbyll",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 280,
+  "stars": 381,
+  "description": "Stylish, minimalistic theme for jekyll.",
+  "downloadUrl": "https://github.com/dbtek/dbyll/archive/master.tar.gz"
+}

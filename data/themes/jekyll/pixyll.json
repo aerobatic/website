@@ -1,0 +1,13 @@
+{
+  "title": "Pixyll",
+  "homepage": "https://github.com/johnotander/pixyll",
+  "thumbnail": "pixyll.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/pixyll.png",
+  "slug": "pixyll",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1071,
+  "stars": 1359,
+  "description": "A simple, beautiful Jekyll theme that's mobile first",
+  "downloadUrl": "https://github.com/johnotander/pixyll/archive/master.tar.gz"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Jekyll Now",
+  "homepage": "https://github.com/barryclark/jekyll-now",
+  "thumbnail": "jekyll-now.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jekyll-now.png",
+  "slug": "now",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 14443,
+  "stars": 3581,
+  "description": "Build a Jekyll blog in minutes, without touching the command line.",
+  "downloadUrl": "https://github.com/barryclark/jekyll-now/archive/master.tar.gz"
+}

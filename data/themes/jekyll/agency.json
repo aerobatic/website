@@ -1,0 +1,15 @@
+{
+  "title": "Agency",
+  "homepage": "https://github.com/y7kim/agency-jekyll-theme",
+  "thumbnail": "agency.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/agency.jpg",
+  "slug": "agency",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 645,
+  "stars": 404,
+  "description": "Agency Theme for Jekyll",
+  "downloadUrl": "https://github.com/y7kim/agency-jekyll-theme/archive/gh-pages.tar.gz",
+  "demoAppId": "52b76f34-1a56-43c0-b4d4-c74f3b073550",
+  "demoAppName": "theme-jekyll-agency-demo"
+}

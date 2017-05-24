@@ -1,0 +1,13 @@
+{
+  "title": "Online CV",
+  "homepage": "https://github.com/sharu725/online-cv",
+  "thumbnail": "online-cv.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/online-cv.png",
+  "slug": "online-cv",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 279,
+  "stars": 164,
+  "description": "A minimal Jekyll Theme to host your resume (CV)",
+  "downloadUrl": "https://github.com/sharu725/online-cv/archive/master.tar.gz"
+}

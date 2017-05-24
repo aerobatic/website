@@ -1,0 +1,13 @@
+{
+  "title": "Long Haul",
+  "homepage": "https://github.com/brianmaierjr/long-haul",
+  "thumbnail": "long-haul.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/long-haul.png",
+  "slug": "long-haul",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 310,
+  "stars": 265,
+  "description": "A minimal, type-focused Jekyll theme.",
+  "downloadUrl": "https://github.com/brianmaierjr/long-haul/archive/master.tar.gz"
+}

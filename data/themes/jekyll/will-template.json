@@ -1,0 +1,13 @@
+{
+  "title": "Will Jekyll Template",
+  "homepage": "https://github.com/willianjusten/will-jekyll-template",
+  "thumbnail": "will-jekyll-template.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/will-jekyll-template.png",
+  "slug": "will-template",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 246,
+  "stars": 196,
+  "description": "A simple Jekyll theme.",
+  "downloadUrl": "https://github.com/willianjusten/will-jekyll-template/archive/master.tar.gz"
+}

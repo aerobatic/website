@@ -1,0 +1,15 @@
+{
+  "title": "Carte",
+  "homepage": "https://github.com/Wiredcraft/carte",
+  "thumbnail": "carte.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/carte.jpg",
+  "slug": "carte",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 147,
+  "stars": 522,
+  "description": "Simple Jekyll-based documentation site for APIs.",
+  "downloadUrl": "https://github.com/Wiredcraft/carte/archive/gh-pages.tar.gz",
+  "demoAppId": "d9175394-3ce5-458b-be2b-41212a3189e8",
+  "demoAppName": "theme-jekyll-carte-demo"
+}

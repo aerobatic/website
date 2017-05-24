@@ -1,0 +1,13 @@
+{
+  "title": "Minimal",
+  "homepage": "https://github.com/orderedlist/minimal",
+  "thumbnail": "minimal.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/minimal.jpg",
+  "slug": "minimal",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 311,
+  "stars": 1103,
+  "description": "A Theme for GitHub Pages",
+  "downloadUrl": "https://github.com/orderedlist/minimal/archive/master.tar.gz"
+}

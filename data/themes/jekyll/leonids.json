@@ -1,0 +1,13 @@
+{
+  "title": "Leonids",
+  "homepage": "https://github.com/renyuanz/leonids",
+  "thumbnail": "leonids.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/leonids.png",
+  "slug": "leonids",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 138,
+  "stars": 278,
+  "description": "A simple and clean two columns Jekyll theme.",
+  "downloadUrl": "https://github.com/renyuanz/leonids/archive/master.tar.gz"
+}

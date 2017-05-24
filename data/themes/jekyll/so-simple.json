@@ -1,0 +1,13 @@
+{
+  "title": "So Simple",
+  "homepage": "https://github.com/mmistakes/so-simple-theme",
+  "thumbnail": "so-simple.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/so-simple.png",
+  "slug": "so-simple",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1609,
+  "stars": 745,
+  "description": ":art: A simple and clean responsive Jekyll theme for words and photos.",
+  "downloadUrl": "https://github.com/mmistakes/so-simple-theme/archive/master.tar.gz"
+}

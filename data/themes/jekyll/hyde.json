@@ -1,0 +1,15 @@
+{
+  "title": "Hyde",
+  "homepage": "https://github.com/poole/hyde",
+  "thumbnail": "hyde.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/hyde.png",
+  "slug": "hyde",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1552,
+  "stars": 1874,
+  "description": "A brazen two-column theme for Jekyll.",
+  "downloadUrl": "https://github.com/poole/hyde/archive/master.tar.gz",
+  "demoAppId": "863c0d67-7f7d-4667-aacc-ec5dadc04348",
+  "demoAppName": "theme-jekyll-hyde-demo"
+}

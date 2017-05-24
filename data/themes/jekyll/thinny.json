@@ -1,0 +1,13 @@
+{
+  "title": "Thinny",
+  "homepage": "https://github.com/camporez/Thinny",
+  "thumbnail": "thinny.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/thinny.png",
+  "slug": "thinny",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 103,
+  "stars": 273,
+  "description": "A beautiful and responsive theme for Jekyll.",
+  "downloadUrl": "https://github.com/camporez/Thinny/archive/master.tar.gz"
+}

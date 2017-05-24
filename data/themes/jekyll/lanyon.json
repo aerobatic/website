@@ -1,0 +1,13 @@
+{
+  "title": "Lanyon",
+  "homepage": "https://github.com/poole/lanyon",
+  "thumbnail": "lanyon.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/lanyon.png",
+  "slug": "lanyon",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1434,
+  "stars": 1884,
+  "description": "A content-first, sliding sidebar theme for Jekyll.",
+  "downloadUrl": "https://github.com/poole/lanyon/archive/master.tar.gz"
+}

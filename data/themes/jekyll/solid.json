@@ -1,0 +1,13 @@
+{
+  "title": "Solid",
+  "homepage": "https://github.com/st4ple/solid-jekyll",
+  "thumbnail": "solid.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/solid.png",
+  "slug": "solid",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 388,
+  "stars": 289,
+  "description": "A Jekyll port of the Solid theme (by blacktie.co). ",
+  "downloadUrl": "https://github.com/st4ple/solid-jekyll/archive/master.tar.gz"
+}

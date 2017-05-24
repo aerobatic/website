@@ -1,0 +1,13 @@
+{
+  "title": "Kactus",
+  "homepage": "https://github.com/nickbalestra/kactus",
+  "thumbnail": "kactus.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/kactus.png",
+  "slug": "kactus",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 179,
+  "stars": 306,
+  "description": "Cactus's default theme on Jekyll",
+  "downloadUrl": "https://github.com/nickbalestra/kactus/archive/master.tar.gz"
+}

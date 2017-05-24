@@ -1,0 +1,15 @@
+{
+  "title": "Beautiful Jekyll",
+  "homepage": "https://github.com/daattali/beautiful-jekyll",
+  "thumbnail": "beautiful-jekyll.png",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/beautiful-jekyll.png",
+  "slug": "beautiful",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 1745,
+  "stars": 629,
+  "description": "Build a beautiful and simple website in literally minutes. Demo at http://deanattali.com/beautiful-jekyll",
+  "downloadUrl": "https://github.com/daattali/beautiful-jekyll/archive/master.tar.gz",
+  "demoAppId": "216fec59-1ecf-44c3-b862-6cc3af774802",
+  "demoAppName": "theme-jekyll-beautiful-demo"
+}

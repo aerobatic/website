@@ -1,0 +1,15 @@
+{
+  "title": "Harmony",
+  "homepage": "https://github.com/gayanvirajith/harmony",
+  "thumbnail": "harmony.jpg",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/harmony.jpg",
+  "slug": "harmony",
+  "siteType": "jekyll",
+  "source": "http://jekyllthemes.org",
+  "forks": 222,
+  "stars": 222,
+  "description": "A responsive Jekyll theme.",
+  "downloadUrl": "https://github.com/gayanvirajith/harmony/archive/master.tar.gz",
+  "demoAppId": "8ca2bc6a-a46b-407b-8554-ac2c1b0d9c77",
+  "demoAppName": "theme-jekyll-harmony-demo"
+}
