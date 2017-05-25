@@ -13,5 +13,17 @@ $(function () {
       console.log(e);
   });
 
-  // var getStarsPromises = $.map('#themes .theme .gh-stars', );  
+  // Load the stargazers count for each theme repo
+  Promise.all($.map($('#themes .theme .gh-stars').toArray(), function(elem) {
+    var target = $(elem);
+    var gitHubUrl = target.attr('href');
+    // Extract the repo full name 
+    var repoFullName = gitHubUrl.match(/^https:\/\/github\.com\/(.*)/)[1];
+
+    return fetch('https://www.aerobatic.com/github-api/repos/' + repoFullName)
+      .then(function(res) { return res.json()})
+      .then(function(json) {
+        target.text(target.text() + ' ' + json.stargazers_count);
+      });
+  }));
 });

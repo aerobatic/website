@@ -25,6 +25,8 @@ plugins:
     method: get
     options:
       url: https://api.github.com/*
+      # Cache on CDN for 1 hour
+      cacheMaxAge: 3600
       headers:
         # new Buffer('dvonlehman:{PERSONAL_TOKEN}').toString('base64')
         Authorization: Basic $GITHUB_API_AUTH
