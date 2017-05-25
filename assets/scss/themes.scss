@@ -1,0 +1,58 @@
+#themes {
+  .nav-pills {
+    li.active a {
+      color: #707070;
+      background-color: inherit;
+      font-weight: bold;
+    }
+    li a:hover {
+      border-radius: 0;
+    }
+  }
+
+  .theme {
+    display: flex;
+    margin-bottom: 25px;
+    background-color: $lightGray;
+    padding: 10px;
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img.screenshot {
+      border: solid 1px #707070;
+      display: block;
+      margin: 0 15px 0 0;
+      width: 250px;
+      height: 200px;
+      border-radius: 0;
+    }
+
+    h3 {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    p {
+      color: $darkGray;
+      font-size: 15px;
+    }
+
+    .input-group .form-control {
+      font-family: $fontMono;
+      padding: 4px 8px;
+      background-color: $white;
+    }
+
+    .buttons {
+      margin-top: 15px;
+
+      a.btn {
+        font-weight: 600;
+      }
+    }
+  }
+}
