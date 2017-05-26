@@ -9,5 +9,7 @@
   "forks": 103,
   "stars": 273,
   "description": "A beautiful and responsive theme for Jekyll.",
-  "downloadUrl": "https://github.com/camporez/Thinny/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/camporez/Thinny/archive/master.tar.gz",
+  "demoAppId": "d51ae096-13bd-4fea-80bc-8e91c80a1bcf",
+  "demoAppName": "theme-jekyll-thinny-demo"
 }

@@ -9,5 +9,7 @@
   "forks": 355,
   "stars": 773,
   "description": "Ghost's default theme (Casper) on Jekyll",
-  "downloadUrl": "https://github.com/rosario/kasper/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/rosario/kasper/archive/master.tar.gz",
+  "demoAppId": "934a4fa3-209f-4591-b705-df5be7c1e689",
+  "demoAppName": "theme-jekyll-kasper-demo"
 }

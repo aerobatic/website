@@ -1,5 +1,5 @@
 {
-  "title": "Jekyll Now",
+  "title": "Now",
   "homepage": "https://github.com/barryclark/jekyll-now",
   "thumbnail": "jekyll-now.png",
   "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jekyll-now.png",
@@ -9,5 +9,7 @@
   "forks": 14443,
   "stars": 3581,
   "description": "Build a Jekyll blog in minutes, without touching the command line.",
-  "downloadUrl": "https://github.com/barryclark/jekyll-now/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/barryclark/jekyll-now/archive/master.tar.gz",
+  "demoAppId": "143d0331-15a3-4499-8d5f-32d5395719cf",
+  "demoAppName": "theme-jekyll-now-demo"
 }

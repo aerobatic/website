@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 566,
   "stars": 557,
-  "description": ":tomato: A Jekyll theme.",
-  "downloadUrl": "https://github.com/muan/scribble/archive/gh-pages.tar.gz"
+  "description": "A Jekyll theme.",
+  "downloadUrl": "https://github.com/muan/scribble/archive/gh-pages.tar.gz",
+  "demoAppId": "36b5ba00-74f7-43b1-83a7-4016b30d6013",
+  "demoAppName": "theme-jekyll-scribble-demo"
 }

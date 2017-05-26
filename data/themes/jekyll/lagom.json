@@ -9,5 +9,7 @@
   "forks": 377,
   "stars": 364,
   "description": "A Jekyll blog theme with just the right amount of style",
-  "downloadUrl": "https://github.com/swanson/lagom/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/swanson/lagom/archive/master.tar.gz",
+  "demoAppId": "7988562d-8ce0-4523-8312-5eacb9406edf",
+  "demoAppName": "theme-jekyll-lagom-demo"
 }

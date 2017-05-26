@@ -9,5 +9,7 @@
   "forks": 304,
   "stars": 782,
   "description": "blog & blog theme🤘",
-  "downloadUrl": "https://github.com/Gaohaoyang/gaohaoyang.github.io/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/Gaohaoyang/gaohaoyang.github.io/archive/master.tar.gz",
+  "demoAppId": "5a1e3d27-f5d5-4077-bdb1-ab5efcdbba70",
+  "demoAppName": "theme-jekyll-gaohaoyang-demo"
 }

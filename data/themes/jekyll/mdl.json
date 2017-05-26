@@ -1,5 +1,5 @@
 {
-  "title": "Jekyll Material Design Lite",
+  "title": "Material Design Lite",
   "homepage": "https://github.com/gdg-managua/jekyll-mdl",
   "thumbnail": "jekyll-mdl.jpg",
   "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jekyll-mdl.jpg",
@@ -9,5 +9,7 @@
   "forks": 106,
   "stars": 168,
   "description": "A Jekyll theme based in Google Material Design Lite library.",
-  "downloadUrl": "https://github.com/gdg-managua/jekyll-mdl/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/gdg-managua/jekyll-mdl/archive/master.tar.gz",
+  "demoAppId": "95f54d52-76d5-4f2c-abef-297aa85f0c29",
+  "demoAppName": "theme-jekyll-mdl-demo"
 }

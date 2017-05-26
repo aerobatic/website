@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 723,
   "stars": 539,
-  "description": "SinglePaged - Simple Jekyll template",
-  "downloadUrl": "https://github.com/t413/SinglePaged/archive/gh-pages.tar.gz"
+  "description": "Simple single-page Jekyll template",
+  "downloadUrl": "https://github.com/t413/SinglePaged/archive/gh-pages.tar.gz",
+  "demoAppId": "a2424531-1893-4c13-b6ba-d5548acc7863",
+  "demoAppName": "theme-jekyll-singlepaged-demo"
 }

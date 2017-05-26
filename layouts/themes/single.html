@@ -28,11 +28,15 @@
           {{ if in (seq 0 2 100) ($.Scratch.Get "themeIndex") }}<div class="row">{{ end }}
           <div class="col-md-6">
             <div class="theme">
-              <img src="{{ $theme.thumbnailUrl }}" class="screenshot" />
+              <a class="screenshot" href="https://{{$theme.demoAppName}}.aerobatic.io" target="_blank">
+                <img src="{{ $theme.thumbnailUrl }}" />
+              </a>
               <div class="details">
                 <div>
                   <h3>{{ $theme.title }}</h3>
-                  <p>{{ $theme.description | truncate 100 }}</p>
+                  {{ if (isset $theme "description") }}
+                    <p class="description">{{ $theme.description | truncate 100 }}</p>
+                  {{ end }}
                 </div>
                 <div>
                   <div class="input-group" data-copy-cli>
@@ -44,7 +48,7 @@
 
                   <div class="buttons">
                     {{ if (isset $theme "demoAppName") }}
-                      <a class="btn btn-default btn-sm" href="https://{{$theme.demoAppName}}.aerobatic.io" target="_blank">
+                      <a class="btn btn-default btn-sm" href="https://{{$theme.demoAppName}}.aerobatic.io?__preview=1" target="_blank">
                         <span>Live demo</span>
                         <i class="fa fa-external-link fa-lg"></i>
                       </a>

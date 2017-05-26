@@ -9,5 +9,7 @@
   "forks": 124,
   "stars": 226,
   "description": "A minimal one-column theme for Jekyll. ",
-  "downloadUrl": "https://github.com/vincentchan/mickey/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/vincentchan/mickey/archive/master.tar.gz",
+  "demoAppId": "d4371e97-f749-41fd-88e7-c45da7fe28d9",
+  "demoAppName": "theme-jekyll-mickey-demo"
 }

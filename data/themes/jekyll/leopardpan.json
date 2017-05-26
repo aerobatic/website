@@ -9,5 +9,7 @@
   "forks": 101,
   "stars": 220,
   "description": "个人博客，看效果进入",
-  "downloadUrl": "https://github.com/leopardpan/leopardpan.github.io/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/leopardpan/leopardpan.github.io/archive/master.tar.gz",
+  "demoAppId": "79866295-f260-4bdc-a892-23592bef78eb",
+  "demoAppName": "theme-jekyll-leopardpan-demo"
 }

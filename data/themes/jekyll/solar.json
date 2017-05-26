@@ -9,5 +9,7 @@
   "forks": 88,
   "stars": 156,
   "description": "A stylish theme for Jekyll blogs, based on the Solarized color palette",
-  "downloadUrl": "https://github.com/mattvh/solar-theme-jekyll/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/mattvh/solar-theme-jekyll/archive/master.tar.gz",
+  "demoAppId": "1edc66f1-a831-4765-9370-22e9039e8500",
+  "demoAppName": "theme-jekyll-solar-demo"
 }

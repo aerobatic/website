@@ -1,5 +1,5 @@
 {
-  "title": "Jekyll-Uno",
+  "title": "Uno",
   "homepage": "https://github.com/joshgerdes/jekyll-uno",
   "thumbnail": "jekyll-uno.png",
   "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/jekyll-uno.png",
@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 268,
   "stars": 296,
-  "description": "Jekyll-Uno - a minimal, responsive theme for Jekyll based on Uno for Ghost",
-  "downloadUrl": "https://github.com/joshgerdes/jekyll-uno/archive/master.tar.gz"
+  "description": "A minimal, responsive theme for Jekyll based on Uno for Ghost",
+  "downloadUrl": "https://github.com/joshgerdes/jekyll-uno/archive/master.tar.gz",
+  "demoAppId": "218eb6b0-b0aa-46e9-9c66-9ac6533870c6",
+  "demoAppName": "theme-jekyll-uno-demo"
 }

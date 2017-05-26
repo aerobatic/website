@@ -9,5 +9,7 @@
   "forks": 1071,
   "stars": 1359,
   "description": "A simple, beautiful Jekyll theme that's mobile first",
-  "downloadUrl": "https://github.com/johnotander/pixyll/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/johnotander/pixyll/archive/master.tar.gz",
+  "demoAppId": "25be035b-0a3f-4ae7-a6b5-a01bf53a0b0a",
+  "demoAppName": "theme-jekyll-pixyll-demo"
 }

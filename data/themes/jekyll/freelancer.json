@@ -9,5 +9,7 @@
   "forks": 748,
   "stars": 678,
   "description": "Jekyll theme based on Freelancer Start Bootstrap theme",
-  "downloadUrl": "https://github.com/jeromelachaud/freelancer-theme/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/jeromelachaud/freelancer-theme/archive/master.tar.gz",
+  "demoAppId": "fa05b9d6-1075-47c1-b568-4c3dbc2a0df6",
+  "demoAppName": "theme-jekyll-freelancer-demo"
 }

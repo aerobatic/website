@@ -9,5 +9,7 @@
   "forks": 243,
   "stars": 159,
   "description": "Jekyll theme based on Grayscale Start Bootstrap theme",
-  "downloadUrl": "https://github.com/jeromelachaud/grayscale-theme/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/jeromelachaud/grayscale-theme/archive/master.tar.gz",
+  "demoAppId": "7da9c207-94f5-4ee4-a208-cf9de6604bff",
+  "demoAppName": "theme-jekyll-grayscale-demo"
 }

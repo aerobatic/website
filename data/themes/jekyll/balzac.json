@@ -3,11 +3,13 @@
   "homepage": "https://github.com/coletownsend/balzac-for-jekyll",
   "thumbnail": "balzac.jpg",
   "thumbnailUrl": "https://raw.githubusercontent.com/mattvh/jekyllthemes/master/thumbnails/balzac.jpg",
-  "slug": "balzac-for-jekyll",
+  "slug": "balzac",
   "siteType": "jekyll",
   "source": "http://jekyllthemes.org",
   "forks": 284,
   "stars": 354,
   "description": "Your favorite AnchorCMS theme, now for Jekyll!",
-  "downloadUrl": "https://github.com/coletownsend/balzac-for-jekyll/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/coletownsend/balzac-for-jekyll/archive/master.tar.gz",
+  "demoAppId": "49d09bb7-cea6-45dd-9a53-3585a8eb3992",
+  "demoAppName": "theme-jekyll-balzac-demo"
 }

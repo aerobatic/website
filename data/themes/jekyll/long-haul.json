@@ -9,5 +9,7 @@
   "forks": 310,
   "stars": 265,
   "description": "A minimal, type-focused Jekyll theme.",
-  "downloadUrl": "https://github.com/brianmaierjr/long-haul/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/brianmaierjr/long-haul/archive/master.tar.gz",
+  "demoAppId": "ebc97dd5-79da-4a25-9205-465548fd6a8d",
+  "demoAppName": "theme-jekyll-long-haul-demo"
 }

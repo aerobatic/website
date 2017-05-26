@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 4268,
   "stars": 1985,
-  "description": ":triangular_ruler: A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server.",
-  "downloadUrl": "https://github.com/mmistakes/minimal-mistakes/archive/master.tar.gz"
+  "description": "A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server.",
+  "downloadUrl": "https://github.com/mmistakes/minimal-mistakes/archive/master.tar.gz",
+  "demoAppId": "44bc9d94-c1b0-462c-ba0e-6af50cf533fa",
+  "demoAppName": "theme-jekyll-minimal-mistakes-demo"
 }

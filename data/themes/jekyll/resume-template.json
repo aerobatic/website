@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 289,
   "stars": 428,
-  "description": ":page_facing_up::briefcase::tophat: A simple Jekyll + GitHub Pages powered resume template.",
-  "downloadUrl": "https://github.com/jglovier/resume-template/archive/gh-pages.tar.gz"
+  "description": "A simple Jekyll powered resume template.",
+  "downloadUrl": "https://github.com/jglovier/resume-template/archive/gh-pages.tar.gz",
+  "demoAppId": "0b7a897a-b2cd-49cc-923d-07e09d0962eb",
+  "demoAppName": "theme-jekyll-resume-template-demo"
 }

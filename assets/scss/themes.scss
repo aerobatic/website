@@ -1,5 +1,7 @@
 #themes {
   .nav-pills {
+    margin-bottom: 20px;
+
     li.active a {
       color: #707070;
       background-color: inherit;
@@ -22,13 +24,19 @@
       justify-content: space-between;
     }
 
-    img.screenshot {
-      border: solid 1px #707070;
-      display: block;
-      margin: 0 15px 0 0;
-      width: 250px;
-      height: 200px;
-      border-radius: 0;
+    a.screenshot {
+      img {
+        border: solid 1px #707070;
+        display: block;
+        margin: 0 15px 0 0;
+        width: 250px;
+        height: 200px;
+        border-radius: 0;
+      }
+
+      a.source {
+        font-size: 13px;
+      }
     }
 
     h3 {
@@ -36,9 +44,10 @@
       font-size: 20px;
     }
 
-    p {
+    p.description {
       color: $darkGray;
-      font-size: 15px;
+      font-size: 14px;
+      margin-bottom: 5px;
     }
 
     .input-group .form-control {

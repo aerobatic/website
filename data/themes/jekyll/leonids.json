@@ -9,5 +9,7 @@
   "forks": 138,
   "stars": 278,
   "description": "A simple and clean two columns Jekyll theme.",
-  "downloadUrl": "https://github.com/renyuanz/leonids/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/renyuanz/leonids/archive/master.tar.gz",
+  "demoAppId": "e18cb3de-d18f-4423-a744-6275a64f7bb8",
+  "demoAppName": "theme-jekyll-leonids-demo"
 }

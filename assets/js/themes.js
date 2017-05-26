@@ -23,7 +23,11 @@ $(function () {
     return fetch('https://www.aerobatic.com/github-api/repos/' + repoFullName)
       .then(function(res) { return res.json()})
       .then(function(json) {
-        target.text(target.text() + ' ' + json.stargazers_count);
+        // btn-arrow-left
+        $('<a class="btn btn-default btn-sm btn-arrow btn-arrow-left" target="_blank">')
+          .attr('href', gitHubUrl)
+          .text(json.stargazers_count)
+          .insertAfter(target);
       });
   }));
 });

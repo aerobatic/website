@@ -9,5 +9,7 @@
   "forks": 279,
   "stars": 164,
   "description": "A minimal Jekyll Theme to host your resume (CV)",
-  "downloadUrl": "https://github.com/sharu725/online-cv/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/sharu725/online-cv/archive/master.tar.gz",
+  "demoAppId": "8b9d9ff9-1a60-4a16-8ba0-4be1002ddde4",
+  "demoAppName": "theme-jekyll-online-cv-demo"
 }

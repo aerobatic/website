@@ -8,6 +8,8 @@
   "source": "http://jekyllthemes.org",
   "forks": 474,
   "stars": 331,
-  "description": "»Feeling Responsive« is a free flexible theme for Jekyll built on Foundation framework. You can use it for your company site, as a portfolio or as a blog.",
-  "downloadUrl": "https://github.com/Phlow/feeling-responsive/archive/gh-pages.tar.gz"
+  "description": "Flexible theme for Jekyll built on Foundation framework. You can use it for your company site, as a portfolio or as a blog.",
+  "downloadUrl": "https://github.com/Phlow/feeling-responsive/archive/gh-pages.tar.gz",
+  "demoAppId": "07c82067-6c26-49f9-acb4-695f09790619",
+  "demoAppName": "theme-jekyll-feeling-responsive-demo"
 }
