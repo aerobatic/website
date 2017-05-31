@@ -1,0 +1,13 @@
+{
+  "slug": "sb-admin-2",
+  "title": "Start Bootstrap SB Admin 2",
+  "description": "A Bootstrap admin theme, dashboard, or web app UI featuring powerful jQuery plugins for extended functionality.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-sb-admin-2",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/sb-admin-2.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/archive/master.tar.gz",
+  "demoAppId": "4848be56-5f4e-4387-84a4-e142775a112a",
+  "demoAppName": "theme-html5-sb-admin-2-demo"
+}

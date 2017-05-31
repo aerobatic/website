@@ -1,0 +1,26 @@
+{
+  "repoFullName": "saey55/hugo-elate-theme",
+  "branch": "master",
+  "repoName": "hugo-elate-theme",
+  "forks": 25,
+  "stars": 28,
+  "description": "Elate theme ported to Hugo by Pieter Saey",
+  "downloadUrl": "https://github.com/saey55/hugo-elate-theme/archive/master.tar.gz",
+  "slug": "elate",
+  "siteType": "hugo",
+  "title": "Elate",
+  "repoUrl": "https://github.com/saey55/hugo-elate-theme",
+  "licenseLink": "https://github.com/saey55/hugo-elate-theme/blob/master/LICENSE.md",
+  "tags": [
+    "Elate",
+    "Hugo",
+    "parallax"
+  ],
+  "minVersion": 0.17,
+  "homepage": "http://saey55.gitlab.io/pietercv",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/saey55/hugo-elate-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "1283cea6-1f3d-42dc-84aa-6e6c9547086a",
+  "demoAppName": "theme-hugo-elate-demo"
+}

@@ -1,0 +1,23 @@
+{
+  "repoFullName": "alexurquhart/hugo-geo",
+  "branch": "master",
+  "repoName": "hugo-geo",
+  "forks": 23,
+  "stars": 39,
+  "description": "A responsive blog theme made using Bootstrap 3, jQuery, and D3.js",
+  "downloadUrl": "https://github.com/alexurquhart/hugo-geo/archive/master.tar.gz",
+  "slug": "geo",
+  "siteType": "hugo",
+  "title": "hugo-geo",
+  "repoUrl": "https://github.com/alexurquhart/hugo-geo",
+  "licenseLink": "https://raw.githubusercontent.com/alexurquhart/hugo-geo/master/LICENSE",
+  "tags": [
+    "blog"
+  ],
+  "minVersion": 0.14,
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/alexurquhart/hugo-geo/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "79591eca-c89a-4e26-a4c9-d8fcbf07fea3",
+  "demoAppName": "theme-hugo-geo-demo"
+}

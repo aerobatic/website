@@ -1,0 +1,27 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-steam-theme",
+  "branch": "master",
+  "repoName": "hugo-steam-theme",
+  "forks": 44,
+  "stars": 42,
+  "description": "A minimal theme for bloggers.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-steam-theme/archive/master.tar.gz",
+  "slug": "steam",
+  "siteType": "hugo",
+  "title": "Steam",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-steam-theme",
+  "licenseLink": "https://github.com/yourname/yourtheme/blob/master/LICENSE.md",
+  "tags": [
+    "google analytics",
+    "disqus",
+    "blog",
+    "minimal"
+  ],
+  "minVersion": 0.2,
+  "homepage": "//github.com/digitalcraftsman/",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-steam-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "59339dc2-382c-423b-854c-9524bcf45c32",
+  "demoAppName": "theme-hugo-steam-demo"
+}

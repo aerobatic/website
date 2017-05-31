@@ -1,0 +1,28 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-cactus-theme",
+  "branch": "master",
+  "repoName": "hugo-cactus-theme",
+  "forks": 73,
+  "stars": 94,
+  "description": "A minimalistic and responsive theme for bloggers.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-cactus-theme/archive/master.tar.gz",
+  "slug": "cactus",
+  "siteType": "hugo",
+  "title": "Cactus",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-cactus-theme",
+  "licenseLink": "https://github.com/digitalcraftsman/hugo-cactus-theme/blob/master/License.md",
+  "tags": [
+    "blog",
+    "disqus",
+    "google analytics",
+    "rss",
+    "syntax highlighting"
+  ],
+  "minVersion": 0.2,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-cactus-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "bb6bb1a2-7143-40bf-9fe3-8cd2274cb2ac",
+  "demoAppName": "theme-hugo-cactus-demo"
+}

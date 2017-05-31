@@ -1,0 +1,13 @@
+{
+  "slug": "sb-modern-business",
+  "title": "Start Bootstrap Modern Business",
+  "description": "A full website template framework for building Bootstrap 4 websites with 17 pages and a working contact form.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-modern-business",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/modern-business.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-modern-business/archive/master.tar.gz",
+  "demoAppId": "c8dd9a5c-1d8a-4689-8933-44429035c26a",
+  "demoAppName": "theme-html5-sb-modern-business-demo"
+}

@@ -7,3 +7,4 @@ static/*.js.map
 *.tar.gz
 **/.DS_Store
 .env
+aero-deploy.tar.gz

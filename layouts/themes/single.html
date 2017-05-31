@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Themes</h1>
-                    <p>Gallery of themes to use to kickstart your own websites on Aerobatic</p>
+                    <p>Themes make it easy to kickstart a great looking website on Aerobatic</p>
                     <pre><code>aero create --theme {{ .Params.themeType }}/theme-name</code></pre>
                 </div>
             </div>
@@ -22,13 +22,17 @@
           <li role="presentation" {{ if eq .Params.themeType "hugo" }}class="active"{{ end }}><a href="/themes/hugo/">Hugo</a></li>
         </ul>
       </div>
+
       <div class="container">
+        {{ if .Content }}
+          <div class="alert alert-info">{{ .Content }}</div>
+        {{ end }}
         {{ $.Scratch.Set "themeIndex" 0 }}
         {{ range $theme := (index $.Site.Data.themes .Params.themeType) }}
           {{ if in (seq 0 2 100) ($.Scratch.Get "themeIndex") }}<div class="row">{{ end }}
           <div class="col-md-6">
             <div class="theme">
-              <a class="screenshot" href="https://{{$theme.demoAppName}}.aerobatic.io" target="_blank">
+              <a class="screenshot {{.Params.themeType}}" href="https://{{$theme.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
                 <img src="{{ $theme.thumbnailUrl }}" />
               </a>
               <div class="details">
@@ -48,12 +52,12 @@
 
                   <div class="buttons">
                     {{ if (isset $theme "demoAppName") }}
-                      <a class="btn btn-default btn-sm" href="https://{{$theme.demoAppName}}.aerobatic.io?__preview=1" target="_blank">
-                        <span>Live demo</span>
+                      <a class="btn btn-default btn-sm" href="https://{{$theme.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
+                        <span>Demo</span>
                         <i class="fa fa-external-link fa-lg"></i>
                       </a>
                     {{ end }}
-                    <a class="btn btn-default btn-sm gh-stars" href="{{ $theme.homepage }}" target="_blank">
+                    <a class="btn btn-default btn-sm gh-stars" href="{{ index $theme "repoUrl" | default ($theme.homepage) }}" target="_blank">
                       <i class="fa fa-github fa-lg"></i>
                       <span>Star</span>
                     </a>
@@ -70,6 +74,5 @@
     {{ partial "footer.html" . }}
     {{ partial "google-analytics.html" . }}
     {{ partial "js.html" . }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
   </body>
 </html>

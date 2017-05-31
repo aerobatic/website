@@ -1,0 +1,13 @@
+{
+  "slug": "sb-small-business",
+  "title": "Start Bootstrap Small Business",
+  "description": "A free, easy to use, Bootstrap starter template perfect for building small business marketing websites.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-small-business",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/small-business.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-small-business/archive/master.tar.gz",
+  "demoAppId": "7174736b-9d83-42af-b344-66cc14fa6aa3",
+  "demoAppName": "theme-html5-sb-small-business-demo"
+}

@@ -1,0 +1,29 @@
+{
+  "repoFullName": "halogenica/beautifulhugo",
+  "branch": "master",
+  "repoName": "beautifulhugo",
+  "forks": 55,
+  "stars": 53,
+  "description": "A port of Beautiful Jekyll theme",
+  "downloadUrl": "https://github.com/halogenica/beautifulhugo/archive/master.tar.gz",
+  "slug": "beautifulhugo",
+  "siteType": "hugo",
+  "title": "Beautiful Hugo",
+  "repoUrl": "https://github.com/halogenica/beautifulhugo",
+  "licenseLink": "https://github.com/halogenica/Hugo-BeautifulHugo/blob/master/LICENSE",
+  "tags": [
+    "blog",
+    "company",
+    "portfolio",
+    "projects",
+    "minimal",
+    "responsive"
+  ],
+  "minVersion": 0.17,
+  "homepage": "http://halogenica.net",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/halogenica/beautifulhugo/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "6f9a1109-ed2b-4749-8351-6555d1ab8aea",
+  "demoAppName": "theme-hugo-beautifulhugo-demo"
+}

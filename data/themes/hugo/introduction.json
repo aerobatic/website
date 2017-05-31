@@ -1,0 +1,25 @@
+{
+  "repoFullName": "vickylaixy/hugo-theme-introduction",
+  "branch": "master",
+  "repoName": "hugo-theme-introduction",
+  "forks": 13,
+  "stars": 27,
+  "description": "Minimal, single page, smooth scrolling theme for Hugo.",
+  "downloadUrl": "https://github.com/vickylaixy/hugo-theme-introduction/archive/master.tar.gz",
+  "slug": "introduction",
+  "siteType": "hugo",
+  "title": "Introduction",
+  "repoUrl": "https://github.com/vickylaixy/hugo-theme-introduction",
+  "licenseLink": "https://github.com/vickylaiio/hugo-theme-introduction/blob/master/LICENSE.md",
+  "tags": [
+    "clean",
+    "minimal"
+  ],
+  "minVersion": 0.15,
+  "homepage": "https://vickylai.io",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/vickylaixy/hugo-theme-introduction/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "f5df3602-ddfa-4307-aad4-edfc36abdf7f",
+  "demoAppName": "theme-hugo-introduction-demo"
+}

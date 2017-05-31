@@ -1,0 +1,29 @@
+{
+  "repoFullName": "jchatkinson/HugoMDL",
+  "branch": "master",
+  "repoName": "HugoMDL",
+  "forks": 22,
+  "stars": 28,
+  "description": "a simple and responsive theme to show your bio, blog, and projects - based on Google's Material Design Lite library",
+  "downloadUrl": "https://github.com/jchatkinson/HugoMDL/archive/master.tar.gz",
+  "slug": "hugomdl",
+  "siteType": "hugo",
+  "title": "HugoMDL",
+  "repoUrl": "https://github.com/jchatkinson/HugoMDL",
+  "licenseLink": "https://github.com/jchatkinson/HugoMDL/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "projects",
+    "portfolio",
+    "Material Design Lite",
+    "MDL",
+    "Material Design"
+  ],
+  "minVersion": 0.14,
+  "homepage": "http://jatkinson.me",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/jchatkinson/HugoMDL/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "8cb9b90a-f489-4ec8-ad76-a821e99c96ff",
+  "demoAppName": "theme-hugo-hugomdl-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "sb-logo-nav",
+  "title": "Start Bootstrap Logo Nav",
+  "description": "A Bootstrap navigation template featuring an image logo in place of the navbar header text.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-logo-nav",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/logo-nav.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-logo-nav/archive/master.tar.gz",
+  "demoAppId": "cb3ee6b7-ec60-453a-b63f-bf2683a9bd05",
+  "demoAppName": "theme-html5-sb-logo-nav-demo"
+}

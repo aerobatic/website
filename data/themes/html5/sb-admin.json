@@ -1,0 +1,13 @@
+{
+  "slug": "sb-admin",
+  "title": "Start Bootstrap SB Admin",
+  "description": "A Bootstrap 4 admin theme with powerful jQuery plugins to extend the functionality of the Bootstrap framework.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-sb-admin",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/sb-admin.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-sb-admin/archive/master.tar.gz",
+  "demoAppId": "b7ae0e6b-a4c7-455c-b71c-0125592edbed",
+  "demoAppName": "theme-html5-sb-admin-demo"
+}

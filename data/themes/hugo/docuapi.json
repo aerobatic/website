@@ -1,0 +1,28 @@
+{
+  "repoFullName": "bep/docuapi",
+  "branch": "master",
+  "repoName": "docuapi",
+  "forks": 11,
+  "stars": 65,
+  "description": "Beautiful documentation for your API.",
+  "downloadUrl": "https://github.com/bep/docuapi/archive/master.tar.gz",
+  "slug": "docuapi",
+  "siteType": "hugo",
+  "title": "DocuAPI",
+  "repoUrl": "https://github.com/bep/docuapi",
+  "licenseLink": "https://github.com/bep/docuapi/blob/master/LICENSE.md",
+  "tags": [
+    "Documentation",
+    "API",
+    "Docs",
+    "Responsive",
+    "Multilingual"
+  ],
+  "minVersion": 0.17,
+  "homepage": "http://bep.is",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/bep/docuapi/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "b8034f8e-d8bd-48ed-903c-2a3db327a3dc",
+  "demoAppName": "theme-hugo-docuapi-demo"
+}

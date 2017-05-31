@@ -1,0 +1,28 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-artists-theme",
+  "branch": "master",
+  "repoName": "hugo-artists-theme",
+  "forks": 23,
+  "stars": 29,
+  "description": "A one page portfolio for freelancers, programmers and designers.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-artists-theme/archive/master.tar.gz",
+  "slug": "artists",
+  "siteType": "hugo",
+  "title": "Artists",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-artists-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-artists-theme/blob/master/LICENSE",
+  "tags": [
+    "portfolio",
+    "showcase",
+    "skills",
+    "clients",
+    "contact form"
+  ],
+  "minVersion": 0.2,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-artists-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "7314b9ff-43ce-45e9-a905-b59c0ce135cf",
+  "demoAppName": "theme-hugo-artists-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "sb-round-about",
+  "title": "Start Bootstrap Round About",
+  "description": "A simple about page template for Bootstrap 4 featuring an easy to use image grid with rounded images.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-round-about",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/round-about.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-round-about/archive/master.tar.gz",
+  "demoAppId": "9c195640-6731-4c9e-a5bc-36d57865eb6a",
+  "demoAppName": "theme-html5-sb-round-about-demo"
+}

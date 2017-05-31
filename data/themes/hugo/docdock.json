@@ -1,0 +1,27 @@
+{
+  "repoFullName": "vjeantet/hugo-theme-docdock",
+  "branch": "master",
+  "repoName": "hugo-theme-docdock",
+  "forks": 18,
+  "stars": 21,
+  "description": "Documentation theme for Hugo, based on Matcornic Learn theme",
+  "downloadUrl": "https://github.com/vjeantet/hugo-theme-docdock/archive/master.tar.gz",
+  "slug": "docdock",
+  "siteType": "hugo",
+  "title": "docDock",
+  "repoUrl": "https://github.com/vjeantet/hugo-theme-docdock",
+  "licenseLink": "https://github.com/vjeantet/hugo-theme-docdock/blob/master/LICENSE.md",
+  "tags": [
+    "documentation",
+    "menu",
+    "slide",
+    "search"
+  ],
+  "minVersion": 0.2,
+  "homepage": "http://vjeantet.fr/",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "23098632-2e41-4281-ac00-4e285df1ae34",
+  "demoAppName": "theme-hugo-docdock-demo"
+}

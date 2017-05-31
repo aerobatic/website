@@ -1,0 +1,13 @@
+{
+  "slug": "sb-heroic-features",
+  "title": "Start Bootstrap Heroic Features",
+  "description": "A Bootstrap home page template featuring a hero unit and a grid of thumbnail features.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-heroic-features",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/heroic-features.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-heroic-features/archive/master.tar.gz",
+  "demoAppId": "54b066d5-2a00-4442-a3b1-4a6cbec75a75",
+  "demoAppName": "theme-html5-sb-heroic-features-demo"
+}

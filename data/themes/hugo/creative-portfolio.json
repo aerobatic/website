@@ -1,0 +1,28 @@
+{
+  "repoFullName": "kishaningithub/hugo-creative-portfolio-theme",
+  "branch": "master",
+  "repoName": "hugo-creative-portfolio-theme",
+  "forks": 27,
+  "stars": 44,
+  "description": "Port of the creative portfolio theme",
+  "downloadUrl": "https://github.com/kishaningithub/hugo-creative-portfolio-theme/archive/master.tar.gz",
+  "slug": "creative-portfolio",
+  "siteType": "hugo",
+  "title": "Creative portfolio",
+  "repoUrl": "https://github.com/kishaningithub/hugo-creative-portfolio-theme",
+  "licenseLink": "https://github.com/kishaningithub/hugo-creative-portfolio-theme/blob/master/LICENSE",
+  "tags": [
+    "creative",
+    "portfolio",
+    "projects",
+    "minimal",
+    "responsive"
+  ],
+  "minVersion": 0.2,
+  "homepage": "https://github.com/kishaningithub",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/kishaningithub/hugo-creative-portfolio-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "e4853319-6a6f-4d52-b1e9-6fdbff3d1e10",
+  "demoAppName": "theme-hugo-creative-portfolio-demo"
+}

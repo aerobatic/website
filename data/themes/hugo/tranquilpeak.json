@@ -1,0 +1,31 @@
+{
+  "repoFullName": "kakawait/hugo-tranquilpeak-theme",
+  "branch": "master",
+  "repoName": "hugo-tranquilpeak-theme",
+  "forks": 67,
+  "stars": 111,
+  "description": "A gorgeous responsive theme for Hugo blog framework",
+  "downloadUrl": "https://github.com/kakawait/hugo-tranquilpeak-theme/archive/master.tar.gz",
+  "slug": "tranquilpeak",
+  "siteType": "hugo",
+  "title": "Tranquilpeak",
+  "repoUrl": "https://github.com/kakawait/hugo-tranquilpeak-theme",
+  "licenseLink": "https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE",
+  "tags": [
+    "blog",
+    "minimal",
+    "responsive",
+    "personal",
+    "customizable",
+    "creative",
+    "fontawesome",
+    "highlight.js"
+  ],
+  "minVersion": 0.2,
+  "homepage": "https://github.com/kakawait",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/kakawait/hugo-tranquilpeak-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "359e13d2-2577-442f-a118-b8e8761c5fd7",
+  "demoAppName": "theme-hugo-tranquilpeak-demo"
+}

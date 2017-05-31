@@ -1,0 +1,31 @@
+{
+  "repoFullName": "gcushen/hugo-academic",
+  "branch": "master",
+  "repoName": "hugo-academic",
+  "forks": 122,
+  "stars": 474,
+  "description": "Easily create beautifully simple academic or personal sites",
+  "downloadUrl": "https://github.com/gcushen/hugo-academic/archive/master.tar.gz",
+  "slug": "academic",
+  "siteType": "hugo",
+  "title": "Academic",
+  "repoUrl": "https://github.com/gcushen/hugo-academic",
+  "licenseLink": "https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md",
+  "tags": [
+    "academic",
+    "portfolio",
+    "responsive",
+    "student",
+    "personal",
+    "university",
+    "blog",
+    "minimal"
+  ],
+  "minVersion": 0.18,
+  "homepage": "https://georgecushen.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "f228ff3c-e3fd-4fa6-8d74-6d0ec647795e",
+  "demoAppName": "theme-hugo-academic-demo"
+}

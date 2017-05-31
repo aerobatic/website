@@ -1,0 +1,25 @@
+{
+  "repoFullName": "crakjie/landing-page-hugo",
+  "branch": "master",
+  "repoName": "landing-page-hugo",
+  "forks": 40,
+  "stars": 39,
+  "description": "An elegant open source landing page theme.",
+  "downloadUrl": "https://github.com/crakjie/landing-page-hugo/archive/master.tar.gz",
+  "slug": "landing-page",
+  "siteType": "hugo",
+  "title": "Landing Page",
+  "repoUrl": "https://github.com/crakjie/landing-page-hugo",
+  "licenseLink": "https://github.com/crakjie/landing-page-hugo/blob/master/LICENSE.md",
+  "tags": [
+    "company",
+    "products",
+    "landing page"
+  ],
+  "minVersion": 0.14,
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/crakjie/landing-page-hugo/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "e1953565-bf8e-44d9-8c71-784f6fd115a9",
+  "demoAppName": "theme-hugo-landing-page-demo"
+}

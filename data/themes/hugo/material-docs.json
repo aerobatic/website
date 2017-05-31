@@ -1,0 +1,28 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-material-docs",
+  "branch": "master",
+  "repoName": "hugo-material-docs",
+  "forks": 99,
+  "stars": 303,
+  "description": "A material design theme for documentations.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-material-docs/archive/master.tar.gz",
+  "slug": "material-docs",
+  "siteType": "hugo",
+  "title": "Material Docs",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-material-docs",
+  "licenseLink": "https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md",
+  "tags": [
+    "material",
+    "documentation",
+    "docs",
+    "google analytics",
+    "responsive"
+  ],
+  "minVersion": 0.2,
+  "homepage": "https://github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-material-docs/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "89a7453f-1a4c-422f-8ff3-469df39d64a1",
+  "demoAppName": "theme-hugo-material-docs-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "sb-simple-sidebar",
+  "title": "Start Bootstrap Simple Sidebar",
+  "description": "A simple sidebar template for Bootstrap 4 featuring responsive off-canvas navigation at small screen sizes.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/simple-sidebar.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/archive/master.tar.gz",
+  "demoAppId": "b9da498b-250a-4881-9e21-43e08637dfb5",
+  "demoAppName": "theme-html5-sb-simple-sidebar-demo"
+}

@@ -1,0 +1,26 @@
+{
+  "repoFullName": "nurlansu/hugo-sustain",
+  "branch": "master",
+  "repoName": "hugo-sustain",
+  "forks": 30,
+  "stars": 36,
+  "description": "Personal blog built with Bootstrap, powered by Hugo",
+  "downloadUrl": "https://github.com/nurlansu/hugo-sustain/archive/master.tar.gz",
+  "slug": "sustain",
+  "siteType": "hugo",
+  "title": "Sustain",
+  "repoUrl": "https://github.com/nurlansu/hugo-sustain",
+  "licenseLink": "https://github.com/nurlansu/hugo-sustain/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "minimal",
+    "responsive"
+  ],
+  "minVersion": 0.17,
+  "homepage": "https://github.com/nurlansu",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/nurlansu/hugo-sustain/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "d10337a0-20c1-47b0-8e84-7cf7fa88b8c3",
+  "demoAppName": "theme-hugo-sustain-demo"
+}

@@ -1,0 +1,25 @@
+{
+  "repoFullName": "zyro/hyde-x",
+  "branch": "master",
+  "repoName": "hyde-x",
+  "forks": 92,
+  "stars": 197,
+  "description": "An elegant open source and mobile first theme, extended with new integrations and layout improvements",
+  "downloadUrl": "https://github.com/zyro/hyde-x/archive/master.tar.gz",
+  "slug": "hyde-x",
+  "siteType": "hugo",
+  "title": "Hyde-X",
+  "repoUrl": "https://github.com/zyro/hyde-x",
+  "licenseLink": "https://github.com/zyro/hyde-x/LICENSE",
+  "tags": [
+    "blog",
+    "technical",
+    "personal"
+  ],
+  "minVersion": 0.14,
+  "homepage": "http://andreimihu.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/zyro/hyde-x/master/images/screenshot.png",
+  "demoAppId": "5c1cf815-11ba-481a-b84b-b4e58f8ec4d8",
+  "demoAppName": "theme-hugo-hyde-x-demo"
+}

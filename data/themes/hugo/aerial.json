@@ -1,0 +1,25 @@
+{
+  "repoFullName": "sethmacleod/aerial",
+  "branch": "master",
+  "repoName": "aerial",
+  "forks": 8,
+  "stars": 15,
+  "description": "Ported theme of HTML5 UP's Aerial: a single page, single screen responsive site template.",
+  "downloadUrl": "https://github.com/sethmacleod/aerial/archive/master.tar.gz",
+  "slug": "aerial",
+  "siteType": "hugo",
+  "title": "Aerial",
+  "repoUrl": "https://github.com/sethmacleod/aerial",
+  "licenseLink": "https://github.com/sethmacleod/aerial/blob/master/LICENSE.md",
+  "tags": [
+    "responsive",
+    "personal"
+  ],
+  "minVersion": 0.18,
+  "homepage": "https://www.sethmacleod.com/",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/sethmacleod/aerial/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "55801967-116a-4f3d-ac88-d51f05ce0ea2",
+  "demoAppName": "theme-hugo-aerial-demo"
+}

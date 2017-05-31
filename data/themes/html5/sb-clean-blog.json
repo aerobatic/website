@@ -1,0 +1,13 @@
+{
+  "slug": "sb-clean-blog",
+  "title": "Start Bootstrap Clean Blog",
+  "description": "A clean, Bootstrap blog theme ready to hook into your favorite CMS or blogging platform.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-clean-blog",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/clean-blog.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-clean-blog/archive/master.tar.gz",
+  "demoAppId": "414d9182-5fd4-4f1e-9d1b-6e397716dcb8",
+  "demoAppName": "theme-html5-sb-clean-blog-demo"
+}

@@ -1,0 +1,27 @@
+{
+  "repoFullName": "yoshiharuyamashita/blackburn",
+  "branch": "master",
+  "repoName": "blackburn",
+  "forks": 65,
+  "stars": 84,
+  "description": "A clear, responsive theme constructed using Pure CSS from Yahoo",
+  "downloadUrl": "https://github.com/yoshiharuyamashita/blackburn/archive/master.tar.gz",
+  "slug": "blackburn",
+  "siteType": "hugo",
+  "title": "Blackburn",
+  "repoUrl": "https://github.com/yoshiharuyamashita/blackburn",
+  "licenseLink": "https://github.com/yoshiharuyamashita/blackburn/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "personal",
+    "purecss",
+    "responsive"
+  ],
+  "minVersion": 0.15,
+  "homepage": "http://yoshiharuyamashita.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/yoshiharuyamashita/blackburn/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "6b3ad628-ec58-42d4-be89-89a78ad97ebc",
+  "demoAppName": "theme-hugo-blackburn-demo"
+}

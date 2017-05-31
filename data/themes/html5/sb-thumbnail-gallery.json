@@ -1,0 +1,13 @@
+{
+  "slug": "sb-thumbnail-gallery",
+  "title": "Start Bootstrap Thumbnail Gallery",
+  "description": "A thumbnail grid perfect for creating photo galleries quickly and easily with Bootstrap 4.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-thumbnail-gallery",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/thumbnail-gallery.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-thumbnail-gallery/archive/master.tar.gz",
+  "demoAppId": "70916148-10fa-4950-91b7-8588fa6abbac",
+  "demoAppName": "theme-html5-sb-thumbnail-gallery-demo"
+}

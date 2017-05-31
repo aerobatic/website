@@ -1,0 +1,29 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-icarus-theme",
+  "branch": "master",
+  "repoName": "hugo-icarus-theme",
+  "forks": 80,
+  "stars": 87,
+  "description": "The blog theme you may fall in love with, coming to Hugo. ",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-icarus-theme/archive/master.tar.gz",
+  "slug": "icarus",
+  "siteType": "hugo",
+  "title": "Icarus",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-icarus-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md",
+  "tags": [
+    "syntax highlighting",
+    "maxthjax",
+    "rss",
+    "gallery",
+    "widgets",
+    "google analytics"
+  ],
+  "minVersion": 0.2,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-icarus-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "d02f93cc-0955-45c4-8b3e-e4720b58ab9c",
+  "demoAppName": "theme-hugo-icarus-demo"
+}

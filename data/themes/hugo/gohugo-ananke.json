@@ -1,0 +1,25 @@
+{
+  "repoFullName": "budparr/gohugo-theme-ananke",
+  "branch": "master",
+  "repoName": "gohugo-theme-ananke",
+  "forks": 9,
+  "stars": 27,
+  "description": "A Base theme for building full featured Hugo sites",
+  "downloadUrl": "https://github.com/budparr/gohugo-theme-ananke/archive/master.tar.gz",
+  "slug": "gohugo-ananke",
+  "siteType": "hugo",
+  "title": "Ananke Gohugo Theme",
+  "repoUrl": "https://github.com/budparr/gohugo-theme-ananke",
+  "licenseLink": "https://github.com/budparr/gohugo-theme-ananke/blob/master/LICENSE.md",
+  "tags": [
+    "website",
+    "starter"
+  ],
+  "minVersion": 0.18,
+  "homepage": "https://github.com/budparr",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/budparr/gohugo-theme-ananke/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "2789b6f1-2746-4284-8afd-68d82b6a9a2a",
+  "demoAppName": "theme-hugo-gohugo-ananke-demo"
+}

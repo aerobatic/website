@@ -1,0 +1,13 @@
+{
+  "slug": "sb-2-col-portfolio",
+  "title": "Start Bootstrap 2 Col Portfolio",
+  "description": "A basic, two column, portfolio page template perfect for showcasing a group of projects with some details.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-2-col-portfolio",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/2-col-portfolio.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-2-col-portfolio/archive/master.tar.gz",
+  "demoAppId": "627f5683-4cf8-46d8-91c1-a7ccb8ca8556",
+  "demoAppName": "theme-html5-sb-2-col-portfolio-demo"
+}

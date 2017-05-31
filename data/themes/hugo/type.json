@@ -1,0 +1,27 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-type-theme",
+  "branch": "master",
+  "repoName": "hugo-type-theme",
+  "forks": 13,
+  "stars": 20,
+  "description": "A free and open-source Hugo theme. Great for blogs and easy to customize.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-type-theme/archive/master.tar.gz",
+  "slug": "type",
+  "siteType": "hugo",
+  "title": "Type",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-type-theme",
+  "licenseLink": "https://github.com/digitalcraftsman/hugo-type-theme/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "disqus",
+    "google analytics",
+    "minimalistic"
+  ],
+  "minVersion": 0.19,
+  "homepage": "https://github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-type-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "b9cc5515-8e3c-48f9-abed-a5be6b7cbd29",
+  "demoAppName": "theme-hugo-type-demo"
+}

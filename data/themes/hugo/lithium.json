@@ -1,0 +1,24 @@
+{
+  "repoFullName": "jrutheiser/hugo-lithium-theme",
+  "branch": "master",
+  "repoName": "hugo-lithium-theme",
+  "forks": 20,
+  "stars": 25,
+  "description": "Lithium minimal theme",
+  "downloadUrl": "https://github.com/jrutheiser/hugo-lithium-theme/archive/master.tar.gz",
+  "slug": "lithium",
+  "siteType": "hugo",
+  "title": "Lithium",
+  "repoUrl": "https://github.com/jrutheiser/hugo-lithium-theme",
+  "licenseLink": "https://github.com/jrutheiser/hugo-lithium-theme/blob/master/LICENSE.md",
+  "tags": [
+    "blog"
+  ],
+  "minVersion": 0.15,
+  "homepage": "http://jrutheiser.com/",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/jrutheiser/hugo-lithium-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "35340eeb-5943-47d0-a644-387c0e05e410",
+  "demoAppName": "theme-hugo-lithium-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "sb-grayscale",
+  "title": "Start Bootstrap Grayscale",
+  "description": "A free, multipurpose, one page Bootstrap theme featuring a dark color scheme and smooth scrolling animations.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-grayscale",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/grayscale.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-grayscale/archive/master.tar.gz",
+  "demoAppId": "7a1f957f-3a42-45c7-bca3-0e6220e35b63",
+  "demoAppName": "theme-html5-sb-grayscale-demo"
+}

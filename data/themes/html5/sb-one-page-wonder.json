@@ -1,0 +1,13 @@
+{
+  "slug": "sb-one-page-wonder",
+  "title": "Start Bootstrap One Page Wonder",
+  "description": "A simple, one page website template for quickly building one page websites using Bootstrap 4.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-one-page-wonder",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/one-page-wonder.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/archive/master.tar.gz",
+  "demoAppId": "6220d4a2-132e-4602-9daa-2f2b8333b7dd",
+  "demoAppName": "theme-html5-sb-one-page-wonder-demo"
+}

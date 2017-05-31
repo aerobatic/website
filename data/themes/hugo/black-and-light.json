@@ -1,0 +1,22 @@
+{
+  "repoFullName": "davidhampgonsalves/hugo-black-and-light-theme",
+  "branch": "master",
+  "repoName": "hugo-black-and-light-theme",
+  "forks": 15,
+  "stars": 25,
+  "description": "",
+  "downloadUrl": "https://github.com/davidhampgonsalves/hugo-black-and-light-theme/archive/master.tar.gz",
+  "slug": "black-and-light",
+  "siteType": "hugo",
+  "title": "Black & Light",
+  "repoUrl": "https://github.com/davidhampgonsalves/hugo-black-and-light-theme",
+  "licenseLink": "https://github.com/davidhampgonsalves/hugo-black-and-light-theme/blob/master/LICENSE",
+  "tags": [],
+  "minVersion": 0.17,
+  "homepage": "https://davidhampgonsalves.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/davidhampgonsalves/hugo-black-and-light-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "83742dea-ee5c-42b3-adfc-6207d1d1872d",
+  "demoAppName": "theme-hugo-black-and-light-demo"
+}

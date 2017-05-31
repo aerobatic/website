@@ -1,0 +1,26 @@
+{
+  "repoFullName": "tanksuzuki/hemingway",
+  "branch": "master",
+  "repoName": "hemingway",
+  "forks": 42,
+  "stars": 27,
+  "description": "Really minimal blog theme for hugo",
+  "downloadUrl": "https://github.com/tanksuzuki/hemingway/archive/master.tar.gz",
+  "slug": "hemingway",
+  "siteType": "hugo",
+  "title": "Hemingway",
+  "repoUrl": "https://github.com/tanksuzuki/hemingway",
+  "licenseLink": "https://github.com/tanksuzuki/hemingway/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "font awesome",
+    "highlight.js"
+  ],
+  "minVersion": 0.16,
+  "homepage": "http://tanksuzuki.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/tanksuzuki/hemingway/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "33fe3823-f5e4-4137-bd07-9df09ddb0e2a",
+  "demoAppName": "theme-hugo-hemingway-demo"
+}

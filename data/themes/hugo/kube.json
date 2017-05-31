@@ -1,0 +1,31 @@
+{
+  "repoFullName": "jeblister/kube",
+  "branch": "master",
+  "repoName": "kube",
+  "forks": 5,
+  "stars": 18,
+  "description": "Kube is a professional  and a responsive Hugo theme for developers and designers that offers a documentation section mixed with a landing page and a blog.",
+  "downloadUrl": "https://github.com/jeblister/kube/archive/master.tar.gz",
+  "slug": "kube",
+  "siteType": "hugo",
+  "title": "Kube Hugo",
+  "repoUrl": "https://github.com/jeblister/kube",
+  "licenseLink": "https://github.com/jeblister/kube/master/LICENSE.md",
+  "tags": [
+    "responsive",
+    "kube",
+    "documentation",
+    "landing",
+    "blog",
+    "themes",
+    "professional",
+    "modern"
+  ],
+  "minVersion": 0.19,
+  "homepage": "http://findme.surge.sh/",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/jeblister/kube/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "957d2bd1-8a2b-4afc-ad1c-8f93b8973a18",
+  "demoAppName": "theme-hugo-kube-demo"
+}

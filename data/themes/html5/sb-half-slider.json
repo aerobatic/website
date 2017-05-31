@@ -1,0 +1,13 @@
+{
+  "slug": "sb-half-slider",
+  "title": "Start Bootstrap Half Slider",
+  "description": "A half page background image slider for Bootstrap 4 using the built-in Bootstrap carousel plugin.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-half-slider",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/half-slider.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-half-slider/archive/master.tar.gz",
+  "demoAppId": "ed4205df-f8e3-461f-ad89-06180de44b40",
+  "demoAppName": "theme-html5-sb-half-slider-demo"
+}

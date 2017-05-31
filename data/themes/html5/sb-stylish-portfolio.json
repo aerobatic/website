@@ -1,0 +1,13 @@
+{
+  "slug": "sb-stylish-portfolio",
+  "title": "Start Bootstrap Stylish Portfolio",
+  "description": "A stylish, one page, Bootstrap portfolio theme featuring off canvas navigation and smooth page scrolling.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/stylish-portfolio.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/archive/master.tar.gz",
+  "demoAppId": "321d8ee8-9bfb-4211-92f9-512816d196d9",
+  "demoAppName": "theme-html5-sb-stylish-portfolio-demo"
+}

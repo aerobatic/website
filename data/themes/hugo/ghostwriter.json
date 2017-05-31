@@ -1,0 +1,26 @@
+{
+  "repoFullName": "jbub/ghostwriter",
+  "branch": "master",
+  "repoName": "ghostwriter",
+  "forks": 50,
+  "stars": 46,
+  "description": "A fork of simple AJAX driven theme for the Ghost blogging platform ported to Hugo.",
+  "downloadUrl": "https://github.com/jbub/ghostwriter/archive/master.tar.gz",
+  "slug": "ghostwriter",
+  "siteType": "hugo",
+  "title": "ghostwriter",
+  "repoUrl": "https://github.com/jbub/ghostwriter",
+  "licenseLink": "https://github.com/jbub/ghostwriter/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "technical",
+    "personal"
+  ],
+  "minVersion": 0.15,
+  "homepage": "https://github.com/jbub",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/jbub/ghostwriter/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "f23bd8c7-b869-4562-99c0-130e0df83a12",
+  "demoAppName": "theme-hugo-ghostwriter-demo"
+}

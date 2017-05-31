@@ -1,0 +1,29 @@
+{
+  "repoFullName": "devcows/hugo-universal-theme",
+  "branch": "master",
+  "repoName": "hugo-universal-theme",
+  "forks": 67,
+  "stars": 65,
+  "description": "A port of the Universal theme",
+  "downloadUrl": "https://github.com/devcows/hugo-universal-theme/archive/master.tar.gz",
+  "slug": "universal",
+  "siteType": "hugo",
+  "title": "Universal",
+  "repoUrl": "https://github.com/devcows/hugo-universal-theme",
+  "licenseLink": "https://github.com/devcows/hugo-universal-theme/blob/master/LICENSE",
+  "tags": [
+    "blog",
+    "company",
+    "portfolio",
+    "projects",
+    "minimal",
+    "responsive"
+  ],
+  "minVersion": 0.15,
+  "homepage": "//github.com/adrianmo",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/devcows/hugo-universal-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "900ca8ab-a09d-476a-b66f-ba9cf71d7802",
+  "demoAppName": "theme-hugo-universal-demo"
+}

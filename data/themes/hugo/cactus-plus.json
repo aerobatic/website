@@ -1,0 +1,32 @@
+{
+  "repoFullName": "nodejh/hugo-theme-cactus-plus",
+  "branch": "master",
+  "repoName": "hugo-theme-cactus-plus",
+  "forks": 13,
+  "stars": 20,
+  "description": "A minimalistic and responsive theme for bloggers.",
+  "downloadUrl": "https://github.com/nodejh/hugo-theme-cactus-plus/archive/master.tar.gz",
+  "slug": "cactus-plus",
+  "siteType": "hugo",
+  "title": "Cactus Plus",
+  "repoUrl": "https://github.com/nodejh/hugo-theme-cactus-plus",
+  "licenseLink": "https://github.com/nodejh/hugo-theme-cactus-plus/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "disqus",
+    "duoshuo",
+    "google analytics",
+    "baidu tongji",
+    "rss",
+    "syntax highlighting",
+    "tags",
+    "categories"
+  ],
+  "minVersion": 0.18,
+  "homepage": "https://github.com/nodejh",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/nodejh/hugo-theme-cactus-plus/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "cc34dd45-9200-4132-9295-b30c96faab48",
+  "demoAppName": "theme-hugo-cactus-plus-demo"
+}

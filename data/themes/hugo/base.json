@@ -1,0 +1,23 @@
+{
+  "repoFullName": "crakjie/hugo-base-theme",
+  "branch": "master",
+  "repoName": "hugo-base-theme",
+  "forks": 11,
+  "stars": 26,
+  "description": "Theme inspired by gohugo.io",
+  "downloadUrl": "https://github.com/crakjie/hugo-base-theme/archive/master.tar.gz",
+  "slug": "base",
+  "siteType": "hugo",
+  "title": "Hugo Base",
+  "repoUrl": "https://github.com/crakjie/hugo-base-theme",
+  "tags": [
+    "landing page",
+    "hugo"
+  ],
+  "minVersion": 0.12,
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/crakjie/hugo-base-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "44b45a12-b553-4803-85af-5436e919466a",
+  "demoAppName": "theme-hugo-base-demo"
+}

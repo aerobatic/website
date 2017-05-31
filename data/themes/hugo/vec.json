@@ -1,0 +1,28 @@
+{
+  "repoFullName": "IvanChou/hugo-theme-vec",
+  "branch": "master",
+  "repoName": "hugo-theme-vec",
+  "forks": 11,
+  "stars": 15,
+  "description": "Vec -- a minimal theme for Hugo.",
+  "downloadUrl": "https://github.com/IvanChou/hugo-theme-vec/archive/master.tar.gz",
+  "slug": "vec",
+  "siteType": "hugo",
+  "title": "Vec",
+  "repoUrl": "https://github.com/IvanChou/hugo-theme-vec",
+  "licenseLink": "https://github.com/IvanChou/hugo-theme-vec/blob/master/LICENSE.md",
+  "tags": [
+    "minimal",
+    "clean",
+    "neat",
+    "black white",
+    "blog"
+  ],
+  "minVersion": 0.15,
+  "homepage": "https://yii.im",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/IvanChou/hugo-theme-vec/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "82478ce6-c66a-43e5-b12b-a3eee5648d62",
+  "demoAppName": "theme-hugo-vec-demo"
+}

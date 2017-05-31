@@ -1,0 +1,26 @@
+{
+  "repoFullName": "mgjohansen/hucore",
+  "branch": "master",
+  "repoName": "hucore",
+  "forks": 14,
+  "stars": 25,
+  "description": "Minimal blog theme for hugo based on Hemingway2",
+  "downloadUrl": "https://github.com/mgjohansen/hucore/archive/master.tar.gz",
+  "slug": "hucore",
+  "siteType": "hugo",
+  "title": "HUCORE",
+  "repoUrl": "https://github.com/mgjohansen/hucore",
+  "licenseLink": "https://github.com/mgjohansen/hucore/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "font awesome",
+    "highlight.js"
+  ],
+  "minVersion": 0.16,
+  "homepage": "https://github.com/mgjohansen",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "60a23a58-9f43-473f-9cec-f5bcaf9f46bc",
+  "demoAppName": "theme-hugo-hucore-demo"
+}

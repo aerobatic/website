@@ -33,12 +33,20 @@ Register at [https://dashboard.aerobatic.com/register](https://dashboard.aerobat
 
 In less than 30 seconds your website will be deployed to an https URL on our global CDN.
 
-For a more realistic example, you can create a website from a template such as [this one](https://html5up.net/editorial) from [HTML5 Up](https://html5up.net/). When specifying the `--source` argument a new directory will automatically be created for you.
+#### Or use a theme
+
+You can also create a new site using a packaged theme for Jekyll, Hugo, or plain HTML5 sites. Below are some examples you can try or browse the [Aerobatic theme gallery](/themes/) for something that catches your eye.
 
 ~~~sh
-[$] aero create --source https://html5up.net/editorial/download -n your-site-name
-[$] cd your-site-name
-[$] aero deploy
+[$] aero create --theme jekyll/agency
+~~~
+
+~~~sh
+[$] aero create --theme hugo/creative-portfolio
+~~~
+
+~~~sh
+[$] aero create --theme html5/sb-business-casual
 ~~~
 
 ### Next Steps

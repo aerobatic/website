@@ -20,6 +20,7 @@
 
     .details {
       display: flex;
+      flex: 1;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -29,8 +30,8 @@
         border: solid 1px #707070;
         display: block;
         margin: 0 15px 0 0;
-        width: 250px;
-        height: 200px;
+        max-width: 250px;
+        // height: 200px;
         border-radius: 0;
       }
 
@@ -38,6 +39,15 @@
         font-size: 13px;
       }
     }
+
+    // a.screenshot.jekyll > img {
+    //   width: 250px;
+    //   height: 200px;
+    // }
+
+    // a.screenshot.hugo > img {
+    //   width: 
+    // }
 
     h3 {
       margin-top: 5px;

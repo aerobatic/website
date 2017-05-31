@@ -1,0 +1,13 @@
+{
+  "slug": "sb-blog-home",
+  "title": "Start Bootstrap Blog Home",
+  "description": "A simple, unstyled, blog homepage starter template for creating Bootstrap 4 blog websites.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-blog-home",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/blog-home.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-blog-home/archive/master.tar.gz",
+  "demoAppId": "da93617d-73bc-4862-8b2d-a040141526fc",
+  "demoAppName": "theme-html5-sb-blog-home-demo"
+}

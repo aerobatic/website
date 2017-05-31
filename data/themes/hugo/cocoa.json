@@ -1,0 +1,28 @@
+{
+  "repoFullName": "nishanths/cocoa-hugo-theme",
+  "branch": "master",
+  "repoName": "cocoa-hugo-theme",
+  "forks": 80,
+  "stars": 134,
+  "description": "Consistent, responsive theme with clean typography",
+  "downloadUrl": "https://github.com/nishanths/cocoa-hugo-theme/archive/master.tar.gz",
+  "slug": "cocoa",
+  "siteType": "hugo",
+  "title": "Cocoa",
+  "repoUrl": "https://github.com/nishanths/cocoa-hugo-theme",
+  "licenseLink": "https://github.com/nishanths/cocoa-hugo-theme/blob/master/LICENSE",
+  "tags": [
+    "open-sans",
+    "minimal",
+    "clean",
+    "svg",
+    "comments"
+  ],
+  "minVersion": 0.18,
+  "homepage": "https://github.com/nishanths",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/nishanths/cocoa-hugo-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "91bcbc4f-3704-4548-a390-eccbe9cb90c3",
+  "demoAppName": "theme-hugo-cocoa-demo"
+}

@@ -64,6 +64,7 @@ plugins:
       /docs/static-http-hosting: /docs/static-serving/
       /bitbucket-changes: /blog/announcing-aerobatic-transition/
       /feed.xml: /index.xml
+      /themes/: /themes/html5/
   - name: health-check
     path: /health
   - name: custom-errors

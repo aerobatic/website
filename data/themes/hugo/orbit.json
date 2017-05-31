@@ -1,0 +1,26 @@
+{
+  "repoFullName": "aerohub/hugo-orbit-theme",
+  "branch": "master",
+  "repoName": "hugo-orbit-theme",
+  "forks": 14,
+  "stars": 32,
+  "description": "Responsive Resume/CV Theme for Developers",
+  "downloadUrl": "https://github.com/aerohub/hugo-orbit-theme/archive/master.tar.gz",
+  "slug": "orbit",
+  "siteType": "hugo",
+  "title": "Orbit",
+  "repoUrl": "https://github.com/aerohub/hugo-orbit-theme",
+  "licenseLink": "//github.com/aerohub/hugo-orbit-theme/blob/master/LICENSE.md",
+  "tags": [
+    "cv",
+    "resume",
+    "colour schemes"
+  ],
+  "minVersion": 0.16,
+  "homepage": "//github.com/aerohub",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/aerohub/hugo-orbit-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "2b92aa85-8333-43cd-a2b9-3dc0e3e570a9",
+  "demoAppName": "theme-hugo-orbit-demo"
+}

@@ -1,0 +1,31 @@
+{
+  "repoFullName": "aerohub/hugo-identity-theme",
+  "branch": "master",
+  "repoName": "hugo-identity-theme",
+  "forks": 23,
+  "stars": 31,
+  "description": "Little profile/card-style template based on Identity by HTML5 UP.",
+  "downloadUrl": "https://github.com/aerohub/hugo-identity-theme/archive/master.tar.gz",
+  "slug": "identity",
+  "siteType": "hugo",
+  "title": "Hugo Identity",
+  "repoUrl": "https://github.com/aerohub/hugo-identity-theme",
+  "licenseLink": "//github.com/aerohub/hugo-identity/blob/master/LICENSE.md",
+  "tags": [
+    "responsive",
+    "configurable",
+    "profile",
+    "card",
+    "contact",
+    "social",
+    "minimal",
+    "google analytics"
+  ],
+  "minVersion": 0.16,
+  "homepage": "https://github.com/aerohub/hugo-identity-theme",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/aerohub/hugo-identity-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "9c095d24-8f63-4659-a5f7-421cf457f19c",
+  "demoAppName": "theme-hugo-identity-demo"
+}

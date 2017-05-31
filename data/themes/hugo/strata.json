@@ -1,0 +1,29 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-strata-theme",
+  "branch": "master",
+  "repoName": "hugo-strata-theme",
+  "forks": 50,
+  "stars": 53,
+  "description": "A responsive and minimal single-page portfolio with blogging capabilities.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-strata-theme/archive/master.tar.gz",
+  "slug": "strata",
+  "siteType": "hugo",
+  "title": "Strata",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-strata-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-strata-theme/blob/master/LICENSE.md",
+  "tags": [
+    "image gallery",
+    "contact form",
+    "google analytics",
+    "customizable",
+    "blog",
+    "single-page"
+  ],
+  "minVersion": 0.16,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-strata-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "e7c5c0ec-2eea-4ba9-bd28-f145a98ce01c",
+  "demoAppName": "theme-hugo-strata-demo"
+}

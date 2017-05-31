@@ -1,0 +1,25 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-freelancer-theme",
+  "branch": "master",
+  "repoName": "hugo-freelancer-theme",
+  "forks": 20,
+  "stars": 34,
+  "description": "A one page HTML theme for freelancers.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-freelancer-theme/archive/master.tar.gz",
+  "slug": "freelancer",
+  "siteType": "hugo",
+  "title": "Freelancer",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-freelancer-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-freelancer-theme/blob/master/LICENSE",
+  "tags": [
+    "freenlancer",
+    "portfolio"
+  ],
+  "minVersion": 0.14,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-freelancer-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "e4849a2c-5253-4266-abc8-6b35f2ce2199",
+  "demoAppName": "theme-hugo-freelancer-demo"
+}

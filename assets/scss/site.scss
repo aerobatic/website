@@ -65,16 +65,17 @@ pre {
       color: #f91;
     }
   }
+}
 
-  .login-link {
-    background-color: $success;
-    color: $white !important;
-    border-radius: 4px;
-    transition: background-color 200ms ease;
+.login-link {
+  background-color: $success;
+  color: $white !important;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color 200ms ease;
 
-    &:hover {
-      background-color: rgb(83, 221, 148) !important;
-    }
+  &:hover {
+    background-color: rgb(83, 221, 148) !important;
   }
 }
 

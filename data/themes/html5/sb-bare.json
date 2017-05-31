@@ -1,0 +1,13 @@
+{
+  "slug": "sb-bare",
+  "title": "Start Bootstrap Bare",
+  "description": "An unstlyed starter template for Bootstrap 4 with predefined file paths for easy development.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-bare",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/bare.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-bare/archive/master.tar.gz",
+  "demoAppId": "b2337df1-f63c-4f70-8506-2d95e223f254",
+  "demoAppName": "theme-html5-sb-bare-demo"
+}

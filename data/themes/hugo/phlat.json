@@ -1,0 +1,26 @@
+{
+  "repoFullName": "nraboy/hugo-phlat-theme",
+  "branch": "master",
+  "repoName": "hugo-phlat-theme",
+  "forks": 15,
+  "stars": 17,
+  "description": "A flat theme for the Hugo static website engine",
+  "downloadUrl": "https://github.com/nraboy/hugo-phlat-theme/archive/master.tar.gz",
+  "slug": "phlat",
+  "siteType": "hugo",
+  "title": "Phlat Theme",
+  "repoUrl": "https://github.com/nraboy/hugo-phlat-theme",
+  "licenseLink": "https://github.com/nraboy/hugo-phlat-theme/blob/master/LICENSE.md",
+  "tags": [
+    "flat",
+    "bootstrap",
+    "font-awesome"
+  ],
+  "minVersion": 0.14,
+  "homepage": "https://www.nraboy.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/nraboy/hugo-phlat-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "c6f24342-9406-493c-bc59-d45969544de1",
+  "demoAppName": "theme-hugo-phlat-demo"
+}

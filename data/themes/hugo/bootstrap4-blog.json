@@ -1,0 +1,26 @@
+{
+  "repoFullName": "alanorth/hugo-theme-bootstrap4-blog",
+  "branch": "master",
+  "repoName": "hugo-theme-bootstrap4-blog",
+  "forks": 35,
+  "stars": 47,
+  "description": "A simple Hugo theme based on the Bootstrap v4 blog example.",
+  "downloadUrl": "https://github.com/alanorth/hugo-theme-bootstrap4-blog/archive/master.tar.gz",
+  "slug": "bootstrap4-blog",
+  "siteType": "hugo",
+  "title": "Hugo Bootstrap v4 Blog",
+  "repoUrl": "https://github.com/alanorth/hugo-theme-bootstrap4-blog",
+  "licenseLink": "https://github.com/alanorth/hugo-theme-bootstrap4/blob/master/LICENSE.txt",
+  "tags": [
+    "bootstrap",
+    "blog",
+    "font awesome"
+  ],
+  "minVersion": 0.19,
+  "homepage": "https://englishbulgaria.net",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/alanorth/hugo-theme-bootstrap4-blog/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "eaf30535-6abc-44b2-b14e-2234e4529ccb",
+  "demoAppName": "theme-hugo-bootstrap4-blog-demo"
+}

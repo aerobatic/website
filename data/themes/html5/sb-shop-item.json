@@ -1,0 +1,11 @@
+{
+  "slug": "sb-shop-item",
+  "title": "Start Bootstrap Shop Item",
+  "description": "A simple, unstyled, shop item page template featuring Bootstrap snippets from Bootsnipp.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-shop-item",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/shop-item.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-shop-item/archive/master.tar.gz"
+}

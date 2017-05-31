@@ -1,0 +1,30 @@
+{
+  "repoFullName": "aerohub/hugrid",
+  "branch": "master",
+  "repoName": "hugrid",
+  "forks": 9,
+  "stars": 24,
+  "description": "A simple grid theme for Hugo. A kind of boilerplate to perform anyone or anything quickly.",
+  "downloadUrl": "https://github.com/aerohub/hugrid/archive/master.tar.gz",
+  "slug": "hugrid",
+  "siteType": "hugo",
+  "title": "Hugrid",
+  "repoUrl": "https://github.com/aerohub/hugrid",
+  "licenseLink": "//github.com/aerohub/hugrid/blob/master/LICENSE.md",
+  "tags": [
+    "responsive",
+    "grid",
+    "portfolio",
+    "cards",
+    "simple",
+    "collections",
+    "google analytics"
+  ],
+  "minVersion": 0.15,
+  "homepage": "//github.com/aerohub/hugrid",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/aerohub/hugrid/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "77f0dc64-4da6-4e5b-be42-72db00feda52",
+  "demoAppName": "theme-hugo-hugrid-demo"
+}

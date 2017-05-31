@@ -1,0 +1,25 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-creative-theme",
+  "branch": "master",
+  "repoName": "hugo-creative-theme",
+  "forks": 60,
+  "stars": 64,
+  "description": "A one page HTML theme for creatives.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-creative-theme/archive/master.tar.gz",
+  "slug": "creative",
+  "siteType": "hugo",
+  "title": "Creative",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-creative-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-creative-theme/blob/master/LICENSE",
+  "tags": [
+    "creative",
+    "portfolio"
+  ],
+  "minVersion": 0.14,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-creative-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "6c98e12c-f9c0-4af4-8514-d7573f54288c",
+  "demoAppName": "theme-hugo-creative-demo"
+}

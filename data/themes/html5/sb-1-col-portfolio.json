@@ -1,0 +1,13 @@
+{
+  "slug": "sb-1-col-portfolio",
+  "title": "Start Bootstrap 1 Col Portfolio",
+  "description": "An unstyled, single column, portfolio page template perfect for showcasing a group of detailed projects.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/1-col-portfolio.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/archive/master.tar.gz",
+  "demoAppId": "f8b3a882-edba-476a-8c85-9b5aa05a03b1",
+  "demoAppName": "theme-html5-sb-1-col-portfolio-demo"
+}

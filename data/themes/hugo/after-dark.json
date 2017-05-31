@@ -1,0 +1,29 @@
+{
+  "repoFullName": "comfusion/after-dark",
+  "branch": "master",
+  "repoName": "after-dark",
+  "forks": 50,
+  "stars": 134,
+  "description": "A simple, yet highly configurable responsive dark theme.",
+  "downloadUrl": "https://github.com/comfusion/after-dark/archive/master.tar.gz",
+  "slug": "after-dark",
+  "siteType": "hugo",
+  "title": "After Dark",
+  "repoUrl": "https://github.com/comfusion/after-dark",
+  "licenseLink": "https://github.com/comfusion/after-dark/blob/master/LICENSE.md",
+  "tags": [
+    "personal",
+    "minimal",
+    "responsive",
+    "accessible",
+    "unported",
+    "dark",
+    "themeable"
+  ],
+  "minVersion": 0.16,
+  "homepage": "https://habd.as",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/comfusion/after-dark/master/images/screenshot.png",
+  "demoAppId": "617a8abe-6c40-4bd9-8014-2bed81cef4f1",
+  "demoAppName": "theme-hugo-after-dark-demo"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "sb-new-age",
+  "title": "Start Bootstrap New Age",
+  "description": "A bold and colorful Bootstrap landing page theme for web apps or other business use.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-new-age",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/new-age.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-new-age/archive/master.tar.gz",
+  "demoAppId": "ddb3d7d5-e513-469c-9eec-36facb4339e8",
+  "demoAppName": "theme-html5-sb-new-age-demo"
+}

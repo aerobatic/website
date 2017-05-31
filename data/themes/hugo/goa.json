@@ -1,0 +1,30 @@
+{
+  "repoFullName": "shenoybr/hugo-goa",
+  "branch": "master",
+  "repoName": "hugo-goa",
+  "forks": 19,
+  "stars": 23,
+  "description": "Simple Minimalist Hugo Theme",
+  "downloadUrl": "https://github.com/shenoybr/hugo-goa/archive/master.tar.gz",
+  "slug": "goa",
+  "siteType": "hugo",
+  "title": "Goa",
+  "repoUrl": "https://github.com/shenoybr/hugo-goa",
+  "licenseLink": "https://github.com/shenoybr/hugo-goa/blob/master/LICENSE.md",
+  "tags": [
+    "Roboto",
+    "Lato",
+    "Roboto Slab",
+    "bootstrap",
+    "font awesome",
+    "minimal",
+    "clean"
+  ],
+  "minVersion": 0.16,
+  "homepage": "https://github.com/shenoybr",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/shenoybr/hugo-goa/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "36d62cb8-9b44-4fc4-bba2-5dcc451646c5",
+  "demoAppName": "theme-hugo-goa-demo"
+}

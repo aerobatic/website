@@ -1,0 +1,13 @@
+{
+  "slug": "sb-freelancer",
+  "title": "Start Bootstrap Freelancer",
+  "description": "A one page Bootstrap portfolio theme for freelancers featuring a custom portfolio grid.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-freelancer",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/freelancer.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-freelancer/archive/master.tar.gz",
+  "demoAppId": "f55f4544-1536-4ebe-9cc8-37064fa84217",
+  "demoAppName": "theme-html5-sb-freelancer-demo"
+}

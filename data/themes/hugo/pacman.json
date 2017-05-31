@@ -1,0 +1,25 @@
+{
+  "repoFullName": "coderzh/hugo-pacman-theme",
+  "branch": "master",
+  "repoName": "hugo-pacman-theme",
+  "forks": 14,
+  "stars": 33,
+  "description": "",
+  "downloadUrl": "https://github.com/coderzh/hugo-pacman-theme/archive/master.tar.gz",
+  "slug": "pacman",
+  "siteType": "hugo",
+  "title": "Hugo Pacman Theme",
+  "repoUrl": "https://github.com/coderzh/hugo-pacman-theme",
+  "licenseLink": "https://github.com/coderzh/hugo-pacman-theme/blob/master/LICENSE.md",
+  "tags": [
+    "",
+    ""
+  ],
+  "minVersion": 0.15,
+  "homepage": "http://blog.coderzh.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/coderzh/hugo-pacman-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "76b86a6b-0861-49ef-8cfe-f4b9706614f6",
+  "demoAppName": "theme-hugo-pacman-demo"
+}

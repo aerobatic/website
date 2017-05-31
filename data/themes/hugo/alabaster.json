@@ -1,0 +1,25 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-alabaster-theme",
+  "branch": "master",
+  "repoName": "hugo-alabaster-theme",
+  "forks": 8,
+  "stars": 21,
+  "description": "A documentation theme ported from Sphinx to Hugo",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-alabaster-theme/archive/master.tar.gz",
+  "slug": "alabaster",
+  "siteType": "hugo",
+  "title": "Alabaster",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-alabaster-theme",
+  "licenseLink": "https://github.com/digitalcraftsman/hugo-alabaster-theme/blob/master/LICENSE.md",
+  "tags": [
+    "documentation",
+    "sphinx"
+  ],
+  "minVersion": 0.2,
+  "homepage": "https://github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-alabaster-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "72fef863-3e8e-4a96-a7f3-5a1454d051e1",
+  "demoAppName": "theme-hugo-alabaster-demo"
+}

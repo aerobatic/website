@@ -1,0 +1,27 @@
+{
+  "repoFullName": "wildhaber/gohugo-amp",
+  "branch": "master",
+  "repoName": "gohugo-amp",
+  "forks": 15,
+  "stars": 51,
+  "description": "starter theme featuring AMP project",
+  "downloadUrl": "https://github.com/wildhaber/gohugo-amp/archive/master.tar.gz",
+  "slug": "gohugo-amp",
+  "siteType": "hugo",
+  "title": "gohugo-amp",
+  "repoUrl": "https://github.com/wildhaber/gohugo-amp",
+  "licenseLink": "https://github.com/wildhaber/gohugo-amp/blob/master/LICENSE",
+  "tags": [
+    "blog",
+    "amp",
+    "seo",
+    "starter"
+  ],
+  "minVersion": 0.17,
+  "homepage": "https://github.com/wildhaber",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/wildhaber/gohugo-amp/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "9674bb79-67ec-4b52-b3e9-fdf9b9216af1",
+  "demoAppName": "theme-hugo-gohugo-amp-demo"
+}

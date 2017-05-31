@@ -1,0 +1,27 @@
+{
+  "repoFullName": "jpescador/hugo-future-imperfect",
+  "branch": "master",
+  "repoName": "hugo-future-imperfect",
+  "forks": 58,
+  "stars": 64,
+  "description": "Ported theme of HTML5 UP, future imperfect, with some extra goodies",
+  "downloadUrl": "https://github.com/jpescador/hugo-future-imperfect/archive/master.tar.gz",
+  "slug": "future-imperfect",
+  "siteType": "hugo",
+  "title": "Hugo Future Imperfect",
+  "repoUrl": "https://github.com/jpescador/hugo-future-imperfect",
+  "licenseLink": "https://github.com/jpescador/hugo-future-imperfect/blob/master/LICENSE.md",
+  "tags": [
+    "blog",
+    "responsive",
+    "font awesome",
+    "highlight.js"
+  ],
+  "minVersion": 0.15,
+  "homepage": "https://jpescador.com",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/jpescador/hugo-future-imperfect/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "34b210d9-6fd7-49b7-8260-fbf5c155f4ee",
+  "demoAppName": "theme-hugo-future-imperfect-demo"
+}

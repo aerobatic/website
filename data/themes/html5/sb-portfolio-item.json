@@ -1,0 +1,13 @@
+{
+  "slug": "sb-portfolio-item",
+  "title": "Start Bootstrap Portfolio Item",
+  "description": "An unstlyed, portfolio item template perfect for showcasing a project or work.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/portfolio-item.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item/archive/master.tar.gz",
+  "demoAppId": "7fc968e8-cc31-43ee-b9d8-355a9fde3831",
+  "demoAppName": "theme-html5-sb-portfolio-item-demo"
+}

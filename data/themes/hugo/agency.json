@@ -1,0 +1,29 @@
+{
+  "repoFullName": "digitalcraftsman/hugo-agency-theme",
+  "branch": "master",
+  "repoName": "hugo-agency-theme",
+  "forks": 57,
+  "stars": 62,
+  "description": "A one page portfolio for companies and freelancers.",
+  "downloadUrl": "https://github.com/digitalcraftsman/hugo-agency-theme/archive/master.tar.gz",
+  "slug": "agency",
+  "siteType": "hugo",
+  "title": "Agency",
+  "repoUrl": "https://github.com/digitalcraftsman/hugo-agency-theme",
+  "licenseLink": "//github.com/digitalcraftsman/hugo-agency-theme/blob/master/LICENSE",
+  "tags": [
+    "portfolio",
+    "company",
+    "contact form",
+    "timeline",
+    "google analytics",
+    "piwik"
+  ],
+  "minVersion": 0.15,
+  "homepage": "//github.com/digitalcraftsman",
+  "source": "https://themes.gohugo.io/",
+  "thumbnailUrl": "https://raw.githubusercontent.com/digitalcraftsman/hugo-agency-theme/master/images/screenshot.png",
+  "exampleSite": true,
+  "demoAppId": "cd5f04f2-2eb8-4b94-8bd9-5a756fa6dec3",
+  "demoAppName": "theme-hugo-agency-demo"
+}

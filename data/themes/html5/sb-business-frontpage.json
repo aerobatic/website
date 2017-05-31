@@ -1,0 +1,13 @@
+{
+  "slug": "sb-business-frontpage",
+  "title": "Start Bootstrap Business Frontpage",
+  "description": "A business home page starter template for Bootstrap 4 featuring marketing boxes and a full width image header.",
+  "repoUrl": "https://github.com/BlackrockDigital/startbootstrap-business-frontpage",
+  "thumbnailUrl": "https://raw.githubusercontent.com/BlackrockDigital/startbootstrap/master/img/templates/business-frontpage.jpg",
+  "source": "https://startbootstrap.com",
+  "licence": "MIT",
+  "siteType": "html5",
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-business-frontpage/archive/master.tar.gz",
+  "demoAppId": "4a4a9196-1f33-4bb0-a795-b144d72de456",
+  "demoAppName": "theme-html5-sb-business-frontpage-demo"
+}
