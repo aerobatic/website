@@ -30,6 +30,12 @@ plugins:
       headers:
         # new Buffer('dvonlehman:{PERSONAL_TOKEN}').toString('base64')
         Authorization: Basic $GITHUB_API_AUTH
+  - name: http-proxy
+    path: /github-raw/*
+    method: get
+    options:
+      url: https://raw.githubusercontent.com/*
+      cacheMaxAge: 86400
 
   - name: s3-proxy
     path: /media

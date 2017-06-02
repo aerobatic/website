@@ -1,5 +1,6 @@
 ---
 title: Hugo Themes
+description: Gallery of themes for the Hugo site generator
 themeType: hugo
 ---
 

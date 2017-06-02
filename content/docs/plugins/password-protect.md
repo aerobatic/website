@@ -8,6 +8,8 @@ name: password-protect
 
 The `password-protect` plugin is an easy way to require a password from visitors to access all or parts of your website. You can use our password form, or provide your own fully custom html login page. Like all plugins, password protection can be enabled only for [specific deploy stages](#deploy-stages).
 
+By default the plugin only requires users to enter a password. However you can configure it to require both a username and a password. See the [Usernames](#usernames) section for more details.
+
 See the plugin in action on our [demo site](https://password-protect-demo.aerobatic.io) ([source code](https://github.com/aerobatic/password-protect-demo)).
 
 ### Configuration
@@ -22,6 +24,12 @@ plugins:
       failureWindow: 600
       lockoutDuration: 600
       ignorePatterns: []
+      username: $USERNAME
+      credentials:
+        - username: user1
+          password: $PASS1
+        - username: user2
+          password: pass2
 ---
 ~~~
 
@@ -53,6 +61,14 @@ The number of seconds an IP address is prevented from any further password attem
 
 {{% option "cookieExpiresMinutes" %}}
 How long before the cookie expires and the visitor will be re-prompted to login. If omitted, the cookie will be a session cookie and last until the browser is closed. If you'd like the visitor to be able to close their browser and access the protected portions of your site without re-entering the password, you can explicitly set this option.
+{{% /option %}}
+
+{{% option "username" %}}
+The login username. If omitted from the options then only a password is required. See [Usernames](#usernames) for more details.
+{{% /option %}}
+
+{{% option "credentials" %}}
+An array of `username` and `password` objects for supporting multiple sets of valid credentials. This replaces the individual `username` and `password` options. See [Multiple Credentials](#multiple-credentials) for more details.
 {{% /option %}}
 
 ### Specifying what to protect
@@ -123,11 +139,17 @@ This is less of an issue if you are protecting a sub-directory. In that case you
 
 ### Logout link
 
-If you'd like to have a logout link on the protected pages, you can POST a form with the key `aerobatic-logout`.
+If you'd like to have a logout link on the protected pages, you can simply create a link with the querystring `__logout=1`.
 
 ~~~html
-<form method="POST">
-  <input type="hidden" name="aerobatic-logout" value="1" />
+<a href="/?__logout=1">Log out</a>
+~~~
+
+The same can be accomplished with a `<form>`. This can be helpful to avoid needing to include any path portion in the logout link since a form with no `action` attribute will target the current URL.
+
+~~~html
+<form method="GET">
+  <input type="hidden" name="__logout" value="1" />
   <button type="submit">Log out</button>
 </form>
 ~~~
@@ -193,3 +215,54 @@ plugins:
     options:
       password: [$PASSWORD1, $PASSWORD2, $PASSWORD3] 
 ~~~
+
+### Usernames
+
+By default the plugin only requires users to enter a password. However you can also configure it to require both a username and password. This works both for the default login form and custom login forms. Just include a `username` option in the YAML declaration:
+
+~~~yaml
+plugins:
+  - name: password-protect
+    options:
+      username: $USERNAME
+      password: $PASSWORD
+~~~
+
+For a custom login form, include an `<input>` with the `name` **aerobatic-username** in your login.html:
+
+~~~html
+<script>
+if (/fail=1/.test(location.search)) {
+  document.write('<div class="error">Incorrect username or password</div>');
+}
+</script>
+<form method="POST">
+  <input type="text" name="aerobatic-username" placeholder="Username" />
+  <input type="password" name="aerobatic-password" placeholder="Password" />
+  <button type="submit">Log in</button>
+</form>
+~~~
+
+### Multiple Credentials
+
+Rather than setting a single `username` and `password` options, you can instead specify a `credentials` array with up to 10 username/password pairs:
+
+~~~yaml
+plugins:
+  - name: password-protect
+    options:
+      credentials:
+        - username: user1
+          password: $PASS1
+        - username: user2
+          password: $PASS2
+~~~
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 ---
 title: Jekyll Themes
+description: Gallery of themes for the Jekyll site generator
 themeType: jekyll
 ---
 

@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### June 2, 2017
+* By popular demand the [password-protect](/docs/plugins/password-protect/) plugin now supports the ability to [configure a username](/docs/plugins/password-protect/#usernames) in addition to a password. You can also declare a list of up to 10 username/password credential pairs.
+
 ### May 30, 2017
 * Announcing the new [Aerobatic theme gallery](/themes/) makes it super simple to kickstart your next Hugo, Jekyll, or vanilla HTML5 site from a pre-packaged theme or template. Just pass the `--theme` option to the `aero create` command. For example: `aero create jekyll/freelancer`.
 * Now you can tack the query parameter `__preview` to any Aerobatic site URL to launch the site in a special device viewer that let's you toggle between desktop, laptop, tablet, or phone. [Read more](/docs/overview/#device-preview).
