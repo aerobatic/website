@@ -7,5 +7,7 @@
   "source": "https://startbootstrap.com",
   "licence": "MIT",
   "siteType": "html5",
-  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage/archive/master.tar.gz"
+  "downloadUrl": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage/archive/master.tar.gz",
+  "demoAppId": "fe5eba78-e8e4-42af-ba9d-b58e7533555b",
+  "demoAppName": "theme-html5-sb-shop-homepage-demo"
 }
