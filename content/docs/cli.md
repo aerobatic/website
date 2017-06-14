@@ -225,7 +225,7 @@ You can also call with the `--format json` option to see the entire JSON log ent
 ~~~
 
 #### rename
-Rename the current website. On the Pro plan this only changes the name displayed in the Aerobatic Control Panel. But for the free plan this changes the URL of the site, i.e. `https://SITENAME.aerobatic.io`.
+Rename the current website. For custom domains this this only changes the name displayed in the Aerobatic Control Panel. But for sites using the shared domain, this changes the URL of the site, i.e. `https://SITENAME.aerobatic.io`.
 
 **Options**
 {{% option "-n, --name" %}}
