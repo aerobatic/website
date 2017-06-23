@@ -1,6 +1,6 @@
 ---
 title: Announcing the new Organization pricing plan
-description: Our new Org plan is perfect for digital agencies and companies that create alot of websites
+description: Our new Org plan is perfect for digital agencies and companies that create a lot of websites
 date: 2017-06-23
 slug: announcing-organization-pricing-plan
 ---
