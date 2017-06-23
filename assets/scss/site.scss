@@ -30,11 +30,44 @@ pre {
   padding: 20px 0 40px;
   color: $white;
 
-  h1 {
+  h1.desktop, h1 {
     font-size: 38px;
     font-weight: 100;
+    margin-top: 0;
     margin-bottom: 15px;
+    padding-top: 45px;
+    position: relative;
     -webkit-font-smoothing: antialiased;
+
+    img.jamstack {
+      position: absolute;
+      top: 0;
+      left: 645px;
+      width: 150px;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  h1.mobile {
+    display: none;
+  }
+
+  a.get-started-link {
+    display: inline-block;
+    font-size: 20px;
+    background-color: $success;
+    color: $white !important;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px;
+    transition: background-color 200ms ease;
+
+    &:hover {
+      background-color: rgb(83, 221, 148) !important;
+    }
   }
 
   p {

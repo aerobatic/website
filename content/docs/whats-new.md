@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### June 23, 2017
+* Announcing our new [Organization pricing plan](/blog/announcing-organization-pricing-plan/) geared towards digital agencies developer teams. Every new site automatically available as a sub-domain on your organizations root domain.
+
 ### June 2, 2017
 * By popular demand the [password-protect](/docs/plugins/password-protect/) plugin now supports the ability to [configure a username](/docs/plugins/password-protect/#usernames) in addition to a password. You can also declare a list of up to 10 username/password credential pairs.
 

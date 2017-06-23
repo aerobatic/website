@@ -41,6 +41,26 @@ Some overrides for small screens
       }
     }
   }
+
+  .jumbotron {
+    h1.desktop {
+      display: none;
+    }
+    h1.mobile {
+      font-size: 38px;
+      font-weight: 100;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-top: 34px;
+      position: relative;
+      display: block;
+
+      img.jamstack {
+        width: 120px;
+        left: 227px;
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -75,6 +95,13 @@ Some overrides for small screens
 
   .jumbotron h1 {
     font-size: 38px;
+
+    img.jamstack {
+      position: absolute;
+      top: 0;
+      left: 180px;
+      width: 150px;
+    }
   }
 
   .jumbotron pre {
