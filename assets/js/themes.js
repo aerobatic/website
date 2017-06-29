@@ -20,7 +20,7 @@ $(function () {
     // Extract the repo full name 
     var repoFullName = gitHubUrl.match(/^https:\/\/github\.com\/(.*)/)[1];
 
-    return fetch('https://www.aerobatic.com/github-api/repos/' + repoFullName)
+    return fetch('https://www.aerobatic.com/api/github/repos/' + repoFullName)
       .then(function(res) { return res.json()})
       .then(function(json) {
         // btn-arrow-left

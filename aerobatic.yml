@@ -14,14 +14,16 @@ plugins:
     method: post
     options:
       url: $SLACK_WEBHOOK
+  
   - name: cors
-    path: /github-api/*
+    path: /api/*
     options:
        origin:
         - https://www.aerobatic.com
         - http://localhost:1313
+  
   - name: http-proxy
-    path: /github-api/*
+    path: /api/github/*
     method: get
     options:
       url: https://api.github.com/*
@@ -31,11 +33,19 @@ plugins:
         # new Buffer('dvonlehman:{PERSONAL_TOKEN}').toString('base64')
         Authorization: Basic $GITHUB_API_AUTH
   - name: http-proxy
-    path: /github-raw/*
+    path: /api/github-raw/*
     method: get
     options:
       url: https://raw.githubusercontent.com/*
       cacheMaxAge: 86400
+
+  - name: http-proxy
+    path: /api/slack-invite
+    method: post
+    options:
+      url: https://aerobatic-public.slack.com/api/users.admin.invite
+      query:
+        token: $SLACK_OAUTH_TOKEN
 
   - name: s3-proxy
     path: /media

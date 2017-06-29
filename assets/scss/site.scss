@@ -30,6 +30,11 @@ pre {
   padding: 20px 0 40px;
   color: $white;
 
+  p {
+    max-width: 700px;
+    display: inline-block;
+  }
+
   h1.desktop, h1 {
     font-size: 38px;
     font-weight: 100;
@@ -45,29 +50,14 @@ pre {
       left: 645px;
       width: 150px;
     }
-
-    a {
-      color: #fff;
-    }
   }
 
   h1.mobile {
     display: none;
   }
 
-  a.get-started-link {
-    display: inline-block;
-    font-size: 20px;
-    background-color: $success;
-    color: $white !important;
-    border-radius: 4px;
-    padding: 15px;
-    margin: 15px;
-    transition: background-color 200ms ease;
-
-    &:hover {
-      background-color: rgb(83, 221, 148) !important;
-    }
+  a {
+    color: #fff;
   }
 
   p {
@@ -97,18 +87,6 @@ pre {
     i {
       color: #f91;
     }
-  }
-}
-
-.login-link {
-  background-color: $success;
-  color: $white !important;
-  border-radius: 4px;
-  padding: 10px;
-  transition: background-color 200ms ease;
-
-  &:hover {
-    background-color: rgb(83, 221, 148) !important;
   }
 }
 
