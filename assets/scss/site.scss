@@ -3,7 +3,7 @@ pre {
   background-color: inherit;
 }
 
-.bitbucket-alert {
+.top-alert {
   background-color: #3259B3;
   color: #fff;
   font-size: 14px;
@@ -31,7 +31,7 @@ pre {
   color: $white;
 
   p {
-    max-width: 700px;
+    max-width: 600px;
     display: inline-block;
   }
 
@@ -118,7 +118,7 @@ pre {
 }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 0px;
   padding: 20px 0;
   text-align: center;
   font-size: 13px;
@@ -130,10 +130,14 @@ pre {
     text-transform: none;
     line-height: 20px;
     text-align: right;
+    padding: 0;
 
     li {
       display: inline-block;
       margin-left: 10px;
+    }
+    li:first-child {
+      margin-left: 0;
     }
   }
 

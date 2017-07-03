@@ -61,6 +61,21 @@ Some overrides for small screens
       }
     }
   }
+
+  .copyright {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .quicklinks {
+    text-align: center !important;
+  }
+
+  .jumbotron.slack {
+    .slack-logo {
+      display: none;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */

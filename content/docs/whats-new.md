@@ -6,6 +6,9 @@ name: whats-new
 # What's New
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### July 3, 2017
+* [New blog post](/blog/serverless-slack-team-invite-form/) demonstrating how to implement a Slack team invite form on your website.
+
 ### June 23, 2017
 * Announcing our new [Organization pricing plan](/blog/announcing-organization-pricing-plan/) geared towards digital agencies developer teams. Every new site automatically available as a sub-domain on your organizations root domain.
 

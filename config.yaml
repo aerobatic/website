@@ -19,6 +19,8 @@ params:
       url: http://bitbucket.org/aerobatic
     - title: github-alt
       url: http://github.com/aerobatic
+    - title: slack
+      url: /slack
 
 taxonomies:
   tag: ""
