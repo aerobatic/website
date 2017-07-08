@@ -5,7 +5,7 @@ date: 2017-07-03
 slug: serverless-slack-team-invite-form
 ---
 
-<img src="/img/slack.png" style="float: right; width: 150px;" />Slack has exploded in popularity in recent years as a tool for teams to collaborate. More recently it's also emerged as a way for companies and organizations to have direct conversations with **external** customers. This post describes how you can implement a Slack invitation form on your Aerobatic website that allows customers to enter their email to join the community. Slack will send them an invite with a link to complete the setup process. Aerobatic just [launched our own public Slack community](/slack) using the same technique described below.
+<img src="/img/slack.svg" style="float: right; width: 150px;" />Slack has exploded in popularity in recent years as a tool for teams to collaborate. More recently it's also emerged as a way for companies and organizations to have direct conversations with **external** customers. This post describes how you can implement a Slack invitation form on your Aerobatic website that allows customers to enter their email to join the community. Slack will send them an invite with a link to complete the setup process. Aerobatic just [launched our own public Slack community](/slack) using the same technique described below.
 
 There is an undocumented `/users.admin.invite` endpoint for the [Slack API](https://api.slack.com/web) that is the key to making this all work. The Aerobatic [http-proxy](/docs/plugins/http-proxy) plugin is used to securely pass the required OAuth token which should never be exposed in your HTML source code.
 

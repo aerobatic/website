@@ -7,7 +7,7 @@ name: static-serving
 
 Aerobatic is a specialized platform for efficient delivery of static webpages and website assets. We take care of the configuration details for you that provide the best balance of performance and maintainability. Stop fiddling with CDNs and web server configs and focus on coding great front-end experiences.
 
-#### Serving webpages
+### Serving webpages
 
 When a visitor hits the base URL for your website like `https://site-name.aerobatic.io` or `https://custom-domain.com`, Aerobatic looks for a `index.html` file at the root of your deployment directory. Requests for nested paths (`/about`, `/blog/article-name`) are translated to a `.html` file at the same location in the folder hierarchy. So `/about.html` and `/blob/article-name.html`.
 
@@ -95,3 +95,15 @@ This technique, known as [fingerprinting](https://developers.google.com/web/fund
 Here's a complete picture of the caching headers for the host html page along with the referenced assets:
 
 <img src="/img/caching-diagram.png" />
+
+### Single Page Apps
+
+If you are deploying a single page app (SPA) with client-side routing, then your likely want to serve your main `index.html` page for all extension-less URLs. To force this behavior, just set the `pushState` property to `true` on the [webpage plugin](/docs/plugins/webpage/).
+
+~~~yaml
+plugins:
+  - name: webpage
+    options:
+      pushState: true
+---
+~~~

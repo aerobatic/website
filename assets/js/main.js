@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     var url = $(this).attr('href');
     ga('send', 'event', 'outbound', 'click', url, {
-      hitCallback: function () {
+      hitCallback: function() {
         document.location = url;
       }
     });
@@ -31,44 +31,57 @@ $(document).ready(function() {
   // over a header displays a chain alongside that when clicked navigates
   // to the anchored header. Then it's easy to copy that URL
   // to paste somewhere else.
-  $('.markdown').find('h2, h3, h4, h5').on('mouseenter', function(e) {
-    var heading = $(this);
-    var headingId = heading.attr('id');
-    if (headingId) {
-      heading.css({cursor: 'pointer'})
-        .append('<i class="header-anchor fa fa-link"></i>')
-        .on('click', function() {
-          location.href = location.pathname + '#' + headingId;
-        });
-    }
-  })
-  .on('mouseleave', function(e) {
-    // Remove the anchor on mouseleave
-    $(this).find('i.fa').remove();
-  });
+  $('.markdown')
+    .find('h2, h3, h4, h5')
+    .on('mouseenter', function(e) {
+      var heading = $(this);
+      var headingId = heading.attr('id');
+      if (headingId) {
+        heading
+          .css({ cursor: 'pointer' })
+          .append('<i class="header-anchor fa fa-link"></i>')
+          .on('click', function() {
+            location.href = location.pathname + '#' + headingId;
+          });
+      }
+    })
+    .on('mouseleave', function(e) {
+      // Remove the anchor on mouseleave
+      $(this).find('i.fa').remove();
+    });
 
-  $('div.content dt > code').on('mouseenter', function(e) {
-    var codeDefinition = $(this);
-    var nextElem = codeDefinition.next();
-    if (nextElem.is('a[id]')) {
-      codeDefinition.css({cursor: 'pointer'})
-        .after('<i class="code-anchor fa fa-link"></i>')
-        .on('click', function() {
-          location.href = location.pathname + '#' + nextElem.attr('id');
-        });
-    }
-  })
-  .on('mouseleave', function() {
-    $(this).next('i.fa').remove();
-  });
+  $('div.content dt > code')
+    .on('mouseenter', function(e) {
+      var codeDefinition = $(this);
+      var nextElem = codeDefinition.next();
+      if (nextElem.is('a[id]')) {
+        codeDefinition
+          .css({ cursor: 'pointer' })
+          .after('<i class="code-anchor fa fa-link"></i>')
+          .on('click', function() {
+            location.href = location.pathname + '#' + nextElem.attr('id');
+          });
+      }
+    })
+    .on('mouseleave', function() {
+      $(this).next('i.fa').remove();
+    });
 
   // HACKY way to replace https://!!baseurl!! with https://__baseurl__
-  $('code:contains("https://!!baseurl!!"), span.code:contains("https://!!baseurl!!")').each(function(i, elem) {
+  $(
+    'code:contains("https://!!baseurl!!"), span.code:contains("https://!!baseurl!!")'
+  ).each(function(i, elem) {
     $(elem).contents().each(function(j, child) {
       if (child.nodeType === 3) {
-        child.nodeValue = child.nodeValue.replace('https://!!baseurl!!', 'https://__baseurl__');
+        child.nodeValue = child.nodeValue.replace(
+          'https://!!baseurl!!',
+          'https://__baseurl__'
+        );
       } else {
-        child.innerText = child.innerText.replace('https://!!baseurl!!', 'https://__baseurl__');
+        child.innerText = child.innerText.replace(
+          'https://!!baseurl!!',
+          'https://__baseurl__'
+        );
       }
     });
   });
