@@ -4,7 +4,7 @@ pre {
 }
 
 .top-alert {
-  background-color: #3259B3;
+  background-color: #3259b3;
   color: #fff;
   font-size: 14px;
   padding: 5px 0;
@@ -35,7 +35,8 @@ pre {
     display: inline-block;
   }
 
-  h1.desktop, h1 {
+  h1.desktop,
+  h1 {
     font-size: 38px;
     font-weight: 100;
     margin-top: 0;
@@ -147,78 +148,107 @@ pre {
   }
 }
 
-.homepage-testimonial
-{
-    background-position:left top;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin-top: 25px;
-    margin-bottom: 50px;
+.homepage-testimonial {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 25px 0 10px 0;
+  background-color: $linkBlue;
+  color: #fff;
+
+  .carousel-control.left,
+  .carousel-control.right {
+    background-image: none !important;
+  }
+
+  ol.carousel-inner > li.item {
+    height: 300px;
+    margin: 0 130px;
+
+    > div {
+      display: table;
+    }
+
+    blockquote {
+      width: 900px;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.5;
+      letter-spacing: 0.9px;
+      border: none;
+
+      cite {
+        text-transform: uppercase;
+        font-size: 16px;
+        display: block;
+        margin: 5px 0 0;
+        font-style: normal;
+
+        a {
+          color: white;
+          display: inline-block;
+          opacity: 0.5;
+        }
+        a:hover {
+          opacity: 1.0;
+          text-decoration: underline;
+        }
+      }
+
+      cite:before {
+        content: "\2014 \2009";
+      }
+    }
+
+    blockquote:before {
+      display: block;
+      font-size: 80px;
+      font-family: serif;
+      position: absolute;
+      left: -30px;
+      top: -9px;
+      content: "\201C";
+    }
+
+    div.photo {
+      display: table-cell;
+      vertical-align: middle;
+      width: 200px;
+      margin-right: 20px;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 0px;
+  }
 }
 
-.marketing-testimonial
-{
-    background-color:$linkBlue;
-    color:#fff;
-    padding:50px 0;
-    letter-spacing: 0.1em;
-}
-.marketing-testimonial--content
-{
-    width:100%;
-}
-.marketing-testimonial--quote
-{
-    font-size: 24px;
-    font-style: italic;
-    line-height: 1.5;
-    letter-spacing: 0.9px;
-}
-.marketing-testimonial--attribution
-{
-    text-transform:uppercase;
-    font-size: 16px;
-    display: block;
-    margin: 5px 0 0;
-}
+// .marketing-testimonial {
+//   letter-spacing: 0.1em;
+// }
 
-.marketing-testimonial--quote:before
-{
-    display: block;
-    font-size: 80px;
-    font-family: serif;
-    position: absolute;
-    left: -30px;
-    top: -35px;
-    content: "\201C";
-}
+// .marketing-testimonial--attribution:before {
+//   content: "\2014 \2009";
+// }
 
-
-.marketing-testimonial--attribution:before
-{
-    content: "\2014 \2009";
+.marketing-plans--heading {
+  font-size: 45px;
+  margin-top: 20px;
 }
-
-.marketing-plans--heading
-{
-    font-size:45px;
-    margin-top:20px
+.marketing-plans--content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto 0 auto;
 }
-.marketing-plans--content
-{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    margin:50px auto 0 auto;
-}
-.pricing-table
-{
-    margin-top: 25px;
+.pricing-table {
+  margin-top: 25px;
 }
 
 .legal-header {
-    margin-top:0px;
+  margin-top: 0px;
 }
 
 div.alert {
@@ -238,7 +268,7 @@ div.alert > p:last-child {
 }
 
 div.alert.warning {
-  color: #613A00;
+  color: #613a00;
   background-color: #ffe3c8;
   border: 1px solid #dca874;
 }
@@ -259,8 +289,9 @@ div.alert h3 {
   font-size: 18px !important;
 }
 
-code, span.code {
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+code,
+span.code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 90%;
   color: #205081;
   background-color: #f8f8f8;

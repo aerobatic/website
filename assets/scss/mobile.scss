@@ -1,7 +1,7 @@
 /*
 Some overrides for small screens
 */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
   .navbar-default {
     position: relative;
     z-index: 1;
@@ -79,7 +79,7 @@ Some overrides for small screens
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
   .content {
     padding-top: 10px;
   }
@@ -92,6 +92,10 @@ Some overrides for small screens
     width: 100%;
   }
 
+  .homepage-testimonial {
+    display: none;
+  }
+
   #post h1 {
     font-size: 26px;
     line-height: 32px;
@@ -102,7 +106,9 @@ Some overrides for small screens
     margin-top: 24px;
   }
 
-  #post h4, #post h5, #post h3 {
+  #post h4,
+  #post h5,
+  #post h3 {
     font-size: 16px;
     margin-top: 20px;
     line-height: 24px;

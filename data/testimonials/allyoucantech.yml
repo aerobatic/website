@@ -1,0 +1,7 @@
+index: 0
+company: AllYouCanTech
+name: Artur Adib
+url: https://www.allyoucantech.com/
+image: artur-adib.jpg
+text: At AllYouCanTech we needed a simple solution for deploying and maintaining daily curated data. Aerobatic enabled us to go to market in only a couple of weeks, with zero concern around setting up servers, databases, or scaling resources, while knowing the content was distributed globally and delivered using the latest web standards.
+# After researching our options, it became clear that a static site generator along with Aerobatic's out-of-the-box features like CDN and HTTP/2 would provide not only the simplest but also the most robust solution for our type of service.

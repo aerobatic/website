@@ -47,6 +47,7 @@ plugins:
       queryParam: q
       maxResults: 10
       mustacheTags: ['<%=', '%>']
+      minScore: 1.0
 ~~~
 
 {{% option "resultsTemplate" %}}
@@ -63,6 +64,10 @@ The maximum number of search results to return. Defaults to `10`.
 
 {{% option "mustacheTags" %}}
 Override the default mustache tags. The default is `['{{', '}}']`.
+{{% /option %}}
+
+{{% option "minScore" %}}
+The minimum relevance score to be included in the results. The default is `1.0`. If results at the end of the list are not sufficiently relevant to the search term you can increase this value. Note that results are sorted by score in descending order.
 {{% /option %}}
 
 **Site scanner**
