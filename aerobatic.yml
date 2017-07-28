@@ -11,6 +11,7 @@ deploy:
   optimizer:
     inlineCriticalCss: true
     ignoreStylesheets: []
+    forceCriticalCss: [h1, h2, h3, h4]
     archetypes:
       - pattern: docs/index.html
       - pattern: docs/**
@@ -19,20 +20,12 @@ deploy:
           - "regex:\\.language-sh"
           - "regex:\\.language-bash"
           - "#docs-menu li.active > a"
-          - h1
-          - h2
-          - h3
-          - h4
       - pattern: blog/index.html
       - pattern: blog/**
         forceCriticalCss:
           - "regex:\\.markdown"
           - "regex:\\.language-sh"
           - "regex:\\.language-bash"
-          - h1
-          - h2
-          - h3
-          - h4
       - pattern: index.html
 
 plugins:
