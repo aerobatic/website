@@ -8,6 +8,19 @@ deploy:
         webhookUrl: $SLACK_WEBHOOK_ALERT
       email:
         to: [david.vonlehman@gmail.com]
+  optimizer:
+    inlineCriticalCss: true
+    deferredCssMarker: '<span id="deferred-css"></span>'
+    ignoreStylesheets:
+      - bootstrap.min.css
+    archetypes:
+      - pattern: docs/**
+        forceCriticalCss: []
+      - pattern: blog/**
+        forceCriticalCss: []
+      - pattern: index.html
+
+
 plugins:
   - name: http-proxy
     path: /slack
