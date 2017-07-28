@@ -160,6 +160,12 @@ pre {
     background-image: none !important;
   }
 
+  // Need to force the active carousel item to be displayed for some reason due
+  // to the optimized css
+  li.item.active {
+    display: block !important;
+  }
+
   ol.carousel-inner > li.item {
     height: 300px;
     margin: 0 130px;
@@ -223,14 +229,6 @@ pre {
     bottom: 0px;
   }
 }
-
-// .marketing-testimonial {
-//   letter-spacing: 0.1em;
-// }
-
-// .marketing-testimonial--attribution:before {
-//   content: "\2014 \2009";
-// }
 
 .marketing-plans--heading {
   font-size: 45px;

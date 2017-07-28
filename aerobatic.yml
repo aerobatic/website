@@ -10,16 +10,30 @@ deploy:
         to: [david.vonlehman@gmail.com]
   optimizer:
     inlineCriticalCss: true
-    deferredCssMarker: '<span id="deferred-css"></span>'
-    ignoreStylesheets:
-      - bootstrap.min.css
+    ignoreStylesheets: []
     archetypes:
+      - pattern: docs/index.html
       - pattern: docs/**
-        forceCriticalCss: []
+        forceCriticalCss:
+          - "regex:\\.markdown"
+          - "regex:\\.language-sh"
+          - "regex:\\.language-bash"
+          - "#docs-menu li.active > a"
+          - h1
+          - h2
+          - h3
+          - h4
+      - pattern: blog/index.html
       - pattern: blog/**
-        forceCriticalCss: []
+        forceCriticalCss:
+          - "regex:\\.markdown"
+          - "regex:\\.language-sh"
+          - "regex:\\.language-bash"
+          - h1
+          - h2
+          - h3
+          - h4
       - pattern: index.html
-
 
 plugins:
   - name: http-proxy
