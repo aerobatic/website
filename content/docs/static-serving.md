@@ -44,58 +44,6 @@ Aerobatic out of the box serves your site using industry standard HTTP  performa
 
 Your web pages are served from our origin servers with an `ETag` header that uniquely identifies the current deployed version of your website. On subsequent requests, your visitors' browser will send an `If-None-Match` header corresponding to the previous `ETag`. Assuming a new version has not been deployed in the meantime, Aerobatic will return an empty `304 Not Modified` response informing the browser that the copy it has in cache is still valid. This cuts down considerably on the number of bytes sent over the network resulting in a faster site. Because the browser is forced to re-validate on each page request, you can be assured that all users will immediately get the most recent version after a new deployment and not a stale copy from cache.
 
-### Asset acceleration
-
-At deploy time, the Aerobatic deploy engine performs some minimal additional pre-processing to your source code to optimize the delivery of static assets such a JavaScript, stylesheets, images, etc.
-
-The pre-processor calculates an md5 hash based on the current contents of all your non .html assets such as .js, .css, .jpg. Then your `.html` and `.css` files are scanned for references to these files and injects the corresponding hash value into the filename. For example, if you deploy an html file with the following markup:
-
-~~~html
-<div>
-  <link rel="stylesheet" href="/css/styles.css" />
-  <img src="/images/hero.jpg" />
-  <script src="/js/app.js"></script>
-</div>
-~~~
-
-It will look like this when served from the Aerobatic CDN:
-
-~~~html
-<div>
-  <link rel="stylesheet" href="/css/styles--md5--934u5kl3jk5j453.css" />
-  <img src="/images/hero--md5--359u46kld3i40u35.jpg" />
-  <script src="/js/app--md5--eijtwk4ltj3lkj359kry.js"></script>
-</div>
-~~~
-
-When these individual assets are served up they will have an aggressive cache header informing the CDN, the browser, and any caching layers in between, to keep serving the same cached version for a full year.
-
-~~~text
-Cache-Control: public, max-age=31557600
-~~~
-
-This way even if you deploy new versions of your website, the assets that have not actually changed since the previous deployment will have the same hashed URL pointing to the previously cached copies. In the event that you make a tweak to an html page, website visitors will immediately get the freshest copy of the HTML, but still utilize cached versions of your site's JavaScript, stylesheets, and images - meaning faster page load times for your website visitors. If you do make a change to one of the hashed assets, then a new hashed URL will result, orphaning the old copy, and forcing the CDN to fetch the latest from the origin server which will be aggressively cached once again.
-
-This also works with assets linked in stylesheets. For example:
-
-~~~css
-div.hero { background-image: url(../images/hero.jpg) };
-~~~
-
-Becomes:
-
-~~~css
-div.hero { background-image: url(../images/hero--md5--903u435ilje434kvns.jpg) };
-~~~
-
-This technique, known as [fingerprinting](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating-and-updating-cached-responses), provides the best of both worlds: high cache utilization and instant updates when necessary. With Aerobatic you get this automatically - no special build steps on your part.
-
-### Caching Diagram
-
-Here's a complete picture of the caching headers for the host html page along with the referenced assets:
-
-<img src="/img/caching-diagram.png" />
-
 ### Single Page Apps
 
 If you are deploying a single page app (SPA) with client-side routing, then your likely want to serve your main `index.html` page for all extension-less URLs. To force this behavior, just set the `pushState` property to `true` on the [webpage plugin](/docs/plugins/webpage/).

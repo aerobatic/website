@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+    <section id="quickStarts">
+      <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h1>Quick Starts</h1>
+                  <p>Quick starts are a great way to get a new website up and running fast</p>
+                  <div>
+                    <pre><code>aero create --quick-start {{ .Params.quickStartType }}/name</code></pre>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li role="presentation" {{ if eq .Params.quickStartType "html5" }}class="active"{{ end }}><a href="/quickstarts/html5/">HTML5</a></li>
+          <li role="presentation" {{ if eq .Params.quickStartType "jekyll" }}class="active"{{ end }}><a href="/quickstarts/jekyll/">Jekyll</a></li>
+          <li role="presentation" {{ if eq .Params.quickStartType "hugo" }}class="active"{{ end }}><a href="/quickstarts/hugo/">Hugo</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        {{ if .Content }}
+          <div class="alert alert-info">{{ .Content }}</div>
+        {{ end }}
+        {{ $.Scratch.Set "quickStartIndex" 0 }}
+        {{ range $quickStart := (index $.Site.Data.quickstarts .Params.quickStartType) }}
+          {{ if in (seq 0 2 100) ($.Scratch.Get "quickStartIndex") }}<div class="row">{{ end }}
+          <div class="col-md-6">
+            <div class="quickstart">
+              <a class="screenshot {{.Params.quickStartType}}" href="https://{{$quickStart.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
+                <img src="{{ $quickStart.thumbnailUrl }}" />
+              </a>
+              <div class="details">
+                <div>
+                  <h3>{{ $quickStart.title }}</h3>
+                  {{ if (isset $quickStart "description") }}
+                    <p class="description">{{ $quickStart.description | truncate 100 }}</p>
+                  {{ end }}
+                </div>
+                <div>
+                  <div class="input-group" data-copy-cli>
+                    <input type="text" class="form-control" value="aero create --quick-start {{ $quickStart.siteType }}/{{ $quickStart.slug }}" readonly>
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Copy and paste to your command line" data-clipboard-text="aero create --quick-start {{ $quickStart.siteType }}/{{ $quickStart.slug }}"><i class="fa fa-clipboard"></i></button>
+                    </span>
+                  </div>
+
+                  <div class="buttons">
+                    {{ if (isset $quickStart "demoAppName") }}
+                      <a class="btn btn-default btn-sm" href="https://{{$quickStart.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
+                        <span>Demo</span>
+                        <i class="fa fa-external-link fa-lg"></i>
+                      </a>
+                    {{ end }}
+                    <a class="btn btn-default btn-sm gh-stars" href="{{ index $quickStart "repoUrl" | default ($quickStart.homepage) }}" target="_blank">
+                      <i class="fa fa-github fa-lg"></i>
+                      <span>Star</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ if in (seq 1 2 100) ($.Scratch.Get "quickStartIndex") }}</div>{{ end }}
+          {{ $.Scratch.Add "quickStartIndex" 1 }}
+        {{ end }}
+      </div>
+    </section>
+    {{ partial "footer.html" . }}
+    {{ partial "google-analytics.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

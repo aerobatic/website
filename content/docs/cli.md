@@ -89,8 +89,8 @@ Create a new Aerobatic website in the current directory. If no `aerobatic.yml` f
 The desired name of the website. Names are globally unique and must be URL friendly (lower-case letters, numbers, and dashes). If no name is specified then a random website name will be generated for you. You can always use the [rename](#rename) command to change the name later.
 {{% /option %}}
 
-{{% option "-t, --theme" %}}
-The name of a theme from the [Aerobatic theme gallery](/themes/) to use to kickstart the website. All themes have been optimized for the Aerobatic platform. Themes are available for Hugo, Jekyll, and vanilla HTML5.
+{{% option "-q, --quick-start" %}}
+The name of a quick start from the [Aerobatic Quick Start gallery](/quickstarts/html5/) to use to kickstart the website. Quick starts are available for Hugo, Jekyll, and vanilla HTML5.
 
 {{% option "-S, --source" %}}
 URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.
@@ -100,7 +100,7 @@ URL to a `.zip` or `.tar.gz` archive to create the new website from. This will a
 ~~~bash
 [$] aero create       # Creates website at the current directory
 [$] aero create -n website-name
-[$] aero create --theme hugo/agency
+[$] aero create --quick-start hugo/agency
 [$] aero create --source https://html5up.net/editorial/download --name html5up-demo
 [$] aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip
 ~~~

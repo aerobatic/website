@@ -100,7 +100,8 @@ plugins:
       /docs/static-http-hosting: /docs/static-serving/
       /bitbucket-changes: /blog/announcing-aerobatic-transition/
       /feed.xml: /index.xml
-      /themes/: /themes/html5/
+      /themes/: /quickstarts/html5/
+      /themes/*: /quickstarts/*
   - name: health-check
     path: /health
   - name: custom-errors

@@ -30,9 +30,19 @@ pre {
   padding: 20px 0 40px;
   color: $white;
 
-  p {
+  p.sub-title {
     max-width: 600px;
     display: inline-block;
+
+    a {
+      color: #fff;
+      opacity: 0.8;
+      text-decoration: none;
+    }
+    a:hover {
+      opacity: 1.0;
+      text-decoration: underline;
+    }
   }
 
   h1.desktop,
