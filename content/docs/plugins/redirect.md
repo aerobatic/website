@@ -80,6 +80,18 @@ plugins:
 ---
 ~~~
 
+### Redirect entire site
+
+If you want to redirect your entire site to a completely different domain, you can do that too. The following config will preserve the path portion in the redirect. But if you want a catch-all that just redirects to the root of the destination url, just omit the trailing `*`.
+
+~~~yaml
+plugins:
+- name: redirect
+    options:
+      "/*": "https://www.someotherdomain.com/*"
+---
+~~~
+
 ### Specifying 301 or 302
 By default redirects use the permanent 301 response code. This is usually the desired behavior when SEO is a concern. However there may be times when you want a temporary 302 redirect. You can pass an array as the destination value where the first element in the array is the response code and the second is the route pattern.
 
