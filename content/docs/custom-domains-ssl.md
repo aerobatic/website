@@ -28,8 +28,16 @@ You can also re-use the same domain + certificate across multiple paid websites:
 Registering a new custom domain with wildcard certificate is done via the CLI. From the root of the website that you want to attach the domain, simply run the following command:
 
 ~~~bash
-[$] aero domain --name mydomain.com
+[$] aero domain --name mydomain.com --subdomain www
 ~~~
+
+Or if you want to run your site at the apex (i.e. "naked domain"), then specify "@" as the sub-domain:
+
+~~~bash
+[$] aero domain --name mydomain.com --subdomain @
+~~~
+
+See the [aero domain](/docs/cli#domain) command for more details.
 
 You'll be sent a validation email from `no-reply@certificates.amazon.com`. Clicking on the approve link in the email both verifies your ownership of the domain and indicates approval for a SSL/TLS certificate to be provisioned. Once you approve the domain provisioning process will being. It takes anywhere from 20-40 minutes for everything to propagate across our worldwide content delivery network.
 
