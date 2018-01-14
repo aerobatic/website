@@ -1,0 +1,18 @@
+
+machine:
+  node:
+    version: 8.9.3
+
+dependencies:
+  pre:
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
+    - npm install -g aerobatic-cli
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - npm install
+      - NODE_ENV=production npm run build:aerobatic
+      - aero deploy
