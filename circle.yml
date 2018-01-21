@@ -22,4 +22,4 @@ deployment:
     branch: master
     commands:
       - NODE_ENV=production yarn run build:aerobatic
-      - aero deploy
+      - yarn run deploy

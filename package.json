@@ -5,15 +5,22 @@
   "description": "Aerobatic marketing site at www.aerobatic.com",
   "scripts": {
     "clean": "rm -f static/*.js static/*.css",
+    "deploy": "aero deploy",
     "babel:build": "babel assets/js --out-file static/site.js --source-maps",
-    "babel:watch": "babel assets/js --watch --out-file static/site.js --source-maps",
+    "babel:watch":
+      "babel assets/js --watch --out-file static/site.js --source-maps",
     "sass:watch": "onchange 'assets/scss/**/*.scss' -- npm run sass:build",
-    "sass:build": "node-sass --include-path node_modules/bootstrap-sass/assets/stylesheets assets/scss/main.scss static/site.css",
-    "build:assets": "npm run clean && npm run sass:build && npm run babel:build",
+    "sass:build":
+      "node-sass --include-path node_modules/bootstrap-sass/assets/stylesheets assets/scss/main.scss static/site.css",
+    "build:assets":
+      "npm run clean && npm run sass:build && npm run babel:build",
     "build": "npm run build:assets && hugo",
-    "build:aerobatic": "npm run build:assets && hugo --baseURL https://__baseurl__",
-    "start": "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'",
-    "gen-test-search": "curl -H 'Accept:application/json' https://www.aerobatic.com/search?q=static | mustache - public/search/index.html > public/search/temp.html",
+    "build:aerobatic":
+      "npm run build:assets && hugo --baseURL https://__baseurl__",
+    "start":
+      "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'",
+    "gen-test-search":
+      "curl -H 'Accept:application/json' https://www.aerobatic.com/search?q=static | mustache - public/search/index.html > public/search/temp.html",
     "serve": "hs ./public -p 9999"
   },
   "devDependencies": {
