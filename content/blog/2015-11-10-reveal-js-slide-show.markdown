@@ -75,4 +75,4 @@ The only thing that you might have to change is the app name, which has to be un
 
 Our demo app code is [here](https://bitbucket.org/aerobatic/revealjs)
 
-And our slide show is [here](http://reveal-demo.aerobatic.io)
+And our slide show is [here](http://reveal-demo.aerobaticapp.com)

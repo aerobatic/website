@@ -9,7 +9,7 @@ Aerobatic is a specialized platform for efficient delivery of static webpages an
 
 ### Serving webpages
 
-When a visitor hits the base URL for your website like `https://site-name.aerobatic.io` or `https://custom-domain.com`, Aerobatic looks for a `index.html` file at the root of your deployment directory. Requests for nested paths (`/about`, `/blog/article-name`) are translated to a `.html` file at the same location in the folder hierarchy. So `/about.html` and `/blob/article-name.html`.
+When a visitor hits the base URL for your website like `https://site-name.aerobaticapp.com` or `https://custom-domain.com`, Aerobatic looks for a `index.html` file at the root of your deployment directory. Requests for nested paths (`/about`, `/blog/article-name`) are translated to a `.html` file at the same location in the folder hierarchy. So `/about.html` and `/blob/article-name.html`.
 
 ### Trailing slashes
 

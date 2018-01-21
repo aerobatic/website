@@ -17,7 +17,7 @@ The rest of this post walks you through how to create a d3 visualization with a 
 
 While 6.4Mb isn't exactly a huge file, this sort of setup becomes more important if you're working with multiple data files and / or larger datasets.
 
-- The demo site can be found at [https://d3s3.aerobatic.io/](https://d3s3.aerobatic.io/)
+- The demo site can be found at [https://d3s3.aerobaticapp.com/](https://d3s3.aerobaticapp.com/)
 - The source code for the demo is on Bitbucket at [https://bitbucket.org/aerobatic/d3s3/src](https://bitbucket.org/aerobatic/d3s3/src)
 
 ## Add data file to AWS S3
@@ -197,5 +197,5 @@ Your final visualization should look something like below:
 
 And again:
 
-- The demo site can be found at [https://d3s3.aerobatic.io/](https://d3s3.aerobatic.io/)
+- The demo site can be found at [https://d3s3.aerobaticapp.com/](https://d3s3.aerobaticapp.com/)
 - The source code for the demo is on Bitbucket at [https://bitbucket.org/aerobatic/d3s3/src](https://bitbucket.org/aerobatic/d3s3/src)

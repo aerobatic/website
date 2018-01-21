@@ -18,7 +18,7 @@ Hosting a Jekyll site with Aerobatic can be as easy as typing in a couple of com
 [$] aero deploy --directory _site                            # deploy output to Aerobatic
 
 Version v1 deployment complete.
-View now at https://my-jekyll-site.aerobatic.io
+View now at https://my-jekyll-site.aerobaticapp.com
 ~~~
 
 In the example above, we compiled our site locally and deployed the `/_site` directory to Aerobatic. However, using [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), we can set things up such the site is automatically built and deployed with each push to a Bitbucket repository.
@@ -144,7 +144,7 @@ pipelines:
 ---
 ~~~
 
-With this configuration, any push to the `master` branch will deploy to `https://jekyll-pipelines.aerobatic.io` and pushes to the `develop` branch will deploy to `https://jekyll-pipelines--staging.aerobatic.io`. This of course works with custom domains as well.
+With this configuration, any push to the `master` branch will deploy to `https://jekyll-pipelines.aerobaticapp.com` and pushes to the `develop` branch will deploy to `https://jekyll-pipelines--staging.aerobaticapp.com`. This of course works with custom domains as well.
 
 ## Additional reading
 * The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/aerobatic/jekyll-pipelines).

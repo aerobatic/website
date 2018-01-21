@@ -15,7 +15,7 @@ Create a `login.html` page in the `/static` directory where Hugo will pass throu
 
 You can style your login page however you want. What's essential is that the form markup needs to be decorated with the `aerobatic-password` attribute in the input as shown below.
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,20 +42,21 @@ You can style your login page however you want. What's essential is that the for
         </script>
     </body>
 </html>
-~~~
+```
 
 ## Create Aerobatic site
 
 Assuming you've already installed the aerobatic-cli, from the command line, enter the following to associate your Hugo site with Aerobatic:
 
-~~~bash
+```bash
 aero create
-~~~
+```
 
 ## Edit `aerobatic.yml`
+
 This is where you'll take advantage of Aerobatic's built-in [password-protect](https://www.aerobatic.com/docs/plugins/password-protect/) plugin. In the root of your Hugo site, open up the newly created `aerobatic.yml` file and edit like so:
 
-~~~yaml
+```yaml
 # Aerobatic website manifest
 id: <YOUR AEROBATIC SITE'S ID>
 plugins:
@@ -71,7 +72,7 @@ plugins:
         - '/js/*.js'
         - '/img/*.jpg'
   - name: webpage
-~~~
+```
 
 You'll notice here a couple of things. The first is that we have an environment variable called `$SITE_PASSWORD`. The second thing you probably noticed is that we're telling the password-protect plugin to not protect a few files, namely some CSS, JS, and JPG files. That's so they can load on the login.html page and not get a 401 error before the password has been entered.
 
@@ -85,7 +86,7 @@ Login to the [Aerobatic dashboard](dashboard.aerobatic.com), and navigate to you
 
 At this point you could just type `aero deploy -d public` to deploy your Hugo site. However, in this case, we're going to use [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines) to set up a nice continuous deployment flow. Make sure you enable Bitbucket Pipelines in your repo, and here's what your `bitbucket-pipelines.yml` file might look like (you may have noticed we're using Aerobatic's [custom docker image](https://www.aerobatic.com/blog/optimized-docker-images-continuous-deployment/) for Hugo:
 
-~~~bash
+```bash
 image: aerobatic/hugo
 pipelines:
   branches:
@@ -95,17 +96,17 @@ pipelines:
             - git clone https://github.com/alexurquhart/hugo-geo.git themes/hugo-geo
             - hugo --theme=hugo-geo --baseURL "https://__baseurl__"
             - aero deploy --directory public
-~~~
+```
 
 ### Push your changes
 
 Either from the command line, or with a tool like [Sourcetreee](https://www.sourcetreeapp.com/), push the changes to your Jekyll repository. e.g.
 
-~~~bash
+```bash
 git add --all
 git commit -m "Added a login page"
 git push origin master
-~~~
+```
 
 ## Summary
 
@@ -113,4 +114,4 @@ That's it! Your Hugo site is now password protected with a branded login page. I
 
 Additionally, maybe you want to handle the 401 error with a custom error page if the user incorrectly enters their credentials. Again, all possible with the Aerobatic [custom-errors](/docs/custom-error-pages) plugin.
 
-The demo Hugo site can be found at [https://hugo-demo.aerobatic.io/](https://huo-demo.aerobatic.io/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/hugo-demo/src).
+The demo Hugo site can be found at [https://hugo-demo.aerobaticapp.com/](https://hugo-demo.aerobaticapp.com/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/hugo-demo/src).

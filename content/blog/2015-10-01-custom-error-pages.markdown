@@ -56,5 +56,5 @@ Either create a `package.json` file, or in your repository's existing `package.j
 Push your updated repo with the newly created `404.html` and `package.json` files, and you're done!
 
 ### Sample App
-* Basic web site that uses the Aerobatic `custom-errors` plugin: [http://custom-errors.aerobatic.io/](http://custom-errors.aerobatic.io/)
+* Basic web site that uses the Aerobatic `custom-errors` plugin: [http://custom-errors.aerobaticapp.com/](http://custom-errors.aerobaticapp.com/)
 * Sample app code on Bitbucket: [https://bitbucket.org/aerobatic/custom-errors/src](https://bitbucket.org/aerobatic/custom-errors/src)

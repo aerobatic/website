@@ -36,12 +36,12 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: aeroCreateSuccess("https://basic-html.aerobatic.io")
+          success: aeroCreateSuccess("https://basic-html.aerobaticapp.com")
         },
         {
           text: "aero deploy",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://html-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://html-demo.aerobaticapp.com")
         }
       ]
     },
@@ -59,7 +59,7 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: aeroCreateSuccess("https://jekyll-demo.aerobatic.io")
+          success: aeroCreateSuccess("https://jekyll-demo.aerobaticapp.com")
         },
         {
           text: "jekyll build",
@@ -69,7 +69,7 @@ $(function() {
         {
           text: "aero deploy --directory _site",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://jekyll-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://jekyll-demo.aerobaticapp.com")
         }
       ]
     },
@@ -93,7 +93,7 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: aeroCreateSuccess("https://hugo-demo.aerobatic.io")
+          success: aeroCreateSuccess("https://hugo-demo.aerobaticapp.com")
         },
         {
           text: "hugo",
@@ -103,7 +103,7 @@ $(function() {
         {
           text: "aero deploy --directory public",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://hugo-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://hugo-demo.aerobaticapp.com")
         }
       ]
     },
@@ -124,7 +124,7 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: aeroCreateSuccess("https://hexo-demo.aerobatic.io")
+          success: aeroCreateSuccess("https://hexo-demo.aerobaticapp.com")
         },
         {
           text: "hexo generate",
@@ -134,7 +134,7 @@ $(function() {
         {
           text: "aero deploy --directory public",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://hexo-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://hexo-demo.aerobaticapp.com")
         }
       ]
     },
@@ -156,7 +156,7 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: "Website https://yeoman-demo.aerobatic.io created"
+          success: "Website https://yeoman-demo.aerobaticapp.com created"
         },
         {
           text: "gulp build",
@@ -166,7 +166,7 @@ $(function() {
         {
           text: "aero deploy --directory dist",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://yeoman-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://yeoman-demo.aerobaticapp.com")
         }
       ]
     },
@@ -188,7 +188,7 @@ $(function() {
         {
           text: "aero create",
           output: [aeroCreateOutput],
-          success: "Website https://react-demo.aerobatic.io created"
+          success: "Website https://react-demo.aerobaticapp.com created"
         },
         {
           text: "yarn build",
@@ -198,7 +198,7 @@ $(function() {
         {
           text: "aero deploy --directory build",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://react-demo.aerobatic.io")
+          success: aeroDeploySuccess("https://react-demo.aerobaticapp.com")
         }
       ]
     }

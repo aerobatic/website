@@ -15,11 +15,11 @@ Hosting a Hugo site with Aerobatic can be as easy as typing in a couple of comma
 [$] cd themes; git clone https://github.com/eliasson/liquorice
 [$] hugo -t liquorice
 [$] aero create                                           # create the Aerobatic site
-[$] hugo --baseURL https://my-new-hugo-site.aerobatic.io  # build the site overriding baseURL
+[$] hugo --baseURL https://my-new-hugo-site.aerobaticapp.com  # build the site overriding baseURL
 [$] aero deploy -d public                                 # deploy output to Aerobatic
 
 Version v1 deployment complete.
-View now at https://hugo-docs-test.aerobatic.io
+View now at https://hugo-docs-test.aerobaticapp.com
 ~~~
 
 In the example above, we compiled our site locally and deployed the `/public` directory to Aerobatic. However, using [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), we can set things up such that we can create new blog posts directly in Bitbucket, and have Bitbucket Pipelines automatically build our Hugo site and deploy a new version to Aerobatic.

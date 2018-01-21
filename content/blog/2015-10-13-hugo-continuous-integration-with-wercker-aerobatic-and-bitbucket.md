@@ -197,4 +197,4 @@ Phew, you're now done! Thankfully, all of this was a series of one-time steps. F
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/hugo/bb-blog-post.png">
 
 #### Demo App
-The demo app is live on Aerobatic at [http://hugo-demo.aerobatic.io/](http://hugo-demo.aerobatic.io/) and the code is on [Bitbucket](https://bitbucket.org/dundonian/hugo-demo/src).
+The demo app is live on Aerobatic at [http://hugo-demo.aerobaticapp.com/](http://hugo-demo.aerobaticapp.com/) and the code is on [Bitbucket](https://bitbucket.org/dundonian/hugo-demo/src).

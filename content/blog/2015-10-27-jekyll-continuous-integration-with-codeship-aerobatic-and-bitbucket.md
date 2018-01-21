@@ -110,4 +110,4 @@ To host the static website, we now just need to link the aerobatic branch to Aer
 Phew, you're now done! Thankfully, all of this was a series of one-time steps. From now on, you can just push markdown files to the master branch and everything else will happen automatically. You can even just create your markdown blog posts directly in the Bitbucket UI.
 
 #### Demo App
-The demo app is live on Aerobatic at [http://jekyll-codeship.aerobatic.io/](http://jekyll-codeship.aerobatic.io/).
+The demo app is live on Aerobatic at [http://jekyll-codeship.aerobaticapp.com/](http://jekyll-codeship.aerobaticapp.com/).

@@ -40,7 +40,7 @@ At this point, we could now simply create and deploy the site to Aerobatic for h
 
 However, we're going to use GitHub and Shippable to set up our CI workflow. So, go ahead and create the Aerobatic site with `aero create -n shippable`, but don't deploy it just yet. 
 
-Also, note that in this example, we've called our website `shippable` but you can name it anything you want. When it's deployed, it will have the URL format of `https://your-website-name.aerobatic.io`.
+Also, note that in this example, we've called our website `shippable` but you can name it anything you want. When it's deployed, it will have the URL format of `https://your-website-name.aerobaticapp.com`.
 
 ## Create package.json
 

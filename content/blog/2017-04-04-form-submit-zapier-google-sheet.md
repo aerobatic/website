@@ -12,7 +12,7 @@ In this blog post we'll explore how to append each submission of a simple online
 
 ![Form to webhook to Google sheet](https://www.aerobatic.com/media/blog/form-submit-webhook-google-sheet.png)
 
-If you're unfamiliar with Aerobatic static plugins, check out [this introduction](https://www.aerobatic.com/docs/configuration/#plugins). The code examples for this post are based on the [form-submit-demo](https://form-submit-demo.aerobatic.io) [[source code](https://github.com/aerobatic/form-submit-demo)].
+If you're unfamiliar with Aerobatic static plugins, check out [this introduction](https://www.aerobatic.com/docs/configuration/#plugins). The code examples for this post are based on the [form-submit-demo](https://form-submit-demo.aerobaticapp.com) [[source code](https://github.com/aerobatic/form-submit-demo)].
 
 ## First create the form
 
@@ -77,7 +77,7 @@ Now let's configure the integration in Zapier. First you need a Zapier account &
 
 Go ahead and submit another test form and you should see it get added to the spreadsheet. Since Google docs auto-update when changes are made by other users (or API calls in this case), you can even leave the sheet up and see new submissions appear in near real-time!
 
-Here's a screencast showing the [form-submit-demo](https://form-submit-demo.aerobatic.io) (which uses the same exact setup as we just walked through) in action:
+Here's a screencast showing the [form-submit-demo](https://form-submit-demo.aerobaticapp.com) (which uses the same exact setup as we just walked through) in action:
 
 {{< youtube 67ZL7pJ52bM >}}
 

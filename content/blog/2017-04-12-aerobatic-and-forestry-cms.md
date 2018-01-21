@@ -37,7 +37,7 @@ For this walkthrough we'll use a [demonstration repo](https://github.com/aerobat
 3. In the **Generator** drop down, select "Hugo" and leave the **Version** as-is
 4. Now select **GitHub** as the repository provider and **Public Repos**
 5. In the **Choose Repository** screen select **your-github-user/forestry-cms-demo** and leave branch as **master**
-6. On the **Site Settings** screen set the name to something like **aerobatic-forestry-demo** and the Url to the value provided from the `aero create` command run in step 3 from the previous section. It should look something like `https://funny-name.aerobatic.io`.
+6. On the **Site Settings** screen set the name to something like **aerobatic-forestry-demo** and the Url to the value provided from the `aero create` command run in step 3 from the previous section. It should look something like `https://funny-name.aerobaticapp.com`.
 7. On the **Hosting Info** screen select **Commit to source repo only**
 8. Finally click **Save Changes**
 

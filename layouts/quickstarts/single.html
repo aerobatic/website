@@ -34,7 +34,7 @@
           {{ if in (seq 0 2 100) ($.Scratch.Get "quickStartIndex") }}<div class="row">{{ end }}
           <div class="col-md-6">
             <div class="quickstart">
-              <a class="screenshot {{.Params.quickStartType}}" href="https://{{$quickStart.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
+              <a class="screenshot {{.Params.quickStartType}}" href="https://{{$quickStart.demoAppName}}.aerobaticapp.com?__preview=laptop" target="_blank">
                 <img src="{{ $quickStart.thumbnailUrl }}" />
               </a>
               <div class="details">
@@ -54,7 +54,7 @@
 
                   <div class="buttons">
                     {{ if (isset $quickStart "demoAppName") }}
-                      <a class="btn btn-default btn-sm" href="https://{{$quickStart.demoAppName}}.aerobatic.io?__preview=laptop" target="_blank">
+                      <a class="btn btn-default btn-sm" href="https://{{$quickStart.demoAppName}}.aerobaticapp.com?__preview=laptop" target="_blank">
                         <span>Demo</span>
                         <i class="fa fa-external-link fa-lg"></i>
                       </a>

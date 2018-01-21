@@ -128,7 +128,7 @@ After ~15 seconds, your app will be live to the public!
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/react-starterify/app-deployed.png" alt="Screenshot of a live static website version in Aerobatic">
 
 #### Demo App
-The demo app is live on Aerobatic at [http://react-starterify.aerobatic.io/](http://react-starterify.aerobatic.io/).
+The demo app is live on Aerobatic at [http://react-starterify.aerobaticapp.com/](http://react-starterify.aerobaticapp.com/).
 
 ## Next Steps
 Often, with Single Page Apps, our front-end is calling APIs. The [Aerobatic API proxy](/docs/#sec5) makes many of those operations easier and more efficient for developers.

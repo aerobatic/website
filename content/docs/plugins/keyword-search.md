@@ -9,7 +9,7 @@ description: The keyword-search plugin provides a way for users to search the co
 
 The keyword search plugin provides full text search capabilities for your Aerobatic website. It works in conjunction with the [site scanner](/docs/configuration/#site-scanner) that crawls and examines your website content following each deployment. You can use our stock search template, or take full control with your own HTML template for a totally seamless user experience.
 
-The search feature on this site is an example of the plugin at work. Also check out the [demo website](https://keyword-search-demo.aerobatic.io) with the full [source code](https://github.com/aerobatic/keyword-search-demo).
+The search feature on this site is an example of the plugin at work. Also check out the [demo website](https://keyword-search-demo.aerobaticapp.com) with the full [source code](https://github.com/aerobatic/keyword-search-demo).
 
 ## Configuration
 
@@ -318,7 +318,7 @@ Here is an example of a basic search results template:
 **TIP** Note the triple `{{{}}}` delimiters around the `snippet` and `urlPath`. This is how Mustache unescapes the output. This is necessary for the snippet since it contains `<em>` tags highligting keyword matches. When using custom Mustache tags you can unescape with syntax like this: `<%= &snippet %>`.
 {{% /alert %}}
 
-The [keyword-search-demo](https://keyword-search-demo.aerobatic.io) has a working example with source code.
+The [keyword-search-demo](https://keyword-search-demo.aerobaticapp.com) has a working example with source code.
 
 ### Use with a static site generator
 To use a custom search results template with a static site generator like Hugo or Jekyll, you just need to make the `search.html` file is emitted to the build output directory. One issue that could arise is a conflict between the mustache delimiters `{{}}` and the generator's template syntax. For example Hugo uses [Go Templates](https://gohugo.io/templates/go-templates/) which also use the double curly delimiters. To avoid this you can override the mustache tags, maybe to the ERB style syntax:

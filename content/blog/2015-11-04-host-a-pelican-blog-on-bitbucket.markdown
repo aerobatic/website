@@ -74,4 +74,4 @@ Make sure that you specify the deployment directory as `/output` and if you're r
 Once you click the button, your site will be live in ~15 seconds, complete with CDN deployment and https. To learn more about other Aerobatic features you can add to your Pelican site, check out our [docs](/docs/) section.
 
 #### Demo App
-The demo app is live on Aerobatic at [https://pelican-demo.aerobatic.io/](https://pelican-demo.aerobatic.io/).
+The demo app is live on Aerobatic at [https://pelican-demo.aerobaticapp.com/](https://pelican-demo.aerobaticapp.com/).

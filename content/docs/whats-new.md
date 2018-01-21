@@ -33,7 +33,7 @@ Here's a running list of the latest new features and enhancements. Have an idea?
 * We now support [email or Slack deploy alerts](/docs/configuration/#deploy-alerts) that you configure in your `aerobatic.yml` file. You can even specify different alerts based on the deploy stage that was updated. Great way for agencies to automatically notify clients when changes are made.
 
 ### Mar 15, 2017
-* New [sample website](https://password-protect-demo.aerobatic.io) demonstrating use of the [password-protect](/docs/plugins/password-protect/) plugin.
+* New [sample website](https://password-protect-demo.aerobaticapp.com) demonstrating use of the [password-protect](/docs/plugins/password-protect/) plugin.
 
 ### Mar 13, 2017
 * You can now pass a `-f` or `--format` option to the [aero logs](/docs/cli/#logs) command to see the raw JSON weblog entries in their entirety. There is also an additional `proxyUrl` property in the log entry for requests that are handled by the [http-proxy](/docs/plugins/http-proxy/) plugin. This is useful when diagnosing exactly what URL Aerobatic is requesting behind the scenes. The [plugin troubleshooting](/docs/plugins/http-proxy/#troubleshooting) section has more details.

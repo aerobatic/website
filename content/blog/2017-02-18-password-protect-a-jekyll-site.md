@@ -88,7 +88,7 @@ Login to the [Aerobatic dashboard](dashboard.aerobatic.com), and navigate to you
 <img class="screenshot" src="/img/jekyll-auth-env-var.png" alt="Aerobatic Environment Variable">
 
 
-The demo site for adding a custom login page can be found at [https://jekyll-auth.aerobatic.io/](https://jekyll-auth.aerobatic.io/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/jekyll-auth/src).
+The demo site for adding a custom login page can be found at [https://jekyll-auth.aerobaticapp.com/](https://jekyll-auth.aerobaticapp.com/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/jekyll-auth/src).
 
 ## Set up Bitbucket Pipelines Continuous Deployment
 
@@ -117,4 +117,4 @@ git push origin master
 
 ## Summary
 
-And that's it! The demo site for adding a custom login page can be found at [https://jekyll-auth.aerobatic.io/](https://jekyll-auth.aerobatic.io/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/jekyll-auth/src).
+And that's it! The demo site for adding a custom login page can be found at [https://jekyll-auth.aerobaticapp.com/](https://jekyll-auth.aerobaticapp.com/) and the source code is on [Bitbucket](https://bitbucket.org/dundonian/jekyll-auth/src).

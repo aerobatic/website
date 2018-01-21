@@ -17,7 +17,7 @@ An even better solution would be to take those files in S3 and serve them from o
 
 So, starting today, all websites hosted with Aerobatic can now access files stored in a S3 bucket directly from the browser, using our [open-source](http://4front.io/docs/plugins/s3-proxy/) **s3-proxy** plugin. The plugin will honor any cache headers set in the S3 metadata, or you can configure the plugin to override the cache headers. The origin S3 bucket does *not* need to be configured for web hosting. For example, the screenshots in this blog post are being served from S3.
 
-The rest of this tutorial shows how to store large files in S3 and make use of the Aerobatic s3-proxy in your website. The demo for this tutorial is [hosted on Aerobatic](http://s3-proxy.aerobatic.io/) and the companion code is on [Bitbucket](https://bitbucket.org/aerobatic/s3-proxy).
+The rest of this tutorial shows how to store large files in S3 and make use of the Aerobatic s3-proxy in your website. The demo for this tutorial is [hosted on Aerobatic](http://s3-proxy.aerobaticapp.com/) and the companion code is on [Bitbucket](https://bitbucket.org/aerobatic/s3-proxy).
 
 ## 1) Create a S3 bucket
 Obviously skip this section if you already have a AWS account and are making use of S3. If you don't yet have an AWS account, you can [get one for free](https://aws.amazon.com/free/).
@@ -32,12 +32,12 @@ If this is something you'll be doing a lot of, it might be worthwhile to use a f
 ## 3) Reference images in your website
 
 ~~~html
-<img src="//s3-proxy.aerobatic.io/media/img/aerobatic-team.jpg">
+<img src="//s3-proxy.aerobaticapp.com/media/img/aerobatic-team.jpg">
 ~~~
 
 In the src URL, you'll notice the following:
 
-- `//s3-proxy.aerobatic.io` - You'll replace this with the name of your Aerobatic hosted website
+- `//s3-proxy.aerobaticapp.com` - You'll replace this with the name of your Aerobatic hosted website
 - `/media` - This is the path that will signal to the s3-proxy that the image is on S3. You can call it anything, but it needs to match the `path` value in your `package.json` file.
 - `/img` - This is the sub-folder in my S3 bucket.
 
@@ -81,7 +81,7 @@ We have two environment variables that will store our AWS access key and secret.
 ## Summary
 Our website is now live, with our S3 images being served from the global CDN.
 
-  <a href="http://s3-proxy.aerobatic.io/">
+  <a href="http://s3-proxy.aerobaticapp.com/">
   <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/s3proxy/demo-app.png" alt="Screenshot of demo app using the s3 proxy plugin">
   </a>
 

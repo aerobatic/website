@@ -11,11 +11,9 @@ sitemap:
     lastmod: 2016-03-15
 ---
 
-
 {% alert warning %}
 **UPDATE:** Aerobatic now has [built-in support](/blog/automated-continuous-deployment-of-jekyll-sites) for building Jekyll sites. You no longer need to rely upon an external CI service for this.
 {% endalert %}
-
 
 This is a cross post from [jasongowans.net](http://www.jasongowans.net/2015/06/12/migrate-a-blog-from-wordpress-to-jekyll-and-host-it-on-bitbucket/)
 
@@ -25,7 +23,6 @@ As an ocassional blogger, I hosted my blog with wordpress.com for years almost b
 First thing to do is to export your Wordpress blog by going to wordpress.com, and in the left nav of the admin console, click tools, and then export.
 
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/export-wordpress.png">
-
 
 This will create an XML file of all your Wordpress data.
 
@@ -48,7 +45,7 @@ Once you've succcessfully installed exitwp, make sure you place your wordpress X
 python exitwp.py
 {% endhighlight %}
 
-When it's finished, there's a new folder created called <code>build</code> in the exitwp repo root. Click through the various subfolders to the <code>_posts</code> folder and you should now see all of your old Wordpress blog posts in beautiful markdown, ready to drop into your shiny new Jekyll blog!
+When it's finished, there's a new folder created called <code>build</code> in the exitwp repo root. Click through the various subfolders to the <code>\_posts</code> folder and you should now see all of your old Wordpress blog posts in beautiful markdown, ready to drop into your shiny new Jekyll blog!
 
 ###Step 3: Download a Jekyll Theme
 [Jekyll Themes](http://jekyllthemes.org/) is a great option for getting going quickly with a Jekyll blog. Once you've downloaded the theme of your choice, assuming you have Jekyll installed, in the root of your new Jekyll blog folder, from the command line, type:
@@ -57,7 +54,7 @@ When it's finished, there's a new folder created called <code>build</code> in th
 jekyll serve
 {% endhighlight %}
 
-You should now have your blog running localhost. At this point, you can then copy over all of your markdown files into the <code>_posts</code> folder. Hit refresh in your browser and boom - you now have a Jekyll blog!
+You should now have your blog running localhost. At this point, you can then copy over all of your markdown files into the <code>\_posts</code> folder. Hit refresh in your browser and boom - you now have a Jekyll blog!
 
 ###Step 4: Create a bitbucket repo
 While the hardcore programmers will likely cackle in unison, personally, I'm a fan of [SourceTree](https://www.atlassian.com/software/sourcetree). So, using SourceTree, you can create a new private repo. Did I mention the private repos are free on Bitbucket?
@@ -77,7 +74,7 @@ Now that you've created your repo on Bitbucket, you'll next want to install the 
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/new-add-ons.png">
 
 ###Step 6: Publish your Site
-From your repo summary page, click the Aerobatic Hosting link. Make sure that you select the sub-folder checkbox option and you tell Aerobatic where your code is, in this case, <code>/_site</code>
+From your repo summary page, click the Aerobatic Hosting link. Make sure that you select the sub-folder checkbox option and you tell Aerobatic where your code is, in this case, <code>/\_site</code>
 
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/link-repo.png">
 
@@ -90,14 +87,13 @@ Once you've pushed your code, refresh the page and you should see that your firs
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/deployed.png">
 
 ###Step 7: Bonus - Custom Domains
-In my case, my blog is now live at [http://dundonian.aerobatic.io/](http://dundonian.aerobatic.io/), but if I wanted to add a custom domain, Aerobatic supports that too.
+In my case, my blog is now live at [http://dundonian.aerobaticapp.com/](http://dundonian.aerobaticapp.com/), but if I wanted to add a custom domain, Aerobatic supports that too.
 
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/custom-domain.png">
 
 For example, [jasongowans.net](http://jasongowans.net/) now points to my blog:
 
 <img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/migrateblog/jasongowans.png">
-
 
 <p class="bg-info"><b>Note:</b> Registering a CNAME can take some time to take effect (for mine it took about 10 minutes). In the meantime, you might get a "Bad Request" error if you type in the URL. Just be patient...</p>
 
@@ -110,24 +106,25 @@ In the JavaScript file that contains your contact form code, simply change the U
 
 {% highlight ruby %}
 $.ajax({
-   url: "//formspree.io/jason@aerobatic.com",
-   type: "POST",
-   data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-          },
+url: "//formspree.io/jason@aerobatic.com",
+type: "POST",
+data: {
+name: name,
+phone: phone,
+email: email,
+message: message
+},
 {% endhighlight %}
 
 The first time you submit the form, you'll be asked to confirm the email address. This is a one time step that you'll need to complete for both your localhost as well as your deployed public version.
 
 ###Step 9: Bonus - Google Analytics
-You've got your blog up and running and now you want to know how much traffic it's getting. Setting up Google Analytics is pretty straightforward. In your <code>_includes</code> folder, create a new file called <code>google_analytics.html</code>
+You've got your blog up and running and now you want to know how much traffic it's getting. Setting up Google Analytics is pretty straightforward. In your <code>\_includes</code> folder, create a new file called <code>google_analytics.html</code>
 
 In that file, you'll want to paste in the tracking code that Google provides. It should look something like the following:
 
 {% highlight ruby %}
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -138,12 +135,13 @@ In that file, you'll want to paste in the tracking code that Google provides. It
   ga('send', 'pageview');
 
 </script>
+
 {% endhighlight %}
 
-Simply replace the "UA-999..." placeholder ID with your own Google Analytics tracking ID. Once this is done, you'll then update the <code>default.html</code> page in your <code>_layouts</code> folder to include the <code>google_analytics.html</code> file you just created:
-
+Simply replace the "UA-999..." placeholder ID with your own Google Analytics tracking ID. Once this is done, you'll then update the <code>default.html</code> page in your <code>\_layouts</code> folder to include the <code>google_analytics.html</code> file you just created:
 
 {% highlight ruby %}
+
 <html lang="en">
 {{ "{% include head.html " }}%}
 {{ "{% include google_analytics.html " }}%}
@@ -157,4 +155,4 @@ Simply replace the "UA-999..." placeholder ID with your own Google Analytics tra
 
 And that's it! In less than an hour, we've converted our blog from Wordpress to Jekyll, and we've configured free hosting via Bitbucket that includes CDN, deployment versions, custom domains, contact form submission, and Google Analytics.
 
-If you run into any issues following these steps, feel free to drop me a note via my contact form. You're also free to check out my [blog repo on Bitbucket](//bitbucket.org/dundonian/blog/src) so you can see things like the folder structure and my <code>_config.yml</code> etc. Good luck!
+If you run into any issues following these steps, feel free to drop me a note via my contact form. You're also free to check out my [blog repo on Bitbucket](//bitbucket.org/dundonian/blog/src) so you can see things like the folder structure and my <code>\_config.yml</code> etc. Good luck!

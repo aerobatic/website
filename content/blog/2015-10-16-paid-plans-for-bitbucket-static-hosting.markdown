@@ -44,7 +44,7 @@ Here's what's included right now, with more features being added all the time.
         </tr>
         <tr>
           <td>SSL</td>
-          <td>For both appname.aerobatic.io and custom domains</td>
+          <td>For both appname.aerobaticapp.com and custom domains</td>
         </tr>
         <tr>
           <td>API Proxy</td>

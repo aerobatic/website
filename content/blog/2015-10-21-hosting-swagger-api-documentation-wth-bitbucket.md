@@ -9,7 +9,7 @@ description: How to create a static site for your Swagger API documentation and 
 
 [Swagger](http://swagger.io/) is a specification format for documenting the interface for RESTful APIs. Essentially, you author a YAML file that describes the operations and their inputs and outputs. There is an ecosystem of tools that can auto-generate documentation or SDKs. For documentation generation there is a project called [swagger-ui](http://swagger.io/) that will generate attractive interactive HTML/JavaScript documentation from a Swagger API specification.
 
-<a href="http://swagger-ui.aerobatic.io/"><img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/swagger/swagger-aerobatic.png" alt="Swagger Docs Live on Aerobatic" ></a>
+<a href="http://swagger-ui.aerobaticapp.com/"><img class="img-responsive marketing-feature-showcase--screenshot" src="//www.aerobatic.com/media/blog/swagger/swagger-aerobatic.png" alt="Swagger Docs Live on Aerobatic" ></a>
 
 All that's left is somewhere to host the generated documentation so you can share it out to would-be API consumers. Since the generated Swagger output is pure static HTML, [Aerobatic](/) is a perfect hosting solution host it on and here's how to set it up:
 
@@ -62,7 +62,7 @@ aero deploy -d dist
 
 #### 8. Congratulations, your Swagger API documentation is live!
 
-* The demo app for this tutorial is [hosted on Aerobatic](http://swagger-ui.aerobatic.io/)
+* The demo app for this tutorial is [hosted on Aerobatic](http://swagger-ui.aerobaticapp.com/)
 * The code repository for the demo app is on [Bitbucket](https://bitbucket.org/aerobatic/swagger-ui/src)
 
 To make updates to your Swagger documentation, use the "Paste JSON" command of the online editor to import `swagger.json` file. Make your changes then download the JSON and replace the contents of your local file. Git push and your site will be updated automatically.

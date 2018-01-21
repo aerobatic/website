@@ -147,7 +147,7 @@ When you migrate your site, you will automatically get a trial of the Pro Plan t
 
 **Non-paying customers WITHOUT a custom domain:**
 
-Your websites will continue to resolve at their *.aerobatic.io domain. However data transfer out will be capped at 10GB / day. If you are thinking of upgrading, be sure to do so by March 1st to take advantage of the special pricing offer below.
+Your websites will continue to resolve at their *.aerobaticapp.com domain. However data transfer out will be capped at 10GB / day. If you are thinking of upgrading, be sure to do so by March 1st to take advantage of the special pricing offer below.
 {{% /alert %}}
 
 #### Special offer for Bitbucket customers

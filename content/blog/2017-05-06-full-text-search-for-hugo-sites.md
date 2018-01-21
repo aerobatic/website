@@ -15,7 +15,7 @@ You can have full text search up and running from scratch in **30 minutes or les
 
 The demo site along with full source code is available for you to clone and follow along.
 
-* Demo site: https://hugo-search-demo.aerobatic.io
+* Demo site: https://hugo-search-demo.aerobaticapp.com
 * Source code: https://github.com/aerobatic/hugo-search-demo
 
 You can clone the demo repo and deploy it to your own account as a new website by following the directions in the README.
@@ -77,7 +77,7 @@ scanner:
       - year
 ~~~
 
-That's it for configuration. We could actually omit the `options` section from the `keyword-search` declaration and run `aero deploy` right now. The content of the site would get indexed and the default search results template rendered at `https://your-site.aerobatic.io/search/`. If you are following along with your own website, it's probably a good idea to go ahead and do that now to test it out.
+That's it for configuration. We could actually omit the `options` section from the `keyword-search` declaration and run `aero deploy` right now. The content of the site would get indexed and the default search results template rendered at `https://your-site.aerobaticapp.com/search/`. If you are following along with your own website, it's probably a good idea to go ahead and do that now to test it out.
 
 For this demo we're going to customize the search results template so it feels like a completely integral part of the site. We'll tackle that next.
 
@@ -88,7 +88,7 @@ For this we need to create a new file at `content/search.html`. Here's where thi
 The template will be bound on Aerobatic to a data object containing the search results. This data object can be seen by running the following curl command:
 
 ~~~sh
-[$] curl -H "Accept:application/json" https://hugo-search-demo.aerobatic.io/search/?q=raven
+[$] curl -H "Accept:application/json" https://hugo-search-demo.aerobaticapp.com/search/?q=raven
 ~~~
 
 Which returns:
@@ -106,7 +106,7 @@ Which returns:
       "snippet": "And the <em>raven</em>, never flitting, still is sitting, still is sitting On the pallid bust of Pallas just above my chamber door; And his eyes have all the s",
       "score": 25.23,
       "urlPath": "/post/the-raven/",
-      "fullUrl":"https://hugo-search-demo.aerobatic.io/post/the-raven/"
+      "fullUrl":"https://hugo-search-demo.aerobaticapp.com/post/the-raven/"
     }
   ]
 }
@@ -143,7 +143,7 @@ description = "Search the site"
 
 Note the extra "&" prefix on `&snippet` and `&urlPath`. This is used to unescape the value. We are able to utilize the same CSS classes that are used in the main list of poems on the home page. The bottom line is it's your code so you have complete freedom to format and style the search results **exactly the way you want**.
 
-Here's what our custom search results looks like (which you can see for real at [https://hugo-search-demo.aerobatic.io/search/?q=winter](https://hugo-search-demo.aerobatic.io/search/?q=winter)).
+Here's what our custom search results looks like (which you can see for real at [https://hugo-search-demo.aerobaticapp.com/search/?q=winter](https://hugo-search-demo.aerobaticapp.com/search/?q=winter)).
 
 <img alt="Search results screenshot" src="https://www.aerobatic.com/media/blog/hugo-search-demo-screenshot.png" style="border: solid 1px #ccc" />
 
@@ -189,7 +189,7 @@ scanner:
       - year
 ~~~
 
-In addition to displaying the metadata next to each search result, you can also search on it. For example: https://hugo-search-demo.aerobatic.io/search/?q=1922.
+In addition to displaying the metadata next to each search result, you can also search on it. For example: https://hugo-search-demo.aerobaticapp.com/search/?q=1922.
 
 ## Sitemap
 

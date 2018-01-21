@@ -9,6 +9,10 @@ dependencies:
     - sudo dpkg -i hugo*.deb
     - npm install -g aerobatic-cli
 
+test:
+  override:
+    - echo "No tests"
+
 deployment:
   master:
     branch: master

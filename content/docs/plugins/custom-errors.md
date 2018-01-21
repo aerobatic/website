@@ -23,5 +23,5 @@ plugins:
 
 #### Sample Custom Errors App
 
-- Here is a basic example web site that uses the Aerobatic `custom-errors` plugin. [http://custom-errors.aerobatic.io/](http://custom-errors.aerobatic.io/)
-- The code for this sample app can be found on Bitbucket at [https://bitbucket.org/aerobatic/custom-errors/src](http://custom-errors.aerobatic.io/)
+- Here is a basic example web site that uses the Aerobatic `custom-errors` plugin. [http://custom-errors.aerobaticapp.com/](http://custom-errors.aerobaticapp.com/)
+- The code for this sample app can be found on Bitbucket at [https://bitbucket.org/aerobatic/custom-errors/src](http://custom-errors.aerobaticapp.com/)

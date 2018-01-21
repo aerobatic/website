@@ -29,7 +29,7 @@ Here's a breakdown of each step:
 3. Configure the [password-protect](/docs/plugins/password-protect/) plugin in the `aerobatic.yml` file so only the client will be able to access it.
 4. Deploy the site by running: `aero deploy`
 5. Re-deploy the site as often as necessary before you are at a state where you are ready to solicit feedback from the client.
-6. Email or message the client with the website URL `https://project-name.aerobatic.io` along with the site password.
+6. Email or message the client with the website URL `https://project-name.aerobaticapp.com` along with the site password.
 7. Once the client is satisfied with the initial release, you're ready to move on to the next phase.
 
 ## Launch Phase

@@ -15,7 +15,7 @@ Aerobatic has made it incredibly easy to deploy your production website with a s
 
 However for sites being built by a team of developers, or when building on behalf of a client, a more formal staged release process is often called for. In a typical workflow, in-progress changes are committed to a dedicated git branch that is not deployed to production. However clients and/or stakeholders usually want to be able to preview and approve website changes well before customers see it for real.
 
-To solve this challenge, Aerobatic now provides a feature called __Deploy branches__ which lets you configure multiple git branches for continuous deployment. One or zero branches can be specified as "production" (more on this shortly) and up to 5 additional branches as staging instances of your site. Whenever a push is made to one of these staging branches your website is automatically deployed to a URL in the form `https://yourapp--test.aerobatic.io` where `test` is a URL-friendly alias for the branch name.
+To solve this challenge, Aerobatic now provides a feature called __Deploy branches__ which lets you configure multiple git branches for continuous deployment. One or zero branches can be specified as "production" (more on this shortly) and up to 5 additional branches as staging instances of your site. Whenever a push is made to one of these staging branches your website is automatically deployed to a URL in the form `https://yourapp--test.aerobaticapp.com` where `test` is a URL-friendly alias for the branch name.
 
 Here's a look at the __Deploy settings__ screen in the Bitbucket add-on:
 
@@ -33,7 +33,7 @@ This ability to change which version of the site is live with a single click als
 
 ## Custom domains
 
-If you are using a custom CNAME, you can still use staging URLs. Just put the branch alias name preceded by the double dash at the end of the first subdomain. For example if your custom CNAME is `www.example.com`, then the staging URLs would look like `www--test.example.com`, `www--preview.example.com`, etc. Note that you will have to register these CNAMEs with your DNS provider and point them to `_origin.aerobatic.io`. However you do not need to register these CNAMEs with your Aerobatic account, just registering the primary website domain is sufficient.
+If you are using a custom CNAME, you can still use staging URLs. Just put the branch alias name preceded by the double dash at the end of the first subdomain. For example if your custom CNAME is `www.example.com`, then the staging URLs would look like `www--test.example.com`, `www--preview.example.com`, etc. Note that you will have to register these CNAMEs with your DNS provider and point them to `_origin.aerobaticapp.com`. However you do not need to register these CNAMEs with your Aerobatic account, just registering the primary website domain is sufficient.
 
 Things become a little more complicated when using both a custom CNAME and an SSL certificate. In this case you will need either a wildcard certificate, like `*.example.com`, or a multi-domain cert that includes both the primary CNAME and all staging CNAMEs. The CNAMEs in this setup would be configured with your DNS provider to point to the designated `*.cloudfront.net` domain and _also_ register it to your Aerobatic account in the domain management screen.
 

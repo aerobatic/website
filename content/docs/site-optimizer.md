@@ -143,8 +143,8 @@ For a more real world example we generated a new site on Aerobatic using our Sta
 
 Mode | URL | Desktop Score | Mobile Score | PageSpeed Results |
 ---|---|---|---|---
-**Without** critical CSS inlining | https://critical-css-demo.aerobatic.io/ | 90 / 100 | 74 / 100 | [View Results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcritical-css-demo.aerobatic.io%2F)
-**With** critical CSS inlining | https://critical-css-demo--optimized.aerobatic.io | **98** / 100 | **98** / 100 | [View Results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcritical-css-demo--optimized.aerobatic.io%2F)
+**Without** critical CSS inlining | https://critical-css-demo.aerobaticapp.com/ | 90 / 100 | 74 / 100 | [View Results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcritical-css-demo.aerobaticapp.com%2F)
+**With** critical CSS inlining | https://critical-css-demo--optimized.aerobaticapp.com | **98** / 100 | **98** / 100 | [View Results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcritical-css-demo--optimized.aerobaticapp.com%2F)
 
 Source code for the demo is available at: https://github.com/aerobatic/critical-css-demo
 

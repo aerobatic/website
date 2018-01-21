@@ -17,7 +17,7 @@ Rather than simply including the entire Bootstrap CSS and JavaScript into the pa
 
 Leveraging Aerobatic's [support for auto-building Jekyll sites](docs/automated-builds#jekyll), including plugins, we'll have an asset optimized, CDN delivered, continuously deployed, Jekyll Bootstrap blog in no time.
 
-If you want a sneak peek, the final product can be viewed at [https://jekyll-bootstrap-blog.aerobatic.io/](https://jekyll-bootstrap-blog.aerobatic.io/) and the source code at [https://bitbucket.org/aerobatic/jekyll-bootstrap-blog](https://bitbucket.org/aerobatic/jekyll-bootstrap-blog).
+If you want a sneak peek, the final product can be viewed at [https://jekyll-bootstrap-blog.aerobaticapp.com/](https://jekyll-bootstrap-blog.aerobaticapp.com/) and the source code at [https://bitbucket.org/aerobatic/jekyll-bootstrap-blog](https://bitbucket.org/aerobatic/jekyll-bootstrap-blog).
 
 ## Configuration
 
@@ -218,7 +218,7 @@ Once your Bitbucket repo is linked to Aerobatic, you just `git push` and the bui
 ~~~
 
 {% raw %}
-If you do a view-source on [https://jekyll-bootstrap-blog.aerobatic.io/](http://getbootstrap.com/examples/blog/blog.css) you'll see at the spots where the `{% stylesheet main %}` and `{% javascript main %}` liquid tags were declared, the following tags are being rendered:
+If you do a view-source on [https://jekyll-bootstrap-blog.aerobaticapp.com/](http://getbootstrap.com/examples/blog/blog.css) you'll see at the spots where the `{% stylesheet main %}` and `{% javascript main %}` liquid tags were declared, the following tags are being rendered:
 {% endraw %}
 
 ~~~html

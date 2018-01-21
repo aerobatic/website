@@ -166,5 +166,5 @@ When utilizing custom basic auth, the website visitor is implicitly logged out w
 The `basic-auth` plugin is intended as a simple, lightweight authentication mechanism, not a robust identity and access management solution. Be aware that the Base64 encoded credentials are cached in the browser for some period of time. It's recommended that credentials be configured as environment variables rather than hardcoded in the `aerobatic.yml` and committed to source control. Aerobatic enforces SSL 100% of the time, so credentials will always be encrypted over the wire.
 
 #### Auth demo website
-- Here is a sample website that uses the Aerobatic basic-auth plugin. [https://auth-demo.aerobatic.io/](https://auth-demo.aerobatic.io/)
+- Here is a sample website that uses the Aerobatic basic-auth plugin. [https://auth-demo.aerobaticapp.com/](https://auth-demo.aerobaticapp.com/)
 - The code for this sample site can be found on Bitbucket at [https://github.com/aerobatic/auth-demo/src](https://github.com/aerobatic/auth-demo/src)

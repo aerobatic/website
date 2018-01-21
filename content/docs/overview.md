@@ -44,7 +44,7 @@ This will make the deployed site available at unique URL. The form of the URL de
 
 | URL style   | Production url | "test" stage URL |
 | ------------- | --------- | ------------- |
-| Shared domain | `https://site-name.aerobatic.io` | `https://site-name--test.aerobatic.io` |
+| Shared domain | `https://site-name.aerobaticapp.com` | `https://site-name--test.aerobaticapp.com` |
 | Custom domain CNAME | `https://www.customdomain.com` | `https://www--test.customdomain.com`|
 | Custom domain apex | `https://customdomain.com` | `https://test.customdomain.com` |
 

@@ -121,7 +121,7 @@ Specify the sub-directory where the built website assets are located. This overr
 {{% /option %}}
 
 {{% option "-s, --stage" %}}
-Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. This impacts the URL of the deployed version. For example passing `--stage test` will make the new version available at `https://www--test.customdomain.com` or `https://SITENAME--test.aerobatic.io`. If no value is provided then the deployment will target the production URL.
+Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. This impacts the URL of the deployed version. For example passing `--stage test` will make the new version available at `https://www--test.customdomain.com` or `https://SITENAME--test.aerobaticapp.com`. If no value is provided then the deployment will target the production URL.
 {{% /option %}}
 
 {{% option "-m, --message" %}}
@@ -225,7 +225,7 @@ You can also call with the `--format json` option to see the entire JSON log ent
 ~~~
 
 #### rename
-Rename the current website. For custom domains this this only changes the name displayed in the Aerobatic Control Panel. But for sites using the shared domain, this changes the URL of the site, i.e. `https://SITENAME.aerobatic.io`.
+Rename the current website. For custom domains this this only changes the name displayed in the Aerobatic Control Panel. But for sites using the shared domain, this changes the URL of the site, i.e. `https://SITENAME.aerobaticapp.com`.
 
 **Options**
 {{% option "-n, --name" %}}
