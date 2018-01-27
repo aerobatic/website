@@ -11,14 +11,15 @@ The `aerobatic-cli` is a way to interact with the Aerobatic platform via the com
 
 The CLI is installed via npm:
 
-~~~sh
+```sh
 [$] npm install aerobatic-cli --global
-~~~
+```
 
 ### Usage
+
 Once installed, the command `aero` should be globally available on your system. Running `aero help` will display a list of all the available commands:
 
-~~~sh
+```sh
 Usage:
     $ aero [command] [options]
 
@@ -38,7 +39,7 @@ Commands:
     versions       Manage website versions
 
     Type aero help COMMAND for more details
-~~~
+```
 
 ### Behind a proxy
 
@@ -61,13 +62,15 @@ The CLI will honor the `HTTPS_PROXY` environment variable when making outbound n
 * [versions](#versions)
 
 #### account
+
 Display a summary of the current Aerobatic account including the list of websites.
 
-~~~bash
+```bash
 [$] aero account
-~~~
+```
 
 #### apikey
+
 Get the api key for the current Aerobatic account. This value should be set as the `AEROBATIC_API_KEY` environment variable in a CI service. Read about [setting up a CI environment](/docs/continuous-deployment#aerobatic-apikey). Run with the `--reset` arg to reset to a new value.
 
 **Options**
@@ -76,12 +79,14 @@ Reset the account api key to a new value.
 {{% /option %}}
 
 **Examples**
-~~~bash
+
+```bash
 [$] aero account
 [$] aero account --reset
-~~~
+```
 
 #### create
+
 Create a new Aerobatic website in the current directory. If no `aerobatic.yml` file exists in the current directory, a new one will created. If there is already an `aerobatic.yml` file, then the "id" property will overriden with the new website's unique identifier.
 
 **Options**
@@ -97,22 +102,25 @@ URL to a `.zip` or `.tar.gz` archive to create the new website from. This will a
 {{% /option %}}
 
 **Examples**
-~~~bash
+
+```bash
 [$] aero create       # Creates website at the current directory
 [$] aero create -n website-name
 [$] aero create --quick-start hugo/agency
 [$] aero create --source https://html5up.net/editorial/download --name html5up-demo
 [$] aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip
-~~~
+```
 
 #### delete
+
 Delete the website at the current directory. This will take down the website resulting in a 404 page. If the site is subscribed to the Pro plan, recurring payments will stop. You will be prompted to confirm the name of the website.
 
-~~~bash
+```bash
 [$] aero delete
-~~~
+```
 
 #### deploy
+
 Deploy a new version of the website in the current directory.
 
 **Options**
@@ -133,14 +141,16 @@ A short message that you want to attach to the deployment metadata. If being [in
 {{% /option %}}
 
 **Examples**
-~~~bash
+
+```bash
 [$] aero deploy
 [$] aero deploy --directory _site
 [$] aero deploy --stage test
 [$] aero deploy --message "Commit message" --commit-url https://github.com/owner/repo/commit/2495349f
-~~~
+```
 
 #### domain
+
 Register a custom domain for the current website. This command requires that your website has already been upgraded to the Pro plan. If you want to run your website at the apex domain, i.e. `https://mydomain.com`, your DNS provider needs to support `ANAME` or `ALIAS` records. For details see the [apex domains docs](/docs/custom-domains-ssl/#apex-domains).
 
 **Options**
@@ -149,58 +159,58 @@ The name of the domain (without any sub-domain, i.e. `mydomain.com`)
 {{% /option %}}
 
 {{% option "-N, --subdomain" %}}
-The subdomain you want your website to be accessible at. For apex domain enter the value '@'. For wildcard domain enter '&#42;'.
-{{% /option %}}
-
-{{% option "-R, --reset" %}}
-Pass this option with no other options to have the domain validation email resent. See the [email troubleshooting tips](/docs/custom-domains-ssl/#trouble-receiving-validation-email).
+The subdomain you want your website to be accessible at. For apex domain enter the value '@'. For wildcard domain enter '\*'.
 {{% /option %}}
 
 You can also run the command without any arguments to get status information on the domain.
 
-~~~bash
+```bash
 [$] aero domain --name mydomain.com --subdomain www
 [$] aero domain --name mydomain.com --subdomain @
 [$] aero domain
-~~~
+```
 
 #### env
+
 Set or display environment variables for the website. By default variables are set for all deploy stages, but you can also override a value for a specific stage. You might want to do this with the [password-protect](/docs/plugins/password-protect/) to configure a different password for different stages. Or for the `url` property of the [http-proxy](/docs/plugins/http-proxy/) if you are proxying to a different API endpoint for test and production. Calling the command with no options will display all your variables.
 
-~~~bash
+```bash
 [$] aero env -n SITE_PASSWORD -v bigsecret
 [$] aero env -n WIDGET_API_URL -v https://widgets-test/ --stage test
 [$] aero env
-~~~
+```
 
 Read more about [configuration with environment variables](/docs/configuration/#environment-variables).
 
 #### info
+
 Display summary information about the current website.
 
-~~~bash
+```bash
 [$] aero info
-~~~
+```
 
 #### login
+
 Login to your Aerobatic account. You'll be prompted to enter your email and password. If your credentials are correct, a file is written at `~/.aerorc.yml` with an auth token that is passed in subsequent commands. The token is valid for 24 hours after which you'll be prompted to login again.
 
-~~~bash
+```bash
 [$] aero login
-~~~
+```
 
 #### logs
+
 Tail the web logs for the current website. Gives a near real-time snapshot of the HTTP requests and responses being served from your site including geoip location.
 
 By default the log entry output follows a format similar to the [Apache combined log format](https://httpd.apache.org/docs/1.3/logs.html#combined) which displays a sub-set of the entire log entry:
 
-~~~text
+```text
 123.123.123.123     - 2017-03-13T15:44:11 - 200 - GET HTTP/1.1 - https://www.aerobatic.com/ - "Seattle, WA, US" - us-west-2
-~~~
+```
 
 You can also call with the `--format json` option to see the entire JSON log entry:
 
-~~~json
+```json
 {
   "appId": "f593b673-75f2-4c7e-8a65-6e0d7a6e0f05",
   "awsRegion": "eu-central-1",
@@ -215,16 +225,17 @@ You can also call with the `--format json` option to see the entire JSON log ent
   "country": "US",
   "region": "WA",
   "city": "Seattle",
-  "httpVersion":"1.1"
+  "httpVersion": "1.1"
 }
-~~~
+```
 
-~~~bash
+```bash
 [$] aero logs
 [$] aero logs --format json
-~~~
+```
 
 #### rename
+
 Rename the current website. For custom domains this this only changes the name displayed in the Aerobatic Control Panel. But for sites using the shared domain, this changes the URL of the site, i.e. `https://SITENAME.aerobaticapp.com`.
 
 **Options**
@@ -232,18 +243,20 @@ Rename the current website. For custom domains this this only changes the name d
 The new name of the website
 {{% /option %}}
 
-~~~bash
+```bash
 [$] aero rename -n "new-website-name"
-~~~
+```
 
 #### switch
+
 Switch to a different Aerobatic account. Displays a list of all the accounts you are associated with and let's you choose which one subsequent commands should be run in the context of.
 
-~~~bash
+```bash
 [$] aero switch
-~~~
+```
 
 #### versions
+
 Manage website versions including displaying all versions, deleting versions, pushing a version to a deploy stage, and deleting a deploy stage. Which action is carried out depends on the combination of options provided.
 
 **Options**
@@ -259,10 +272,10 @@ Delete the version identified by the `--name` option.
 If specified in conjunction with the `--name` option, indicates the stage to push the version to. If used in conjunction with the `--delete` option, then this specifies the stage to delete.
 {{% /option %}}
 
-~~~bash
+```bash
 [$] aero versions                                 # Display a list of all versions
 [$] aero versions -D --name v21                   # Delete version v21
 [$] aero versions --name v2 --stage production    # Deploy version v2 to production stage
 [$] aero versions -n v3 -s test                   # Deploy version v3 to test stage
 [$] aero versions --delete --stage test           # Delete the test deploy stage
-~~~
+```
