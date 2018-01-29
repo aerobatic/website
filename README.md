@@ -9,3 +9,5 @@ The main Aerobatic website at https://www.aerobatic.com. Powered by [Hugo](https
 * Install Pygments `pip install Pygments` or `pip3 install Pygments`
 * `npm install`
 * `npm start`
+
+Every deploy to master is automatically build by [CircleCI](https://circleci.com/bb/aerobatic/aerobatic-com-hugo) and deployed to Aerobatic.
