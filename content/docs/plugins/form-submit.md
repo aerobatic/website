@@ -35,7 +35,7 @@ plugins:
 Your code just has to declare a standard HTML form with a `target` attribute that matches the `path` in the plugin declaration (also be sure to set `method` to "post"). The form submission is stored as a JSON object where the keys are the values of the `name` attributes on the input elements.
 
 ```html
-<form target="/contact-us" method="post">
+<form action="/contact-us" method="post">
   <label for="name">Name</label>
   <input type="text" required name="name">
 
