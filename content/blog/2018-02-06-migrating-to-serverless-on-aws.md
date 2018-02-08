@@ -5,7 +5,7 @@ date: 2018-02-07
 slug: migrating-aerobatic-to-api-gateway-and-lambda
 ---
 
-This post describes how Aerobatic recently overhauled our AWS backend infrastructure running on Elastic Beanstalk and Elasticsearch to API Gateway and Lambda. For most Aerobatic users the important takeaway is that your webpages will download faster as there is a higher probability it will be served directly from the nearest CDN node.
+<img src="/img/serverless.png" style="float: right; width: 200px;" />This post describes how Aerobatic recently overhauled our AWS backend infrastructure running on Elastic Beanstalk and Elasticsearch to API Gateway and Lambda. For most Aerobatic users the important takeaway is that your webpages will download faster as there is a higher probability it will be served directly from the nearest CDN node.
 
 But if you get a kick out of AWS nitty grittiness and all things serverless, let's dig in &mdash; or jump straight to the [pretty diagram](#going-serverless).
 

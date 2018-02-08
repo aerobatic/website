@@ -7,6 +7,10 @@ name: whats-new
 
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Feb 8, 2018
+
+* [New blog post](/blog/migrating-aerobatic-to-api-gateway-and-lambda/) detailing how we recently transitioned our static site hosting infrastructure to AWS serverless.
+
 ### Jan 26, 2018
 
 * Custom domain validation is now accomplished by creating a CNAME record with your DNS provider rather than clicking a link in an email sent to the domain addresses. This eliminates a major source of friction when registering custom domains with Aerobatic.
