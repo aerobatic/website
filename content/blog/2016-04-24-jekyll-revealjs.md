@@ -10,6 +10,7 @@ tags: jekyll, static site generator, revealjs
 [Reveal.js](http://lab.hakim.se/reveal-js/#/) is an open-source HTML presentation framework. In this tutorial, we'll combine [Jekyll](http://jekyllrb.com/) and reveal.js to create our presentation. While this has been done before using various approaches, in this scenario, we'll take advantage of [Jekyll collections](https://jekyllrb.com/docs/collections/) to build our slides.
 
 ## Getting Started
+
 If you don't already have a Jekyll site, go ahead and grab one of the [Jekyll themes](http://jekyllthemes.org/) and [host it with Aerobatic](https://www.aerobatic.com/docs/automated-builds#jekyll).
 
 Next, download the [latest version](https://github.com/hakimel/reveal.js/releases) of reveal.js and add it to the root of your Jekyll site e.g. `<root directory>/reveal.js/`
@@ -18,7 +19,7 @@ Next, download the [latest version](https://github.com/hakimel/reveal.js/release
 
 In the `_layouts` directory, create a new file called `slides.html`. The content of this new file will be as below (note: we're [reusing a layout](https://gist.github.com/luugiathuy/c07ac5608addadb642e5) previously created by [Luu Gia Thuy](https://github.com/luugiathuy)):
 
-~~~html
+```html
 {% raw %}
 <!doctype html>
 <html lang="en">
@@ -42,6 +43,7 @@ In the `_layouts` directory, create a new file called `slides.html`. The content
       <meta name="description" content="{{ site.description }}">
     {% endif %}
 
+    <meta property="og:image" content="/opengraph-image.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -113,23 +115,23 @@ In the `_layouts` directory, create a new file called `slides.html`. The content
   </body>
 </html>
 {% endraw %}
-~~~
+```
 
 ## Slides Collection
 
 Next, we'll declare a slides collection in our `_config.yml`:
 
-~~~yaml
+```yaml
 # Collections
 collections:
   - slides
-~~~
+```
 
 ## Slides
 
 In the root directory of your Jekyll site, create a new directory called `_slides`. This will be where we create our reveal.js slides. For example, create a new file called `1.md` and repeat for each slide you want to have:
 
-~~~yaml
+```yaml
 ---
 title: First Slide
 ---
@@ -137,13 +139,13 @@ title: First Slide
 ## First slide heading
 
 ![Aerobatic logo](https://www.aerobatic.com/media/aerobatic-header-logo.png)
-~~~
+```
 
 ## Index.html
 
 Lastly, we need to render our slides using the collection we've created. To do so, replace the contents of the `index.html` file in your root directory with the following:
 
-~~~yaml
+```yaml
 ---
 layout: slides
 title: Jekyll and reveal.js
@@ -159,7 +161,7 @@ transition: slide
 </section>
 {% endfor %}
 {% endraw %}
-~~~
+```
 
 And that's a wrap. Commit your changes and Aerobatic will rebuild your site automatically!
 
