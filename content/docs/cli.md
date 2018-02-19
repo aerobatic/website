@@ -11,15 +11,13 @@ The `aerobatic-cli` is a way to interact with the Aerobatic platform via the com
 
 The CLI is installed via npm:
 
-```sh
-[$] npm install aerobatic-cli --global
-```
+{{<cli "npm install aerobatic-cli --global">}}
 
 ### Usage
 
 Once installed, the command `aero` should be globally available on your system. Running `aero help` will display a list of all the available commands:
 
-```sh
+```terminal
 Usage:
     $ aero [command] [options]
 
@@ -65,9 +63,7 @@ The CLI will honor the `HTTPS_PROXY` environment variable when making outbound n
 
 Display a summary of the current Aerobatic account including the list of websites.
 
-```bash
-[$] aero account
-```
+{{<cli "aero account">}}
 
 #### apikey
 
@@ -80,10 +76,8 @@ Reset the account api key to a new value.
 
 **Examples**
 
-```bash
-[$] aero account
-[$] aero account --reset
-```
+{{<cli "aero account">}}
+{{<cli "aero account --reset">}}
 
 #### create
 
@@ -103,21 +97,17 @@ URL to a `.zip` or `.tar.gz` archive to create the new website from. This will a
 
 **Examples**
 
-```bash
-[$] aero create       # Creates website at the current directory
-[$] aero create -n website-name
-[$] aero create --quick-start hugo/agency
-[$] aero create --source https://html5up.net/editorial/download --name html5up-demo
-[$] aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip
-```
+{{<cli "aero create" "# Creates website at the current directory">}}
+{{<cli "aero create -n website-name">}}
+{{<cli "aero create --quick-start hugo/agency">}}
+{{<cli "aero create --source https://html5up.net/editorial/download --name html5up-demo">}}
+{{<cli "aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip">}}
 
 #### delete
 
 Delete the website at the current directory. This will take down the website resulting in a 404 page. If the site is subscribed to the Pro plan, recurring payments will stop. You will be prompted to confirm the name of the website.
 
-```bash
-[$] aero delete
-```
+{{<cli "aero delete">}}
 
 #### deploy
 
@@ -142,12 +132,10 @@ A short message that you want to attach to the deployment metadata. If being [in
 
 **Examples**
 
-```bash
-[$] aero deploy
-[$] aero deploy --directory _site
-[$] aero deploy --stage test
-[$] aero deploy --message "Commit message" --commit-url https://github.com/owner/repo/commit/2495349f
-```
+{{<cli "aero deploy">}}
+{{<cli "aero deploy --directory \_site">}}
+{{<cli "aero deploy --stage test">}}
+{{<cli "aero deploy --message 'Commit message' --commit-url https://github.com/owner/repo/commit/2495349f">}}
 
 #### domain
 
@@ -164,21 +152,17 @@ The subdomain you want your website to be accessible at. For apex domain enter t
 
 You can also run the command without any arguments to get status information on the domain.
 
-```bash
-[$] aero domain --name mydomain.com --subdomain www
-[$] aero domain --name mydomain.com --subdomain @
-[$] aero domain
-```
+{{<cli "aero domain --name mydomain.com --subdomain www">}}
+{{<cli "aero domain --name mydomain.com --subdomain @">}}
+{{<cli "aero domain">}}
 
 #### env
 
 Set or display environment variables for the website. By default variables are set for all deploy stages, but you can also override a value for a specific stage. You might want to do this with the [password-protect](/docs/plugins/password-protect/) to configure a different password for different stages. Or for the `url` property of the [http-proxy](/docs/plugins/http-proxy/) if you are proxying to a different API endpoint for test and production. Calling the command with no options will display all your variables.
 
-```bash
-[$] aero env -n SITE_PASSWORD -v bigsecret
-[$] aero env -n WIDGET_API_URL -v https://widgets-test/ --stage test
-[$] aero env
-```
+{{<cli "aero env -n SITE_PASSWORD -v bigsecret">}}
+{{<cli "aero env -n WIDGET_API_URL -v https://widgets-test/ --stage test">}}
+{{<cli "aero env">}}
 
 Read more about [configuration with environment variables](/docs/configuration/#environment-variables).
 
@@ -186,17 +170,13 @@ Read more about [configuration with environment variables](/docs/configuration/#
 
 Display summary information about the current website.
 
-```bash
-[$] aero info
-```
+{{<cli "aero info">}}
 
 #### login
 
 Login to your Aerobatic account. You'll be prompted to enter your email and password. If your credentials are correct, a file is written at `~/.aerorc.yml` with an auth token that is passed in subsequent commands. The token is valid for 24 hours after which you'll be prompted to login again.
 
-```bash
-[$] aero login
-```
+{{<cli "aero login">}}
 
 #### logs
 
@@ -229,10 +209,8 @@ You can also call with the `--format json` option to see the entire JSON log ent
 }
 ```
 
-```bash
-[$] aero logs
-[$] aero logs --format json
-```
+{{<cli "aero logs">}}
+{{<cli "aero log --format json">}}
 
 #### rename
 
@@ -243,17 +221,13 @@ Rename the current website. For custom domains this this only changes the name d
 The new name of the website
 {{% /option %}}
 
-```bash
-[$] aero rename -n "new-website-name"
-```
+{{<cli "aero rename -n new-website-name">}}
 
 #### switch
 
 Switch to a different Aerobatic account. Displays a list of all the accounts you are associated with and let's you choose which one subsequent commands should be run in the context of.
 
-```bash
-[$] aero switch
-```
+{{<cli "aero switch">}}
 
 #### versions
 
@@ -272,10 +246,8 @@ Delete the version identified by the `--name` option.
 If specified in conjunction with the `--name` option, indicates the stage to push the version to. If used in conjunction with the `--delete` option, then this specifies the stage to delete.
 {{% /option %}}
 
-```bash
-[$] aero versions                                 # Display a list of all versions
-[$] aero versions -D --name v21                   # Delete version v21
-[$] aero versions --name v2 --stage production    # Deploy version v2 to production stage
-[$] aero versions -n v3 -s test                   # Deploy version v3 to test stage
-[$] aero versions --delete --stage test           # Delete the test deploy stage
-```
+{{<cli "aero versions" "Display a list of all versions">}}
+{{<cli "aero versions -D --name v21" "Delete version v21">}}
+{{<cli "aero versions --name v2 --stage production" "Deploy version v2 to production stage">}}
+{{<cli "aero versions -n v3 -s test" "Deploy version v3 to test stage">}}
+{{<cli "aero versions --delete --stage test" "Delete the test deploy stage">}}

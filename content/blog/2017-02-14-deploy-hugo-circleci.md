@@ -11,20 +11,16 @@ With the recent introduction of our new CLI, you can now host your Hugo sites on
 
 ## Step 1: Create a new Hugo site
 
-~~~bash
-[$] hugo new site aerohugo && cd $_
-[$] git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
-[$] hugo new post/good-to-great.md
-[$] hugo serve --theme=hugo-zen --buildDrafts
-~~~
+{{< cli "hugo new site aerohugo && cd $\_" >}}
+{{< cli "git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen" >}}
+{{< cli "hugo new post/good-to-great.md" >}}
+{{< cli "hugo serve --theme=hugo-zen --buildDrafts" >}}
 
 At this point, we could now simply create and deploy the site to Aerobatic like so;
 
-~~~bash
-[$] hugo
-[$] aero create
-[$] aero deploy -d public
-~~~
+{{< cli "hugo" >}}
+{{< cli "aero create" >}}
+{{< cli "aero deploy -d public" >}}
 
 However, in this case, what we'd instead like to do is host our site on GitHub and, using CircleCI, auto-build and deploy our site to Aerobatic with each commit to GitHub. That way, we set things up once, and from then on, we only need to author markdown and make our commits. We can even author new blog posts directly in the GitHub UI.
 
@@ -34,20 +30,20 @@ So, we'll still use `aero create` to create the site in Aerobatic, but we'll pau
 
 Go ahead and create a new repository in GitHub at [https://github.com/new](https://github.com/new). Once the repository is created, then push your code to GitHub:
 
-~~~bash
+```bash
 # initialize new git repository
-[$] git init
+git init
 
 # set up our .gitignore and README files
-[$] echo -e "/public \n/themes \naero-deploy.tar.gz" >> .gitignore
-[$] echo "# aerohugo" >> README.md
+echo -e "/public \n/themes \naero-deploy.tar.gz" >> .gitignore
+echo "# aerohugo" >> README.md
 
 # commit and push code to master branch
-[$] git add --all
-[$] git commit -m "first commit"
-[$] git remote add origin https://github.com/Dundonian/aerohugo.git
-[$] git push -u origin master
-~~~
+git add --all
+git commit -m "first commit"
+git remote add origin https://github.com/Dundonian/aerohugo.git
+git push -u origin master
+```
 
 ## Step 3: Set Up CircleCI
 
@@ -61,8 +57,7 @@ Once you've done that, you'll then also need to add the `AEROBATIC_API_KEY` to C
 
 In the root of your repository, you should create a `circle.yml` file to deploy your Hugo site to Aerobatic.
 
-
-~~~yaml
+```yaml
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
@@ -76,17 +71,17 @@ deployment:
       - git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
       - hugo --theme=hugo-zen --baseURL https://!!baseurl!! --buildDrafts
       - aero deploy -d public
-~~~
+```
 
 Once you push this new file to GitHub, your site will be automatically built and deployed by CircleCI:
 
-~~~bash
+```bash
 # commit and push code to master branch
-[$] git add --all
-[$] git commit -m "added circle.yml"
-[$] git remote add origin https://github.com/Dundonian/aerohugo.git
-[$] git push -u origin master
-~~~
+git add --all
+git commit -m "added circle.yml"
+git remote add origin https://github.com/Dundonian/aerohugo.git
+git push -u origin master
+```
 
 <img class="screenshot" src="/img/aero-deploy.png" alt="Aerobatic Deploy">
 
@@ -97,4 +92,3 @@ At this point, with your build process set up, you can now author new blog posts
 <img class="screenshot" src="/img/author-gh.png" alt="Author in GitHub">
 
 And that's it. Happy Coding! p.s. The code for this tutorial can be found at [https://github.com/Dundonian/aerohugo](https://github.com/Dundonian/aerohugo)
-

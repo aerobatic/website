@@ -4,6 +4,7 @@ name: overview
 ---
 
 # Overview
+
 Aerobatic is a specialized platform for efficient delivery of static webpages and website assets. We take care of the configuration details for you that provide the best balance of performance and maintainability. Stop fiddling with CDNs and web server configs and focus on coding great front-end experiences.
 
 ## Performance {#performance}
@@ -36,17 +37,17 @@ This flow provides some key advantages:
 
 Aerobatic makes it super easy to deploy to different "stages". A stage is simply an instance of the site available at a dedicated URL. This is a great way to manage testing and previews of new versions. By default the `aero deploy` command deploys to the "production" stage which is your main URL. However you can specify the `-s` or `--stage` argument to deploy to a different stage. For example:
 
-~~~sh
+```sh
 [$] aero deploy --stage test
-~~~
+```
 
 This will make the deployed site available at unique URL. The form of the URL depends on whether there is a custom domain and if the production site is using a CNAME or the apex.
 
-| URL style   | Production url | "test" stage URL |
-| ------------- | --------- | ------------- |
-| Shared domain | `https://site-name.aerobaticapp.com` | `https://site-name--test.aerobaticapp.com` |
-| Custom domain CNAME | `https://www.customdomain.com` | `https://www--test.customdomain.com`|
-| Custom domain apex | `https://customdomain.com` | `https://test.customdomain.com` |
+| URL style           | Production url                       | "test" stage URL                           |
+| ------------------- | ------------------------------------ | ------------------------------------------ |
+| Shared domain       | `https://site-name.aerobaticapp.com` | `https://site-name--test.aerobaticapp.com` |
+| Custom domain CNAME | `https://www.customdomain.com`       | `https://www--test.customdomain.com`       |
+| Custom domain apex  | `https://customdomain.com`           | `https://test.customdomain.com`            |
 
 In the table above the stage name "test" could be anything you like, "preview", "develop", "etc".
 
@@ -60,21 +61,22 @@ If you are going to be using many stages we recommend the wildcard approach sinc
 {{% /alert %}}
 
 #### Password protection
+
 You may wish to lock down these non-production instances of your site so only authorized visitors can access. This is easy to do with the [password-protect plugin](/docs/plugins/password-protect/). The declaration below in your `aerobatic.yml` file will enforce password protection, but only in the `test` stage:
 
-{{< highlight yaml >}}
+```yaml
 plugins:
   - name: password-protect
     stages: [test]
     options:
       password: $SITE_PASSWORD
-{{< /highlight >}}
+```
 
 #### Continuous deployment
 
 Deploy stages are particularly powerful in conjunction with a CI service. Your build script can automatically deploy git branches to correspondingly named stage. Here's how that could be accomplished with [Travis CI](https://travis-ci.com) in the `.travis.yml` file:
 
-~~~console
+```console
 # Your site's normal build steps here
 npm install aerobatic-cli -g
 
@@ -83,7 +85,7 @@ aero deploy --stage $TRAVIS_BRANCH
 
 # Or even use pull requests!
 aero deploy --stage pr-$TRAVIS-PULL-REQUEST
-~~~
+```
 
 {{% alert warning %}}
 **TIP**: any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
@@ -95,7 +97,7 @@ This technique works with any CI service that provides similar environment varia
 
 You can configure email or Slack alerts when each deployment completes using a block of YAML in your `aerobatic.yml` file:
 
-~~~yaml
+```yaml
 deploy:
   alerts:
     default:
@@ -104,8 +106,7 @@ deploy:
       slack:
         username: 'Website Update'
         webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
----
-~~~
+```
 
 See the [deploy configuration docs](/docs/configuration/#deploy-alerts) for full details.
 
@@ -119,4 +120,4 @@ The site scanner crawls and examines the content of your website after each depl
 
 ### Device preview
 
-You can tack on a `__preview={laptop|desktop|phone|tablet}` to any Aerobatic website URL to load it in a special viewer that allows simulating the site looks on different device types. The value of the `__preview` querystring parameter determines the default selected device. For example here is the URL to preview aerobatic.com on a phone: [https://www.aerobatic.com/?__preview=phone](https://www.aerobatic.com/?__preview=phone). This is a handy way to share a URL with stakeholders so they can get a sense for how the site looks on different devices without having to actually load it on a phone, a tablet, etc.
+You can tack on a `__preview={laptop|desktop|phone|tablet}` to any Aerobatic website URL to load it in a special viewer that allows simulating the site looks on different device types. The value of the `__preview` querystring parameter determines the default selected device. For example here is the URL to preview aerobatic.com on a phone: [https://www.aerobatic.com/?\_\_preview=phone](https://www.aerobatic.com/?__preview=phone). This is a handy way to share a URL with stakeholders so they can get a sense for how the site looks on different devices without having to actually load it on a phone, a tablet, etc.

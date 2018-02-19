@@ -11,9 +11,7 @@ To have your website live and served from our global Content Delivery Network (C
 
 #### 1. Install the aerobatic-cli from npm:
 
-~~~bash
-[$] npm install aerobatic-cli -g
-~~~
+{{< cli "npm install aerobatic-cli -g" >}}
 
 If you don't already have Node.js installed, you can get it [download it from here](https://nodejs.org/en/).
 
@@ -23,13 +21,11 @@ Register at [https://dashboard.aerobatic.com/register](https://dashboard.aerobat
 
 #### 3. Deploy your first website:
 
-~~~sh
-[$] mkdir aerobatic-test-website
-[$] cd aerobatic-test-website
-[$] echo "<html>First Aerobatic Website</html>" > index.html
-[$] aero create -n your-site-name
-[$] aero deploy
-~~~
+{{< cli "mkdir aerobatic-test-website" >}}
+{{< cli "cd aerobatic-test-website" >}}
+{{< cli "echo '<html>First Aerobatic Website</html>' > index.html" >}}
+{{< cli "aero create -n your-site-name" >}}
+{{< cli "aero deploy" >}}
 
 In less than 30 seconds your website will be deployed to an https URL on our global CDN.
 
@@ -37,17 +33,9 @@ In less than 30 seconds your website will be deployed to an https URL on our glo
 
 You can also create a new site using a packaged theme for Jekyll, Hugo, or plain HTML5 sites. Below are some examples you can try or browse the [Aerobatic theme gallery](/themes/) for something that catches your eye.
 
-~~~sh
-[$] aero create --theme jekyll/agency
-~~~
-
-~~~sh
-[$] aero create --theme hugo/creative-portfolio
-~~~
-
-~~~sh
-[$] aero create --theme html5/sb-business-casual
-~~~
+{{< cli "aero create --theme jekyll/agency" >}}
+{{< cli "aero create --theme hugo/creative-portfolio" >}}
+{{< cli "aero create --theme html5/sb-business-casual" >}}
 
 ### Next Steps
 

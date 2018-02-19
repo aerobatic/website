@@ -9,7 +9,6 @@ tags: jekyll, static site generator, travis, cd
 
 With the new Aerobatic CLI, it's now possible to host any static site using any CI tool, and the repo need not be hosted with Bitbucket. In this example, we'll set up continuous deployment of a [Jekyll](https://jekyllrb.com/) site whose repository is hosted on GitHub, using [Travis CI](https://travis-ci.org/).
 
-
 ## Step 1: Pick a Jekyll theme and fork it
 
 From the [Jekyll Themes](http://jekyllthemes.org/) site, pick a theme and fork it in GitHub.
@@ -32,7 +31,7 @@ In the root of your repository, create a new file called `travis.yml`.
 cd my-jekyll-site
 ```
 
-~~~yaml
+```yaml
 language: ruby
 env:
   global:
@@ -50,8 +49,7 @@ script:
 
 after_success:
 - aero deploy -d _site
----
-~~~
+```
 
 ## Step 4: Create aerobatic.yml
 
@@ -85,6 +83,5 @@ git push origin master
 ```
 
 As a reminder, if you run `aero info`, you'll get your production URL. You can also rename the site if you so wish with the `aero rename` command.
-
 
 <img class="screenshot" src="/img/travis-build.png" alt="Travis build">

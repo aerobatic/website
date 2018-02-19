@@ -14,21 +14,19 @@ Requests to the health check path will not get written to your [web logs](/docs/
 
 ### Usage
 
-~~~yaml
+```yaml
 plugins:
   - name: health-check
     path: /health
----
-~~~
+```
 
 You still need to create a `.html` file corresponding to the `path`, in this case `health.html`. Some monitoring services allow you to specify a pattern of text to look for to prove the page is being served correctly so this html page gives you the opportunity to control whatever that text is.
-
 
 ### Hiding from search engines
 
 You probably don't want your health check page to be indexed by search engines. To prevent it from being discovered, add the following to your `robots.txt` (adjusted for your specific configuration):
 
-~~~text
+```text
 User-agent: *
 Disallow: /health
-~~~
+```

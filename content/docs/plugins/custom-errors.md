@@ -10,7 +10,7 @@ By default Aerobatic will render a friendly error page for HTTP error responses 
 
 ### Usage
 
-~~~yaml
+```yaml
 plugins:
   - name: custom-errors
     options:
@@ -18,10 +18,9 @@ plugins:
         500: errors/500.html
         404: errors/404.html
         401: errors/401.html
----
-~~~
+```
 
 #### Sample Custom Errors App
 
-- Here is a basic example web site that uses the Aerobatic `custom-errors` plugin. [http://custom-errors.aerobaticapp.com/](http://custom-errors.aerobaticapp.com/)
-- The code for this sample app can be found on Bitbucket at [https://bitbucket.org/aerobatic/custom-errors/src](http://custom-errors.aerobaticapp.com/)
+* Here is a basic example web site that uses the Aerobatic `custom-errors` plugin. [http://custom-errors.aerobaticapp.com/](http://custom-errors.aerobaticapp.com/)
+* The code for this sample app can be found on Bitbucket at [https://bitbucket.org/aerobatic/custom-errors/src](http://custom-errors.aerobaticapp.com/)

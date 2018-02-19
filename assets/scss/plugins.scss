@@ -7,6 +7,7 @@ section.plugins {
 
   a.plugin {
     display: block;
+    position: relative;
     background-color: $lightGray;
     padding: 15px;
     height: 150px;
@@ -19,6 +20,13 @@ section.plugins {
 
     > span {
       color: $darkGray;
+    }
+
+    > img.partner-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      height: 30px;
     }
   }
 

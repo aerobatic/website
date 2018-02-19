@@ -9,7 +9,7 @@ slug: jekyll-bitbucket-pipelines
 
 Hosting a Jekyll site with Aerobatic can be as easy as typing in a couple of commands using the Aerobatic CLI:
 
-~~~bash
+```bash
 [$] jekyll new my-jekyll-site
 [$] cd my-jekyll-site
 [$] aero create -n my-jekyll-site                            # create the Aerobatic site
@@ -19,7 +19,7 @@ Hosting a Jekyll site with Aerobatic can be as easy as typing in a couple of com
 
 Version v1 deployment complete.
 View now at https://my-jekyll-site.aerobaticapp.com
-~~~
+```
 
 In the example above, we compiled our site locally and deployed the `/_site` directory to Aerobatic. However, using [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines), we can set things up such the site is automatically built and deployed with each push to a Bitbucket repository.
 
@@ -27,8 +27,7 @@ In the example above, we compiled our site locally and deployed the `/_site` dir
 
 First, [create a repository](https://confluence.atlassian.com/bitbucket/create-a-git-repository-759857290.html) in Bitbucket, and then push your jekyll site to the newly created repository:
 
-
-~~~bash
+```bash
 # initialize new git repository
 [$] git init
 
@@ -40,7 +39,7 @@ First, [create a repository](https://confluence.atlassian.com/bitbucket/create-a
 [$] git commit -m "Initial commit"
 [$] git remote add origin git@bitbucket.org:YourUsername/jekyll-pipelines.git
 [$] git push -u origin master
-~~~
+```
 
 ## Step 2: Configure Bitbucket Pipelines
 
@@ -51,7 +50,7 @@ In your website's Bitbucket repo:
 3. On the next screen, leave the default template and click Next.
 4. In the editor, paste in the YAML contents below and click Commit.
 
-~~~yaml
+```yaml
 image: aerobatic/jekyll
 pipelines:
   branches:
@@ -62,8 +61,7 @@ pipelines:
             - 'echo "url: https://__baseurl__" >> _config.yml'
             - bundle exec jekyll build
             - aero deploy --directory _site
----
-~~~
+```
 
 To make the build as steps as streamlined as possible, there's a ready-made docker image [aerobatic/jekyll](https://hub.docker.com/r/aerobatic/jekyll/) that already has Ruby, Bundler, Jekyll, [aerobatic-cli](/docs/cli/), and other supporting software for building native plugin gems all ready to go.
 
@@ -73,7 +71,7 @@ The `https://!!baseurl!!` is a special value that Aerobatic will substitute on t
 
 It's recommended that you include a Gemfile that includes the specific version of Jekyll you want to build your site with, along with any plugin gems. Here's the Gemfile that the `jekyll new` command generates:
 
-~~~ruby
+```ruby
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
@@ -97,7 +95,7 @@ group :jekyll_plugins do
    gem 'jekyll-paginate', '1.1.0'
    gem 'jekyll-sitemap', '1.0.0'
 end
-~~~
+```
 
 It's also a good idea to run `bundle install` to generate a `Gemfile.lock` that should be committed to source control.
 
@@ -107,9 +105,9 @@ The code for this example can be found in this Bitbucket [repository](https://bi
 
 This step only needs to be done once per account. If you haven't already done this in Bitbucket, from the command line:
 
-~~~bash
+```bash
 [$] aero apikey
-~~~
+```
 
 1. Navigate to the Bitbucket account settings for the account that the website repo belongs to.
 2. Scroll down to the bottom of the left nav and click the Environment variables link in the PIPELINES section.
@@ -123,7 +121,7 @@ Now that we've got Bitbucket Pipelines set up, we're now ready to test that ever
 
 Aerobatic [deploy stages](/docs/overview/#deploy-stages) makes it trivially easy to deploy your site to a test URL by passing the `--stage` option to the `deploy` CLI command. This plays nicely with Pipelines mechanism for running different build steps per branch.
 
-~~~yaml
+```yaml
 image: aerobatic/jekyll
 pipelines:
   branches:
@@ -141,12 +139,12 @@ pipelines:
             - 'echo "url: https://__baseurl__" >> _config.yml'
             - bundle exec jekyll build
             - aero deploy --directory _site --stage staging
----
-~~~
+```
 
 With this configuration, any push to the `master` branch will deploy to `https://jekyll-pipelines.aerobaticapp.com` and pushes to the `develop` branch will deploy to `https://jekyll-pipelines--staging.aerobaticapp.com`. This of course works with custom domains as well.
 
 ## Additional reading
+
 * The code for this example can be found in this Bitbucket [repository](https://bitbucket.org/aerobatic/jekyll-pipelines).
 * Learn how to use [declare plugins](/docs/plugins/) in your `aerobatic.yml` to extend the capabilities of your static Jekyll site.
 * [How to Password Protect a Jekyll site](/blog/password-protect-a-jekyll-site/)
@@ -155,6 +153,6 @@ With this configuration, any push to the `master` branch will deploy to `https:/
 
 Jekyll seems to be very particular when running in the Docker container about the format of the `_config.yml` and `Gemfile`. If you get the error below, look at the files in the [sample repo](https://bitbucket.org/aerobatic/jekyll-pipelines) for guidance. Some users have reported they needed a line break at the end of the `_config.yml`.
 
-~~~text
+```text
 jekyll 3.4.2 | Error:  (/opt/atlassian/pipelines/agent/build/_config.yml): mapping values are not allowed in this context
-~~~
+```

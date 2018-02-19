@@ -16,6 +16,7 @@ Aerobatic now offers two pre-built CD images: [aerobatic/hugo](https://hub.docke
 Both images are based on the ultra-lightweight [Alpine Docker Image](http://gliderlabs.viewdocs.io/docker-alpine/). Smaller images lead to faster build container initialization. This, combined with less software to install with each build, means reduced time between pushing to your repo and fresh changes live on Aerobatic.
 
 ### aerobatic/hugo
+
 Weighs in at only 66MB and includes the following:
 
 * python / pip (2.7.13)
@@ -28,7 +29,7 @@ Available on Dockerhub at https://hub.docker.com/r/aerobatic/hugo/
 
 **bitbucket-pipelines.yml usage**
 
-~~~yaml
+```yaml
 image: aerobatic/hugo
 pipelines:
   branches:
@@ -39,10 +40,10 @@ pipelines:
             - (cd themes; git clone https://github.com/alexurquhart/hugo-geo.git)
             - hugo --theme=hugo-geo --baseURL "https://!!baseurl!!"
             - aero deploy --directory public
----
-~~~
+```
 
 ### aerobatic/jekyll
+
 Weighs 118MB and includes the following:
 
 * ruby (v2.3.3)
@@ -55,7 +56,7 @@ Available on Dockerhub at https://hub.docker.com/r/aerobatic/hugo/
 
 **bitbucket-pipelines.yml usage**
 
-~~~yaml
+```yaml
 image: aerobatic/jekyll
 pipelines:
   branches:
@@ -66,5 +67,4 @@ pipelines:
             - 'echo "url: https://!!baseurl!!" >> _config.yml'
             - bundle exec jekyll build
             - aero deploy --directory _site
----
-~~~
+```

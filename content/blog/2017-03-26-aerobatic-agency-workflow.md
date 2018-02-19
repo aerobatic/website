@@ -44,34 +44,37 @@ There are two supported payer models:
 * **Client payer** - the Aerobatic subscription fees are paid directly by the client.
 
 #### Transferring site to client
+
 If the client payer model is more appealing, the agency should transfer the website over to the client:
 
 * Have the client signup for their own Aerobatic account at https://dashboard.aerobatic.com/register.
 * Enter the client's email address in the transfer form found in the website settings section of the dashboard. They will be sent a link to complete the process. The Aerobatic users from the agency team where the website originated will automatically be granted access to the client's Aerobatic team so they can continue to contribute to the site.
 
 #### Upgrade to Pro Plan
+
 Whomever is the owner of the site now will need to upgrade it to the Pro Plan using the simple and secure checkout screen.
 
 #### Register custom domain
+
 Now that the website has been upgraded, a custom domain can be registered using the command: `aero domain --name client-domain.com`. Once the domain has been provisioned, an email will be sent with the proper DNS settings. Depending on the level of technical expertise of the client, developers from the agency may need to assist in getting the DNS settings in place. All custom domains registered with Aerobatic automatically come with a wildcard SSL certificate and all site traffic is forced over https. See the [custom domains and SSL docs](/docs/custom-domains-ssl) for full details.
 
 #### Launch the site
+
 After DNS is setup, you verify it resolves correctly by browsing to the custom domain. Now update the `aerobatic.yml` so the `password-protect` plugin is only enabled for the `preview` stage:
 
-~~~YAML
+```yaml
 plugins:
   - name: password-protect
     stages: [preview]
     options:
       password: $SITE_PASSWORD
----
-~~~
+```
 
 Now do one more deployment:
 
-~~~sh
+```sh
 [$] aero deploy --message "Turn off password-protect"
-~~~
+```
 
 **Congratulations, you are live in production!**
 
@@ -91,6 +94,7 @@ Let's walk through each step:
 6. Keep repeating steps 1-5.
 
 ## Push requests
+
 A push request is just a request by the agency to promote (or "push") a version deployed in the `preview` stage up to production. The idea is that the client is the one that determines when and what is deployed to the production site.
 
 {{% alert tip %}}
@@ -99,11 +103,12 @@ It's worth noting that approving a PR doesn't actually physically deploy anythin
 
 A push request can be made either via the CLI or in the dashboard. From the CLI, just run the `pr` command specifying the stage to push from and the email address to send the request to:
 
-~~~sh
+```sh
 [$] aero pr --stage preview --email sally@client.co --message "Added new legal page"
-~~~
+```
 
 ### Source control and continuous deployment
+
 The AeroAgency workflow can be used independently of any particular source control system, however we do have some suggested best-practices:
 
 * First off, please DO keep your code in source-control.
@@ -111,4 +116,5 @@ The AeroAgency workflow can be used independently of any particular source contr
 * Code being deployed to the preview stage should be located in a branch other than **master**. You might even call the branch **preview** for consistency. Then merge from **preview** to **master** as push requests are approved by the client.
 
 ### CMS Integration
+
 TODO: Talk about integration with CMS tools such as Contentful, Forestry.io, DatoCMS

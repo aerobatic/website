@@ -29,7 +29,6 @@ plugins:
           recipients: [your-email@email.com]
         - name: webhook
           url: $ZAP_GSHEET_WEBHOOK_URL
----
 ```
 
 Your code just has to declare a standard HTML form with a `target` attribute that matches the `path` in the plugin declaration (also be sure to set `method` to "post"). The form submission is stored as a JSON object where the keys are the values of the `name` attributes on the input elements.
@@ -170,7 +169,6 @@ targets:
   - name: email
     subject: Demo contact-form submission
     recipients: [your-email@email.com]
----
 ```
 
 Because you control the subject, you can take advantage of advanced filtering and rule capabilities in your email client. Did you know you can create a rule in Gmail to forward all messages that match a filter criteria to a phone via SMS? Turns out [you can](https://www.howtogeek.com/210956/how-to-configure-automatic-text-message-alerts-for-important-emails/).
@@ -183,7 +181,6 @@ For even more flexibility we offer the `webhook` target. This will POST the form
 targets:
   - name: webhook
     url: $ZAP_GSHEET_WEBHOOK_URL
----
 ```
 
 If the service you want to send form submissions to doesn't provide a webhook endpoint, check out [Zapier](https://zapier.com). It's a SaaS integrator that can expose a webhook endpoint as a bridge to tons of other services including:

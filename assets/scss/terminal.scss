@@ -1,4 +1,20 @@
+.cli {
+  background-color: #2a2a2a;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+  color: #ffffff;
 
+  span.prompt {
+    color: #77b6ec;
+  }
+
+  span.comment {
+    margin-left: 20px;
+    color: #bebec5;
+  }
+}
 
 .terminal-section {
   @media screen and (max-width: 800px) {
@@ -16,7 +32,7 @@
   border-top: solid 40px $lightGray;
   border-radius: 4px 4px 0 0;
   position: relative;
-  background-color: #272E39;
+  background-color: #272e39;
   color: $white;
   font-family: $fontMono;
   padding: 15px;
@@ -55,9 +71,9 @@
   }
 
   .spinner:after {
-  	content:"_";
+    content: "_";
     color: #fff;
-  	animation: terminalSpinner .4s infinite;
+    animation: terminalSpinner 0.4s infinite;
   }
 
   .learn-more {
@@ -77,9 +93,9 @@
   left: 12px;
   width: 16px;
   height: 16px;
-  background-color: #FF6159;
+  background-color: #ff6159;
   border-radius: 16px;
-  box-shadow: 0 0 0 0 #FF6159, 22px 0 0 0 #FFBD2E, 44px 0 0 0 #28CA42;
+  box-shadow: 0 0 0 0 #ff6159, 22px 0 0 0 #ffbd2e, 44px 0 0 0 #28ca42;
   content: "";
 }
 
@@ -109,7 +125,7 @@
         transition: background-color 150ms ease;
 
         &:hover {
-          background-color: $offWhite
+          background-color: $offWhite;
         }
 
         & > i.fa {
@@ -143,25 +159,31 @@
 }
 
 @keyframes cursorBlink {
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes terminalSpinner {
-	0% {
-    content: "-"
-	}
-	25% {
-		content: "\\";
-	}
-	50% {
-		content: "|";
-	}
-	75% {
-		content: "/";
-	}
-	100% {
-		content: "-";
+  0% {
+    content: "-";
+  }
+  25% {
+    content: "\\";
+  }
+  50% {
+    content: "|";
+  }
+  75% {
+    content: "/";
+  }
+  100% {
+    content: "-";
   }
 }

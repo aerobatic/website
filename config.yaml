@@ -1,9 +1,9 @@
 baseurl: http://replace-this-with-your-hugo-site.com/
 languageCode: en-us
 title: Aerobatic
-PygmentsCodeFences: true
-pygmentsuseclasses: true
+pygmentsCodeFences: true
 pygmentsstripall: true
+pygmentsStyle: friendly
 
 permalinks:
   blog: /blog/:slug/

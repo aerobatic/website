@@ -26,7 +26,8 @@ We offer two flavors of basic auth: standard and custom. In standard mode the we
 </div>
 
 ### Configuration
-~~~yaml
+
+```yaml
 plugins:
   - name: basic-auth
     path: /protected
@@ -41,14 +42,13 @@ plugins:
     options:
       errors:
         403: 403.html  # Display this error page if credentials incorrect
----
-~~~
+```
 
 ### Multiple credentials configuration
 
 Rather than the `username` and `password` options, you can also specify a `credentials` array to support multiple pairs of valid credentials.
 
-~~~yaml
+```yaml
 plugins:
   - name: basic-auth
     path: /protected
@@ -59,8 +59,7 @@ plugins:
       - username: user2
         password: $BASIC_AUTH_PASSWORD2
       loginPage: login.html
----
-~~~
+```
 
 #### Options
 
@@ -89,11 +88,12 @@ File path to the custom login form page. If not specified the built-in browser l
 {{% /option %}}
 
 ### Specifying what to protect
+
 In the sample configuration above, the `path` for the plugin is set to only require authentication for requests to `/protected` including anything nested beneath. You can also choose to lock down the entire website by specifying `/` for `path` or omitting it all together.
 
 It's also possible to configure multiple instances of the plugin mounted at different paths. For example you might have a dedicated section of your website for each client, each with their own unique login credentials. Here's how you could go about setting that up:
 
-~~~yaml
+```yaml
 plugins:
   - name: basic-auth
     path: /client1
@@ -106,40 +106,37 @@ plugins:
     options:
       username: $CLIENT2_USERNAME
       password: $CLIENT2_PASSWORD
----
-~~~
+```
 
 ### Environment specific login
 
 You may want to require a login only for specific [deploy stages](/docs/overview#deploy-stages). In this case you can include the optional `stages` property:
 
-~~~yaml
+```yaml
 plugins:
   - name: basic-auth
     stages: [test, preview]
     options:
       username: username
       password: $BASIC_AUTH_PASSWORD
----
-~~~
+```
 
 ### Custom HTML login form {#custom-auth}
 
 While the built-in browser login dialog accomplishes the goal of requiring a username and password, it doesn't look very good and offers no ability to brand or provide additional copy. For this reason we offer custom basic auth, that allows you to code a `login.html` page from scratch that gives you full control over the login experience. Simply add your login page to your repo and specify the path in the `loginPage` option of the `basic-auth` plugin.
 
-~~~yaml
+```yaml
 plugins:
   - name: basic-auth
     options:
       username: username
       password: $BASIC_AUTH_PASSWORD
       loginPage: login.html
----
-~~~
+```
 
 The form markup needs to be decorated with the `data-basic-auth-form`, `data-basic-auth-username`, and `data-basic-auth-password` attributes as shown below. The `data-basic-auth-error` element will only be shown if invalid credentials are submitted.
 
-~~~html
+```html
 <div class="error" data-basic-auth-error>Invalid credentials</div>
 <form method="post" data-basic-auth-form>
   <label for="username">Username</label>
@@ -148,23 +145,27 @@ The form markup needs to be decorated with the `data-basic-auth-form`, `data-bas
   <input type="password" id="username" data-basic-auth-password>
   <input type="submit" value="Submit">
 </form>
-~~~
+```
 
 Aerobatic injects a snippet of JavaScript into your login page that intercepts the form submit event and posts the credentials in the `Authorization` header to the path where the `basic-auth` plugin is mounted. If the credentials are correct, the real HTML page for the current URL is returned and loaded in the browser. The credentials are cached in [Windows.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), so they are automatically cleared when the browser tab is closed. Subsequent requests within the same session will use the cached credentials so the user is not required to re-authenticate.
 
 ### Max login attempts
+
 In order to prevent a potentially malicious user from brute force guessing username/password combinations, we track the number of failed login attempts from a given IP address. If the number of failures from the same IP within the `failedLoginPeriod` exceeds the `maxFailedLogins` option, the `403 Forbidden` error page is returned. That IP will be blocked from attempting any further logins until the failed login period has elapsed. You can customize the 403 error page using the [custom-errors plugin](/docs/custom-error-pages).
 
 ### Logout links
+
 When utilizing custom basic auth, the website visitor is implicitly logged out when the browser tab is closed. For standard basic auth, each browser vendor has their own policy for how long the credentials are cached. You may want to provide your websites visitors a logout link that forces the credentials to be cleared immediately. All you need to do is include an anchor element within pages that require authentication decorated with a `data-basic-auth-logout` attribute. The `href` attribute should be the destination you want the user to be navigated to upon logging out. This works with both the standard and custom versions of the plugin.
 
-~~~html
+```html
 <a href="/" data-basic-auth-logout>Logout</a>
-~~~
+```
 
 ### Security considerations
+
 The `basic-auth` plugin is intended as a simple, lightweight authentication mechanism, not a robust identity and access management solution. Be aware that the Base64 encoded credentials are cached in the browser for some period of time. It's recommended that credentials be configured as environment variables rather than hardcoded in the `aerobatic.yml` and committed to source control. Aerobatic enforces SSL 100% of the time, so credentials will always be encrypted over the wire.
 
 #### Auth demo website
-- Here is a sample website that uses the Aerobatic basic-auth plugin. [https://auth-demo.aerobaticapp.com/](https://auth-demo.aerobaticapp.com/)
-- The code for this sample site can be found on Bitbucket at [https://github.com/aerobatic/auth-demo/src](https://github.com/aerobatic/auth-demo/src)
+
+* Here is a sample website that uses the Aerobatic basic-auth plugin. [https://auth-demo.aerobaticapp.com/](https://auth-demo.aerobaticapp.com/)
+* The code for this sample site can be found on Bitbucket at [https://github.com/aerobatic/auth-demo/src](https://github.com/aerobatic/auth-demo/src)

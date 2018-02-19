@@ -14,15 +14,14 @@ In addition the the settings you explicitly specify, additional contextual keys 
 
 ### Usage
 
-~~~yaml
+```yaml
 plugins:
   - name: client-config
     options:
       variableName: config
       customSetting1: $SETTING_1
       customSetting2: $SETTING_2
----
-~~~
+```
 
 ### Options
 
@@ -31,9 +30,10 @@ The name of the global JavaScript variable the config object is assigned to. Def
 {{% /option %}}
 
 ### Output
+
 Looking the HTML source after deploying your website, the plugin causes a blob similar to below to be emitted in your document `<head>`. Here it is shown formatted for readability, the actual output is minified.
 
-~~~html
+```html
 <script>window['__aerobatic__'] = {
   "customSetting1": "abc",
   "customSetting2": "123",
@@ -41,4 +41,4 @@ Looking the HTML source after deploying your website, the plugin causes a blob s
   "appName": "client-config-test"
 };
 </script>
-~~~
+```

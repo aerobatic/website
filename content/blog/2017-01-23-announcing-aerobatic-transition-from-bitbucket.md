@@ -32,7 +32,7 @@ If this all sounds a bit complicated, don't worry, our migration process will pr
 
 To get a sense for what the `bitbucket-pipelines.yml` file looks like, here's a sample that builds a Jekyll site and deploys to Aerobatic:
 
-~~~yaml
+```yaml
 image: jekyll/jekyll                       # Use the jekyll image from Dockerhub
 pipelines:
   branches:
@@ -43,8 +43,7 @@ pipelines:
           - bundle exec jekyll build       # Build the site
           - npm install -g aerobatic-cli   # Install the aero CLI
           - aero deploy --directory _site  # Deploy the built site to Aerobatic
----
-~~~
+```
 
 An environment variable named `AEROBATIC_API_KEY` must be defined with Pipelines. The migration instructions will provide your unique api key value.
 
@@ -58,7 +57,8 @@ Here's a side by side comparison of the legacy `package.json` structure and the 
 
 {{% col 1 %}}
 **Legacy package.json**
-~~~json
+
+```json
 {
   "_aerobatic": {
     "router": [
@@ -73,19 +73,21 @@ Here's a side by side comparison of the legacy `package.json` structure and the 
         "module": "custom-errors",
         "options": {
           "errors": {
-            "404": "404.html"  
+            "404": "404.html"
           }
         }
       }
     ]
   }
 }
-~~~
+```
+
 {{% /col %}}
 
 {{% col 2 %}}
 **New aerobatic.yml**
-~~~yaml
+
+```yaml
 id: <website_id>
 plugins:
   # Oh nice, comments!
@@ -98,8 +100,8 @@ plugins:
     options:
       errors:
         404: 404.html # Custom 404 page
----
-~~~
+```
+
 {{% /col %}}
 
 ### Web serving improvements
@@ -107,24 +109,26 @@ plugins:
 The underlying web serving infrastructure is largely unchanged, however there are a couple of key enhancements. First we've improved how asset path rewriting is done. Originally we rewrote your images, JavaScripts, css, etc. to an absolute URL, fingerprinted with your unique appId and versionId.
 
 **Legacy asset paths**
-~~~html
+
+```html
 <!-- original html  -->
 <img src="/banner.jpg" />
 
 <!-- deployed html  -->
 <img src="https://d2q4nobwyhnvov.cloudfront.net/[appId]/[versionId]/banner.jpg" />
-~~~
+```
 
-This performance enhancement allows for aggressive cache headers since a new version will always result in a new URL. However the downside is that cached versions are always invalidated, __even if the file didn't change__. Our new approach injects a hash representing the actual file contents into the asset path at deploy time. These assets are served with a 1 year expiration and the same cached files will continue to be served across multiple deployments **unless** the file has actually changed (resulting in a new MD5 hash).
+This performance enhancement allows for aggressive cache headers since a new version will always result in a new URL. However the downside is that cached versions are always invalidated, **even if the file didn't change**. Our new approach injects a hash representing the actual file contents into the asset path at deploy time. These assets are served with a 1 year expiration and the same cached files will continue to be served across multiple deployments **unless** the file has actually changed (resulting in a new MD5 hash).
 
 **New asset paths**
-~~~html
+
+```html
 <!-- original html  -->
 <img src="/banner.jpg" />
 
 <!-- deployed html  -->
 <img src="/banner--md5--[asset-content-hash].jpg" />
-~~~
+```
 
 Read more about [Aerobatic asset acceleration](/docs/static-serving/#asset-acceleration).
 
@@ -135,6 +139,7 @@ The free plan provides all features and unlimited deployments, but **does not** 
 Previously Aerobatic had multiple pricing tiers with a set number of websites and domains. Now we are simplifying our pricing model to a straightforward **$15 a month per website** (special pricing offer below for Bitbucket customers). This includes a custom domain, wildcard SSL certificate, and 500GB of data transfer per month.
 
 {{% alert warning %}}
+
 <div class="header">How you are impacted</div>
 
 **Current paying customers:**
@@ -147,7 +152,7 @@ When you migrate your site, you will automatically get a trial of the Pro Plan t
 
 **Non-paying customers WITHOUT a custom domain:**
 
-Your websites will continue to resolve at their *.aerobaticapp.com domain. However data transfer out will be capped at 10GB / day. If you are thinking of upgrading, be sure to do so by March 1st to take advantage of the special pricing offer below.
+Your websites will continue to resolve at their \*.aerobaticapp.com domain. However data transfer out will be capped at 10GB / day. If you are thinking of upgrading, be sure to do so by March 1st to take advantage of the special pricing offer below.
 {{% /alert %}}
 
 #### Special offer for Bitbucket customers

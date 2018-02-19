@@ -10,20 +10,19 @@ The `http-headers` plugin allows you to append additional HTTP headers to the re
 
 ### Usage
 
-~~~yaml
+```yaml
 plugins:
   - name: http-headers
     options:
       "X-Custom-Header": foo
       security: true
----
-~~~
+```
 
 ### Security headers
 
 Setting the `security` option is a shortcut syntax for including many of the security related headers recommended by the Open Web Application Security Project ([OWASP](https://www.owasp.org/index.php/Main_Page)). Setting it to `true` is equivalent to the following:
 
-~~~yaml
+```yaml
 plugins:
   - name: http-headers
     options:
@@ -37,31 +36,30 @@ plugins:
       "X-XSS-Protection": "1;mode=block"
       # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
       "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
----
-~~~
+```
 
 If you want to override any of these values you can include an explicit value. Similarly if you want to eliminate one of the headers, just set it to an empty value.
 
-~~~yaml
+```yaml
 plugins:
   - name: http-headers
     options:
       security: true
       "X-Frame-Options": DENY
       "X-Content-Type-Options":
----
-~~~
+```
 
 Will result in these headers being sent in the response:
 
-~~~sh
+```
 Content-Security-Policy: "default-src 'self'"
 X-Frame-Options: "DENY"
 X-XSS-Protection: "1;mode=block"
 Strict-Transport-Security: "max-age=31536000; includeSubDomains"
-~~~
+```
 
 ### More info
+
 * [The Security of HTTP-Headers](https://www.contextis.com/resources/blog/security-http-headers/)
 * [SecurityHeaders.io scanning service](https://securityheaders.io/)
 

@@ -14,7 +14,7 @@ This plugin is just a lightweight wrapper around the [expressjs/cors](https://ww
 
 ### Usage
 
-~~~yaml
+```yaml
 plugins:
   - name: cors
     path: /api
@@ -25,8 +25,7 @@ plugins:
     path: /api
     options
       url: https://yourapi.com
----
-~~~
+```
 
 ### Options
 
@@ -48,12 +47,11 @@ When making certain CORS request, such as with verbs other than `GET`, `POST`, o
 
 As mentioned above, with this plugin you can apply CORS support on any request served by Aerobatic including static files. Let's say you have a `/data` folder in your site with a bunch of `.json` files, you could use a configuration like so:
 
-~~~yaml
+```yaml
 plugins:
   - name: cors
     path: /data
     options:
       origin: https://www.anotherdomain.com
       methods: [GET]
----
-~~~
+```
