@@ -7,6 +7,10 @@ name: whats-new
 
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Feb 24, 2018
+
+* [Announcing Auth0 plugin](/blog/announcing-auth0-plugin/)&mdash;full-featured identity management solution for your members-only static websites.
+
 ### Feb 8, 2018
 
 * [New blog post](/blog/migrating-aerobatic-to-api-gateway-and-lambda/) detailing how we recently transitioned our static site hosting infrastructure to AWS serverless.

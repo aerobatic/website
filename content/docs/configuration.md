@@ -26,8 +26,8 @@ Each plugin is declared in the `plugins` array of `aerobatic.yml`. The sequence 
 
 The [http-proxy](/docs/plugins/http-proxy) is an example of a plugin that handles the request directly, so any plugins appearing after it will not get executed (provided the `path` is a match). The [http-headers](/docs/plugins/http-headers) plugin, on the other hand, adds some headers to the response, then passes execution along to the next one in the pipeline.
 
-{{% alert warning %}}
-**TIP** This req / res pipeline pattern will be familiar to developers that have worked with [Rack](http://rack.github.io/) or [Express](http://expressjs.com/en/guide/using-middleware.html) middleware. Aerobatic itself is built atop Express. While it's somewhat helpful to understand the concept of middleware flow, no experience with Node.js or Ruby is required to deploy websites on Aerobatic.
+{{% alert tip %}}
+This req / res pipeline pattern will be familiar to developers that have worked with [Rack](http://rack.github.io/) or [Express](http://expressjs.com/en/guide/using-middleware.html) middleware. Aerobatic itself is built atop Express. While it's somewhat helpful to understand the concept of middleware flow, no experience with Node.js or Ruby is required to deploy websites on Aerobatic.
 {{% /alert %}}
 
 #### Declaring plugins
@@ -147,7 +147,7 @@ Environment variables can even have different values for different stages. For e
 {{<cli "aero env --name BASIC_AUTH_PASSWORD --value password123NO --stage production" >}}
 {{<cli "aero env --name BASIC_AUTH_PASSWORD --value password456NO --stage test" >}}
 
-{{% alert warning %}}
+{{% alert tip %}}
 These environment variables are used at runtime by your website plugins. There is also an `AEROBATIC_API_KEY` environment variable which is to be [configured with your CI service](/docs/continuous-deployment#aerobatic-apikey) rather than the `aero env` command.
 {{% /alert %}}
 

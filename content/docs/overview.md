@@ -52,7 +52,7 @@ This will make the deployed site available at unique URL. The form of the URL de
 In the table above the stage name "test" could be anything you like, "preview", "develop", "etc".
 
 {{% alert tip %}}
-**TIP** When deploying to non-production stages with custom domains, you'll need to configure DNS in one of two ways:
+When deploying to non-production stages with custom domains, you'll need to configure DNS in one of two ways:
 
 1. Wildcard CNAME that covers `*.yourdomain.net`
 2. CNAME for each stage, i.e. `test`, `preview`, etc.
@@ -87,8 +87,8 @@ aero deploy --stage $TRAVIS_BRANCH
 aero deploy --stage pr-$TRAVIS-PULL-REQUEST
 ```
 
-{{% alert warning %}}
-**TIP**: any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
+{{% alert tip %}}
+Any characters other than letters, numbers, dashes, or underscores in the stage argument will be converted to a dash "-" to ensure URL friendliness. So `feature/new-nav` will be `feature-new-nav` in the stage URL.
 {{% /alert %}}
 
 This technique works with any CI service that provides similar environment variables (and most all do). You can read more about setting up CI in the [Continuous Deployment](/docs/continuous-deployment) article.
@@ -120,4 +120,4 @@ The site scanner crawls and examines the content of your website after each depl
 
 ### Device preview
 
-You can tack on a `__preview={laptop|desktop|phone|tablet}` to any Aerobatic website URL to load it in a special viewer that allows simulating the site looks on different device types. The value of the `__preview` querystring parameter determines the default selected device. For example here is the URL to preview aerobatic.com on a phone: [https://www.aerobatic.com/?\_\_preview=phone](https://www.aerobatic.com/?__preview=phone). This is a handy way to share a URL with stakeholders so they can get a sense for how the site looks on different devices without having to actually load it on a phone, a tablet, etc.
+You can tack on a `__preview={laptop|desktop|phone|tablet}` to any Aerobatic website URL to load it in a special viewer that simulates how the site looks on different device types. The value of the `__preview` querystring parameter determines the default selected device. For example, here is the URL to preview aerobatic.com on a phone: [https://www.aerobatic.com/?\_\_preview=phone](https://www.aerobatic.com/?__preview=phone). This is a handy way to share a URL with stakeholders so they can get a sense for how the site looks on different devices without having to actually load it on a phone, a tablet, etc.

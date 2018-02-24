@@ -6,6 +6,10 @@ name: password-protect
 
 # Password protect plugin
 
+{{% alert tip %}}
+If you are looking for a full-featured identity management solution with individual user registrations and credentials, you might be more interested in our [auth0 plugin](/docs/plugins/auth0/).
+{{% /alert %}}
+
 The `password-protect` plugin is an easy way to require a password from visitors to access all or parts of your website. You can use our password form, or provide your own fully custom html login page. Like all plugins, password protection can be enabled only for [specific deploy stages](#deploy-stages).
 
 By default the plugin only requires users to enter a password. However you can configure it to require both a username and a password. See the [Usernames](#usernames) section for more details.

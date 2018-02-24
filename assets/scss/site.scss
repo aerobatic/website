@@ -40,7 +40,7 @@ pre {
       text-decoration: none;
     }
     a:hover {
-      opacity: 1.0;
+      opacity: 1;
       text-decoration: underline;
     }
   }
@@ -188,7 +188,7 @@ pre {
       width: 900px;
       display: table-cell;
       vertical-align: middle;
-      font-size: 24px;
+      font-size: 22px;
       font-style: italic;
       line-height: 1.5;
       letter-spacing: 0.9px;
@@ -207,7 +207,7 @@ pre {
           opacity: 0.5;
         }
         a:hover {
-          opacity: 1.0;
+          opacity: 1;
           text-decoration: underline;
         }
       }
@@ -264,6 +264,8 @@ div.alert {
   border-radius: 3px;
   line-height: 1.6;
   padding: 15px;
+  padding-left: 35px;
+  position: relative;
 
   .header {
     font-size: 22px;
@@ -279,12 +281,31 @@ div.alert.warning {
   color: #613a00;
   background-color: #ffe3c8;
   border: 1px solid #dca874;
+  padding-left: 38px;
+}
+
+div.alert.warning:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  top: 11px;
+  left: 10px;
+  content: "\f071";
+  font-size: 20px;
 }
 
 div.alert.tip {
   color: #264c72;
   border: 1px solid #97c1da;
   background-color: #d8ebf8;
+}
+
+div.alert.tip:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  top: 11px;
+  left: 10px;
+  content: "\f0eb";
+  font-size: 23px;
 }
 
 div.alert.footnote {

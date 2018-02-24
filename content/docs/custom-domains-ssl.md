@@ -47,13 +47,13 @@ The validation record will look something like so:
 If interested, you can read more about the validation process in the [ACM documentation](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html).
 
 {{% alert warning %}}
-**ALERT:** Some domain registrars such as Namecheap do not allow an "\_" character in a CNAME value. In this case you will need to transfer your nameservers over to a different DNS provider. We recommend any of the providers listed in the [apex domains section below](#apex-domains).
+Some domain registrars such as Namecheap do not allow an "\_" character in a CNAME value. In this case you will need to transfer your nameservers over to a different DNS provider. We recommend any of the providers listed in the [apex domains section below](#apex-domains).
 {{% /alert %}}
 
 Once domain ownership is validated, the domain provisioning process will commence. This takes roughly 40 minutes to complete. Once complete, you will receive an email from `domains@aerobatic.com` with instructions on how to configure the actual DNS records that cause your domain to resolve to the Aerobatic CDN.
 
 {{% alert warning %}}
-**IMPORTANT:** Do NOT delete the validation CNAME. It will be re-checked every time the SSL certificate is auto-renewed.
+Do **NOT** delete the validation CNAME. It will be re-checked every time the SSL certificate is auto-renewed.
 {{% /alert %}}
 
 ### DNS Settings
@@ -86,7 +86,7 @@ Domain providers that support one of the flavors of CNAME-like at the apex inclu
 * [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200169056-Does-CloudFlare-support-CNAME-APEX-at-the-root-)
 
 {{% alert warning %}}
-**WARNING:** Some providers, such as Namecheap, technically allow you to define a `CNAME` record `@` that will route your apex domain correctly. But be aware, this will **likely break email for your domain**. This is because the `@` record takes precedence over any `MX` mail records.
+Some providers, such as Namecheap, technically allow you to define a `CNAME` record `@` that will route your apex domain correctly. But be aware, this will **likely break email for your domain**. This is because the `@` record takes precedence over any `MX` mail records.
 {{% /alert %}}
 
 We suggest you **ONLY** utilize the apex domain if your DNS provider has special `ALIAS/ANAME` record types specifically intended to handle it. The alternative is a `CNAME` for each website like `www`.
@@ -100,7 +100,7 @@ If your DNS provider does not support `ANAME` or `ALIAS` records and it's not po
 * Use a service called [ARecord](http://www.arecord.net/) which provides a static IP address to assign to an `A` record. Their service will redirect requests from the apex to `www` sub-domain.
 
 {{% alert warning %}}
-**ALERT:** These redirect solutions only work for an **http** request, NOT **https**. If a user types "yourdomain.com" into their browser, the above solution will work since the browser defaults to http in the absence of a protocol. But the **ONLY** way to make `https://yourdomain.com` work is to use one of the aforementioned DNS providers that support `ANAME` or `ALIAS` record types.
+These redirect solutions only work for an **http** request, NOT **https**. If a user types "yourdomain.com" into their browser, the above solution will work since the browser defaults to http in the absence of a protocol. But the **ONLY** way to make `https://yourdomain.com` work is to use one of the aforementioned DNS providers that support `ANAME` or `ALIAS` record types.
 {{% /alert %}}
 
 ### Cloudflare Setup {#cloudflare}

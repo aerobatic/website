@@ -1,4 +1,3 @@
-// @import "pygments";
 @import "variables";
 
 h1,
@@ -37,6 +36,23 @@ body {
 
 .content {
   padding-top: 20px;
+}
+
+.promo-bar {
+  text-align: center;
+  background-color: #272e39;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  font-size: 14px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  img {
+    height: 20px;
+  }
 }
 
 @import "markdown";

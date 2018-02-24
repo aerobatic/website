@@ -19,7 +19,7 @@ plugins:
     options:
       clientId: $AUTH0_CLIENT_ID
       clientSecret: $AUTH0_CLIENT_SECRET
-      tenant: aero-demo
+      tenant: auth0-tenant-name
 ```
 
 ### Options
@@ -106,7 +106,7 @@ The hosted login page can be customized within the Auth0 console. It is using th
 | [initialScreen](https://auth0.com/docs/libraries/lock/v11/configuration#initialscreen-string-)                  | Specify the initial screen shown - `login`, `signUp`, or `forgotPassword`. See [next section](#signup-login-link) for how to control this from your website. |
 
 {{% alert tip %}}
-**TIP: Logo Customization**
+**Logo Customization**
 
 You can customize the image with the [theme.logo](https://auth0.com/docs/libraries/lock/v11/configuration#logo-string-) option. The docs indicate that you specify a URL, but you can also use an inline png. This is helpful when your entire website is protected by the auth0 plugin which would prevent you from hosting the image as part of your Aerobatic site - classic chicken or egg conundrum.
 
