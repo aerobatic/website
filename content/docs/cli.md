@@ -89,7 +89,7 @@ The desired name of the website. Names are globally unique and must be URL frien
 {{% /option %}}
 
 {{% option "-q, --quick-start" %}}
-The name of a quick start from the [Aerobatic Quick Start gallery](/quickstarts/html5/) to use to kickstart the website. Quick starts are available for Hugo, Jekyll, and vanilla HTML5.
+The name of a quick start from the [Aerobatic Quick Start gallery](/quickstarts/jekyll/) to use to kickstart the website. Quick starts are available for Hugo, Jekyll, and vanilla HTML5.
 
 {{% option "-S, --source" %}}
 URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.

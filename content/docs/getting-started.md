@@ -29,16 +29,16 @@ Register at [https://dashboard.aerobatic.com/register](https://dashboard.aerobat
 
 In less than 30 seconds your website will be deployed to an https URL on our global CDN.
 
-#### Or use a theme
+#### Or use a Quick Start
 
-You can also create a new site using a packaged theme for Jekyll, Hugo, or plain HTML5 sites. Below are some examples you can try or browse the [Aerobatic theme gallery](/themes/) for something that catches your eye.
+You can also create a new site using a packaged quick start for Jekyll, Hugo, or plain HTML5 sites. Below are some examples you can try or browse the [Aerobatic Quick Start gallery](/quickstarts/html5/) for something that catches your eye.
 
-{{< cli "aero create --theme jekyll/agency" >}}
-{{< cli "aero create --theme hugo/creative-portfolio" >}}
-{{< cli "aero create --theme html5/sb-business-casual" >}}
+{{< cli "aero create --quick-start jekyll/agency" >}}
+{{< cli "aero create --quick-start hugo/creative-portfolio" >}}
+{{< cli "aero create --quick-start html5/sb-business-casual" >}}
 
 ### Next Steps
 
-* Explore how to use [plugins](/docs/plugins/) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/plugins)
+* Explore how to use [plugins](/docs/plugins/) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
 * If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
 * Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)

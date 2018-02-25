@@ -19,15 +19,15 @@
       </div>
       <div class="container">
         <ul class="nav nav-pills">
-          <li role="presentation" {{ if eq .Params.quickStartType "html5" }}class="active"{{ end }}><a href="/quickstarts/html5/">HTML5</a></li>
           <li role="presentation" {{ if eq .Params.quickStartType "jekyll" }}class="active"{{ end }}><a href="/quickstarts/jekyll/">Jekyll</a></li>
           <li role="presentation" {{ if eq .Params.quickStartType "hugo" }}class="active"{{ end }}><a href="/quickstarts/hugo/">Hugo</a></li>
+          <li role="presentation" {{ if eq .Params.quickStartType "html5" }}class="active"{{ end }}><a href="/quickstarts/html5/">HTML5</a></li>
         </ul>
       </div>
 
       <div class="container">
         {{ if .Content }}
-          <div class="alert alert-info">{{ .Content }}</div>
+          <div class="alert tip">{{ .Content }}</div>
         {{ end }}
         {{ $.Scratch.Set "quickStartIndex" 0 }}
         {{ range $quickStart := (index $.Site.Data.quickstarts .Params.quickStartType) }}
