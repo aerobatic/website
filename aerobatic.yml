@@ -98,6 +98,7 @@ plugins:
       /docs/http-basic-authentication: /docs/plugins/basic-auth/
       /docs/custom-error-pages: /docs/plugins/custom-errors/
       /docs/static-http-hosting: /docs/static-serving/
+      /docs/continuous-deployment: /docs/deployment/#continuous-deployment
       /bitbucket-changes: /blog/announcing-aerobatic-transition/
       /feed.xml: /index.xml
       /themes/: /quickstarts/jekyll/

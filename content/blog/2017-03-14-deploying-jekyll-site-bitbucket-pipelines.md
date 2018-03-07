@@ -45,10 +45,10 @@ First, [create a repository](https://confluence.atlassian.com/bitbucket/create-a
 
 In your website's Bitbucket repo:
 
-1. Click the Pipelines link in the left nav menu of your Bitbucket repository.
-2. Click the Enable Pipelines button.
-3. On the next screen, leave the default template and click Next.
-4. In the editor, paste in the YAML contents below and click Commit.
+1.  Click the Pipelines link in the left nav menu of your Bitbucket repository.
+2.  Click the Enable Pipelines button.
+3.  On the next screen, leave the default template and click Next.
+4.  In the editor, paste in the YAML contents below and click Commit.
 
 ```yaml
 image: aerobatic/jekyll
@@ -109,9 +109,9 @@ This step only needs to be done once per account. If you haven't already done th
 [$] aero apikey
 ```
 
-1. Navigate to the Bitbucket account settings for the account that the website repo belongs to.
-2. Scroll down to the bottom of the left nav and click the Environment variables link in the PIPELINES section.
-3. Create a new environment variable called `AEROBATIC_API_KEY` with the value you got by running the `aero apikey` command. Be sure to click the Secured checkbox.
+1.  Navigate to the Bitbucket account settings for the account that the website repo belongs to.
+2.  Scroll down to the bottom of the left nav and click the Environment variables link in the PIPELINES section.
+3.  Create a new environment variable called `AEROBATIC_API_KEY` with the value you got by running the `aero apikey` command. Be sure to click the Secured checkbox.
 
 ## Step 4: Edit and Commit Code
 
@@ -119,7 +119,7 @@ Now that we've got Bitbucket Pipelines set up, we're now ready to test that ever
 
 ## Deploy stages
 
-Aerobatic [deploy stages](/docs/overview/#deploy-stages) makes it trivially easy to deploy your site to a test URL by passing the `--stage` option to the `deploy` CLI command. This plays nicely with Pipelines mechanism for running different build steps per branch.
+Aerobatic [deploy stages](/docs/deployment/#deploy-stages) makes it trivially easy to deploy your site to a test URL by passing the `--stage` option to the `deploy` CLI command. This plays nicely with Pipelines mechanism for running different build steps per branch.
 
 ```yaml
 image: aerobatic/jekyll

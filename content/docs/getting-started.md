@@ -40,5 +40,5 @@ You can also create a new site using a packaged quick start for Jekyll, Hugo, or
 ### Next Steps
 
 * Explore how to use [plugins](/docs/plugins/) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
-* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
+* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/deployment/#continuous-deployment)
 * Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)

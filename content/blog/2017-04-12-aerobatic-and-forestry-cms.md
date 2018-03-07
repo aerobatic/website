@@ -26,20 +26,20 @@ For this walkthrough we'll use a [demonstration repo](https://github.com/aerobat
 
 ### Create Aerobatic website
 
-1. Fork the demo repo from https://github.com/aerobatic/forestry-cms-demo
-2. Clone the repo locally
-3. From the root of the repo, run `aero create`. The CLI will report back the URL for your website which you will need in the next section.
+1.  Fork the demo repo from https://github.com/aerobatic/forestry-cms-demo
+2.  Clone the repo locally
+3.  From the root of the repo, run `aero create`. The CLI will report back the URL for your website which you will need in the next section.
 
 ### Setting up Forestry
 
-1. Now login to Forestry.io (you can use your GitHub credentials if you like)
-2. Click the **Setup Site** button and select **Import Existing Site**
-3. In the **Generator** drop down, select "Hugo" and leave the **Version** as-is
-4. Now select **GitHub** as the repository provider and **Public Repos**
-5. In the **Choose Repository** screen select **your-github-user/forestry-cms-demo** and leave branch as **master**
-6. On the **Site Settings** screen set the name to something like **aerobatic-forestry-demo** and the Url to the value provided from the `aero create` command run in step 3 from the previous section. It should look something like `https://funny-name.aerobaticapp.com`.
-7. On the **Hosting Info** screen select **Commit to source repo only**
-8. Finally click **Save Changes**
+1.  Now login to Forestry.io (you can use your GitHub credentials if you like)
+2.  Click the **Setup Site** button and select **Import Existing Site**
+3.  In the **Generator** drop down, select "Hugo" and leave the **Version** as-is
+4.  Now select **GitHub** as the repository provider and **Public Repos**
+5.  In the **Choose Repository** screen select **your-github-user/forestry-cms-demo** and leave branch as **master**
+6.  On the **Site Settings** screen set the name to something like **aerobatic-forestry-demo** and the Url to the value provided from the `aero create` command run in step 3 from the previous section. It should look something like `https://funny-name.aerobaticapp.com`.
+7.  On the **Hosting Info** screen select **Commit to source repo only**
+8.  Finally click **Save Changes**
 
 Forestry is now linked to the GitHub repo. You can add and update pages, menus, and other content using their visual editing controls. If you click on the "Sample blog post" you'll notice a big green **Publish** button that will push a commit with the latest changes to the repository. In the next step we will configure the CI provider to build the changes and deploy to Aerobatic.
 
@@ -47,7 +47,7 @@ The **Preview** button below the **Publish** button will launch the rendered sit
 
 ![Forestry Screenshot](https://www.aerobatic.com/media/blog/forestry-hugo-screenshot.png)
 
-See the [Forestry documentation](https://forestry.io/docs/) to learn more about how it works and what it is capable of. 
+See the [Forestry documentation](https://forestry.io/docs/) to learn more about how it works and what it is capable of.
 
 ### Setting up CI
 
@@ -55,11 +55,11 @@ The final piece of the puzzle is setting up a CI provider to automatically build
 
 The process for setting up any CI provider is roughly:
 
-1. Log into their dashboard
-2. Create a new CI project
-3. Bind it to the desired Git repo
-4. Add a build manifest to your repo, i.e. `appveyor.yml`, `.travis.yml`, etc.
-5. Create an environment variable named `AEROBATIC_API_KEY` whose value you can retrieve by running the `aero apikey` CLI command locally.
+1.  Log into their dashboard
+2.  Create a new CI project
+3.  Bind it to the desired Git repo
+4.  Add a build manifest to your repo, i.e. `appveyor.yml`, `.travis.yml`, etc.
+5.  Create an environment variable named `AEROBATIC_API_KEY` whose value you can retrieve by running the `aero apikey` CLI command locally.
 
 The demo repo already has an [appveyor.yml](https://github.com/aerobatic/forestry-cms-demo/blob/master/appveyor.yml) file that does the following:
 
@@ -78,26 +78,19 @@ Now whenever a change is pushed to the repo, whether a stylesheet update by a de
 
 ## Approval workflow with pull requests
 
-This setup works great for small teams where everyone is allowed to deploy straight to production. But many teams want some controls in place where changes are first deployed to a test environment before being promoted to production. This is where [Aerobatic deploy stages](/docs/overview/#deploy-stages) come into play.
+This setup works great for small teams where everyone is allowed to deploy straight to production. But many teams want some controls in place where changes are first deployed to a test environment before being promoted to production. This is where [Aerobatic deploy stages](/docs/deployment/#deploy-stages) come into play.
 
 Back in the Forestry setup, we selected the "master" branch. However a different branch such as "preview" could have been selected. Then in the CI build instructions, the "preview" branch would be configured to deploy to the preview stage rather than production. This is done by passing the `--stage` option to the CLI, i.e. `aero deploy -d public --stage preview`. The preview URL is a private instance where reviewers and other stakeholders can see and approve changes prior to going live to production. You can even utilize the [password-protect](/docs/plugins/password-protect/) plugin to require a password for the preview stage ensuring only authorized people can access it.
 
 The process for promoting to production then becomes:
 
-1. Submit a pull request from preview branch to master
-2. Approver reviews and either requests changes or approves
-3. Pull request is merged to master
-4. A CI build is triggered that build and deploys the master branch to production
+1.  Submit a pull request from preview branch to master
+2.  Approver reviews and either requests changes or approves
+3.  Pull request is merged to master
+4.  A CI build is triggered that build and deploys the master branch to production
 
 While pull requests are likely a new concept for most non-developers, the basic idea of an approval workflow is well understood. Admittedly this notion of marketers and content editors utilizing Git is not widely practiced yet, but hopefully as services like Forestry continue to evolve, they will provide friendly abstractions around things like pull requests that makes taking advantage of these powerful tools increasingly accessible to developers and non-developers alike.
 
 ## Conclusion
 
-So that's our end to end publishing workflow. While there are a few moving parts involved, once setup the entire system works quite reliably. Both the code *and* content happily reside together in the same repo and all changes, both those initiated by developers and content editors, flows through a common deployment (and approval) pipeline. If you're a developer and have been wanting to switch from a CMS to a static site generator, but have been holding off because the marketing folks demand a GUI interface, check out [Forestry.io](https://forestry.io) and see if you can say goodbye to WordPress once and for all.
-
-
-
-
-
-
-
+So that's our end to end publishing workflow. While there are a few moving parts involved, once setup the entire system works quite reliably. Both the code _and_ content happily reside together in the same repo and all changes, both those initiated by developers and content editors, flows through a common deployment (and approval) pipeline. If you're a developer and have been wanting to switch from a CMS to a static site generator, but have been holding off because the marketing folks demand a GUI interface, check out [Forestry.io](https://forestry.io) and see if you can say goodbye to WordPress once and for all.

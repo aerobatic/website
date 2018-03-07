@@ -138,35 +138,35 @@ $(function() {
         }
       ]
     },
-    yeoman: {
-      title: "Yeoman",
+    gatsby: {
+      title: "Gatsby",
       commands: [
         {
-          text: "mkdir angular-project && cd $_"
+          text: "gatsby new gatsby-project",
+          output: ["Creating new site", "Installing packages"],
+          success: "Gatsby done creating starter site"
         },
         {
-          text: "yo angular",
-          output: [
-            "Generating Angular app",
-            "Running bower install",
-            "Running npm install"
-          ],
-          success: "Yeoman done generating app"
+          text: "cd gatsby-project"
         },
         {
-          text: "aero create",
+          text: "aero create --name gatsby-demo",
           output: [aeroCreateOutput],
-          success: "Website https://yeoman-demo.aerobaticapp.com created"
+          success: "Website https://gatsby-demo.aerobaticapp.com created"
         },
         {
-          text: "gulp build",
-          output: ["Running build task"],
-          success: "Finished building app"
+          text: "gatsby build",
+          output: [
+            "Building CSS",
+            "Building production JavaScript bundles",
+            "Building static HTML for pages"
+          ],
+          success: "Done building"
         },
         {
-          text: "aero deploy --directory dist",
+          text: "aero deploy --directory public",
           output: aeroDeployOutput,
-          success: aeroDeploySuccess("https://yeoman-demo.aerobaticapp.com")
+          success: aeroDeploySuccess("https://gatsby-demo.aerobaticapp.com")
         }
       ]
     },
@@ -207,10 +207,20 @@ $(function() {
   $("#generatorMenu a").on("click", function(event) {
     event.preventDefault();
     if (runningDemo) return false;
-    var key = $(this).attr("href").substr(1);
-    $(this).closest("ul").find("li").removeClass("active");
-    $(this).parent().addClass("active");
-    $(this).closest("ul").find("li:not(.active)").addClass("inactive");
+    var key = $(this)
+      .attr("href")
+      .substr(1);
+    $(this)
+      .closest("ul")
+      .find("li")
+      .removeClass("active");
+    $(this)
+      .parent()
+      .addClass("active");
+    $(this)
+      .closest("ul")
+      .find("li:not(.active)")
+      .addClass("inactive");
 
     loadGeneratorDemo(key);
   });
@@ -251,7 +261,10 @@ $(function() {
           runningDemo = null;
           // Remove the spinner
           generatorMenu.find("li").removeClass("inactive");
-          generatorMenu.removeClass("running").find("li i.fa-spin").remove();
+          generatorMenu
+            .removeClass("running")
+            .find("li i.fa-spin")
+            .remove();
           return;
         } else {
           repeat(index + 1);

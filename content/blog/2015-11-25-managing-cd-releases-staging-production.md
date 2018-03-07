@@ -8,20 +8,20 @@ tags: CD, environments, staging, production, devops
 ---
 
 {{% alert warning %}}
-**DEPRECATED** This post refers to an older version of Aerobatic. Check out how we now handle CD release workflow using [deploy stages](/docs/overview/#deploy-stages).
+**DEPRECATED** This post refers to an older version of Aerobatic. Check out how we now handle CD release workflow using [deploy stages](/docs/deployment/#deploy-stages).
 {{% /alert %}}
 
 Aerobatic has made it incredibly easy to deploy your production website with a simple `git push` command to your Bitbucket repo. Our [continuous deployment worker](http://www.aerobatic.com/blog/lambda-continuous-deployment.html) automatically grabs the latest source bundle, deploys it, and voilà, in less than a minute, your website is live to the world. This is the ultimate streamlined deployment flow for simple websites that are maintained by a single developer.
 
 However for sites being built by a team of developers, or when building on behalf of a client, a more formal staged release process is often called for. In a typical workflow, in-progress changes are committed to a dedicated git branch that is not deployed to production. However clients and/or stakeholders usually want to be able to preview and approve website changes well before customers see it for real.
 
-To solve this challenge, Aerobatic now provides a feature called __Deploy branches__ which lets you configure multiple git branches for continuous deployment. One or zero branches can be specified as "production" (more on this shortly) and up to 5 additional branches as staging instances of your site. Whenever a push is made to one of these staging branches your website is automatically deployed to a URL in the form `https://yourapp--test.aerobaticapp.com` where `test` is a URL-friendly alias for the branch name.
+To solve this challenge, Aerobatic now provides a feature called **Deploy branches** which lets you configure multiple git branches for continuous deployment. One or zero branches can be specified as "production" (more on this shortly) and up to 5 additional branches as staging instances of your site. Whenever a push is made to one of these staging branches your website is automatically deployed to a URL in the form `https://yourapp--test.aerobaticapp.com` where `test` is a URL-friendly alias for the branch name.
 
-Here's a look at the __Deploy settings__ screen in the Bitbucket add-on:
+Here's a look at the **Deploy settings** screen in the Bitbucket add-on:
 
   <img class="screenshot" src="//www.aerobatic.com/media/blog/deploy-branches/deploy-branch-settings.png" alt="Screenshot of the Aerobatic deploy branch setup">
 
-And here is what the __Website versions__ view looks like with multiple staging branches in play. As I mentioned above, you don't need _any_ branches continuously deployed to production. You may wish to always manually promote a version using the actions drop down next to each deployed version. The goal is to provide enough built-in flexibility to adapt to different release workflows such as [Simple Git](http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/), [GitHub flow](https://guides.github.com/introduction/flow/), or [gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
+And here is what the **Website versions** view looks like with multiple staging branches in play. As I mentioned above, you don't need _any_ branches continuously deployed to production. You may wish to always manually promote a version using the actions drop down next to each deployed version. The goal is to provide enough built-in flexibility to adapt to different release workflows such as [Simple Git](http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/), [GitHub flow](https://guides.github.com/introduction/flow/), or [gitflow](http://nvie.com/posts/a-successful-git-branching-model/).
 
   <img class="img-responsive marketing-feature-showcase--screenshot" src="http://www.aerobatic.com/media/blog/deploy-branches/promote-deployment.png" alt="Screenshot of the promoting a version to production">
 
@@ -45,7 +45,7 @@ Aerobatic injects a `__aerobatic__` global variable (the name is configurable) i
 
 ## Environment variables
 
-When working with multiple instances of a website, a common need is for configuration settings that vary. Aerobatic uses  environment variables for configuration and now with Deploy branches you can override settings on a branch by branch basis. For example you might be using our [API proxy](http://www.aerobatic.com/docs/#sec5) to communicate with a remote REST api that has a production and test endpoints.
+When working with multiple instances of a website, a common need is for configuration settings that vary. Aerobatic uses environment variables for configuration and now with Deploy branches you can override settings on a branch by branch basis. For example you might be using our [API proxy](http://www.aerobatic.com/docs/#sec5) to communicate with a remote REST api that has a production and test endpoints.
 
 In the screenshot below the variable `API_URL` is configured with 3 different values. If it's not obvious, the `default` values are used for all branches that do not have an explicit override.
 
@@ -53,7 +53,7 @@ In the screenshot below the variable `API_URL` is configured with 3 different va
 
 In the `package.json` we can configure the proxy to get the url of the origin API from the `API_URL` environment variable. By parsing the branch name out of the incoming URL, Aerobatic will know which environment variable values to use.
 
-~~~json
+```json
 {
   "_aerobatic": {
     "router": [
@@ -67,13 +67,13 @@ In the `package.json` we can configure the proxy to get the url of the origin AP
     ]
   }
 }
-~~~
+```
 
 ## Locking down staging URLs
 
 Very likely you don't want your staging URLs to be accessible to the general public or to search crawlers. To prevent this, Aerobatic provides the [basic-auth plugin](/docs/plugins/#basic-auth) as a simple way to password protect a website. In the `package.json` manifest you can optionally declare a list of environments for which each plugin should be invoked. That allows you to enforce basic auth only on the staging branches but not on the public production site if you choose.
 
-~~~json
+```json
 {
   "_aerobatic": {
     "router": [
@@ -88,6 +88,6 @@ Very likely you don't want your staging URLs to be accessible to the general pub
     ]
   }
 }
-~~~
+```
 
 For digital agencies, this is a great way to provide a private URL to your clients where they can track progress and provide feedback on pre-released website work.

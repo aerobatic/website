@@ -5,7 +5,7 @@ name: cli
 
 # Command Line Tool
 
-The `aerobatic-cli` is a way to interact with the Aerobatic platform via the command line and the only way to deploy new versions. You can run it from your local machine, or from a build script in a [continuous deployment workflow](/docs/continuous-deployment).
+The `aerobatic-cli` is a way to interact with the Aerobatic platform via the command line and the only way to deploy new versions. You can run it from your local machine, or from a build script in a [continuous deployment workflow](/docs/deployment/#continuous-deployment).
 
 ## Installation
 
@@ -67,7 +67,7 @@ Display a summary of the current Aerobatic account including the list of website
 
 #### apikey
 
-Get the api key for the current Aerobatic account. This value should be set as the `AEROBATIC_API_KEY` environment variable in a CI service. Read about [setting up a CI environment](/docs/continuous-deployment#aerobatic-apikey). Run with the `--reset` arg to reset to a new value.
+Get the api key for the current Aerobatic account. This value should be set as the `AEROBATIC_API_KEY` environment variable in a CI service. Read about [setting up a CI environment](/docs/deployment#aerobatic-apikey). Run with the `--reset` arg to reset to a new value.
 
 **Options**
 {{% option "-R, --reset" %}}
@@ -123,7 +123,7 @@ Specify the [deploy stage](/docs/overview#deploy-stages) for the deployment. Thi
 {{% /option %}}
 
 {{% option "-m, --message" %}}
-A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history. It will also be displayed in any email or Slack [deploy alerts](/docs/configuration/#deploy-alerts).
+A short message that you want to attach to the deployment metadata. If being [invoked from a CI server](/docs/deployment/#continuous-deployment), it may be useful to pass the git commit message and the URL to the commit details that triggered the build. This information will be displayed in the Aerobatic control panel as part of the deployment history. It will also be displayed in any email or Slack [deploy alerts](/docs/deployment/#deploy-alerts).
 {{% /option %}}
 
 {{% option "-c, --commit-url" %}}

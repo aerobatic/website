@@ -51,7 +51,7 @@ Here's a running list of the latest new features and enhancements. Have an idea?
 
 ### Mar 24, 2017
 
-* We now support [email or Slack deploy alerts](/docs/configuration/#deploy-alerts) that you configure in your `aerobatic.yml` file. You can even specify different alerts based on the deploy stage that was updated. Great way for agencies to automatically notify clients when changes are made.
+* We now support [email or Slack deploy alerts](/docs/deployment/#deploy-alerts) that you configure in your `aerobatic.yml` file. You can even specify different alerts based on the deploy stage that was updated. Great way for agencies to automatically notify clients when changes are made.
 
 ### Mar 15, 2017
 

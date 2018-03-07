@@ -1,60 +1,75 @@
-.pricing-plans {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+@import "variables";
 
-  .plan {
+#pricing {
+  margin-top: 50px;
+
+  .sub-header {
+    color: $gray;
+    margin-bottom: 30px;
+  }
+
+  .pricing-plans {
     display: flex;
-    flex-direction: column;
-    flex: 0 0 300px;
-    border-radius: 4px;
-    margin: 10px;
-    border: 1px solid $lightGray;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    ul {
-      padding: 0;
-      list-style: none;
-      flex: 1 1 auto;
+    .plan {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 300px;
+      border-radius: 4px;
+      margin: 10px;
+      border: 1px solid $lightGray;
+      text-align: center;
 
-      li {
-        font-size: 14px;
-        color: black;
-        padding: 10px;
-        border-bottom: 1px solid $lightGray;
+      ul {
+        padding: 0;
+        list-style: none;
+        flex: 1 1 auto;
+
+        li {
+          font-size: 14px;
+          color: black;
+          padding: 10px;
+          border-bottom: 1px solid $lightGray;
+        }
+      }
+
+      .btn {
+        width: calc(100% - 20px);
+        margin: 10px;
       }
     }
+  }
 
-    .btn {
-      width: calc(100% - 20px);
-      margin: 10px;
+  .plan.pro {
+    border-top: solid 5px $primary;
+  }
+
+  .pricing-copy {
+    max-width: 660px;
+    margin: 0 auto 20px auto;
+  }
+
+  .price {
+    h2 {
+      display: inline-block;
+      font-size: 42px !important;
+      margin: 0 !important;
     }
-  }
-}
 
-.pricing-copy {
-  max-width: 660px;
-  margin: 0 auto 20px auto;
-}
+    sup.currency {
+      font-size: 16px;
+      display: inline-block;
+      position: relative;
+      top: -15px;
+      margin-right: 3px;
+    }
 
-.price {
-  h2 {
-    display: inline-block;
-    font-size: 42px !important;
-    margin: 0 !important;
-  }
-
-  sup.currency {
-    font-size: 16px;
-    display: inline-block;
-    position: relative;
-    top: -15px;
-    margin-right: 3px;
-  }
-
-  .period {
-    font-size: 20px;
-    display: inline-block;
-    margin-left: 3px;
+    .period {
+      font-size: 20px;
+      display: inline-block;
+      margin-left: 3px;
+    }
   }
 }

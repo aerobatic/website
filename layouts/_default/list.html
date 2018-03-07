@@ -4,8 +4,6 @@
   <body>
     {{ partial "nav.html" . }}
     <div class="container">
-      <h1>Blog</h1>
-
       <div class="blog-list">
         {{ range $index, $post := (where .Data.Pages ".Params.hidden" "ne" "true").ByPublishDate.Reverse }}
           {{ if in (seq 0 3 100) $index }}<div class="row">{{ end }}

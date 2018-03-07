@@ -5,15 +5,19 @@ name: static-site-generators
 
 # Static site generators
 
-Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](https://jekyllrb.com/), Hugo, Middleman and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.). Aerobatic works with **any** tool that generates static HTML, but we provide some specific guidance for the following popular generators:
+Aerobatic is a perfect hosting complement to static site generators such as [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io), [Hexo](https://hexo.io/), [Gatsby](https://www.gatsbyjs.org/) and others. Simply configure `aerobatic-cli` to deploy the directory where the generator emits the built site (`_site`, `public`, `dist`, etc.). Aerobatic works with **any** tool that generates static HTML, but we provide some specific guidance for the following popular generators:
 
 {{% col-3 1 %}}[![jekyll](/img/frameworks/jekyll.png)](#jekyll){{% /col-3 %}}
 {{% col-3 2 %}}[![hugo](/img/frameworks/hugo.png)](#hugo){{% /col-3 %}}
 {{% col-3 3 %}}[![react](/img/frameworks/react.png)](#react){{% /col-3 %}}
 
 {{% col-3 1 %}}[![hexo](/img/frameworks/hexo.png)](#hexo){{% /col-3 %}}
-{{% col-3 2 %}}[![yeoman](/img/frameworks/yeoman.png)](#yeoman){{% /col-3 %}}
+{{% col-3 2 %}}[![yeoman](/img/frameworks/gatsby.png)](#gatsby){{% /col-3 %}}
 {{% col-3 3 %}}[![plain-html](/img/frameworks/html.png)](#html){{% /col-3 %}}
+
+{{% col-3 1 %}}[![yeoman](/img/frameworks/yeoman.png)](#yeoman){{% /col-3 %}}
+{{% col-3 2 %}}{{% /col-3 %}}
+{{% col-3 3 %}}{{% /col-3 %}}
 
 ### Specifying deploy directory
 
@@ -47,11 +51,11 @@ In general we suggest using relative URLs in your template files since the brows
 
 That way the same markup will function identically no matter where what the base host is, i.e. `http://localhost:4000`, `https://yoursite.com`, or `https://test.yoursite.com`.
 
-However, most static site generators have a `url` or `baseURL` config setting that is used to build an absolute URL. You could hardcode this value to your production URL, but then it won't automatically adjust when you push the version from one stage to another, i.e. `www--test.domain.com` to `www.domain.com`. If you are going to be taking advantage of [deploy stages](/docs/overview/#deploy-stages), we recommend that you specify the reserved value <span class="code">https://!!baseurl!!</span> which Aerobatic substitutes at render time with the actual requested site url. We offer ways to configure this for specific generators below.
+However, most static site generators have a `url` or `baseURL` config setting that is used to build an absolute URL. You could hardcode this value to your production URL, but then it won't automatically adjust when you push the version from one stage to another, i.e. `www--test.domain.com` to `www.domain.com`. If you are going to be taking advantage of [deploy stages](/docs/deployment/#deploy-stages), we recommend that you specify the reserved value <span class="code">https://!!baseurl!!</span> which Aerobatic substitutes at render time with the actual requested site url. We offer ways to configure this for specific generators below.
 
 ### Generator configurations
 
-Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/continuous-deployment/).
+Here some configuration tips for some of the popular static site generators. Even if your generator isn't listed, it's likely that it offers very similar functionality. These tips are relevant both when deploying to Aerobatic locally or from a [continuous integration build](/docs/deployment/#continuous-deployment).
 
 ### Jekyll
 
@@ -130,6 +134,37 @@ Here's how to create a new [Hexo](https://hexo.io) site and deploy it to Aerobat
 {{<cli "echo 'url: https://!!baseurl!!' > \_aerobatic.config.yml" "override site.url for Aerobatic">}}
 {{<cli "hexo generate --config \_config.yml,\_aerobatic.config.yml" "generate the output">}}
 {{<cli "aero deploy -d public" "deploy output to Aerobatic">}}
+
+## Gatsby
+
+<div class="generator-section"><img alt="react" src="/img/frameworks/gatsby.png"></div>
+
+Here's how to generate a new [Gatsby](https://www.gatsbyjs.org/) site from scratch and deploy it to Aerobatic:
+
+{{<cli "gatsby new gatsby-project">}}
+{{<cli "cd gatsby-project">}}
+{{<cli "aero create --name my-gatsby-project" "create the Aerobatic site">}}
+{{<cli "gatsby build" "build the gatsby site">}}
+{{<cli "aero deploy --directory public" "deploy build output to Aerobatic">}}
+
+There are also a couple of recommended config settings to make in the `aerobatic.yml` to take full advantage of the way Gatsby optimizes the build output.
+
+First we can disable the Aerobatic [asset fingerprinting](/docs/site-optimizer/#asset-fingerprinting) since Gatsby already takes care of that. Secondly, we can use the [http-headers](/docs/plugins/http-headers) plugin to set an aggressive `Cache-Control` header on all `.js` and `.js.map` requests. If contents of these files change, Gatsby will generate a differently named file, so there's no reason not to cache for a full year.
+
+```yaml
+deploy:
+  # Note with below setting it is not neccessary to pass --directory to aero deploy command
+  directory: public
+  optimizer:
+    fingerprintAssets: false
+
+plugins:
+  - name: http-headers
+    path: ['/*.js', '/*.js.map']
+    options:
+      "Cache-Control": "public, max-age=31536000"
+  - name: webpage
+```
 
 ## React
 

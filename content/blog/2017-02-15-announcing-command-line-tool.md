@@ -46,7 +46,7 @@ If you want to try out a slightly more realistic example, try creating a website
 ### Next Steps
 
 * Explore how to use [plugins](/docs/configuration/#plugins) to create a custom 404 page, turn on basic auth, configure redirects, and much more. [Learn more &#8594;](/docs/configuration/#plugins)
-* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/continuous-deployment/)
+* If you are using a CI service, find out how to configure your automated build to deploy to Aerobatic with each git push. [Learn more &#8594;](/docs/deployment/#continuous-deployment)
 * Upgrade to the Pro plan for increased data transfer limits and a custom domain + matching SSL cert. [Learn more &#8594;](/docs/custom-domains-ssl/)
 
 Aerobatic has more tutorial blog posts available at [http://aerobatic.com/blog](/blog)

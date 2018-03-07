@@ -12,7 +12,7 @@ hidden: true
 This blog post describes some features that don't actually exist yet such as **push requests**.
 {{% /alert %}}
 
-In this post I describe a workflow for digital agencies and freelancers building website projects on behalf clients using static site generators such as Jekyll, Hugo, or Middleman. It leverages Aerobatic's support for [deploy stages](/docs/overview/#deploy-stages) to provide an isolated preview URL for the client to preview and approve changes before being deployed to the actual production URL. The workflow also takes full advantage of the Aerobatic [password-protect](/docs/plugins/password-protect/) plugin to ensure the preview URL can only be accessed by the client and not the general public.
+In this post I describe a workflow for digital agencies and freelancers building website projects on behalf clients using static site generators such as Jekyll, Hugo, or Middleman. It leverages Aerobatic's support for [deploy stages](/docs/deployment/#deploy-stages) to provide an isolated preview URL for the client to preview and approve changes before being deployed to the actual production URL. The workflow also takes full advantage of the Aerobatic [password-protect](/docs/plugins/password-protect/) plugin to ensure the preview URL can only be accessed by the client and not the general public.
 
 The workflow has 3 distinct phases: pre-launch, launch, and post-launch.
 
@@ -24,13 +24,13 @@ This is the first phase of the client engagement. At this point scope has been a
 
 Here's a breakdown of each step:
 
-1. Create the website using: `aero create --name project-name`
-2. Using a static site generator like Hugo or Jekyll, develop the initial draft of the site.
-3. Configure the [password-protect](/docs/plugins/password-protect/) plugin in the `aerobatic.yml` file so only the client will be able to access it.
-4. Deploy the site by running: `aero deploy`
-5. Re-deploy the site as often as necessary before you are at a state where you are ready to solicit feedback from the client.
-6. Email or message the client with the website URL `https://project-name.aerobaticapp.com` along with the site password.
-7. Once the client is satisfied with the initial release, you're ready to move on to the next phase.
+1.  Create the website using: `aero create --name project-name`
+2.  Using a static site generator like Hugo or Jekyll, develop the initial draft of the site.
+3.  Configure the [password-protect](/docs/plugins/password-protect/) plugin in the `aerobatic.yml` file so only the client will be able to access it.
+4.  Deploy the site by running: `aero deploy`
+5.  Re-deploy the site as often as necessary before you are at a state where you are ready to solicit feedback from the client.
+6.  Email or message the client with the website URL `https://project-name.aerobaticapp.com` along with the site password.
+7.  Once the client is satisfied with the initial release, you're ready to move on to the next phase.
 
 ## Launch Phase
 
@@ -72,9 +72,7 @@ plugins:
 
 Now do one more deployment:
 
-```sh
-[$] aero deploy --message "Turn off password-protect"
-```
+{{<cli "aero deploy --message 'Turn off password-protect'" >}}
 
 **Congratulations, you are live in production!**
 
@@ -86,12 +84,12 @@ In the post-launch phase the website continues to be iterated on. Remember the c
 
 Let's walk through each step:
 
-1. Client requests changes are made. Or maybe the agency is working off of a backlog of features.
-2. The agency developer codes up the changes and deploys them to the preview stage with the command: `aero deploy --stage preview`. The updates will then be available at a URL like `https://www--preview.client-domain.com`. This URL will be password protected even though the production site is not since the plugin is now only enabled for the preview stage.
-3. Developer issues a "push request" (more about that next) for the client to review changes on the preview URL.
-4. If the client accepts the updates, they simply click the "Approve" button. This will automatically promote the version from `staging` to `production`, no further action required by the developer.
-5. If the client would like additional changes made before pushing to production, they simply reply to the email with feedback.
-6. Keep repeating steps 1-5.
+1.  Client requests changes are made. Or maybe the agency is working off of a backlog of features.
+2.  The agency developer codes up the changes and deploys them to the preview stage with the command: `aero deploy --stage preview`. The updates will then be available at a URL like `https://www--preview.client-domain.com`. This URL will be password protected even though the production site is not since the plugin is now only enabled for the preview stage.
+3.  Developer issues a "push request" (more about that next) for the client to review changes on the preview URL.
+4.  If the client accepts the updates, they simply click the "Approve" button. This will automatically promote the version from `staging` to `production`, no further action required by the developer.
+5.  If the client would like additional changes made before pushing to production, they simply reply to the email with feedback.
+6.  Keep repeating steps 1-5.
 
 ## Push requests
 
@@ -103,16 +101,14 @@ It's worth noting that approving a PR doesn't actually physically deploy anythin
 
 A push request can be made either via the CLI or in the dashboard. From the CLI, just run the `pr` command specifying the stage to push from and the email address to send the request to:
 
-```sh
-[$] aero pr --stage preview --email sally@client.co --message "Added new legal page"
-```
+{{<cli "aero pr --stage preview --email sally@client.co --message 'Added new legal page'" >}}
 
 ### Source control and continuous deployment
 
 The AeroAgency workflow can be used independently of any particular source control system, however we do have some suggested best-practices:
 
 * First off, please DO keep your code in source-control.
-* For teams with multiple developers there are definite advantages to setting up continuous deployment from git. We have multiple tutorials covering different popular CI services on our [continuous deployment guide](/docs/continuous-deployment/). In this arrangement, rather than running `aero deploy` from the developer machine, the developer just pushes code to git which triggers the CI service that builds the static site generator and deploys to Aerobatic. For freelancers, this might be overkill so we'd suggest starting off deploying with the CLI locally and introduce CI later if needed.
+* For teams with multiple developers there are definite advantages to setting up continuous deployment from git. We have multiple tutorials covering different popular CI services on our [continuous deployment guide](/docs/deployment/#continuous-deployment). In this arrangement, rather than running `aero deploy` from the developer machine, the developer just pushes code to git which triggers the CI service that builds the static site generator and deploys to Aerobatic. For freelancers, this might be overkill so we'd suggest starting off deploying with the CLI locally and introduce CI later if needed.
 * Code being deployed to the preview stage should be located in a branch other than **master**. You might even call the branch **preview** for consistency. Then merge from **preview** to **master** as push requests are approved by the client.
 
 ### CMS Integration

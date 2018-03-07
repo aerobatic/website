@@ -208,7 +208,7 @@ plugins:
       password: $CLIENT1_PASSWORD
 ```
 
-Read more about [deploy stages](/docs/overview/#deploy-stages).
+Read more about [deploy stages](/docs/deployment/#deploy-stages).
 
 ### Multiple passwords
 

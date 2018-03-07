@@ -34,35 +34,47 @@ This req / res pipeline pattern will be familiar to developers that have worked 
 
 Here is the basic form for declaring a plugin:
 
-{{< highlight yaml >}}
+```yaml
 plugins:
-
-* name: plugin-name # required - the name of the plugin
-  path: # optional - only invoke if the URL path matches
-  stages: [] # optional - only invoke if current deploy stage appears in list
-  options: # depends on the specific plugin
-  option1: true
-  option2: 5{{< /highlight >}}
+  - name: plugin-name # required - the name of the plugin
+    path: # optional - only invoke if the URL path matches
+    stages: [] # optional - only invoke if current deploy stage appears in list
+    options: # depends on the specific plugin
+      option1: true
+      option2: 5
+```
 
 Here's a basic `plugins` definition that declares a couple of our most popular plugins: [custom-errors](/docs/plugins/custom-errors/) and [password-protect](/docs/plugins/password-protect/).
 
-{{< highlight yaml >}}
+```yaml
 plugins:
+  - name: custom-errors
+    options:
+      errors:
+      404: errors/404.html
 
-* name: custom-errors
-  options:
-  errors:
-  404: errors/404.html
+  - name: password-protect
+    path: /protected
+    options:
+      username: $USERNAME
+      password: $PASSWORD
 
-* name: basic-auth
-  path: /protected
-  options:
-  username: $BASIC_AUTH_USERNAME
-  password: $BASIC_AUTH_PASSWORD
+  - name: webpage
+```
 
-* name: webpage{{< /highlight >}}
+Notice that the `password-protect` declaration includes a `path` property whereas the others do not. This indicates that the plugin should only be invoked if the incoming URL is under the `/protected` directory (including nested directories). The other plugins are invoked for all requests assuming the request makes it that far. The `username` and `password` values are being specified as environment variables - more on that below.
 
-Notice that the `basic-auth` declaration includes a `path` property whereas the others do not. This indicates that the plugin should only be invoked if the incoming URL is under the `/protected` directory (including nested directories). The other plugins are invoked for all requests assuming the request makes it that far. The `username` and `password` values are being specified as environment variables - more on that below.
+**Array of paths**
+
+You can also set `path` to an array if you want to mount the plugin at more than one path. In the following example (taken from our [Gatsby instructions](/docs/static-site-generators/#gatsby)), the [http-headers](/docs/plugins/http-headers/) plugin is configured to override the `Cache-Control` header for any request with a `.js` or `.js.map` extension.
+
+```yaml
+plugins:
+  - name: http-headers
+    path: ['/*.js', '/*.js.map']
+    options:
+      'Cache-Control': 'public, max-age=31536000'
+```
 
 #### Stage specific plugins
 
@@ -70,65 +82,14 @@ Plugins can include an optional `stages` property which specifies when the plugi
 
 A common use case is wanting to lock down only staging instances with the `basic-auth` plugin. In the example below visitors to `https://staging.custdomain.net` will be prompted for credentials, but not `https://custdomain.net`.
 
-{{< highlight yaml >}}
-
-* name: basic-auth
-  stages: [staging]
-  options:
-  username: $BASIC_AUTH_USERNAME
-  password: $BASIC_AUTH_PASSWORD{{< /highlight >}}
-
-## Deploy Alerts
-
-<img src="/img/deploy-alert-types.png" style="display:block; margin: 0 auto"/>
-
-You can specify that an alert be sent whenever a deployment completes. The two currently supported alert types are email and Slack. To send an alert for all deployments (regardless of stage), declare YAML like so in your `aerobatic.yml`:
-
 ```yaml
-deploy:
-  alerts:
-    default:
-      # You can specify one or both of these keys
-      email:
-        to: [userA@company.com, userB@company.com]
-      slack:
-        username: 'Website Update'  # Optional, defaults to "Aerobatic Deploys"
-        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
+plugins:
+  - name: basic-auth
+    stages: [staging]
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
 ```
-
-To get the `webhookUrl`, just add the [Incoming Webhook App](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks) to your Slack instance. You simply specify which channel you want the alerts to be posted to (i.e. something like "#deployments") and you'll be provided the URL to paste into your `aerobatic.yml` file. You can also choose an icon or emoji that appears next to each alert.
-
-If you don't want to store the `webhookUrl` in clear text, you can also configure it as an [environment variable](/docs/configuration/#environment-variables):
-
-```yaml
-slack:
-  webhookUrl: $SLACK_DEPLOY_ALERT_URL
-```
-
-Deploy these changes and you'll start getting alerts with each new deployment. The alert includes the name of the website, the version name, an optional message, and a hyperlink that launches the site.
-
-![Slack Alert](/img/slack-deploy-alert.png)
-
-The deploy message is a handy way to provide a short description of the what was changed. The message is provided to the `aero deploy` command like so:
-
-{{<cli "aero deploy --message 'Added new link to the global footer'" >}}
-
-### Stage specific alerts
-
-There is also the flexibility to define different alerts based on the deploy stage. For example, if you are an agency, you might want to post alerts for all deployments to your team's internal Slack channel, but additionally send an email alert to the client for production deployments:
-
-```yaml
-deploy:
-  alerts:
-    default:
-      slack:
-        webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
-    production:
-      email:
-        to: [sally@client.co]  # Alert the client for production deployments
-```
-
-You can also omit the `default` section altogether and configure alerts on a stage by stage basis - whatever best fits your workflow.
 
 ### Environment variables
 
@@ -148,7 +109,7 @@ Environment variables can even have different values for different stages. For e
 {{<cli "aero env --name BASIC_AUTH_PASSWORD --value password456NO --stage test" >}}
 
 {{% alert tip %}}
-These environment variables are used at runtime by your website plugins. There is also an `AEROBATIC_API_KEY` environment variable which is to be [configured with your CI service](/docs/continuous-deployment#aerobatic-apikey) rather than the `aero env` command.
+These environment variables are used at runtime by your website plugins. There is also an `AEROBATIC_API_KEY` environment variable which is to be [configured with your CI service](/docs/deployment#aerobatic-apikey) rather than the `aero env` command.
 {{% /alert %}}
 
 ## Site scanner
