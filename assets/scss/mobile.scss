@@ -5,6 +5,22 @@ Some overrides for small screens
   .navbar-default {
     position: relative;
     z-index: 1;
+
+    a.mobile-search {
+      display: block;
+      float: right;
+      margin-top: 5px;
+      margin-right: 10px;
+      color: gray;
+    }
+
+    form.navbar-form[role="search"] {
+      display: none;
+    }
+
+    #goto-dashboard {
+      display: none;
+    }
   }
 
   .navbar-collapse {
@@ -75,6 +91,24 @@ Some overrides for small screens
     .slack-logo {
       display: none;
     }
+  }
+
+  #features {
+    .row {
+      margin-top: 0px;
+    }
+
+    a {
+      padding-left: 0px !important;
+      margin-bottom: 30px;
+    }
+    svg {
+      display: none;
+    }
+  }
+
+  #pricing {
+    margin-top: 0px;
   }
 }
 

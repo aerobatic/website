@@ -11,19 +11,22 @@
   }
 
   .col-md-4 {
-    position: relative;
-    padding-left: 60px;
-    text-decoration: none;
+    a {
+      display: block;
+      position: relative;
+      padding-left: 60px;
+      text-decoration: none;
 
-    h3 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
 
-    p {
-      color: inherit;
+      p {
+        color: $darkGray;
+      }
     }
   }
 

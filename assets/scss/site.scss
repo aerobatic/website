@@ -87,6 +87,10 @@ pre {
 .navbar {
   height: 55px;
   margin-bottom: 0;
+
+  a.mobile-search {
+    display: none;
+  }
 }
 
 .navbar-nav {
