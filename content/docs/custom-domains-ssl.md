@@ -1,6 +1,7 @@
 ---
 title: Custom Domains and SSL
 name: custom-domains-ssl
+description: How to register a custom domain with SSL for your website
 ---
 
 # Custom Domains and SSL

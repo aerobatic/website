@@ -44,6 +44,10 @@
 
   .plan.pro {
     border-top: solid 5px $primary;
+
+    i.fa {
+      color: $gray;
+    }
   }
 
   .pricing-copy {

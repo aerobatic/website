@@ -1,6 +1,7 @@
 ---
 title: CLI
 name: cli
+description: Documentation for the Aerobatic CLI
 ---
 
 # Command Line Tool

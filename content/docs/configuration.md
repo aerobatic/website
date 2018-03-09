@@ -1,6 +1,7 @@
 ---
 title: Configuration
 name: configuration
+description: Configuration guide for the aerobatic.yml file
 ---
 
 # Configuration

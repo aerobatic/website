@@ -22,12 +22,12 @@ The first step in making the move is to [login to the new dashboard](https://das
 Once logged in to the control panel, click the "Bitbucket Migrate" link in the navigation. This will present a list of all your Bitbucket websites. Click the button next to the website you want to migrate and the app will provide you contents to use for the new `aerobatic.yml` and `bitbucket-pipelines.yml` files that you will need to create in your repo.
 
 ### Create the `aerobatic.yml`
+
 Create a new file at the root of your website repo named `aerobatic.yml`. Paste the contents provided. At a minimum, the file requires a single `id` property with your repo ID:
 
-~~~yaml
+```yaml
 id: "<your bitbucket repo_id>"
----
-~~~
+```
 
 If you created the file on your local machine, rather than within the Bitbucket web interface, push the change.
 
@@ -47,35 +47,35 @@ If you created the file on your local machine, rather than within the Bitbucket 
 
 **5.** This will trigger your first Pipelines build, however the deployment to Aerobatic will fail because we haven't configured the `AEROBATIC_API_KEY` environment variable yet.
 
-{% alert tip %}
+{{% alert tip %}}
 **TIP:** Steps **6** and **7** below only have to be done **once** per Bitbucket individual or team account. For subsequent websites, the `AEROBATIC_API_KEY` will already be set to go.
-{% endalert %}
+{{% /alert %}}
 
 **6.** To get the value of your Aerobatic api key, you first need to have the CLI installed. If you don't have the CLI installed yet, do so by running:
 
-~~~sh
+```sh
 [$] npm install aerobatic-cli -g
-~~~
+```
 
 Now login to the CLI with the same credentials you used to login to the Control Panel:
 
-~~~sh
+```sh
 [$] aero login
-~~~
+```
 
 When your account was migrated, an identically named Aerobatic account was created for all Bitbucket accounts you belong to (both individual and team) that had the Aerobatic add-on installed. You need to ensure the CLI is set to use the same account that the repo belongs to:
 
 The `switch` command will display all the Aerobatic account you are associated with. Use the arrow keys to select the appopriate account.
 
-~~~sh
+```sh
 [$] aero switch
-~~~
+```
 
 Now you can run the `apikey` command:
 
-~~~sh
+```sh
 [$] aero apikey
-~~~
+```
 
 This will print out the value of your api key. Keep this window open as you'll need that value momentarily.
 

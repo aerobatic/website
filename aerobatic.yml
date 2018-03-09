@@ -8,25 +8,25 @@ deploy:
         webhookUrl: $SLACK_WEBHOOK_ALERT
       email:
         to: [david.vonlehman@gmail.com]
-  optimizer:
-    inlineCriticalCss: true
-    ignoreStylesheets: []
-    forceCriticalCss: [h1, h2, h3, h4]
-    archetypes:
-      - pattern: docs/index.html
-      - pattern: docs/**
-        forceCriticalCss:
-          - "regex:\\.markdown"
-          - "regex:\\.language-sh"
-          - "regex:\\.language-bash"
-          - "#docs-menu li.active > a"
-      - pattern: blog/index.html
-      - pattern: blog/**
-        forceCriticalCss:
-          - "regex:\\.markdown"
-          - "regex:\\.language-sh"
-          - "regex:\\.language-bash"
-      - pattern: index.html
+  # optimizer:
+  #   inlineCriticalCss: true
+  #   ignoreStylesheets: []
+  #   forceCriticalCss: [h1, h2, h3, h4]
+  #   archetypes:
+  #     - pattern: docs/index.html
+  #     - pattern: docs/**
+  #       forceCriticalCss:
+  #         - "regex:\\.markdown"
+  #         - "regex:\\.language-sh"
+  #         - "regex:\\.language-bash"
+  #         - "#docs-menu li.active > a"
+  #     - pattern: blog/index.html
+  #     - pattern: blog/**
+  #       forceCriticalCss:
+  #         - "regex:\\.markdown"
+  #         - "regex:\\.language-sh"
+  #         - "regex:\\.language-bash"
+  #     - pattern: index.html
 
 plugins:
   - name: http-proxy

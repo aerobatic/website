@@ -3,17 +3,16 @@
 <div id="docs-menu">
   <ul class="nav nav-stacked">
     <li {{ if eq .Params.name "getting-started" }}class="active"{{ end }}><a href="/docs/getting-started/">Getting Started</a></li>
-    <li {{ if eq .Params.name "overview" }}class="active"{{ end }}><a href="/docs/overview/">Overview</a>
-      {{ if eq .Params.name "overview" }}
-      <ul class="submenu">
-        <li><a href="/docs/overview/#performance">Performance</a></li>
-        <li><a href="/docs/overview/#security">Security</a></li>
-        <li><a href="/docs/overview/#authentication">Website authentication</a></li>
-        <li><a href="/docs/overview/#custom-404">Custom 404s</a></li>
-        <li><a href="/docs/overview/#device-preview">Device preview</a></li>
-      </ul>
-      {{ end }}
-    </li>
+    <li {{ if eq .Params.name "overview" }}class="active"{{ end }}><a href="/docs/overview/">Overview</a></li>
+    {{ if eq .Params.name "overview" }}
+    <ul class="submenu">
+      <li><a href="/docs/overview/#performance">Performance</a></li>
+      <li><a href="/docs/overview/#security">Security</a></li>
+      <li><a href="/docs/overview/#authentication">Website authentication</a></li>
+      <li><a href="/docs/overview/#custom-404">Custom 404s</a></li>
+      <li><a href="/docs/overview/#device-preview">Device preview</a></li>
+    </ul>
+    {{ end }}
     <li {{ if eq .Params.name "deployment" }}class="active"{{ end }}><a href="/docs/deployment/">Deployment</a></li>
     <li {{ if eq .Params.name "cli" }}class="active"{{ end }}><a href="/docs/cli/">CLI</a></li>
     <li {{ if eq .Params.name "static-serving" }}class="active"{{ end }}><a href="/docs/static-serving/">Static website serving</a></li>

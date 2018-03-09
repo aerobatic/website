@@ -264,7 +264,7 @@ div.alert {
   border-radius: 3px;
   line-height: 1.6;
   padding: 15px;
-  padding-left: 35px;
+  padding-left: 45px;
   position: relative;
 
   .header {
@@ -281,7 +281,6 @@ div.alert.warning {
   color: #613a00;
   background-color: #ffe3c8;
   border: 1px solid #dca874;
-  padding-left: 38px;
 }
 
 div.alert.warning:before {
@@ -350,4 +349,8 @@ pre > code {
 
 li > pre {
   margin-top: 12px;
+}
+
+.algolia-autocomplete {
+  margin-top: 4px;
 }
