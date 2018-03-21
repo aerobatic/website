@@ -51,7 +51,7 @@ If interested, you can read more about the validation process in the [ACM docume
 Some domain registrars such as Namecheap do not allow an "\_" character in a CNAME value. In this case you will need to transfer your nameservers over to a different DNS provider. We recommend any of the providers listed in the [apex domains section below](#apex-domains).
 {{% /alert %}}
 
-Once domain ownership is validated, the domain provisioning process will commence. This takes roughly 40 minutes to complete. Once complete, you will receive an email from `domains@aerobatic.com` with instructions on how to configure the actual DNS records that cause your domain to resolve to the Aerobatic CDN.
+Once domain ownership is validated, the domain provisioning process will commence. This takes roughly 40 minutes to complete. Once complete, you will receive an email from `support@aerobatic.com` with instructions on how to configure the actual DNS records that cause your domain to resolve to the Aerobatic CDN. You can also run the `aero domain` command (with no arguments) to get the latest status.
 
 {{% alert warning %}}
 Do **NOT** delete the validation CNAME. It will be re-checked every time the SSL certificate is auto-renewed.

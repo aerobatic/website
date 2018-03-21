@@ -151,7 +151,7 @@ The name of the domain (without any sub-domain, i.e. `mydomain.com`)
 The subdomain you want your website to be accessible at. For apex domain enter the value '@'. For wildcard domain enter '\*'.
 {{% /option %}}
 
-You can also run the command without any arguments to get status information on the domain.
+You can also run the command without any arguments to get status information on the domain as well as DNS details.
 
 {{<cli "aero domain --name mydomain.com --subdomain www">}}
 {{<cli "aero domain --name mydomain.com --subdomain @">}}

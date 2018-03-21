@@ -147,7 +147,7 @@ Here's how to generate a new [Gatsby](https://www.gatsbyjs.org/) site from scrat
 {{<cli "gatsby build" "build the gatsby site">}}
 {{<cli "aero deploy --directory public" "deploy build output to Aerobatic">}}
 
-There are also a couple of recommended config settings to make in the `aerobatic.yml` to take full advantage of the way Gatsby optimizes the build output.
+<!-- There are also a couple of recommended config settings to make in the `aerobatic.yml` to take full advantage of the way Gatsby optimizes the build output.
 
 First we can disable the Aerobatic [asset fingerprinting](/docs/site-optimizer/#asset-fingerprinting) since Gatsby already takes care of that. Secondly, we can use the [http-headers](/docs/plugins/http-headers) plugin to set an aggressive `Cache-Control` header on all `.js` and `.js.map` requests. If contents of these files change, Gatsby will generate a differently named file, so there's no reason not to cache for a full year.
 
@@ -164,7 +164,7 @@ plugins:
     options:
       "Cache-Control": "public, max-age=31536000"
   - name: webpage
-```
+``` -->
 
 ## React
 
