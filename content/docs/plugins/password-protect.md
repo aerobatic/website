@@ -14,7 +14,7 @@ The `password-protect` plugin is an easy way to require a password from visitors
 
 By default the plugin only requires users to enter a password. However you can configure it to require both a username and a password. See the [Usernames](#usernames) section for more details.
 
-See the plugin in action on our [demo site](https://password-protect-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/password-protect-demo)).
+See the plugin in action on our [demo site](https://password-protect-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/password-protect-demo)). You can also read more about [how authentication works](/docs/overview/#how-authentication-works).
 
 ### Configuration
 

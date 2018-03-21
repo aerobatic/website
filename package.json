@@ -18,7 +18,7 @@
     "build:aerobatic":
       "npm run build:assets && hugo --baseURL https://__baseurl__",
     "start":
-      "npm run clean && npm run sass:build && npm run babel:build && parallelshell 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'",
+      "npm run clean && npm run sass:build && npm run babel:build && concurrently 'npm run sass:watch' 'npm run babel:watch' 'hugo serve'",
     "gen-test-search":
       "curl -H 'Accept:application/json' https://www.aerobatic.com/search?q=static | mustache - public/search/index.html > public/search/temp.html",
     "serve": "hs ./public -p 9999"
@@ -26,9 +26,9 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-babili": "0.0.9",
+    "concurrently": "^3.5.1",
     "mustache": "^2.3.0",
     "node-sass": "^4.1.1",
-    "onchange": "^3.2.1",
-    "parallelshell": "^2.0.0"
+    "onchange": "^3.2.1"
   }
 }

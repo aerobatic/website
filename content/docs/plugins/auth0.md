@@ -8,7 +8,7 @@ name: auth0
 
 The `auth0` plugin provides robust authentication and user management for your static website hosted on Aerobatic via an integration with Auth0 &mdash; a leading provider of identify management services. Using this plugin, all your user's credentials live securely within Auth0. Login and sign-up takes place on your Auth0 [hosted login page](https://auth0.com/docs/hosted-pages/login). You can allow users to register with a username or password, or via any of the Auth0 supported social and enterprise [3rd party identify providers](https://auth0.com/docs/identityproviders) including Google, Facebook, GitHub, Salesforce, and [many more](https://auth0.com/docs/identityproviders).
 
-See the plugin in action on our [demo site](https://auth0-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/auth0-demo)).
+See the plugin in action on our [demo site](https://auth0-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/auth0-demo)). You can also read more about [how authentication works](/docs/overview/#how-authentication-works).
 
 ### Configuration
 

@@ -26,6 +26,17 @@ You have two options for locking down all or parts of your website to authentica
 1.  [password-protect plugin](/docs/plugins/password-protect) - Simple password that you distribute to people that need access.
 2.  [auth0 plugin](/docs/plugins/auth0) - Full featured identity management that allows signups and individual user accounts powered by [Auth0](https://auth0.com).
 
+### How authentication works
+
+Both the password-protect and auth0 plugins utilize a shared cookie based security mechanism to ensure that only authenticated users can access webpage urls from the protected section of the site.
+
+* Upon successful login credentials being submitted, a [json web token](https://jwt.io/) (JWT) is generated with a crypto token that is only known to the Aerobatic backend.
+* This JWT is set as the value of the `aerobatic-auth` cookie. This cookie is set with the `HttpOnly` and `Secure` flags, so it is inaccessible to client-side JavaScript and is only transmitted by the browser for `https` connections.
+* The expiration date of the cookie can be controlled via the `cookieExpiresMinutes` plugin option. If no value is specified the default behavior is a session cookie that expires when the browser tab is closed. Setting to an explicit value is useful if you want logged in sessions to persist across browser sessions.
+* When an inbound request is made to a URL protected by one of the auth plugins, the server code grabs the value of the `aerobatic-auth` cookie. If the cookie is missing, the user is redirected to the login page. If the cookie is present, it is decrypted with the secure token and the contents are verified to ensure it has not been tampered with. If everything checks out, the requested webpage is returned.
+* Auth protected webpages are returned with the header `Cache-Control: no-cache`. This ensures that the CDN and browser do **not** cache the response. Note that because of Aerobatic's geo-distributed origin servers, you still get edge delivery benefits even without serving from the outer-most CDN nodes.
+* The same cookie validation process happens for both human generated requests and bots. So there's no way for crawlers to obtain access to your protected pages.
+
 ### Custom 404 page {#custom-404}
 
 Custom `404` error pages are specified with the [custom-errors](/docs/plugins/custom-errors/) plugin.
