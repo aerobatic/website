@@ -18,14 +18,17 @@
   <meta name="twitter:title" content="{{ .Site.Title }} - {{ .Title }}">
   <meta name="twitter:description" content="{{ .Params.description }}">
 
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
   <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   <link href="{{ .Site.BaseURL }}/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="canonical" href="{{ .Site.BaseURL }}">
   <link rel="alternate" href="{{ .Site.BaseURL }}/feed.xml" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="/site.css" />  

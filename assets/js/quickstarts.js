@@ -1,15 +1,15 @@
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 
-  var clipboard = new Clipboard("#quickStarts div[data-copy-cli] button");
-  clipboard.on("success", function(e) {
-    // https://stackoverflow.com/a/9875490
-    $(e.trigger).attr("title", "Copied!").tooltip("fixTitle").tooltip("show");
-  });
+  // var clipboard = new Clipboard("#quickStarts div[data-copy-cli] button");
+  // clipboard.on("success", function(e) {
+  //   // https://stackoverflow.com/a/9875490
+  //   $(e.trigger).attr("title", "Copied!").tooltip("fixTitle").tooltip("show");
+  // });
 
-  clipboard.on("error", function(e) {
-    console.log(e);
-  });
+  // clipboard.on("error", function(e) {
+  //   console.log(e);
+  // });
 
   // Load the stargazers count for each quickstart repo
   Promise.all(
