@@ -7,6 +7,10 @@ name: whats-new
 
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### May 3, 2018
+
+* [Announcing authorized plugin](/docs/plugins/authorized/)&mdash;a new plugin that builds upon the Auth0 plugin with the ability to enforce fine grained roled based authorization to sections of your site.
+
 ### Feb 24, 2018
 
 * [Announcing Auth0 plugin](/blog/announcing-auth0-plugin/)&mdash;full-featured identity management solution for your members-only static websites.

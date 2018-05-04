@@ -10,6 +10,10 @@ The `auth0` plugin provides robust authentication and user management for your s
 
 See the plugin in action on our [demo site](https://auth0-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/auth0-demo)). You can also read more about [how authentication works](/docs/overview/#how-authentication-works).
 
+{{% alert tip %}}
+If you desire more fine-graned access control, check out the **[authorized plugin](/docs/plugins/authorized/)**. It works in conjunction with the auth0 plugin. You can use it to do things like lock down the `/subscriber/*` section of your site to only user that have the Auth0 subscriber role.
+{{% /alert %}}
+
 ### Configuration
 
 ```yaml

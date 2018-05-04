@@ -48,7 +48,7 @@ The validation record will look something like so:
 If interested, you can read more about the validation process in the [ACM documentation](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html).
 
 {{% alert warning %}}
-Some domain registrars such as Namecheap do not allow an "\_" character in a CNAME value. In this case you will need to transfer your nameservers over to a different DNS provider. We recommend any of the providers listed in the [apex domains section below](#apex-domains).
+Some domain registrars such as Namecheap do not allow an "\_" character in a CNAME value. In this case you will need to transfer your nameservers over to a different DNS provider. We recommend any of the providers listed in the [apex domains section below](#apex-domains). Cloudflare is free to use for basic DNS services, see our [Namecheap to Cloudflare directions](#namecheap-to-cloudflare).
 {{% /alert %}}
 
 Once domain ownership is validated, the domain provisioning process will commence. This takes roughly 40 minutes to complete. Once complete, you will receive an email from `support@aerobatic.com` with instructions on how to configure the actual DNS records that cause your domain to resolve to the Aerobatic CDN. You can also run the `aero domain` command (with no arguments) to get the latest status.
@@ -126,6 +126,23 @@ You'll want to create two record sets, an `A` record for your apex domain and a 
 | --------- | ------------------ | ----- | ------------------------------------ |
 | \<blank\> | `A - IPv4 address` | Yes   | `[domain_dns_value].cloudfront.net.` |
 | `www`     | `CNAME`            | No    | `[domain_dns_value].cloudfront.net`  |
+
+### Namecheap to Cloudflare {#namecheap-to-cloudflare}
+
+Namecheap is a popular service for getting a good deal on a domain name, but their DNS management leaves much to be desired. In addition to not supporting ANAME records for apex domains, it also does not support the `\_` character in a `CNAME` which the domain validation record requires. For many users, the easiest and cheapest solution is to transfer the domain nameserver over to Cloudflare.
+
+1.  First you'll need to [create an account on Cloudflare](https://www.cloudflare.com/a/signup)
+2.  In the Cloudflare dashboard, click the **Add site** button and enter your domain name
+3.  Follow the wizard steps to setup your Cloudflare site
+4.  Transfer your nameservers in the Namecheap dashboard to the values provided by Cloudflare
+
+<img class="screenshot" src="http://www.aerobatic.com/media/docs/namecheap-cloudflare-custom-nameservers.png" alt="Namecheap Cloudflare custom nameservers">
+
+Now you should be able to create the validation CNAME in Cloudflare without any problems. Your final set of DNS records when fully configured for Aerobatic will look something like below. The 2nd `CNAME` record with the leading "\_" is the domain validation record. The other two are for the actual custom domain resolution to your Aerobatic CDN distribution.
+
+Note the grayed out icon in the **Status** column. This indicates that only the Cloudflare DNS services are being utilized.
+
+<img class="screenshot" src="http://www.aerobatic.com/media/docs/cloudflare-dns-records.png" alt="Cloudflare DNS records">
 
 **Related links**
 
