@@ -136,13 +136,13 @@ Namecheap is a popular service for getting a good deal on a domain name, but the
 3.  Follow the wizard steps to setup your Cloudflare site
 4.  Transfer your nameservers in the Namecheap dashboard to the values provided by Cloudflare
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/namecheap-cloudflare-custom-nameservers.png" alt="Namecheap Cloudflare custom nameservers">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/namecheap-cloudflare-custom-nameservers.png" alt="Namecheap Cloudflare custom nameservers">
 
 Now you should be able to create the validation CNAME in Cloudflare without any problems. Your final set of DNS records when fully configured for Aerobatic will look something like below. The 2nd `CNAME` record with the leading "\_" is the domain validation record. The other two are for the actual custom domain resolution to your Aerobatic CDN distribution.
 
 Note the grayed out icon in the **Status** column. This indicates that only the Cloudflare DNS services are being utilized.
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/cloudflare-dns-records.png" alt="Cloudflare DNS records">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/cloudflare-dns-records.png" alt="Cloudflare DNS records">
 
 **Related links**
 

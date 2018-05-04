@@ -48,13 +48,13 @@ Here are the steps involved in getting authorization setup in Auth0:
 
 In order to manage roles and user-role assignments, you need to install the [Auth0 Authorization Extension](https://auth0.com/docs/extensions/authorization-extension/v2). Login to your Auth0 dashboard and click the **Extensions** link in the left navigation bar.
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/auth0/authorization-extension-install.png" alt="Auth0 Authorization Extension Install">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/auth0/authorization-extension-install.png" alt="Auth0 Authorization Extension Install">
 
 ### Configuring the Authorization Extension {#configuring-authorization-extension}
 
 Configure the extension to store persist the roles in the application metadata:
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/auth0/authorization-extension-configuration.png" alt="Auth0 Authorization Extension configuration">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/auth0/authorization-extension-configuration.png" alt="Auth0 Authorization Extension configuration">
 
 This will sync the roles from the extension into the `app_metadata` section of the user profile whenever a user logs in. The result will look something like so:
 
@@ -95,17 +95,17 @@ function (user, context, callback) {
 
 Now you will have two rules: "auth0-authorization-extension" which was created by the authorization extension, and the new custom "Add authorization to token" rule.
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/auth0/authorization-rules.png" alt="Auth0 authorization rules">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/auth0/authorization-rules.png" alt="Auth0 authorization rules">
 
 ### Create roles and assign users {#create-roles-assign-users}
 
 After installing the authorization extension, there should now be a **Authorization** link in the Auth0 dashboard left navigation. Click on it to launch the authorization management window. Click the **Roles** link in the left navigation then click the **Create Role** button. In the **Application** drop down, you should select the Auth0 client that you setup to represent your Aeroatic application [for the auth0 plugin](/docs/plugins/auth0/#step-2-create-client).
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/auth0/create-role.png" alt="Auth0 create role">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/auth0/create-role.png" alt="Auth0 create role">
 
 Once at least one role has been created, you can assign users to those roles:
 
-<img class="screenshot" src="http://www.aerobatic.com/media/docs/auth0/auth-user-roles.png" alt="Auth0 user roles">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/auth0/auth-user-roles.png" alt="Auth0 user roles">
 
 In the screenshot above, we've assigned the user to a role called "subscriber". When this user next logs in, they will be authorized to access any section of the site that requires this role. Here's how that would be configured in the `aerobatic.yml`:
 
