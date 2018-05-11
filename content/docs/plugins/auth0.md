@@ -11,7 +11,7 @@ The `auth0` plugin provides robust authentication and user management for your s
 See the plugin in action on our [demo site](https://auth0-demo.aerobaticapp.com) ([source code](https://github.com/aerobatic/auth0-demo)). You can also read more about [how authentication works](/docs/overview/#how-authentication-works).
 
 {{% alert tip %}}
-If you desire more fine-graned access control, check out the **[authorized plugin](/docs/plugins/authorized/)**. It works in conjunction with the auth0 plugin. You can use it to do things like lock down the `/subscriber/*` section of your site to only user that have the Auth0 subscriber role.
+If you desire more fine-grained access control, check out the **[authorized plugin](/docs/plugins/authorized/)**. It works in conjunction with the auth0 plugin. You can use it to do things like lock down the `/subscriber/*` section of your site to only user that have the Auth0 subscriber role.
 {{% /alert %}}
 
 ### Configuration
@@ -165,51 +165,48 @@ This link will both destroy the `aerobatic-auth` cookie as well as log the user 
 
 ### Display Logged-In User Info
 
-If you want to display the logged-in user's name, profile picture, or email in your website, in addition to the `auth0` plugin, you also need the [client-config](/docs/plugins/client-config) plugin. The `client-config` declaration must come _after_ the `auth0` plugin and _before_ the `webpage` plugin.
+If you want to display the logged-in user's name, profile picture, or email in your website, in addition to the `auth0` plugin, you can use a bit of client JavaScript to read from the `user` cookie. One approach would be to include a snippet similiar to the following in the `<head>` of your page template:
 
-```yaml
-plugins:
-  - name: auth0
-    path: /members
-    options:
-      clientId: your-auth0-client-id
-      clientSecret: $AUTH0_CLIENT_SECRET
-      tenant: your-tenant-name
-  - name: client-config
-  - name: webpage
-```
-
-This will render a snippet of inline JavaScript in the `<head>` of your html pages that looks like this:
-
-```html
+```js
 <script>
-window['__aerobatic__']= {
-  "versionId": "xxx",
-  "appName": "xxx",
-  "appId": "xxx",
-  "user": {
-    "name": "Roger Dodger",
-    "nickname": "Roger",
-    "user_id": "google-oauth2|11601620621887895232",
-    "picture": "https://lh5.googleusercontent.com/-vQoXXpzdVuE/AAAAAAAAAAI/AAAAAAAAB7s/iKR3NS--yvQ/photo.jpg"
-  }
-};
+  (function() {
+    // Parse the user object from the document.cookie
+    var userMatch = document.cookie.match(/[; ]?user=([^\s;]*)/);
+    if (userMatch && userMatch.length > 1) {
+      window.loggedInUser = JSON.parse(unescape(userMatch[1]));
+    }
+  })();
 </script>
 ```
 
-The attributes of the `user` object correspond to the [Auth0 normalized profile schema](https://auth0.com/docs/user-profile/normalized/auth0#normalized-user-profile-schema).
+The shape of the user object correspond to the [Auth0 normalized profile schema](https://auth0.com/docs/user-profile/normalized/auth0#normalized-user-profile-schema).
 
-Since the `window.__aerobatic__` variable is declared in the `<head>`, it will be available to JavaScript at any point in your `<body>` to render in the DOM. Obviously there's lots of ways to do this, but here's one simple implementation that avoids any [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content).
+```json
+{
+  "name": "Roger Dodger",
+  "nickname": "Roger",
+  "user_id": "google-oauth2|11601620621887895232",
+  "picture":
+    "https://lh5.googleusercontent.com/-vQoXXpzdVuE/AAAAAAAAAAI/AAAAAAAAB7s/iKR3NS--yvQ/photo.jpg"
+}
+```
+
+With the `window.loggedInUser` object in hand, you could use a technique like so to display it on the screen without any [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content):
 
 ```html
 <span id="username"></span>
 <script>
-  // Guard clause to prevent error when running the site locally in development
-  if (window.__aerobatic__ && window.__aerobatic__.user) {
-    document.getElementById('username').innerText = window.__aerobatic__.user.name;
-  }
+  (function() {
+    if (window.loggedInUser) {
+      document.getElementById('username').innerText = window.loggedInUser.name;
+    }
+  })();
 </script>
 ```
+
+{{% alert warning %}}
+The `user` cookie is set without the [HttpOnly](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies) flag so it is available to your site's JavaScript. Aerobatic uses a different secure cookie `aerobatic_auth` to perform the server side authentication enforcement. This cookie is encrypted and not accessible to client JavaScript to prevent tampering.
+{{% /alert %}}
 
 ### Additional Auth0 Capabilities
 
