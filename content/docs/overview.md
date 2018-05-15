@@ -13,6 +13,10 @@ Aerobatic utilizes a multi-layered global CDN so no matter where in the world yo
 
 ![CDN World Map](https://www.aerobatic.com/media/docs/cdn-world-map.png)
 
+{{% alert tip %}}
+Our friends at [Dotcom Monitor](https://www.dotcom-tools.com/) provide a great [**free webpage speed test**](https://www.dotcom-tools.com/website-speed-test.aspx) that allows you to easily measure your website perormance from 25 different physical locations around the globe. This is a great way to visualize the real-world impact of serving website assets from a nearby CDN node vs. a central origin server.
+{{% /alert %}}
+
 ## Security {#security}
 
 All Aerobatic sites are served exclusively via SSL. All `http://` requests are 301 redirected at the CDN edge to the `https://` equivalent. Custom domains (included in Pro Plan) include a wildcard auto-renewing SSL certificate &mdash; set it once and never worry about certs again.
