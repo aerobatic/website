@@ -13,7 +13,7 @@ When a visitor hits the base URL for your website like `https://site-name.aeroba
 
 ### Trailing slashes
 
-If you've ever configured a web server you'll know that trailing slashes can pose a challenge. Standard web server behavior for a request to `/blog/` (with trailing slash) is to look for a file at `/blog/index.html`. But what happens if the trailing slash is omitted in the request? Many web servers will just return a 404. Aerobatic has intelligent fallback detection that will `301` redirect if there exists an alternative page. So a request for `https://site.com/blog` will automatically redirect to the trailing slash version `https://site.com/blog/` if (and **only** if) the file `/blog/index.html` exists. The inverse is true for trailing slash to non-trailing slash. This helps reduce `404` errors for common URL permutations.
+If you've ever configured a web server you'll know that trailing slashes can pose a challenge. Standard web server behavior for a request to `/blog/` (with trailing slash) is to look for a file at `/blog/index.html`. But what happens if the trailing slash is omitted in the request? Many web servers will just return a `404`. Aerobatic has intelligent fallback detection that will `301` redirect if there exists an alternative page. So a request for `https://site.com/blog` will automatically redirect to the trailing slash version `https://site.com/blog/` if (and **only** if) the file `/blog/index.html` exists. The inverse is true for trailing slash to non-trailing slash. This helps reduce `404` errors for common URL permutations.
 
 ### Canonical URLs
 
@@ -21,20 +21,23 @@ Aerobatic applies best-practice conventions for redirecting to the "pretty" cano
 
 The table below illustrates how Aerobatic handles some common scenarios with **no** special configuration on your part:
 
-| Request URL    | File exists test                                                                   | Render page                  | Redirect url | Response Code  |
-| -------------- | ---------------------------------------------------------------------------------- | ---------------------------- | ------------ | -------------- |
-| `/blog`        | `/blog.html == true`                                                               | `/blog.html`                 |              | `200` or `304` |
-| `/blog.html`   |                                                                                    |                              | `/blog`      | `302`          |
-| `/blog/`       | `/blog/index.html==true`                                                           | `/blog/index.html`           |              | `200` or `304` |
-| `/blog/`       | `/blog/index.html==false`<br>`/blog.html == true`                                  |                              | `/blog`      | `302`          |
-| `/blog/`       | `/blog/index.html==false`<br>`/blog/index.xml == true`                             | `/blog/index.xml`            |              | `200` or `304` |
-| `/blog/`       | `/blog/index.html==false`<br>`/blog/index.xml==false`<br> `/blog/index.json==true` | `/blog/index.json`           |              | `200` or `304` |
-| `/blog`        | `/blog.html==false`<br>`/blog/index.html==true`                                    |                              | `/blog/`     | `302`          |
-| `/blog/index`  |                                                                                    |                              | `/blog/`     | `301`          |
-| `/About-Us`    | `/About-Us.html==false`<br>`/about-us.html==true`                                  |                              | `/about-us`  | `301`          |
-| `/favicon.ico` | `/favicon.ico==true`                                                               | `/favicon.ico`               |              | `200` or `304` |
-| `/favicon.ico` | `/favicon.ico==false`                                                              | default favicon              |              | `200` or `304` |
-| `/*`           | No condition matches                                                               | Default or custom error page |              | `404`          |
+| Request URL        | File exists test                                                                   | Render page                  | Redirect url | Response Code  |
+| ------------------ | ---------------------------------------------------------------------------------- | ---------------------------- | ------------ | -------------- |
+| `/index.html`      |                                                                                    |                              | `/`          | `301`          |
+| `/`                | `/index.html==true`                                                                |                              |              | `200` or `304` |
+| `/blog`            | `/blog.html == true`                                                               | `/blog.html`                 |              | `200` or `304` |
+| `/blog.html`       |                                                                                    |                              | `/blog`      | `301`          |
+| `/blog/`           | `/blog/index.html==true`                                                           | `/blog/index.html`           |              | `200` or `304` |
+| `/blog/`           | `/blog/index.html==false`<br>`/blog.html == true`                                  |                              | `/blog`      | `301`          |
+| `/blog/`           | `/blog/index.html==false`<br>`/blog/index.xml == true`                             | `/blog/index.xml`            |              | `200` or `304` |
+| `/blog/`           | `/blog/index.html==false`<br>`/blog/index.xml==false`<br> `/blog/index.json==true` | `/blog/index.json`           |              | `200` or `304` |
+| `/blog`            | `/blog.html==false`<br>`/blog/index.html==true`                                    |                              | `/blog/`     | `301`          |
+| `/blog/index`      |                                                                                    |                              | `/blog/`     | `301`          |
+| `/blog/index.html` |                                                                                    |                              | `/blog/`     | `301`          |
+| `/About-Us`        | `/About-Us.html==false`<br>`/about-us.html==true`                                  |                              | `/about-us`  | `301`          |
+| `/favicon.ico`     | `/favicon.ico==true`                                                               | `/favicon.ico`               |              | `200` or `304` |
+| `/favicon.ico`     | `/favicon.ico==false`                                                              | default favicon              |              | `200` or `304` |
+| `/*`               | No condition matches                                                               | Default or custom error page |              | `404`          |
 
 ## Cache headers
 
