@@ -29,4 +29,4 @@ The [s-maxage](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-C
 
 ## Taking advantage
 
-All Aerobatic websites using either the [password-protect](/docs/plugins/password-protect) or the [auth0](/docs/plugins/auth0) will automatically start running considerably faster with your next deployment starting today (May 21, 2018). **No code changes required**. The performance improvement should be particularly dramatic in parts of the world furthest from an Aerobatic origin server such as South America, Eastern Asia, and Australia/New Zealand.
+All Aerobatic websites leveraging either the [password-protect](/docs/plugins/password-protect) or [auth0](/docs/plugins/auth0) plugins will automatically load considerably faster starting with your next deployment on or after May 21, 2018. **No code changes required**. The performance improvement should be particularly dramatic in parts of the world furthest from an Aerobatic origin server such as South America, Eastern Asia, and Australia/New Zealand.
