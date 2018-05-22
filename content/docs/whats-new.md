@@ -7,6 +7,10 @@ name: whats-new
 
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### May 21, 2018
+
+* Announcing [major speed improvements for authenticated sites](/blog/speed-boost-for-password-auth0-protected-sites/). Now password and auth0 protected pages respond from the CDN just as fast as publicly available static pages.
+
 ### May 3, 2018
 
 * [Announcing authorized plugin](/docs/plugins/authorized/)&mdash;a new plugin that builds upon the Auth0 plugin with the ability to enforce fine grained roled based authorization to sections of your site.
