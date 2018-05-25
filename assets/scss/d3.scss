@@ -2,9 +2,9 @@
   width: 960px;
   overflow: auto;
 
-  svg{
-    width:5000px;
-    overflow-x:scroll;
+  svg {
+    width: 5000px;
+    overflow-x: scroll;
   }
 }
 
@@ -28,5 +28,5 @@
 }
 
 .x.axis path {
-  display: none;
+  display: block;
 }
