@@ -49,14 +49,14 @@ The [s3-proxy](/docs/plugins/s3-proxy/) plugin needs to be declared in the [aero
 
 ```yaml
 plugins:
-  name: s3-proxy
-  path: /s3-proxy
-  options:
-    bucket: your_bucket_name
-    accessKeyId: $S3_ACCESS_KEY_ID
-    secretAccessKey: $S3_SECRET_ACCESS_KEY
-    overrideCacheControl: max-age=2592000
-    region: us-west-2
+  - name: s3-proxy
+    path: /s3-proxy
+    options:
+      bucket: your_bucket_name
+      accessKeyId: $S3_ACCESS_KEY_ID
+      secretAccessKey: $S3_SECRET_ACCESS_KEY
+      overrideCacheControl: max-age=2592000
+      region: us-west-2
 ```
 
 ## Read in data
@@ -82,7 +82,7 @@ d3.csv("/s3-proxy/data/adWordsLocations.csv", function(d) {
 
 In this demo, we'll create a barchart that reads in the data, groups geographical targets by country, and then sorts the list of countries in descending order. So now, your `analysis.js` file will look more like the following:
 
-```javascript
+```js
 d3.csv("/s3-proxy/data/adWordsLocations.csv", function(d) {
   return {
     criteria_id : +d["Criteria ID"],
