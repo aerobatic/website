@@ -8,20 +8,20 @@ description: How to register a custom domain with SSL for your website
 
 Once your site is upgraded to the paid plan, you can configure your site to be served on a custom domain. Aerobatic will provision a wildcard SSL certificate for your domain using the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/). Wildcard certificates cover your apex, aka "naked", domain and all subdomains. This allows you to cover all your [deploy stages](/docs/overview#deploy-stages) using the same certificate, for example:
 
-* `https://www.mydomain.com`
-* `https://www--test.mydomain.com`
-* `https://www--develop.mydomain.com`
+- `https://www.mydomain.com`
+- `https://www--test.mydomain.com`
+- `https://www--develop.mydomain.com`
 
 Depending on your DNS provider (more on this below), you can use apex (aka "naked") domains:
 
-* `https://mydomain.com`
-* `https://test.mydomain.com`
-* `https://develop.mydomain.com`
+- `https://mydomain.com`
+- `https://test.mydomain.com`
+- `https://develop.mydomain.com`
 
 You can also re-use the same domain + certificate across multiple paid websites:
 
-* `https://www.mydomain.com`
-* `https://blog.mydomain.com`
+- `https://www.mydomain.com`
+- `https://blog.mydomain.com`
 
 ### Registering your domain
 
@@ -79,12 +79,12 @@ The apex or "naked" domain is the root domain, sans any subdomain, i.e. `https:/
 
 Domain providers that support one of the flavors of CNAME-like at the apex include:
 
-* [DNS Made Easy - ANAME](https://aerobatic.atlassian.net/wiki/display/AKB/Add+an+ANAME+record+to+your+DNS+provider)
-* [DNS Simple - ALIAS](https://support.dnsimple.com/articles/alias-record/)
-* [easyDNS - ANAME](https://fusion.easydns.com/index.php?/Knowledgebase/Article/View/190/7/aname-records/)
-* [Route53 - ALIAS](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
-* [NS1 - ALIAS](https://ns1.com/articles/naked-domains-get-sexier-with-ns1-alias-records)
-* [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200169056-Does-CloudFlare-support-CNAME-APEX-at-the-root-)
+- [DNS Made Easy - ANAME](https://aerobatic.atlassian.net/wiki/display/AKB/Add+an+ANAME+record+to+your+DNS+provider)
+- [DNS Simple - ALIAS](https://support.dnsimple.com/articles/alias-record/)
+- [easyDNS - ANAME](https://fusion.easydns.com/index.php?/Knowledgebase/Article/View/190/7/aname-records/)
+- [Route53 - ALIAS](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
+- [NS1 - ALIAS](https://ns1.com/articles/naked-domains-get-sexier-with-ns1-alias-records)
+- [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200169056-Does-CloudFlare-support-CNAME-APEX-at-the-root-)
 
 {{% alert warning %}}
 Some providers, such as Namecheap, technically allow you to define a `CNAME` record `@` that will route your apex domain correctly. But be aware, this will **likely break email for your domain**. This is because the `@` record takes precedence over any `MX` mail records.
@@ -96,9 +96,9 @@ We suggest you **ONLY** utilize the apex domain if your DNS provider has special
 
 If your DNS provider does not support `ANAME` or `ALIAS` records and it's not possible to switch, then your best bet is to redirect the apex URL to a CNAME like `www`. Below are two possible ways to configure this:
 
-* Many providers let you define a URL redirect record that will redirect the apex to any URL of your choice. In this case you would want to point to `https://www.mydomain.com`.
+- Many providers let you define a URL redirect record that will redirect the apex to any URL of your choice. In this case you would want to point to `https://www.mydomain.com`.
 
-* Use a service called [ARecord](http://www.arecord.net/) which provides a static IP address to assign to an `A` record. Their service will redirect requests from the apex to `www` sub-domain.
+- Use a service called [ARecord](http://www.arecord.net/) which provides a static IP address to assign to an `A` record. Their service will redirect requests from the apex to `www` sub-domain.
 
 {{% alert warning %}}
 These redirect solutions only work for an **http** request, NOT **https**. If a user types "yourdomain.com" into their browser, the above solution will work since the browser defaults to http in the absence of a protocol. But the **ONLY** way to make `https://yourdomain.com` work is to use one of the aforementioned DNS providers that support `ANAME` or `ALIAS` record types.
@@ -108,13 +108,13 @@ These redirect solutions only work for an **http** request, NOT **https**. If a 
 
 When using Cloudflare in front of your Aerobatic custom domain there are a few considerations to keep in mind:
 
-* You can use the [CNAME flattening](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) feature to make your site available at the apex domain.
-* We recommend that you disable the Cloudflare proxy and use the "DNS Only" mode. This is done by clicking the orange cloud next to the DNS record so that it runs into a gray cloud with an arrow over top.
+- You can use the [CNAME flattening](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root) feature to make your site available at the apex domain.
+- We recommend that you disable the Cloudflare proxy and use the "DNS Only" mode. This is done by clicking the orange cloud next to the DNS record so that it runs into a gray cloud with an arrow over top.
 
 If you do choose to enable the Cloudflare Proxy/CDN functionality, then make sure the following settings are made:
 
-* You **must** set SSL to "Full" to avoid your site getting caught in a redirect loop. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-)].
-* In order to force CloudFlare to use the HTTP headers set by Aerobatic make sure to set the "Respect Existing Headers" option. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200169266-Does-Cloudflare-honor-my-Expires-and-Cache-Control-headers-for-static-content-)]
+- You **must** set SSL to "Full" to avoid your site getting caught in a redirect loop. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200170416-What-do-the-SSL-options-mean-)].
+- In order to force CloudFlare to use the HTTP headers set by Aerobatic make sure to set the "Respect Existing Headers" option. [[CloudFlare docs](https://support.cloudflare.com/hc/en-us/articles/200169266-Does-Cloudflare-honor-my-Expires-and-Cache-Control-headers-for-static-content-)]
 
 ### Route 53 setup {#route53}
 
@@ -138,24 +138,26 @@ Namecheap is a popular service for getting a good deal on a domain name, but the
 
 <img class="screenshot" src="https://www.aerobatic.com/media/docs/namecheap-cloudflare-custom-nameservers.png" alt="Namecheap Cloudflare custom nameservers">
 
-Now you should be able to create the validation CNAME in Cloudflare without any problems. Your final set of DNS records when fully configured for Aerobatic will look something like below. The 2nd `CNAME` record with the leading "\_" is the domain validation record. The other two are for the actual custom domain resolution to your Aerobatic CDN distribution.
+Now you should be able to create the validation CNAME in Cloudflare without any problems. Your final set of DNS records when fully configured for Aerobatic will look something like below. The 2nd `CNAME` record with the leading "\_" is the domain validation record. The others are for the actual custom domain resolution to your Aerobatic CDN distribution.
 
 Note the grayed out icon in the **Status** column. This indicates that only the Cloudflare DNS services are being utilized.
 
-<img class="screenshot" src="https://www.aerobatic.com/media/docs/cloudflare-dns-records.png" alt="Cloudflare DNS records">
+<img class="screenshot" src="https://www.aerobatic.com/media/docs/--1/cloudflare-dns-records.png" alt="Cloudflare DNS records">
+
+In order for your apex (aka naked) domain to resolve to Aerobatic you need to use Cloudflare [CNAME flattening](https://support.cloudflare.com/hc/en-us/articles/200169056-CNAME-Flattening-RFC-compliant-support-for-CNAME-at-the-root). First delete the automatically generated A record that points to an IP address. Then create a CNAME with the value "@" that points to the `*.cloudfront.net` domain assigned to your Aerobatic domain. The 3rd record in the screenshot above represents the flattened apex CNAME.
 
 **Related links**
 
-* [Values for Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-alias.html#rrsets-values-alias-alias)
-* [Migrating DNS Service for an Existing Domain to Amazon Route 53](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)
+- [Values for Alias Resource Record Sets](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values-alias.html#rrsets-values-alias-alias)
+- [Migrating DNS Service for an Existing Domain to Amazon Route 53](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)
 
 ### Apex domains and deploy stages {#apex-domains-deploy-stages}
 
 When using deploy stages for websites whose production URL is at the apex, the stage name becomes a subdomain:
 
-* `https://mydomain.com` <-- production
-* `https://staging.mydomain.com`
-* `https://test.mydomain.com`
+- `https://mydomain.com` <-- production
+- `https://staging.mydomain.com`
+- `https://test.mydomain.com`
 
 <!-- ## Binding domain to website
 Once DNS is setup, it's still necessary to bind the domain + subdomain to a specific Aerobatic website. For an existing website this is done in the *Hosting settings* screen. You can also select a custom domain at the time of creating a new website from a Bitbucket repo. Naturally you can only bind one website to a domain name + subdomain combination. For the apex domain you leave the subdomain blank or enter the special value `@`. -->

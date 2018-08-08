@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build-deploy-job:
+    docker:
+    - image: circleci/node:8.11
+
+    steps:
+    - checkout
+
+    # Dependencies
+    # Restore the dependency cache
+    - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+
+    - run: wget https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Linux-64bit.deb
+    - run: sudo dpkg -i hugo*.deb
+    - run: npm install
+    - run: npm install aerobatic-cli
+    - run: NODE_ENV=production npm run build:aerobatic
+    - run: npm run deploy
+
+    # Save dependency cache
+    - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build-deploy-job
