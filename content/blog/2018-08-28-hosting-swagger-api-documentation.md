@@ -8,7 +8,7 @@ description: How to create a static site for your Swagger API documentation and 
 
 [Swagger](http://swagger.io/) is a specification format for documenting the interface for RESTful APIs. Essentially, you author a YAML file that describes the operations and their inputs and outputs. There is an ecosystem of tools that can auto-generate documentation or SDKs. For documentation generation there is a project called [swagger-ui](https://swagger.io/tools/swagger-ui/) that will generate attractive interactive HTML/JavaScript documentation from a Swagger API specification.
 
-The latest version of swagger-ui is packaged as an [npm module](https://www.npmjs.com/package/swagger-ui) that can be imported into a JavaScript application. To make it easy to get started, we've provided a starter app you can download and tweak. It's ready made to be deployed to Aerobatic. You can see the live demo at: [https://swagger-ui-demo.aerobaticapp.com/](https://swagger-ui-demo.aerobaticapp.com/). The [create-react-app](https://github.com/facebook/create-react-app) to bootstrap a small React app that acts as a simple host container.
+The latest version of swagger-ui is packaged as an [npm module](https://www.npmjs.com/package/swagger-ui) that can be imported into a JavaScript application. To make it easy to get started, we've provided a starter app ([GitHub repo](https://github.com/aerobatic/swagger-ui-demo)) you can download and tweak. It's ready made to be deployed to Aerobatic. You can see the live demo at: [https://swagger-ui-demo.aerobaticapp.com/](https://swagger-ui-demo.aerobaticapp.com/). The [create-react-app](https://github.com/facebook/create-react-app) to bootstrap a small React app that acts as a simple host container.
 
 ### Getting started steps
 
