@@ -21,7 +21,7 @@ The latest version of swagger-ui is packaged as an [npm module](https://www.npmj
 
 The demo uses the [Pet Store sample](http://petstore.swagger.io/v2/swagger.json) API json definition file. To substitute your own API's swagger definition, you have two options:
 
-- Point to the swagger JSON definition via a remote URL
+- Package the swagger JSON file in the website app bundle:
 
   ```js
   import petStoreSwagger from "./petstore-swagger.json";
@@ -32,7 +32,7 @@ The demo uses the [Pet Store sample](http://petstore.swagger.io/v2/swagger.json)
   });
   ```
 
-- Place the swagger JSON file within this project and import it directly
+- Download the JSON file from a remote URL:
 
   ```js
   SwaggerUI({
