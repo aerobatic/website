@@ -39,14 +39,14 @@ plugins:
     method: post
     options:
       url: $SLACK_WEBHOOK
-  
+
   - name: cors
     path: /api/*
     options:
-       origin:
+      origin:
         - https://www.aerobatic.com
         - http://localhost:1313
-  
+
   - name: http-proxy
     path: /api/github/*
     method: get
@@ -86,13 +86,13 @@ plugins:
     method: get
     options:
       resultsTemplate: /search/index.html
-      mustacheTags: ['<%=', '%>']
+      mustacheTags: ["<%=", "%>"]
   - name: redirect
     options:
       /docs: /docs/getting-started/
-      /docs/environment-variables: '/docs/configuration/#environment-variables'
+      /docs/environment-variables: "/docs/configuration/#environment-variables"
       /docs/api-proxy: /docs/plugins/http-proxy/
-      /docs/performance: '/docs/overview/#performance'
+      /docs/performance: "/docs/overview/#performance"
       /docs/ssl: /docs/custom-domains-ssl/
       /docs/custom-domains: /docs/custom-domains-ssl/
       /docs/automated-builds: /docs/static-generators/
@@ -108,12 +108,13 @@ plugins:
       /feed.xml: /index.xml
       /themes/: /quickstarts/jekyll/
       /themes/*: /quickstarts/*
+      /blog/hosting-swagger-api-documentation-wth-bitbucket: /blog/hosting-swagger-api-documentation
   - name: health-check
     path: /health
   - name: custom-errors
     options:
       errors:
-        '404': 404.html
+        "404": 404.html
 
 scanner:
   keywordSearch:
@@ -122,4 +123,3 @@ scanner:
       - /legal/**
       - /search/**
     titleStripStart: "Aerobatic - "
-
