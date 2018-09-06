@@ -1,4 +1,6 @@
---- title: Slack Community ---
+---
+title: Slack Community
+---
 
 <section id="slack-invite">
   <div class="jumbotron slack">
@@ -6,35 +8,39 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1><img src="/img/slack.png" width="100" height="100" class="slack-logo" /> Join us on Slack</h1>
-          <p style="margin-bottom: 30px">Enter your email to join our public Slack community for guidance, feature roadmap discussions, or just chat about
+          <p style="margin-bottom: 30px">Enter your email to join our public Slack community for guidance, feature
+            roadmap discussions, or just chat about
             JAMstack tech.</p>
 
           <form id="slackInviteForm" method="POST" action="/slack-invite" class="form-inline">
             <div class="input-group input-group-lg">
               <input id="slackEmail" type="email" class="form-control input-lg" placeholder="you@email.com">
               <span class="input-group-btn">
-                  <button class="btn btn-success" type="submit">Send Invite</button>
-                </span>
+                <button class="btn btn-success" type="submit">Send Invite</button>
+              </span>
             </div>
           </form>
 
           <div>
             <span id="slackAlreadyInvited" style="display:none">
-                You have already been invited. <a href="https://aerobatic-public.slack.com" target="_blank">Visit the community on Slack</a> <i class="fa fa-external-link"></i>
-              </span>
+              You have already been invited. <a href="https://aerobatic-public.slack.com" target="_blank">Visit the
+                community on Slack</a> <i class="fa fa-external-link"></i>
+            </span>
             <span id="slackAlreadyMember" style="display:none">
-                You are already a member. <a href="https://aerobatic-public.slack.com" target="_blank">Visit the community on Slack</a> <i class="fa fa-external-link"></i>
-              </span>
+              You are already a member. <a href="https://aerobatic-public.slack.com" target="_blank">Visit the
+                community on Slack</a> <i class="fa fa-external-link"></i>
+            </span>
             <span id="slackInviteSuccess" style="display:none">
-                <strong>Invitation sent!</strong> Check your inbox for an invite from Slack.
-              </span>
+              <strong>Invitation sent!</strong> Check your inbox for an invite from Slack.
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container">
-    Read our <a href="/blog/serverless-slack-team-invite-form/">blog post</a> to learn how to implement a Slack team invite
+    Read our <a href="/blog/serverless-slack-team-invite-form/">blog post</a> to learn how to implement a Slack team
+    invite
     form on your site.
   </div>
 </section>
@@ -62,13 +68,13 @@
       evt.preventDefault();
 
       fetch('https://www.aerobatic.com/api/slack-invite', {
-        method: 'POST',
-        body: 'email=' + encodeURIComponent(slackEmail.value) + '&set_active=true',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
+          method: 'POST',
+          body: 'email=' + encodeURIComponent(slackEmail.value) + '&set_active=true',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
+        })
         .then(function (res) {
           return res.json();
         })
@@ -104,5 +110,4 @@
         });
     });
   })();
-
 </script>
