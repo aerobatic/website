@@ -23,7 +23,7 @@ Aerobatic is a perfect hosting complement to static site generators such as [Jek
 
 There are two ways to configure the deploy directory:
 
-* Add a `deploy` section to your `aerobatic.yml` with a `directory` prop:
+- Add a `deploy` section to your `aerobatic.yml` with a `directory` prop:
 
   ```yaml
   deploy:
@@ -85,11 +85,13 @@ jekyll build --config _config.yml,_config.aerobatic.yml
 aero deploy --directory _site
 ```
 
+We recommend that you use the [pretty permalink](https://jekyllrb.com/docs/permalinks/#built-in-formats) style for extension-less URLs. This avoids incurring a redirect when hosted on Aerobatic.
+
 **Additional reading**
 
-* [Continuous deployment of Jekyll with GitHub and TravisCI](/blog/jekyll-travis-github-aerobatic/)
-* [Continuous deployment of Jekyll site with Bitbucket Pipelines](/blog/jekyll-bitbucket-pipelines/)
-* [How to password protect a Jekyll site](/blog/password-protect-a-jekyll-site/)
+- [Continuous deployment of Jekyll with GitHub and TravisCI](/blog/jekyll-travis-github-aerobatic/)
+- [Continuous deployment of Jekyll site with Bitbucket Pipelines](/blog/jekyll-bitbucket-pipelines/)
+- [How to password protect a Jekyll site](/blog/password-protect-a-jekyll-site/)
 
 ## Hugo
 
