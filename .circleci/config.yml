@@ -2,26 +2,39 @@ version: 2
 jobs:
   build-deploy-job:
     docker:
-    - image: circleci/node:8.11
+      - image: circleci/node:8.11
 
     steps:
-    - checkout
+      - checkout
 
-    # Dependencies
-    # Restore the dependency cache
-    - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+      # Restore the dependency cache
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
 
-    - run: wget https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Linux-64bit.deb
-    - run: sudo dpkg -i hugo*.deb
-    - run: npm install
-    - run: npm install aerobatic-cli
-    - run: NODE_ENV=production npm run build:aerobatic
-    - run: npm run deploy
+      - run: wget https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Linux-64bit.deb
+      - run: sudo dpkg -i hugo*.deb
+      - run: npm install
+      - run: npm install aerobatic-cli
+      - run: NODE_ENV=production npm run build:aerobatic
 
-    # Save dependency cache
-    - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Deploy based on branch
+          command: |
+            if [ $CIRCLE_BRANCH == 'master' ]
+            then
+              echo 'Deploy to staging'
+              aero deploy --stage staging
+            elif [ $CIRCLE_BRANCH == 'production' ]
+            then
+              echo 'Deploy to production'
+              aero deploy --stage staging
+            else
+              echo 'No deploy for branch $CIRCLE_BRANCH'
+            fi
+
+      # Save dependency cache
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
 

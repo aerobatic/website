@@ -7,6 +7,10 @@ name: whats-new
 
 Here's a running list of the latest new features and enhancements. Have an idea? Let us know at [support@aerobatic.com](mailto://support@aerobatic.com).
 
+### Dec 8, 2018
+
+- Released [client IP ranges](/docs/access-control), a new way to specify access control based on the client's IPv4 and/or IPv6 ranges.
+
 ### Nov 15, 2018
 
 - Announcing our [i18n plugin](/docs/plugins/i18n/) that enabled you to redirect your website visitors to an alternative locale specific URL based on their language or country of origin.

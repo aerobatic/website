@@ -25,6 +25,7 @@ Usage:
 Commands:
     account        Display a summary of the current Aerobatic account.
     apikey         Get the api key for the current Aerobatic account.
+    clientip       Restrict website access to specific IP ranges
     create         Create a new Aerobatic website in the current directory
     delete         Delete the current website
     deploy         Deploy the website in the current directory.
@@ -46,19 +47,20 @@ The CLI will honor the `HTTPS_PROXY` environment variable when making outbound n
 
 ### Commands
 
-* [account](#account)
-* [apikey](#apikey)
-* [create](#create)
-* [delete](#delete)
-* [deploy](#deploy)
-* [domain](#domain)
-* [env](#env)
-* [info](#info)
-* [login](#login)
-* [logs](#logs)
-* [rename](#rename)
-* [switch](#switch)
-* [versions](#versions)
+- [account](#account)
+- [apikey](#apikey)
+- [clientip](#clientip)
+- [create](#create)
+- [delete](#delete)
+- [deploy](#deploy)
+- [domain](#domain)
+- [env](#env)
+- [info](#info)
+- [login](#login)
+- [logs](#logs)
+- [rename](#rename)
+- [switch](#switch)
+- [versions](#versions)
 
 #### account
 
@@ -80,6 +82,30 @@ Reset the account api key to a new value.
 {{<cli "aero account">}}
 {{<cli "aero account --reset">}}
 
+#### clientip
+
+Restrict website access to specific IP ranges using IPv4 and IPv6 addresses and/or CIDR blocks. Users whose IP address falls outside the specified ranges will receive a `401` error. [Read more](/docs/access-control/#client-ip-ranges).
+
+**Options**
+{{% option "-v, --value" %}}
+The comma delimited list of IPs and/or CIDR blocks.
+{{% /option %}}
+
+{{% option "-s, --stage" %}}
+The deploy stage to set the value for. Omitting this option sets it for all stages.
+{{% /option %}}
+
+{{% option "-D, --delete" %}}
+Use this option to remove any client IP restrictions. To remove for a specific stage, also pass the `--stage` option.
+{{% /option %}}
+
+**Examples**
+
+{{<cli "aero clientip --value \"125.19.23.0/24,2001:cdba::3257:9652,62.230.58.1\"" "Set the IP ranges">}}
+{{<cli "aero clientip --value myip" "Lock it down to just your own current IP">}}
+{{<cli "aero clientip --delete" "Delete the IP range restrictions">}}
+{{<cli "aero clientip --delete --stage test" "Delete the IP ranges for the test stage">}}
+
 #### create
 
 Create a new Aerobatic website in the current directory. If no `aerobatic.yml` file exists in the current directory, a new one will created. If there is already an `aerobatic.yml` file, then the "id" property will overriden with the new website's unique identifier.
@@ -91,18 +117,19 @@ The desired name of the website. Names are globally unique and must be URL frien
 
 {{% option "-q, --quick-start" %}}
 The name of a quick start from the [Aerobatic Quick Start gallery](/quickstarts/jekyll/) to use to kickstart the website. Quick starts are available for Hugo, Jekyll, and vanilla HTML5.
+{{% /option %}}
 
 {{% option "-S, --source" %}}
-URL to a `.zip` or `.tar.gz` archive to create the new website from. This will automatically create a new directory.
+URL to a `.tar.gz` archive to create the new website from. This will automatically create a new directory.
 {{% /option %}}
 
 **Examples**
 
-{{<cli "aero create" "# Creates website at the current directory">}}
+{{<cli "aero create" "Creates website at the current directory">}}
 {{<cli "aero create -n website-name">}}
 {{<cli "aero create --quick-start hugo/agency">}}
 {{<cli "aero create --source https://html5up.net/editorial/download --name html5up-demo">}}
-{{<cli "aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.zip">}}
+{{<cli "aero create -S https://github.com/BlackrockDigital/startbootstrap-business-casual/archive/gh-pages.tar.gz">}}
 
 #### delete
 

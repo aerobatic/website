@@ -19,11 +19,11 @@ Here's the basic sequence of steps that take place behind the scenes with each d
 
 This flow provides some key advantages:
 
-* You never have to worry about stale assets continuing to be served after a new version is deployed. As soon as the deployment is complete, everyone gets the latest and greatest, guaranteed.
-* Because previous versions are not overwritten, rollbacks are trivial - just a quick change in the dashboard to point back to the previous version.
-* Geo load-balancing to the nearest AWS region means that your website visitors get a snappy downloads no matter where they are in the world.
+- You never have to worry about stale assets continuing to be served after a new version is deployed. As soon as the deployment is complete, everyone gets the latest and greatest, guaranteed.
+- Because previous versions are not overwritten, rollbacks are trivial - just a quick change in the dashboard to point back to the previous version.
+- Geo load-balancing to the nearest AWS region means that your website visitors get a snappy downloads no matter where they are in the world.
 
-### Deploy stages
+### Deploy stages {#deploy-stages}
 
 Aerobatic makes it super easy to deploy to different "stages". A stage is simply an instance of the site available at a dedicated URL. This is a great way to manage testing and previews of new versions. By default the `aero deploy` command deploys to the "production" stage which is your main URL. However you can specify the `-s` or `--stage` argument to deploy to a different stage. For example:
 
@@ -48,9 +48,13 @@ When deploying to non-production stages with custom domains, you'll need to conf
 If you are going to be using many stages we recommend the wildcard approach since it's a one time setup.
 {{% /alert %}}
 
-### Password protection of stages
+### Protection of stages
 
-In general you probably want to prevent the general public from accessing your test instances. This is easy to do with the [password-protect plugin](/docs/plugins/password-protect/). The declaration below in your `aerobatic.yml` file will enforce password protection, but only in the `test` stage:
+In general you probably want to prevent the general public from accessing your site's test URL. This is straightforward to do with both the [password-protect plugin](/docs/plugins/password-protect/) and [client IP ranges](/docs/access-control/#client-ip-ranges).
+
+**Password protect**
+
+The declaration below in your `aerobatic.yml` file will enforce password protection, but only in the `test` stage:
 
 ```yaml
 plugins:
@@ -59,6 +63,16 @@ plugins:
     options:
       password: $SITE_PASSWORD
 ```
+
+**Client IP ranges**
+
+To set allowed client IP ranges, use the CLI [clientip](/docs/cli/#clientip) command.
+
+{{<cli "aero clientip --value '97.113.60.0/24' --stage test">}}
+
+A shorthand way to lock it down to just your current personal IP is using the "myip" special value:
+
+{{<cli "aero clientip --value myip --stage test">}}
 
 ## Continuous deployment
 
@@ -96,9 +110,9 @@ You'll notice in the `aero deploy` call above we are passing two arguments: `--c
 
 **Related blog posts**
 
-* [Jekyll Continuous Deployment with Bitbucket Pipelines and Aerobatic](/blog/hugo-bitbucket-pipelines/)
-* [Deploy a Hugo site to Aerobatic with CircleCI](/blog/hugo-github-circleci/)
-* [Hugo Continuous Deployment with Bitbucket Pipelines and Aerobatic](/blog/hugo-bitbucket-pipelines/)
+- [Jekyll Continuous Deployment with Bitbucket Pipelines and Aerobatic](/blog/hugo-bitbucket-pipelines/)
+- [Deploy a Hugo site to Aerobatic with CircleCI](/blog/hugo-github-circleci/)
+- [Hugo Continuous Deployment with Bitbucket Pipelines and Aerobatic](/blog/hugo-bitbucket-pipelines/)
 
 ### API Key environment variable {#aerobatic-apikey}
 
@@ -149,7 +163,7 @@ deploy:
       email:
         to: [userA@company.com, userB@company.com]
       slack:
-        username: 'Website Update'  # Optional, defaults to "Aerobatic Deploys"
+        username: "Website Update" # Optional, defaults to "Aerobatic Deploys"
         webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
 ```
 
@@ -182,7 +196,7 @@ deploy:
         webhookUrl: https://hooks.slack.com/services/xxx/xxx/xxxx
     production:
       email:
-        to: [sally@client.co]  # Alert the client for production deployments
+        to: [sally@client.co] # Alert the client for production deployments
 ```
 
 You can also omit the `default` section altogether and configure alerts on a stage by stage basis - whatever best fits your workflow.
