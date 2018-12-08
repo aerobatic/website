@@ -23,11 +23,11 @@ jobs:
             if [ $CIRCLE_BRANCH == 'master' ]
             then
               echo 'Deploy to staging'
-              aero deploy --stage staging
+              ./node_modules/.bin/aero deploy --stage staging
             elif [ $CIRCLE_BRANCH == 'production' ]
             then
               echo 'Deploy to production'
-              aero deploy --stage staging
+              ./node_modules/.bin/aero deploy --stage staging
             else
               echo 'No deploy for branch $CIRCLE_BRANCH'
             fi
